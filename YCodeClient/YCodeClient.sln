@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCodeClient", "Assembly-CSharp.csproj", "{735F0098-F4AF-E309-0FA6-0B31FF4BBF1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCodeClient", "Assembly-CSharp-Editor.csproj", "{FB126B1D-6929-462A-8AB2-5117EA66B9A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{735F0098-F4AF-E309-0FA6-0B31FF4BBF1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735F0098-F4AF-E309-0FA6-0B31FF4BBF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735F0098-F4AF-E309-0FA6-0B31FF4BBF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735F0098-F4AF-E309-0FA6-0B31FF4BBF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB126B1D-6929-462A-8AB2-5117EA66B9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB126B1D-6929-462A-8AB2-5117EA66B9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB126B1D-6929-462A-8AB2-5117EA66B9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB126B1D-6929-462A-8AB2-5117EA66B9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

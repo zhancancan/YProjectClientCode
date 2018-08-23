@@ -1,0 +1,84 @@
+option java_package ="com.typeData";
+
+message Type_Animation {
+		required string name = 1;
+		required string description = 2;
+		required string animation = 3;
+}
+message Type_Property {
+		required string name = 1;
+		required string description = 2;
+		required int32 key = 3;
+		required string alias = 4;
+}
+message Type_Resource {
+		required string name = 1;
+		required string description = 2;
+		required int32 key = 3;
+		required string icon = 4;
+		required string iconBig = 5;
+		required string iconFly = 6;
+		required uint32 color = 7;
+}
+message Type_RewardGroup {
+		required string id = 1;
+		required string name = 2;
+		required string description = 3;
+		repeated RewardData rewards = 4;
+		repeated int32 testData = 5;
+}
+message Type_SightScope {
+		required string name = 1;
+		required string description = 2;
+		required int32 scope = 3;
+}
+message Type_Chapter {
+		required string id = 1;
+		required string name = 2;
+		required string description = 3;
+		required bool enabled = 4;
+		required string icon = 5;
+}
+message Type_Mission {
+		required string id = 1;
+		required string name = 2;
+		required string description = 3;
+		required bool isMain = 4;
+		required bool enabled = 5;
+		required string rewardId = 6;
+		required string chapterId = 7;
+		required string input = 8;
+		required string output = 9;
+}
+message Type_NodeKill {
+		required string id = 1;
+		required string name = 2;
+		required string description = 3;
+		required bool enabled = 4;
+		required string nodeType = 5;
+		required int32 nodeIndex = 6;
+		required string place = 7;
+		required string npcId = 8;
+		required int32 numKill = 9;
+		repeated int32 testKey = 10;
+}
+message Type_NodeSubmit {
+		required string id = 1;
+		required string name = 2;
+		required string description = 3;
+		required bool enabled = 4;
+		required string nodeType = 5;
+		required int32 nodeIndex = 6;
+		required string place = 7;
+		required string npcId = 8;
+}
+message Type_NodeTake {
+		required string id = 1;
+		required string name = 2;
+		required string description = 3;
+		required bool enabled = 4;
+		required string nodeType = 5;
+		required int32 nodeIndex = 6;
+		required string place = 7;
+		required string npcId = 8;
+}

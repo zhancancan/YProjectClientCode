@@ -1,0 +1,15 @@
+local this={}
+require "CommandClasses"
+local classes =_G["CommandClasses"]
+-- local log = require "Logger"
+-- local SocketForm = require "SocketForm"
+function this.execute(x,y,z,fx,fy,fz)
+	-- log:log(x,y,z,fx,fy,fz)
+	-- local  form = SocketForm(classes.MOVE_COMMAND)
+	-- form.position={x=x,y=y,z=z}
+	-- form.forcast={x=fx,y=fy,z=fz}
+	-- form:send()
+end
+
+local t = require "EntityCommand"
+t[classes.MoveCommand]=this

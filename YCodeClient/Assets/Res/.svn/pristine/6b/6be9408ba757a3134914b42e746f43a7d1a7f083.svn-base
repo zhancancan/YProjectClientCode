@@ -1,0 +1,84 @@
+﻿using edit.pure.etui.utils;
+using edit.pure.preview;
+using pure.ui.core;
+using UnityEditor;
+using UnityEngine;
+
+namespace inspectors.ui {
+    [CustomEditor(typeof (GameObject))]
+    public class Insp_UIPrefab : DecoratorEditor {
+        private static UIPreivewUtility previewer;
+        private static UIPreivewUtility.Styles styles;
+
+        private static void DestroyPreview() {
+            if (previewer != null) previewer.Clear();
+        }
+
+        private GameObject _prefab;
+        private bool _isUIPrefab;
+        private Rect _baseRect;
+
+        public Insp_UIPrefab() : base("GameObjectInspector") {
+        }
+
+        public override void OnSceneGUI() {
+            // do things cause the gameobjectinspaceor doesn't has the OnSceneGUI Method;
+        }
+
+        public void OnEnable() {
+            DestroyPreview();
+            _prefab = target as GameObject;
+            _isUIPrefab = UIPrefabUtility.IsUIPrefab(_prefab);
+            if (_isUIPrefab && _prefab != null) {
+                _baseRect = _prefab.GetComponent<RectTransform>().rect;
+                if (!previewer) previewer = new UIPreivewUtility();
+            }
+        }
+
+        public override void OnInspectorGUI() {
+            if (_isUIPrefab) {
+                GUILayout.Label("UI Style: " + AssetDatabase.GetAssetPath(_prefab));
+                RectTransform rt = _prefab.transform as RectTransform;
+                if (rt != null) {
+                    Rect r = rt.rect;
+                    GUILayout.Label("Size:  " + r.width + ":" + r.height);
+                }
+                UIType ut = UIPrefabUtility.GetUIType(_prefab);
+                EditorGUI.BeginChangeCheck();
+                ut = (UIType) EditorGUILayout.EnumPopup("Type:", ut);
+                if (EditorGUI.EndChangeCheck()) {
+                    UIPrefabUtility.SetUIType(_prefab, ut);
+                }
+                bool enabled = UIPrefabUtility.GetUIModifactionProperty<bool>(_prefab, UIUtiltiy.UI_ENABLE);
+                EditorGUI.BeginChangeCheck();
+                enabled = EditorGUILayout.Toggle("Enable:", enabled);
+                if (EditorGUI.EndChangeCheck()) {
+                    UIPrefabUtility.SetUIModitionProperty(_prefab, UIUtiltiy.UI_ENABLE, enabled);
+                }
+            }
+        }
+
+        public override bool HasPreviewGUI() {
+            return _isUIPrefab || buildInEditor.HasPreviewGUI();
+        }
+
+        public override void DrawPreview(Rect previewArea) {
+            if (_isUIPrefab && _prefab && previewer != null) {
+                if (styles == null) styles = UIPreivewUtility.style;
+                previewer.Draw(_prefab, new Rect(previewArea) {y = previewArea.y + 32, height = previewArea.height - 32},
+                    styles.background);
+                Rect area = new Rect(previewArea) {height = 16};
+                GUI.Label(area, AssetDatabase.GetAssetPath(_prefab), styles.info);
+                area.y += 16;
+                GUI.Label(area, "Size: " + _baseRect.width + " x " + _baseRect.height, styles.info);
+            } else {
+                base.DrawPreview(previewArea);
+            }
+        }
+
+        protected override void OnDestroy() {
+            DestroyPreview();
+            base.OnDestroy();
+        }
+    }
+}

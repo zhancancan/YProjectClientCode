@@ -1,0 +1,115 @@
+﻿using System;
+using System.Text;
+using LuaInterface;
+using pure.ai.aimachine.runner;
+using pure.database.structure.tree;
+using pure.entity.animation;
+using pure.entity.interfaces;
+using pure.refactor.property;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using pure.ticker;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.MOVE)]
+    public class AICommand_Move : CpxAction {
+        [Editable(0)]
+        public float threshold;
+
+        [Editable(1)]
+        public float duration = 0.6f;
+
+        [Editable(2)]
+        public float forcastLen = 0.1f;
+
+        public override RpxAction GetRuntime() {
+            return RpxPool<Runtime>.Get().SetSource(this);
+        }
+
+        private class Runtime : ModelCommandImpl<AICommand_Move>, ISpeedSource {
+            private float _speed;
+            private long _duetime;
+            private Vector3[] _path = new Vector3[3];
+            private MoveRunner_Path3D _runner;
+
+            public override void Enter() {
+                long now = SystemTime.GetTime();
+                long extra = (long) (cpx.duration*1000);
+                _duetime = now + extra;
+                model.SetAnimator(AnimatorType.IS_RUNNING, AnimatorControllerParameterType.Bool, 1);
+                LuaTable tb = machine.GetRuntimeData<LuaTable>(CpxState.TEMP_DATA);
+                Vector3 np = GetPosition(tb, "position");
+                Vector3 dest = GetPosition(tb, "forcast");
+                Vector3 mp = model.position;
+                Vector3 gap = np - mp;
+                float offset = gap.magnitude;
+                if (offset > cpx.threshold) {
+                    model.MoveTo(np);
+                    mp = np;
+                    offset = 0;
+                }
+                gap = dest - np;
+                float pass = model.speed*cpx.forcastLen;
+                float timeOffset;
+                float destOffset = gap.magnitude;
+                Vector3 trueDest;
+                if (pass < destOffset) {
+                    trueDest = np + gap.normalized*pass;
+                    timeOffset = cpx.forcastLen;
+                } else {
+                    trueDest = dest;
+                    timeOffset = (trueDest - np).magnitude/model.speed;
+                }
+                StringBuilder sb = new StringBuilder();
+                sb.AppendFormat("mp->np offset={0}\n", offset);
+                offset += (trueDest - np).magnitude;
+                _speed = offset/timeOffset;
+                sb.AppendFormat("offset ={0}, timeoffset={1}, speed={2}", offset, timeOffset, _speed);
+                Debug.Log(sb);
+                _path[0] = mp;
+                _path[1] = np;
+                _path[2] = trueDest;
+                _runner = MoveRunner_Path3D.Get();
+                _runner.Set(model, this);
+                _runner.Preset(_path, now, 0);
+                _runner.updateAnim = false;
+                _runner.Enter();
+                _status = CompStatus.RUNING;
+            }
+
+            public override void UpdateNow(long now) {
+                if (_runner != null) {
+                    _runner.UpdateNow(now);
+                    if (_runner.finished) {
+                        ClearRunner();
+                    }
+                }
+            }
+
+            private void ClearRunner() {
+                if (_runner != null) {
+                    _runner.Exit();
+                    _runner = null;
+                }
+            }
+
+            public override void Exit() {
+                ClearRunner();
+                base.Exit();
+                RpxPool<Runtime>.Release(this);
+            }
+
+            private static Vector3 GetPosition(LuaTable tb, string param) {
+                LuaTable p = (LuaTable) tb[param];
+                return new Vector3(
+                    p.RawGet<string, float>("x"),
+                    p.RawGet<string, float>("y"),
+                    p.RawGet<string, float>("z"));
+            }
+
+            public float speed { get { return Math.Min(model.speed*1.5f, _speed); } }
+            public override bool running { get { return SystemTime.GetTime() <= _duetime; } }
+        }
+    }
+}

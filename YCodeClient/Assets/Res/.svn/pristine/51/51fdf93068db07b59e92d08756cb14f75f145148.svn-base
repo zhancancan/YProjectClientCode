@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!--<message name="RewardGroup"> 
+		<field name="rewards" type="list" sourceTable="RewardUnit"/>
+	</message>
+
+	<message name="RewardUnit">
+		<field name="group"/>
+	</message>-->
+	
+	<message name ="EmoteTab"> 
+		<field name="emotes" type="list" direction="pull"/>
+	</message>	
+	
+	<message name ="Emote">
+		<field name="tabIndex"  direction="set" targetTable="EmoteTab" targetField="emotes"/>
+	</message>
+	<message name ="Hero">
+		<field name="icon"  	type="newIndex" replace="t[k]=string.format('ICON_%s_0',t.artKey)"/>
+		<field name="portrait"  type="newIndex" replace="t[k]=string.format('PRT_%s_0_roleshow',t.artKey)"/>
+		<field name="showFx"  	type="newIndex" replace="t[k]=string.format('Fx_%s_HP',t.artKey)"/>
+		<field name="heroType" 	type="HeroType"/>
+	</message> 
+	<message name ="StartHero">
+		<field name="hero"  type="Hero" sourceField="heroId" /> 
+		<field name="icon"  type="newIndex" replace="t[k]=t.hero.heroType.icon"/>
+		<field name="name"  type="newIndex" replace="t[k]=t.hero.name"/>
+	</message>
+
+</root>
+

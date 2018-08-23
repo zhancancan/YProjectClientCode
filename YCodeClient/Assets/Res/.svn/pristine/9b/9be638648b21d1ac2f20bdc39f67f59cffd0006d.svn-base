@@ -1,0 +1,104 @@
+option java_package = "com.changqu.master.protobuf"; 
+
+//code=60001
+message RewardData {
+	required int32 type = 1;	 
+	required int32 secondType = 2;	 
+	required int32 calcMethod = 3;	
+	required float rewardValue = 4;	  
+	repeated float testData = 5;	  
+}
+
+//code=60002
+message Position{ 
+	required float x =1;
+	required float y =2;
+	required float z =3;  
+}
+
+
+//code=60004
+message Data_Player {
+	required string id = 1;			
+	optional string name = 2;			
+	optional string description = 3;	
+	optional int32 fightScore = 4;	   
+	optional string body=5; 
+	optional string weapon=6; 
+	optional string horse=7;
+	optional bool horseVisible=8; 	
+	optional float speed=9; 
+	optional Position position=10; 
+}
+
+
+
+//code=60006
+message Data_Scene {
+	required int32 id = 1;			        
+	required int32 sceneType=2;
+	required string placeFile=3;
+}
+
+//code=60007
+message Data_Equip {
+	required string id = 1;			
+	optional string name = 2;			
+	optional string description = 3;	
+	optional string iconId = 4;	 
+	optional uint32 fightScore = 5;	  
+	repeated RewardData rewards=6;
+}
+
+//code=60008
+message Data_Gem {
+	required string id = 1;			
+	optional string name = 2;			
+	optional string description = 3;	 
+	optional string iconId = 4;	      
+}
+
+//code=60009
+message Data_FieldController {
+	required string id = 1;			
+	optional string name = 2;			
+	optional string description = 3;	 
+	optional string iconId = 4;	      
+}  
+
+//code=60010
+message Data_ActionMove {
+	required string entityId = 1;			
+	required int32 entityType = 2;			
+	required Position position = 3;	 
+	required Position forcast = 4;	   
+	optional int64 time =5;
+}  
+
+// 聊天记录 code=60011
+message Data_ChatMessage {
+	required uint32 channel = 1;				// 聊天频道类型	 2：世界   3：当前   4：帮会   5：私聊  6：求援  7：系统
+	optional string senderName = 2;			// 发送者名称
+	optional uint32 senderLogo = 3;			// 发送者徽章
+	optional uint32 senderLevel = 4;			// 发送者等级
+	optional string toName = 5;				// 接受者名称   私聊用
+	optional uint32 msgType = 6;				// 消息类型  0：文字  1：语音  2：图片
+	optional string msgString = 7;				// 消息内容   非文字类型格式：  byte数据ID#byte消息长度（比如语音消息多少秒）
+	optional uint64 time = 8;					// 发送时间
+	optional uint32 showType = 9;				// 显示类型	0:聊天框 1:公告 2:全部显示
+	optional string senderId = 10;				// 发送者ID
+	optional string toId = 11;					// 接受者ID   私聊用
+	optional string senderUseTitleInfo = 12;	//  发送者当前使用的称号ID,过期时间
+	optional uint32 senderPortrait = 13;		// 发送者头像ID
+}
+
+// NPC数据 code=60012
+message Data_Npc {
+	required uint32 id = 1;			//怪物ID
+	optional string npcId = 2;			//NPC定义ID
+	optional uint32 level = 3;			//怪物等级
+	optional uint32 hp = 4;			//当前血量
+	optional uint32 maxHp = 5;		//最大血量
+	optional Position position = 6;		//位置
+}
+

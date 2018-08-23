@@ -1,0 +1,9 @@
+require "Class"
+require "Data"
+local superClass =_G["Data"]
+local class=_G["class"]
+local this =class("Data_Player",superClass)
+_G["Data_Player"]=this
+
+
+return this

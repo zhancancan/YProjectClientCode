@@ -1,0 +1,262 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed78bc37db392d54d903a177cc00cafc, type: 3}
+  m_Name: ProtoDeco
+  m_EditorClassIdentifier: 
+  leftMargin: 263
+  descripts:
+  - name: Data_UserState
+    customClass: Data_Character
+    table: 
+    proxyType: 1
+    proxyCacheMode: 0
+  - name: MessageCollection
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: MessageData
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: RewardData
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: Position
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: Data_Character
+    customClass: 
+    table: 
+    proxyType: 1
+    proxyCacheMode: 0
+  - name: Data_Player
+    customClass: 
+    table: Data_SceneObj
+    proxyType: 2
+    proxyCacheMode: 1
+  - name: Data_Scene
+    customClass: 
+    table: 
+    proxyType: 4
+    proxyCacheMode: 0
+  - name: Data_Equip
+    customClass: 
+    table: Data_Props
+    proxyType: 0
+    proxyCacheMode: 0
+  - name: Data_Gem
+    customClass: 
+    table: Data_Props
+    proxyType: 0
+    proxyCacheMode: 0
+  - name: Data_FieldController
+    customClass: 
+    table: 
+    proxyType: 1
+    proxyCacheMode: 0
+  - name: Data_ActionMove
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 0
+  - name: Data_UserBase
+    customClass: Data_Character
+    table: 
+    proxyType: 1
+    proxyCacheMode: 0
+  - name: Data_Error
+    customClass: 
+    table: 
+    proxyType: 4
+    proxyCacheMode: 0
+  - name: Data_Npc
+    customClass: 
+    table: Data_SceneObj
+    proxyType: 2
+    proxyCacheMode: 1
+  - name: Data_CmdDestroyObject
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_CmdMoveObject
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_Ping
+    customClass: 
+    table: 
+    proxyType: 4
+    proxyCacheMode: 0
+  - name: Data_PingResp
+    customClass: 
+    table: 
+    proxyType: 4
+    proxyCacheMode: 0
+  - name: CharacterProperty
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: ControlState
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: Data_Aoe
+    customClass: 
+    table: 
+    proxyType: 2
+    proxyCacheMode: 1
+  - name: Data_Bullet
+    customClass: 
+    table: 
+    proxyType: 2
+    proxyCacheMode: 1
+  - name: Data_Command
+    customClass: 
+    table: 
+    proxyType: 4
+    proxyCacheMode: 0
+  - name: Data_ChatMessage
+    customClass: 
+    table: 
+    proxyType: 4
+    proxyCacheMode: 0
+  - name: Data_UserCurrency
+    customClass: 
+    table: Data_Currencies
+    proxyType: 0
+    proxyCacheMode: 0
+  - name: Data_CmdMoveObjectTo
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_BuffObj
+    customClass: 
+    table: Data_Buffs
+    proxyType: 0
+    proxyCacheMode: 1
+  - name: Data_SkillObj
+    customClass: 
+    table: 
+    proxyType: 0
+    proxyCacheMode: 1
+  - name: Data_CharacterProperty
+    customClass: 
+    table: Data_CharacterProperties
+    proxyType: 0
+    proxyCacheMode: 1
+  - name: Data_ControlState
+    customClass: Data_CharacterGameInfo
+    table: 
+    proxyType: 1
+    proxyCacheMode: 0
+  - name: Data_CmdCastSkill
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_CmdMove
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_CmdMoveTo
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_CmdCast
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: PropertyGroup
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: Property
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: ThingGroup
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: Thing
+    customClass: 
+    table: 
+    proxyType: 3
+    proxyCacheMode: 0
+  - name: Data_UserHero
+    customClass: 
+    table: 
+    proxyType: 0
+    proxyCacheMode: 1
+  - name: Data_SceneHealth
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_SceneBuff
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_CmdSceneBuff
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_CmdSceneHealth
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_CmdSceneDead
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  - name: Data_UserCurrentQuest
+    customClass: 
+    table: 
+    proxyType: 0
+    proxyCacheMode: 1
+  - name: Data_UserQuest
+    customClass: 
+    table: 
+    proxyType: 0
+    proxyCacheMode: 1
+  - name: Data_UserQuestReward
+    customClass: 
+    table: 
+    proxyType: 0
+    proxyCacheMode: 1
+  - name: Data_CmdSceneLog
+    customClass: 
+    table: 
+    proxyType: 5
+    proxyCacheMode: 1
+  usage: 1
+  foldFields: 1

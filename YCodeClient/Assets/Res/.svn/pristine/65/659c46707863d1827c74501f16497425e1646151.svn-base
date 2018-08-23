@@ -1,0 +1,13 @@
+local this={}
+
+function this:show()
+end
+
+function this:hide()
+end
+
+function this:initView(med)
+	this.med = med
+end
+
+return this;

@@ -1,0 +1,45 @@
+import "GameToClientProto.proto";
+option java_package = "com.changqu.master.protobuf";  
+
+//code=70001
+message CmdEnhance{ 
+	required string propId =1; 
+	required bool useGold =2;
+}
+
+//code=70002
+message CmdEnhance1{ 
+	required string propId =1; 
+	required bool useGold =2;
+}
+
+//code=70004
+message CmdMove {
+	required uint32 type = 1;
+	required Position position = 2;
+	required Position forcast = 3;
+	optional bool isLast = 4;
+}
+
+//聊天测试 code=70005
+message ChatRequest { 
+	required uint32 channel = 1;			// 频道序号按照ChatChannel表的id字段
+	optional uint32 msgType = 2;			// byte消息类型  0：文字  1：语音 
+	optional string description = 3;		// 文字消息内容 ,内嵌指令[e:xxx]表情,[p:xxx]道具，服务端发的其他消息体用<herf="cmd object">xxx</herf> cmd object 为1个json结构object, {cmd:enhance,arg="12"}
+	optional string toUserName = 4;			// 私聊目标用户名称
+	optional uint32 toUserId = 5;			// 私聊目标用户ID   (ID和名称同时存在时以ID为准)
+	optional bytes media=6;					//语音或其他类型的2进制数据
+}
+
+//管理命令 code=70006
+message Command {
+	required string cmd = 1;	// 命令
+}
+
+//施放技能 code=70007
+message CmdCast {
+	required string id = 1;	// 技能唯一ID
+	required Position position = 2; //施放者位置
+	optional Position forcast = 3; //技能施放位置
+	optional float orient = 4; //技能施放方向
+}

@@ -1,0 +1,6 @@
+local class 		= require "Class"
+local this 			=class("Data_Bullet",require "Data")
+local Logger 		= require "Logger"
+
+
+return this

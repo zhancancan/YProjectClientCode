@@ -1,0 +1,97 @@
+local this={}
+local _meta={}
+local med
+local heroPane
+
+local TypeClasses	= require "TypeClasses"
+local TypeDB		= require "TypeDB"
+local ns 			= require "CSNamespace"
+local LoginTools 	= require "LoginTools"
+local panel  		= ns["PanelManager"]
+
+local loginNet 		= require "loginNet"
+
+local Logger 		= require "Logger"
+local dialog 		= require "Dialog"
+
+local heroId 
+
+--Grid
+local heroItem={}
+function heroItem.draw(_,cell,data)
+	cell:SetString("icon",data.icon)
+end
+
+function heroItem.onInit(_,cell)
+	cell:SetClickTrigger("icon")
+end
+
+local function updateHeroModel(hero)
+	med:PlayPortrait(hero.portrait,hero.showFx)
+end
+
+local function updateHeroInfo(startHero)
+	med:SetString("obj_0/icon",startHero.icon)
+	med:SetString("obj_0/txt",startHero.name)
+	med:SetString("obj_0/area",startHero.desc)
+	heroId = startHero.id
+end
+
+local function onBtnClick(btn)
+	if btn=="btn_0" then
+		--Test
+		local heroArr=TypeDB.toArray(TypeClasses.TYPE_HERO)
+		med:SetString("obj_2/txt",heroArr[math.random(#heroArr)].name)
+	elseif btn=="btn_1" then
+		local name=med:GetString("obj_2/txt")
+		if name~=nil then
+			loginNet.startUserRegister(name,heroId)
+		end
+	end
+end
+
+local function onHeroItemClick(_,evt)
+	updateHeroModel(evt.data.hero)
+	updateHeroInfo(evt.data)
+end
+
+local function onBackBtnClick()
+	LoginTools.askLogout(
+		function (r)
+			if r then
+				LoginTools.doLogout();
+				med.Hide(med);
+			end
+		end
+	)
+end
+
+--Mediator
+function this.show()
+	panel.Close("LoginPanel_login")
+
+	local startHeroArr=TypeDB.toArray(TypeClasses.TYPE_STARTHERO)
+	med:SetList("obj_1/pane",startHeroArr)
+	med:SetInt("obj_1/pane",0)
+
+	heroPane.selectedData=startHeroArr[1]
+	updateHeroModel(startHeroArr[1].hero)
+	updateHeroInfo(startHeroArr[1])
+end
+
+function this.hide()
+	med:SetList("obj_1/pane",nil)
+
+end
+
+function this.initView(_,meditor)
+	med=meditor
+	med:AddListener("obj_2/btn_0",onBtnClick)
+	med:AddListener("obj_2/btn_1",onBtnClick)
+	med:AddListener("obj_3/btn",onBackBtnClick)
+
+	med:SetPaneFactory("obj_1/pane",heroItem)
+	heroPane=med:AddListener("obj_1/pane",onHeroItemClick)
+end
+
+return this

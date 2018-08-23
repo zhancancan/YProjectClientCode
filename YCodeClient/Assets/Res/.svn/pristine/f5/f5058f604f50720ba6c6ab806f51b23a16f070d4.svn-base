@@ -1,0 +1,29 @@
+local class=require "Class"
+local this =class("CmdMoveObject")
+local dbmgt= require "DataManager"
+local db =dbmgt.dbase
+local DataClasses = require "DataClasses"
+local table;
+local user = require "Data_Character"
+
+function this:ctor()
+	self.time = 0
+end
+-- - is self
+function this:execute(_)
+	self.stateName= "Move"
+	print("cmd CmdMoveObject")
+	if not table then table = db:getTable(DataClasses.DATA_SCENEOBJ) end
+
+	print(user._data.id)
+	if self.id ~= user._data.id then
+
+		local d =table:selectOne(self.id)
+		if d and d.entity then
+			d.entity:ChangeState(self)
+		end
+end
+
+end
+
+return this

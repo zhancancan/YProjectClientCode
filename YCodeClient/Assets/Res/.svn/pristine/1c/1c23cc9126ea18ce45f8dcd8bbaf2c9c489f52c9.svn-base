@@ -1,0 +1,47 @@
+local class 		= require "Class"
+local this 			= class("Data_SkillObj",require "Data")
+local Logger 		= require "Logger"
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+
+local table
+
+
+
+local function getType(self)
+	if not table then table = db.getTable(TypeClasses.TYPE_SKILL)	end
+
+	if self then
+		local skill = rawget(self,"skill")
+		if not skill then
+			print(self.skillId)
+			skill = table:selectOne({id=self.skillId})
+			rawset(self, "skill",skill)
+		end
+		return skill
+	end
+	return nil
+end
+
+
+
+local meta = {
+	__index = function(t,k)
+		if k == "name"  then
+			local  def = getType(t)
+			if def then return def.name end
+
+		elseif k == "skill" then
+			local  def = getType(t)--todo
+			if def then return def.skill end
+		end
+		return nil
+	end
+
+}
+
+function this:ctor()
+	setmetatable(self._data, meta)
+end
+
+return this

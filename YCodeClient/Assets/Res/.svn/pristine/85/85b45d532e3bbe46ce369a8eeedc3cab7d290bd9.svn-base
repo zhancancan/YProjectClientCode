@@ -1,0 +1,10 @@
+﻿using edit.pure.machine.core;
+using game.entity.game.machine;
+
+namespace plugins.machine.canvas.login.actions {
+    [MacActon(false, "Pick Server", new[] {typeof (LoginMachineChart)})]
+    internal class LogAct_PickServer : Mac_Action {
+        public override string actionType { get { return LoginCenter.ACT_PICK_SERVER; } }
+        public override string renderContent { get { return "Pick Sever"; } set { } }
+    }
+}

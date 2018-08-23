@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_yangguifei_HP" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_yangguifei_HP.tree" fileName="Fx_yangguifei_HP.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="-1">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="-1" duration="10" durationScaleType="-1" actionType="0" anim="Skill_0" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="-1" />
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="-1" duration="9.4" durationScaleType="-1" actionType="0" anim="Show" paramName="" paramType="9" paramValue="0" animTarget="1" bone="B_weapon_0" autoBlock="True" animatorScaleType="-1" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="-1" duration="0" durationScaleType="-1" delay="0" delayScaleType="-1" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/yangguifei/EP_yangguifei_0_hp_sp/EP_yangguifei_HP.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="10" durationScaleType="-1" animatorScaleType="-1" orientMode="1" dirMode="1" />
+      </cell>
+      <cell treeOpen="False" editName="" cellType="fxtimescale" groupPhase="0" time="8" timeScaleType="0" scaleType="-1" scale="0.1" phase="0" />
+      <cell treeOpen="False" editName="" cellType="fxtimescale" groupPhase="0" time="9" timeScaleType="0" scaleType="-1" scale="1" phase="0" />
+    </cell>
+  </cell>
+</Canvas>

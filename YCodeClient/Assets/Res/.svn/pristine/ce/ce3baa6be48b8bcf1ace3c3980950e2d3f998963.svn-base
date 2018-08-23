@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_xiaoqiao_skill_0" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_xiaoqiao_skill_0.tree" fileName="Fx_xiaoqiao_skill_0.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="0.73" durationScaleType="0" actionType="0" anim="Skill_0" paramName="" paramType="0" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="hudie" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0.5" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/xiaoqiao/EP_xiaoqiao_0_sp/EP_xiaoqiao_skill_2.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.6" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="weapon_0" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0.5" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/xiaoqiao/EP_xiaoqiao_0_sp/EP_xiaoqiao_skill_2_weapon.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="0.7" durationScaleType="0" boneName="B_weapon_0" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="True" editName="bullet_0" cellType="emitnormal" groupPhase="0" time="0.3" timeScaleType="0" duration="0.5" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/xiaoqiao/EP_xiaoqiao_0_sp/EP_xiaoqiao_skill_045_bullet.prefab" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="1" minArea="0:0:0" maxArea="0:0:0" offset="0:1.5:0" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="2" minArea="0:0:0" maxArea="0:0:0" offset="0:1.5:0.2" />
+        <cell treeOpen="False" editName="" cellType="parabola" groupPhase="0" velocity="0:20:19" gravity="0:60:0" orientMode="2" speedScaleType="0" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.2" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

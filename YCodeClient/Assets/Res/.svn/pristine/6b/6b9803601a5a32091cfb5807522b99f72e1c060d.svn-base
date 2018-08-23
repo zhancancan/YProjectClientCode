@@ -1,0 +1,53 @@
+﻿using LuaInterface;
+using pure.database.structure.tree;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.TEST_MOVE)]
+    public class AICommand_TestMove : CpxAction {
+        public override RpxAction GetRuntime() {
+            return new Runtime(this);
+        }
+
+        private class Runtime : ModelCommandImpl {
+            private Vector3 _dest;
+            private Vector3 _offset;
+            private long _prevTime = -1;
+
+            internal Runtime(CpxAction s) : base(s) {
+            }
+
+            public override void Enter() {
+                LuaTable tb = machine.GetRuntimeData<LuaTable>(CpxState.TEMP_DATA);
+                _offset = new Vector3(
+                    tb.RawGet<string, float>("x"),
+                    tb.RawGet<string, float>("y"),
+                    tb.RawGet<string, float>("z"));
+                _dest = model.position;
+                Vector3 p = _dest + _offset;
+                model.MoveTo(p);
+                _status = CompStatus.RUNING;
+            }
+
+            public override void UpdateNow(long now) {
+                if (!running) return;
+                if (_prevTime == -1) _prevTime = now;
+                float pass = (now - _prevTime)*0.001f*5;
+                Vector3 p = model.position;
+                Vector3 dir = _dest - p;
+                if (pass >= dir.magnitude) {
+                    model.MoveTo(_dest);
+                    _status = CompStatus.COMPLETE;
+                } else {
+                    p += dir.normalized*pass;
+                    model.MoveTo(p);
+                }
+            }
+
+            public override void Exit() {
+            }
+        }
+    }
+}

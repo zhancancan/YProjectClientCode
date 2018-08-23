@@ -1,0 +1,20 @@
+local class 		= require "Class"
+local base 			= require "Data_Action"
+local this 			= class("Data_CmdCast",base)
+local TypeClasses 	= require "TypeClasses"
+local db 			= require "TypeDB"
+local log			= require "Logger"
+
+-- - is self
+function this:execute(_)
+
+	local d = self.table:selectOne(self.id)
+	if d and d.entity then
+		self.stateName = "Dead"
+		d.entity:AddBuff(buff)
+	end
+
+
+end
+
+return this

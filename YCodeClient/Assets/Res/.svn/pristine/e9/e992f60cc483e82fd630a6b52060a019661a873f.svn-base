@@ -1,0 +1,212 @@
+local this={}
+
+local namspace 		= require "CSNamespace"
+local ChatStatus 	= namspace["ChatStatus"]
+local PanelManager 	= namspace["PanelManager"]
+
+require "MessageChannel"
+local Channels= _G["Channels"]
+local med
+local emoPanel
+local channelPane
+local input
+-- local settingPanel
+
+
+local SocketForm 		= require "SocketForm"
+local CommandClasses 	= require "CommandClasses"
+local manager 			= require "MessageManager"
+local debugMsgCenter 	= require "DebugMessageCenter"
+local lang 				= require "LangManager"
+local log 				= require "Logger"
+local gameTicker    	= require "GameTicker"
+
+
+local _currentChannel;
+local emoList
+local sendButton
+local _buttonState = 0--0=active 1=worldForbbiden
+local _isVis
+
+local _meta ={}
+function _meta.onCbChanged(_,selected)
+	med:SetActive("txt",selected)
+end
+
+function _meta.onChannelChanged(_,evt)
+	_currentChannel=evt.data
+	_meta.updateChannel()
+
+end
+function _meta.updateChannel()
+	med:SetActive("btn_0",_currentChannel.channel==Channels.HELP)
+	med:SetActive("cb",_currentChannel.keepVoice>0)
+	_meta.updateButtonInfo()
+end
+
+function _meta.voiceRecord(status,packet)
+	if status == ChatStatus.Start then
+		PanelManager.Open("VoicePanel_social")
+	else
+		PanelManager.Close("VoicePanel_social")
+	end
+end
+function _meta.onBnttonClick(n)
+	if n=="btn_1"then
+		-- print("emoPanel.active ",emoPanel.active)
+		if emoPanel.active then	emoPanel:Hide()	else emoPanel:Show() end
+	elseif n =="btn_0" then
+
+	end
+end
+function _meta.onEmoClick(_,evt)
+	local d =evt.data
+	input:Insert("("..d.key..")")
+	if d.immediateSend == 1 then _meta.submit() end
+
+end
+function _meta.submit()
+	local txt = input.text
+	if #txt<=0 then return end
+	_meta.ensureEmoList();
+	for i=1,#emoList do
+		local e=emoList[i]
+		local k = "%("..e.key.."%)"
+		local rep = "{e:"..e.id.."}"
+		txt=string.gsub(txt,k,rep)
+	end
+
+	-- local form = SocketForm()
+	-- form.method = CommandClasses.ChatRequest
+	-- form.channel = _currentChannel.channel
+	-- form.msgType=0
+	-- form.description = txt
+	-- form:send()
+
+	
+
+	if debugMsgCenter.debugHoldMessage(txt) >= 0 then-->0:no debug hold,=0:match debug,<0:txt has problem
+		if _meta.holdSCMDMessage(txt) == 0 then
+			_meta.sendMessage(txt)
+		end
+	end
+	
+end
+
+function _meta.holdSCMDMessage(content)
+	local m = "scmd%s(%w+)"
+	local pk = string.match(content,m)
+	if not pk then return 0 end
+
+	local form = SocketForm()
+	form.method = CommandClasses.Command
+	form.cmd = pk
+	form:send()
+	log:log("to send scmd  .cmd:",pk)
+
+	return -1
+end
+
+function _meta.sendMessage(content)
+	if not med.active then return end
+
+	if _currentChannel.channel == Channels.WORLD and _buttonState == 1 then
+		log:error("wait a moment~then try send again")
+		return
+	end
+	--todo ,to do
+	--form info shall be right
+	local form = SocketForm()
+	form.method = CommandClasses.ChatRequest
+
+	form.channel = _currentChannel.channel
+	form.msgType = 0--todo
+	form.description = content
+	form.toUserName = nil--todo
+	form.toUserId = nil--todo
+	form.media = nil--todo
+
+	form:send()
+
+	if _currentChannel.channel == Channels.WORLD and _buttonState == 0 then
+		--
+		_meta.switchLockButton()
+		-- manager.startCountdown(60,_meta.updateButtonInfo)
+		manager:doSendWorldMsgInterval(_meta.switchLockButton)
+	end
+
+end
+
+function _meta.switchLockButton(pUnlock)
+	if pUnlock then
+		_buttonState = 0
+	else
+		_buttonState = 1
+	end
+end
+
+function _meta.updateButtonInfo(pTime)
+	if not _isVis then return end
+	pTime = manager.getCountDown()
+	if _buttonState == 1 and _currentChannel.channel == Channels.WORLD then
+		local str = string.format("%d s",pTime)
+		-- local str = lang.format("Preload.sceneLoad",pTime)
+		if pTime <=0 then
+			_meta.switchLockButton(true)
+			str = lang.get("LoginPanel_preloading.btn_0")
+		end
+		-- med:SetString("btn_2",str)
+	else
+		local str = lang.get("Preload.copy")
+		-- med:SetString("btn_2",str)
+	end
+end
+
+
+function _meta.ensureEmoList()
+	if not emoList then
+		local db = require "TypeDB"
+		local classes = require "TypeClasses"
+		emoList=db.toArray(classes.TYPE_EMOTE)
+	end
+end
+
+--------------------------mediator
+function this.show()
+	_currentChannel = channelPane.selectedData
+	_meta.updateChannel()
+	_isVis = true
+end
+
+function this.hide()
+	_currentChannel=nil
+	_isVis = false
+end
+
+function this:initView(mediator)
+	med=mediator
+	med:AddListener("btn_0",_meta.onBnttonClick)
+	med:AddListener("btn_1",_meta.onBnttonClick)
+	med:AddListener("btn_2",_meta.submit)
+	med:AddListener("btn_3",_meta.voiceRecord)
+	med:AddListener("cb",	_meta.onCbChanged)
+	input=med:GetUI("txt")
+	sendButton = med:GetUI("btn_2")
+	emoPanel = med:GetSibling("sub_1")
+	emoPanel:AddListener("pane_1",_meta.onEmoClick)
+	channelPane=med:GetSibling("sub_0"):AddListener("pane_0",_meta.onChannelChanged)
+
+
+end
+
+
+
+
+function this.destroyView()
+	emoPanel=nil
+	channelPane =nil
+end
+
+------------for Debug
+
+return this;

@@ -1,0 +1,125 @@
+-- local class = _G["class"]
+-- -- local base = require "EventDispatcher"
+-- -- local this = class("DebugMessageCenter",base).new()
+-- local this = class("DebugMessageCenter").new()
+
+local this = {debugMode = 1}
+
+-- local debugMode = 1
+
+---------
+local _debugWords = require "DebugWords"
+
+function this.debugHoldMessage(inputContent)
+	if debugMode <= 0 then return 1 end
+
+	if #inputContent <= 0 then
+		return -1
+	end
+	-- print("debug holdMessage")
+	local upper = inputContent
+	-- local upper = string.upper(inputContent)
+
+	local m = "CMD%s(%w+)%((%d*)%)"
+	local pk,pv = string.match(upper,m)
+
+	if not pk then
+		m = "CMD%s(%w+)%s*(%d*)"
+		pk = string.match(upper,m)
+	end
+	-- print(pk)
+	-- print(pv)
+	if pk then
+		local matched = false
+		local fn = _debugWords.funs[pk]
+		if fn ~= nil then
+			if type(fn) == "function" then
+				fn(pv)
+				_debugWords.showSystemMessage(debugMode,pk,pv)
+				matched = true
+			end
+		end
+		if not matched then
+			for _,item in pairs(_debugWords.msg) do
+				if item.key == pk then
+					if item.func and type(item.func) == "function" then
+						item.func(pk,pv)
+					end
+					_debugWords.showSystemMessage(debugMode,pk,pv)
+					matched = true
+					break
+				end
+			end
+		end
+		if matched then return 0 end
+	end
+	
+	
+
+	return 1
+end
+
+----socket message
+local center = require "ProxyCenter"
+-- local SocketForm = require "SocketForm"
+-- local CommandClasses = require "CommandClasses"
+-- function this.socketSend()
+-- 	local form = SocketForm()
+-- 	form.method = CommandClasses.ChatRequest
+-- 	form.channel = _currentChannel.channel
+-- 	form.msgType=0
+-- 	form.description = txt
+-- 	form:send()
+-- end
+
+---socket debug recv
+--debug change scene
+function this.debugChangeScene(data)
+	if debugMode <= 0 then return 1 end
+	if not data then return 1 end
+
+	local place = {}
+	for k,v in pairs(data) do
+		if k ~= "name" then
+			place[k] = v
+			-- print(k,v)
+		end
+	end
+
+	place.sceneType = 0
+	-- place.id = 1
+
+	local player ={
+		id="12",
+		name="haha",
+		body="Assets/Res/Arts/Role/Hero/lvbu/lvbu_0_sp/RP_lvbu_0.prefab",
+		position={x=25,y=7,z=52},
+		speed=6
+	}
+	local character ={
+		id="12",
+		name="haha"
+	}
+	local t=center.serialize(
+		{
+			{code=60006,data=place},
+			{code=60004,data=player},
+			{code=60003,data=character}
+		}
+	)
+	center.parse({buffer=t},-1)
+
+end
+
+-----------------
+function this.init()
+	this.initTestLoginData()
+end
+
+function this.initTestLoginData()
+	
+end
+
+
+this.init()
+return this

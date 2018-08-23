@@ -1,0 +1,70 @@
+local this ={}
+local center 			= require "ProxyCenter"
+local SocketForm 		= require "SocketForm"
+local CommandClasses 	= require "CommandClasses"
+local namespace 		= require "CSNamespace"
+local server 			= namespace["LuaServer"]
+local Logger 			= require "Logger"
+
+function this.run()
+	Logger:log("test login")
+	server.Connect("192.168.0.218",17001)
+
+	local form = SocketForm()
+	form.method =CommandClasses.UserLogin
+	form.type = 1
+	form.code="phil"
+	form.zoneId=1
+	form:send()
+
+
+	local place = {id=1,sceneType=0,placeFile="xinshou"}
+	local player ={
+		id="12",
+		name="haha",
+		body="RP_lvbu_0",
+		-- position={x=25,y=7,z=52},
+		position={x=38.8,y=27.5,z=54.6},
+		speed=6
+	}
+	-- local character ={
+	-- 	id="12",
+	-- 	name="haha"
+	-- }
+	local character ={
+		id="12",
+		heroId = "2",
+		isRemove=false,
+		level = 1,
+		exp = 2,
+		loginTime = os.time(),
+		lastLoginTime = os.time(),
+		lastLogoutTime = os.time(),
+	}
+	local t=center.serialize(
+		{
+			{code=60006,data=place},
+			{code=60004,data=player},
+			{code=90002,data=character}
+		}
+	)
+	center.parse({buffer=t},-1)
+
+
+
+
+	local manager = require "MessageManager"
+	local Channels= _G["Channels"]
+	local str="hello[e:1]world[e:3]test"
+	-- str = "hello"
+	local obj={channel=Channels.WORLD,senderId="12",name="hehehe",msgString=str,msgType=0,time=SystemTime.time}
+	for  i=1,40 do
+		local m =setmetatable({},{__index=obj})
+		m.senderName="haha_"..i
+		if math.random()>0.5 then m.senderId ="12" else m.senderId="124" end
+		-- if math.random()>0.5 then m.msgString="abcdefg" end
+		manager.add(m)
+	end
+end
+
+return this

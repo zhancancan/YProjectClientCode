@@ -1,0 +1,40 @@
+local class = require "Class"
+local this = class("Test Lua Action")
+
+local namespace = require "CSNamespace"
+local CompStatus = namespace["CompStatus"]
+local co = require "coroutine"
+local log = require "Logger"
+require "GameTicker"
+local  sys = _G["SystemTime"]
+function this:enter(c)
+	self.action =c
+	self._coupdate=co.start(self.execute,self)
+	co.start(self._wait,self,2)
+	self._prev=sys.time
+	self._startTime=sys.time
+end
+function this:execute()
+	local c=0
+	while true do
+		c=c+1
+		co.wait(0.1)
+		-- log:log("execute ",c,sys.time-self._prev,sys.time- self._startTime)
+		self._prev =sys.time
+	end
+end
+function this:_wait(d)
+	co.wait(d)
+	self.action:SetStatus(CompStatus.COMPLETE)
+	if self._coupdate~=nil then
+		co.stop(self._coupdate)
+		log:log("stop coroutine :" , self._coupdate)
+		self._coupdate=nil
+	end
+end
+function this:exit()
+	self.action=nil
+
+end
+
+return this;

@@ -1,0 +1,44 @@
+﻿using System;
+using LuaInterface;
+using pure.ai.aimachine.runner;
+using pure.asset.manager.utils;
+using pure.database.structure.tree;
+using pure.entity.interfaces;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using pure.treeComp.firefx.core;
+using pure.utils.debug;
+using pure.utils.mathTools;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.HEALTH)]
+    public class AICommand_Health : CpxAction {
+        public override RpxAction GetRuntime() {
+            return RpxPool<Runtime>.Get().SetSource(this);
+        }
+
+        private class Runtime : ModelCommandImpl<AICommand_Health> {
+
+            protected override void OnEnter() {
+                Debug.Log("aicmd health onEnter todo");
+                object obj = machine.GetRuntimeData<object>(CpxState.TEMP_DATA);
+                if (obj == null) {
+                    GlobalLogger.LogError("no setting data retrieved");
+                    return;
+                }
+                _status = CompStatus.COMPLETE;
+
+            }
+
+
+            private void OnComplete() {
+                _status = CompStatus.COMPLETE;
+            }
+
+            protected override void OnExit() {
+                RpxPool<Runtime>.Release(this);
+            }
+        }
+    }
+}

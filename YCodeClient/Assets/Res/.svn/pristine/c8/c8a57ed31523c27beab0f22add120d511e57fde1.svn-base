@@ -1,0 +1,23 @@
+local TableEvent={}
+TableEvent.UPDATE 	= "table:update"
+TableEvent.INSERT 	= "Table:insert"
+TableEvent.REMOVE 	= "table:remove"
+_G["TableEvent"] 	= TableEvent
+
+
+local UIEvent={}
+UIEvent.CHANGE 		= 1
+UIEvent.CLICK 		= 2
+UIEvent.DRAG 		= 3
+UIEvent.DROP 		= 4
+UIEvent.LIST_CLICK 	= 5
+_G["UIEvent"] 		= UIEvent
+
+local DragStatus={}
+DragStatus.START 	= 1
+DragStatus.DRAG 	= 2
+DragStatus.END 		= 3
+DragStatus.FAIL 	= 4
+_G["DragStatus"] 	= DragStatus
+
+

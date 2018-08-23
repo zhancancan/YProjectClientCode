@@ -1,0 +1,30 @@
+local class 		= require "Class"
+local base			= require "ModelProxy"
+local this 			= class("Proxy_Player",base)
+local namespace 	= require "CSNamespace"
+local app 			= require "AppCenter";
+
+function this:pushData(buffer,_)
+	local isNew,data=self:_push(buffer,serverId)
+	if not data then return end
+	
+	if isNew then
+		local model =namespace["Data_ModelLua"].new
+
+		local id = data._data.id
+		if id == app.playerId then
+			data._data.isHost = true
+			data._data.ai="hostMachine_0"
+			local o = model(data)
+			data.model=o
+		else
+			data._data.isHost = false
+			data._data.ai="hostMachine_0"--shall be other
+			local o = model(data)
+			data.model=o
+		end
+
+	end
+end
+
+return this

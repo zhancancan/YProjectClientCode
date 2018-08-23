@@ -1,0 +1,53 @@
+local this={}
+local med
+
+local class 			= require "Class"
+local TypeClasses		= require "TypeClasses"
+local typeDB			= require "TypeDB"
+local ns 				= require "CSNamespace"
+local panelManager  	= ns.PanelManager
+
+local error				= require "ErrorCenter"
+local log 				= require "Logger"
+
+local data_questState   = require "Data_UserQuestState"
+
+local quest
+
+--Mediator
+local function  onErrorReceived(err)
+	log.log("create med", err.code, err.msg)
+end
+
+local function onSubQuestBtnClick(n)
+	if n=="btn" then
+		local typeSubeQuestId = quest.subQuest
+		local subQuestId = data_questState.subQuestId
+		-- if subQuestId ~= nil and typeSubeQuestId ~= subQuestId then
+			panelManager.Open("SubTaskPanel_Achievement",subQuestId)
+		-- end
+	else
+		panelManager.Open("TaskChapterPanel_Achievement",subQuestId)
+	end
+end
+
+function this.show()
+	error.addListener(onErrorReceived,this)
+    local questId = data_questState.questId
+	if questId ~= nil then
+		quest = typeDB.selectOne(TypeClasses.TYPE_QUEST,questId)
+		med:SetString("txt",quest.name)
+	end
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+end
+
+function this.initView(_,meditor)
+	med = meditor
+	med:AddListener("btn",onSubQuestBtnClick)
+	med:AddListener("btn_0",onSubQuestBtnClick)
+end
+
+return this

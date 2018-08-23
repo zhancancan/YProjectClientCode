@@ -1,0 +1,5 @@
+local class = require "Class"
+local this =class("Data_Player",require "Data")
+
+
+return this

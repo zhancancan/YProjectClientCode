@@ -1,0 +1,37 @@
+
+/*-------------------------------------actioin-------------------------------------*/
+/*-------------------------------------支持的消息------------------------------------*/
+//action为c#的machine.rpxaction,可以查看machine/text/TestLuaAction
+lua:onEnter(RpxAction action)
+
+lua:onUpdate(double now)
+
+lua：onExit()
+
+
+
+/*------------------------------------c#支持的调用-----------------------------------*/
+//设置acton的statuc, status枚举 可以通过CSNamespace获取
+c# action:SetStatus(Compostatus status)
+
+
+
+/*-------------------------------------condition-------------------------------------*/
+
+/*-------------------------------------支持的消息------------------------------------*/
+//condition#的machine.rpxCondtiion,可以查看machine/text/TestLuaCondition
+lua:onEnter(RpxCondition condition)
+
+lua:onUpdate(double now)
+
+lua:onExit()
+//返回条件是否成立,每帧调用
+lua:bool checkValidate(double now ,dboule triggerId)
+
+/*------------------------------------c#支持的调用-----------------------------------*/
+//设置 condition 的 结果,
+c# action:SetResult(bool result)
+
+
+
+

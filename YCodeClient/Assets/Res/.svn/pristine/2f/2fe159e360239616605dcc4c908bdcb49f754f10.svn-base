@@ -1,0 +1,21 @@
+local class = require "Class"
+
+local base = require "SingleProxy"
+local this = class("Proxy_Character",base)
+
+function this:ctor()
+	self.__tostring=function()return "[Proxy_Character]" end
+	self._inited=false
+end
+
+
+function this:pushData(buffer,serverId)
+	self:__push(buffer,serverId,self._inited)
+	if not self._inited then
+		local c = require "AppCenter";
+		c.playerId=self._data.id
+		self._inited=true
+	end
+end
+
+return this

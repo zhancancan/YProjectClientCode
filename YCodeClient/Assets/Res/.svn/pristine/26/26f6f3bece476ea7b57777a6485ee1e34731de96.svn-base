@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_shuangzi_jiejie_skill_0" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_shuangzi_jiejie_skill_0.tree" fileName="Fx_shuangzi_jiejie_skill_0.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="1.84" durationScaleType="0" actionType="0" anim="Skill_0" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/shuangzi_jiejie/EP_shuangzi_jiejie_sp/EP_shuangzi_jiejie_skill_0.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="1.84" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

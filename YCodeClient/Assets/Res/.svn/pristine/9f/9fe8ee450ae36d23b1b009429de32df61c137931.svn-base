@@ -1,0 +1,12 @@
+
+local class = require "Class"
+local base	= require "UnsaveProxy"
+local this 	= class("Proxy_Error",base)
+
+function this:pushData(buffer,_)
+	local data=self:_parseData(buffer)
+	if not data then return end
+	-- to do: handle the data_error
+end
+
+return this

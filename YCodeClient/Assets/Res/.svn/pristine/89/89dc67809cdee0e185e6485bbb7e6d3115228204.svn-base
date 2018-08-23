@@ -1,0 +1,1850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<table name ="AoE">
+		<data id="aoe_for_test" prefab="" tag="test,debug" tickTime="3000" onCreate="Aoe_Test" onRemoved="Aoe_Test" onTick="Aoe_Test" onChaEnter="Aoe_Test" onChaLeave="Aoe_Test" onAoeEnter="Aoe_Test" onAoeLeave="Aoe_Test" />
+		<data id="hero_liguang_piercingArrow" prefab="EP_liguang_skill_1_bullet" tag="" tickTime="0" onCreate="" onRemoved="Aoe_Hero_Liguang_PiercingArrow()" onTick="" onChaEnter="" onChaLeave="" onAoeEnter="" onAoeLeave="" />
+		<data id="hero_liguang_trap" prefab="EP_liguang_skill_2_xianjing" tag="" tickTime="0" onCreate="" onRemoved="Aoe_UtilEffect_CreateAoeHere(hero_liguang_trapCanBeTriggered, 1.0, 30000)" onTick="" onChaEnter="" onChaLeave="" onAoeEnter="" onAoeLeave="" />
+		<data id="hero_liguang_trapCanBeTriggered" prefab="EP_liguang_skill_2_shouji" tag="" tickTime="0" onCreate="" onRemoved="" onTick="" onChaEnter="Aoe_Hero_Liguang_Trap()" onChaLeave="" onAoeEnter="" onAoeLeave="" />
+	</table>
+
+	<table name ="BattleInfo">
+		<data id="0" name="" artKey="" maxCount="0" />
+		<data id="1" name="{0}" artKey="damage" maxCount="6" />
+		<data id="10" name="{3}" artKey="immune" maxCount="1" />
+		<data id="11" name="{4}" artKey="absorb" maxCount="1" />
+		<data id="2" name="{0}" artKey="healing" maxCount="6" />
+		<data id="3" name="{0}" artKey="criticaldamage" maxCount="1" />
+		<data id="4" name="{0}" artKey="criticalhealing" maxCount="1" />
+		<data id="5" name="{0}" artKey="dot" maxCount="6" />
+		<data id="6" name="{0}" artKey="criticaldot" maxCount="6" />
+		<data id="7" name="{0}" artKey="warningdamage" maxCount="3" />
+		<data id="8" name="{1}" artKey="shield" maxCount="1" />
+		<data id="9" name="{2}" artKey="dodge" maxCount="6" />
+	</table>
+
+	<table name ="Buff">
+		<data id="buff_for_test" name="测试用buff" tag="test,debug" icon="NullIcon" prefab="" tickTime="3000" priority="10" maxStack="3" propertyModify="(BuffedPlus,attack,100) (BuffedPlus,health,4004) (BuffedTimes,attack,10000)" stateModify="" desc="就测试用用的，别当真" onOccur="Buff_Test" onRemoved="Buff_Test" onTick="Buff_Test" onHit="Buff_Test" onBeHurt="Buff_Test" onKill="Buff_Test" onBeforeKilled="Buff_Test" />
+		<data id="hero_liguang_likeMountain" name="如山" tag="" icon="" prefab="" tickTime="0" priority="0" maxStack="5" propertyModify="" stateModify="" desc="暴击率提升2%，每一层" onOccur="" onRemoved="" onTick="" onHit="" onBeHurt="" onKill="" onBeforeKilled="" />
+		<data id="hero_liguang_noMove" name="不动" tag="" icon="NullIcon" prefab="" tickTime="0" priority="0" maxStack="1" propertyModify="" stateModify="" desc="如果不动，获得暴击提升的如山效果" onOccur="" onRemoved="Buff_Util_CarrierAddBuff(hero_liguang_likeMountain,-999999,0)" onTick="Buff_Util_CarrierAddBuff(hero_liguang_likeMountain,1,3600000)" onHit="" onBeHurt="" onKill="" onBeforeKilled="" />
+		<data id="hero_liguang_steadyShoot" name="蹲射" tag="" icon="NullIcon" prefab="" tickTime="0" priority="0" maxStack="1" propertyModify="" stateModify="" desc="技能冷却缩短，无法移动" onOccur="" onRemoved="" onTick="Buff_Util_ModifySkillCooldown(skill1,1000,skill2,1000)" onHit="" onBeHurt="" onKill="" onBeforeKilled="" />
+	</table>
+
+	<table name ="Bullet">
+		<data id="bullet_for_test" fx="" tag="test,debug" msPerMeter="0" maxDuration="0" onHit="" onRemoved="" />
+	</table>
+
+	<table name ="ChatChannel">
+		<data id="1" name="通用" canBeSelected="0" keepWord="50" keepVoice="10" fontColor="#000000FF" voiceLength="10000" canSendMessage="0" />
+		<data id="2" name="世界" canBeSelected="1" keepWord="50" keepVoice="5" fontColor="#FFFFFFFF" voiceLength="10000" canSendMessage="1" />
+		<data id="3" name="当前" canBeSelected="1" keepWord="50" keepVoice="5" fontColor="#AAAAFFFF" voiceLength="10000" canSendMessage="1" />
+		<data id="4" name="帮会" canBeSelected="1" keepWord="50" keepVoice="10" fontColor="#32DCFFFF" voiceLength="10000" canSendMessage="1" />
+		<data id="5" name="私聊" canBeSelected="1" keepWord="50" keepVoice="10" fontColor="#00FF32FF" voiceLength="10000" canSendMessage="1" />
+		<data id="6" name="求援" canBeSelected="1" keepWord="50" keepVoice="0" fontColor="#FFA000FF" voiceLength="0" canSendMessage="0" />
+		<data id="7" name="系统" canBeSelected="1" keepWord="50" keepVoice="0" fontColor="#FF3C3CFF" voiceLength="0" canSendMessage="0" />
+	</table>
+
+	<table name ="ControlState">
+		<data id="0" key="banMove" description="禁止移动" />
+		<data id="1" key="banCast" description="禁止施法" />
+		<data id="2" key="banTurn" description="禁止转身" />
+		<data id="3" key="banUseItem" description="禁止用道具（药水）" />
+		<data id="4" key="invincible" description="无敌" />
+		<data id="5" key="confused" description="混乱" />
+	</table>
+
+	<table name ="Currency">
+		<data id="1" key="gold" name="金币" icon="" maxCount="200000000" startCount="1000" />
+		<data id="2" key="diamond" name="钻石" icon="" maxCount="200000000" startCount="100" />
+	</table>
+
+	<table name ="Emote">
+		<data id="1" key="大笑" icon="NullIcon" isSmall="1" isAnim="0" immediateSend="0" tabIndex="1" />
+		<data id="2" key="呵呵" icon="NullIcon" isSmall="1" isAnim="1" immediateSend="1" tabIndex="2" />
+		<data id="3" key="沮丧" icon="NullIcon" isSmall="0" isAnim="0" immediateSend="1" tabIndex="1" />
+	</table>
+
+	<table name ="EmoteTab">
+		<data id="1" icon="NullIcon" />
+		<data id="2" icon="NullIcon" />
+	</table>
+
+	<table name ="Equipment">
+		<data id="equip_libin" name="李斌的三角裤" icon="NullIcon" tag="Test" part="3" level="100" quality="5" buff="" />
+	</table>
+
+	<table name ="Exp">
+		<data id="1" key="exp" name="经验" icon="NullIcon" />
+		<data id="2" key="valor" name="勇猛" icon="NullIcon" />
+		<data id="3" key="steady" name="固守" icon="NullIcon" />
+		<data id="4" key="agility" name="灵敏" icon="NullIcon" />
+		<data id="5" key="clever" name="精明" icon="NullIcon" />
+	</table>
+
+	<table name ="Hero">
+		<data id="Baiqi" name="白起" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="baiqi" heroType="saber" buff="" tag="" />
+		<data id="Caoren" name="曹仁" property="(Hero,health,150) (Hero,defense,150) (Hero,attack,50) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="caoren" heroType="rider" buff="" tag="" />
+		<data id="Daji" name="妲己" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="daji" heroType="rider" buff="" tag="" />
+		<data id="Daqiao" name="大乔" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="daqiao" heroType="lancer" buff="" tag="" />
+		<data id="Diaochan" name="貂蝉" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="diaochan" heroType="archer" buff="" tag="" />
+		<data id="Guiguzi" name="鬼谷子" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="guiguzi" heroType="archer" buff="" tag="" />
+		<data id="Huamulan" name="花木兰" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="huamulan" heroType="lancer" buff="" tag="" />
+		<data id="Jingke" name="荆轲" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="jingke" heroType="lancer" buff="" tag="" />
+		<data id="Libai" name="李白" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="libai" heroType="assassin" buff="" tag="" />
+		<data id="Liguang" name="李广" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="Liguang_piercingArrow,Liguang_trap,Liguang_sniper" artKey="liguang" heroType="archer" buff="hero_liguang_likeMountain" tag="" />
+		<data id="Lixiaolong" name="李小龙" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="yangyuhuan" heroType="assassin" buff="" tag="" />
+		<data id="Liyuanba" name="李元霸" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="liyuanba" heroType="assassin" buff="" tag="" />
+		<data id="Lvbu" name="吕布" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="lvbu" heroType="assassin" buff="" tag="" />
+		<data id="Miyue" name="芈月" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="miyue" heroType="saber" buff="" tag="" />
+		<data id="Mozi" name="墨子" property="(Hero,health,150) (Hero,defense,150) (Hero,attack,50) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="mozi" heroType="saber" buff="" tag="" />
+		<data id="Nezha" name="哪吒" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="yangyuhuan" heroType="rider" buff="" tag="" />
+		<data id="Qingshihuang" name="秦始皇" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="qinshihuang" heroType="rider" buff="" tag="" />
+		<data id="Xiaoqiao" name="小乔" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="xiaoqiao" heroType="lancer" buff="" tag="" />
+		<data id="Yangyuhuan" name="杨玉环" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="yangyuhuan" heroType="archer" buff="" tag="" />
+		<data id="Zhangliang" name="张良" property="(Hero,health,50) (Hero,defense,50) (Hero,attack,150) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="zhangliang" heroType="saber" buff="" tag="" />
+		<data id="Zhaoyun" name="赵云" property="(Hero,health,100) (Hero,defense,100) (Hero,attack,100) (Hero,criticalRate,100) (Hero,criticalDamage,100)" skills="" artKey="zhaoyun" heroType="assassin" buff="" tag="" />
+	</table>
+
+	<table name ="HeroType">
+		<data id="archer" name="弓兵" icon="NullIcon" />
+		<data id="assassin" name="刺客" icon="NullIcon" />
+		<data id="lancer" name="枪兵" icon="NullIcon" />
+		<data id="rider" name="骑兵" icon="NullIcon" />
+		<data id="saber" name="剑士" icon="NullIcon" />
+	</table>
+
+	<table name ="Item">
+		<data id="armor" name="装甲" icon="test" tag="" maxCount="99" effect="" desc="铁制的板甲" />
+		<data id="gear" name="齿轮" icon="test" tag="" maxCount="99" effect="" desc="机械齿轮" />
+		<data id="Hide" name="兽皮" icon="test" tag="" maxCount="99" effect="" desc="野兽的毛皮" />
+		<data id="Paws" name="爪子" icon="test" tag="" maxCount="99" effect="" desc="锋利的爪子" />
+	</table>
+
+	<table name ="MainQuest">
+		<data id="1" step="1" questId="Kill_Libai" />
+		<data id="2" step="2" questId="Wake" />
+		<data id="3" step="3" questId="Leather_Understand" />
+		<data id="4" step="4" questId="Test_Power" />
+		<data id="5" step="5" questId="Dragon_Hunter" />
+		<data id="6" step="6" questId="Machinist_Drawings" />
+		<data id="7" step="7" questId="Love" />
+		<data id="8" step="8" questId="Hunt" />
+		<data id="9" step="9" questId="Assassination" />
+		<data id="10" step="10" questId="Missing" />
+		<data id="11" step="11" questId="Doubt" />
+		<data id="12" step="12" questId="Rebel" />
+		<data id="13" step="13" questId="Variation" />
+		<data id="14" step="14" questId="Variation02" />
+		<data id="15" step="15" questId="Examine" />
+		<data id="16" step="16" questId="Observer" />
+		<data id="17" step="17" questId="Reveal" />
+		<data id="18" step="18" questId="aware" />
+		<data id="19" step="19" questId="deep" />
+		<data id="20" step="20" questId="what" />
+		<data id="21" step="21" questId="Yum_memory" />
+		<data id="22" step="22" questId="Yum_memory2" />
+		<data id="23" step="23" questId="Yum_memory3" />
+		<data id="24" step="24" questId="Android_inherited" />
+		<data id="25" step="25" questId="Hunt3" />
+		<data id="26" step="26" questId="hero_Hunter" />
+		<data id="27" step="27" questId="new_Android" />
+	</table>
+
+	<table name ="NPC">
+		<data id="aeader_woaf" name="头狼" type="1" attackRank="6" defenseRank="4" healthRank="6" speedRank="7" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="bailang" />
+		<data id="archer" name="弓箭手" type="0" attackRank="7" defenseRank="4" healthRank="4" speedRank="2" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan" lootId="" artkey="gongjian" />
+		<data id="arena" name="竞技场招待员·加安娜" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="lvbu" />
+		<data id="blacksmith" name="机械师·鲁达" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="lvbu" />
+		<data id="boss" name="BOSS招待员·烈炎" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="lvbu" />
+		<data id="boss_01" name="炎蛟" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="tunzhou" />
+		<data id="boss_02" name="吞舟" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="tunzhou" />
+		<data id="boss_03" name="暴怒机甲" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="baonujijia" />
+		<data id="boss_04" name="双子" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="tunzhou" />
+		<data id="boss_05" name="妖狐" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="jiuweihu" />
+		<data id="boss_06" name="暴怒者" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="baonu" />
+		<data id="boss_07" name="三头龙" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="tunzhou" />
+		<data id="boss_08" name="无冕者之影" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="tunzhou" />
+		<data id="boss_09" name="襄王神女" type="2" attackRank="10" defenseRank="10" healthRank="10" speedRank="10" exp="0" ai="" dialog="" tag="Leader" lootId="" artkey="tunzhou" />
+		<data id="brown_bear" name="棕熊" type="0" attackRank="7" defenseRank="7" healthRank="7" speedRank="6" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="zongxiong" />
+		<data id="businessman" name="商人·柯林" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="lvbu" />
+		<data id="cao_army_cavalry" name="曹军骑兵" type="0" attackRank="5" defenseRank="5" healthRank="6" speedRank="7" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan" lootId="" artkey="heavycavalry" />
+		<data id="cao_army_Infantry" name="曹军步兵" type="0" attackRank="4" defenseRank="4" healthRank="5" speedRank="5" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan" lootId="" artkey="shibing" />
+		<data id="cao_jun_shooter" name="曹军射手" type="0" attackRank="6" defenseRank="2" healthRank="3" speedRank="2" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan" lootId="" artkey="gongjian2" />
+		<data id="cao_ren" name="曹仁" type="2" attackRank="7" defenseRank="10" healthRank="9" speedRank="7" exp="0" ai="" dialog="" tag="Humanoid,Zhongyuan,Leader" lootId="" artkey="lvbu" />
+		<data id="captain_of_the_spy" name="密探队长" type="1" attackRank="7" defenseRank="3" healthRank="3" speedRank="7" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan,Leader" lootId="" artkey="spy" />
+		<data id="cateran_leader" name="山贼头目" type="1" attackRank="4" defenseRank="4" healthRank="6" speedRank="4" exp="0" ai="" dialog="" tag="Humanoid,Rogue,Leader" lootId="" artkey="shanzei" />
+		<data id="centurion" name="百夫长" type="1" attackRank="4" defenseRank="4" healthRank="6" speedRank="2" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan,Leader" lootId="" artkey="shibing1" />
+		<data id="commander_cao_jun" name="曹军指挥官" type="1" attackRank="8" defenseRank="7" healthRank="8" speedRank="6" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan,Leader" lootId="" artkey="heavycavalry" />
+		<data id="cool_cavalry" name="西凉骑兵" type="0" attackRank="6" defenseRank="4" healthRank="6" speedRank="8" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Barbarian" lootId="" artkey="scout" />
+		<data id="cool_commander" name="西凉指挥官" type="1" attackRank="6" defenseRank="5" healthRank="6" speedRank="8" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Barbarian,Leader" lootId="" artkey="scout" />
+		<data id="cool_infantry" name="西凉步兵" type="0" attackRank="5" defenseRank="3" healthRank="5" speedRank="5" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Barbarian" lootId="" artkey="slavesoldier" />
+		<data id="Data_manager" name="数据管理员·凯撒" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="lvbu" />
+		<data id="demon_fox" name="妖狐" type="0" attackRank="4" defenseRank="2" healthRank="4" speedRank="8" exp="0" ai="" dialog="" tag="Beast,Ghost" lootId="" artkey="jiuweihu" />
+		<data id="eyu" name="鳄鱼" type="0" attackRank="5" defenseRank="5" healthRank="5" speedRank="2" exp="0" ai="" dialog="" tag="Humanoid,Amphibious" lootId="" artkey="eyu" />
+		<data id="fear_guard" name="恐惧卫士" type="1" attackRank="7" defenseRank="6" healthRank="6" speedRank="6" exp="0" ai="" dialog="" tag="Ghost,Soldier" lootId="" artkey="fearwarrior" />
+		<data id="fish_man" name="鱼人" type="0" attackRank="3" defenseRank="3" healthRank="3" speedRank="1" exp="0" ai="" dialog="" tag="Ghost,Amphibious" lootId="" artkey="eyu" />
+		<data id="flame_element" name="烈焰之灵" type="1" attackRank="7" defenseRank="5" healthRank="5" speedRank="5" exp="0" ai="" dialog="" tag="Elemental,Leader" lootId="" artkey="icerock" />
+		<data id="general_cao_Jun" name="曹军将军（步兵）" type="1" attackRank="7" defenseRank="8" healthRank="8" speedRank="5" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan,Leader" lootId="" artkey="general_cao_Jun" />
+		<data id="ghosts" name="大水鬼" type="0" attackRank="5" defenseRank="5" healthRank="5" speedRank="2" exp="0" ai="" dialog="" tag="Ghost,Amphibious" lootId="" artkey="ghost" />
+		<data id="giant_apes" name="巨猿" type="2" attackRank="7" defenseRank="8" healthRank="10" speedRank="8" exp="0" ai="" dialog="" tag="Beast,Leader" lootId="" artkey="jianbing" />
+		<data id="giant_bear" name="巨熊" type="1" attackRank="7" defenseRank="8" healthRank="8" speedRank="5" exp="0" ai="" dialog="" tag="Beast,Leader" lootId="" artkey="ghostxiong" />
+		<data id="giant_beast" name="巨兽" type="1" attackRank="8" defenseRank="10" healthRank="10" speedRank="6" exp="0" ai="" dialog="" tag="Beast,Leader" lootId="" artkey="mengmaxiangbig" />
+		<data id="guard" name="卫兵" type="0" attackRank="5" defenseRank="5" healthRank="7" speedRank="3" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan" lootId="" artkey="shibing1" />
+		<data id="guard_captain" name="守卫队长" type="1" attackRank="5" defenseRank="5" healthRank="7" speedRank="3" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan,Leader" lootId="" artkey="shibing1" />
+		<data id="highway_man" name="山贼" type="0" attackRank="4" defenseRank="4" healthRank="6" speedRank="4" exp="0" ai="" dialog="" tag="Humanoid,Rogue" lootId="" artkey="shanzeiyi" />
+		<data id="huge_wooden_puppet" name="巨大木傀儡" type="1" attackRank="5" defenseRank="6" healthRank="6" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="puppet" />
+		<data id="hun_heavy_cavaary" name="匈奴重骑兵" type="1" attackRank="6" defenseRank="5" healthRank="6" speedRank="8" exp="0" ai="" dialog="" tag="Humanoid，Barbarian,Soldier，Leader" lootId="" artkey="scout" />
+		<data id="hun_infantry" name="匈奴步兵" type="0" attackRank="5" defenseRank="3" healthRank="5" speedRank="5" exp="0" ai="" dialog="" tag="Barbarian,Soldier" lootId="" artkey="slavesoldier" />
+		<data id="hyenas" name="大鬣狗" type="1" attackRank="4" defenseRank="3" healthRank="3" speedRank="6" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="liegouBOSS" />
+		<data id="icerock" name="水元素" type="1" attackRank="7" defenseRank="5" healthRank="5" speedRank="5" exp="0" ai="" dialog="" tag="Elemental,Leader" lootId="" artkey="icerock" />
+		<data id="kanban" name="看板娘·那娜璐" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="lvbu" />
+		<data id="lb" name="神秘商人·兰博" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="lvbu" />
+		<data id="lv_bu" name="吕布" type="2" attackRank="10" defenseRank="8" healthRank="8" speedRank="10" exp="0" ai="" dialog="" tag="Humanoid,Barbarian,Leader" lootId="" artkey="lvbu" />
+		<data id="monkey" name="猴子" type="0" attackRank="4" defenseRank="5" healthRank="3" speedRank="8" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="bailang" />
+		<data id="murloc" name="鱼人" type="0" attackRank="5" defenseRank="5" healthRank="5" speedRank="2" exp="0" ai="" dialog="" tag="Humanoid,Amphibious" lootId="" artkey="heavycavalry" />
+		<data id="necromancer" name="亡灵卫兵" type="0" attackRank="7" defenseRank="4" healthRank="4" speedRank="2" exp="0" ai="" dialog="" tag="Ghost,Soldier" lootId="" artkey="dunguibing" />
+		<data id="phantom_sacrifices" name="幽灵祭祀" type="1" attackRank="6" defenseRank="4" healthRank="6" speedRank="5" exp="0" ai="" dialog="" tag="Ghost,Soldier" lootId="" artkey="warlock" />
+		<data id="ploughed_civilians" name="耕作的平民" type="0" attackRank="1" defenseRank="1" healthRank="1" speedRank="2" exp="0" ai="" dialog="" tag="Humanoid" lootId="" artkey="worker" />
+		<data id="rebel_leader" name="叛军首领" type="1" attackRank="6" defenseRank="4" healthRank="6" speedRank="4" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Leader" lootId="" artkey="shibing1" />
+		<data id="rebel_scouts" name="叛军斥候" type="0" attackRank="6" defenseRank="3" healthRank="2" speedRank="7" exp="0" ai="" dialog="" tag="Humanoid,Soldier" lootId="" artkey="shibing1" />
+		<data id="rebel_soldiers" name="叛军士兵" type="0" attackRank="6" defenseRank="4" healthRank="6" speedRank="4" exp="0" ai="" dialog="" tag="Humanoid,Soldier" lootId="" artkey="shibing1" />
+		<data id="sea_monster" name="海怪" type="2" attackRank="9" defenseRank="9" healthRank="10" speedRank="3" exp="0" ai="" dialog="" tag="Amphibious,Elemental,Leader" lootId="" artkey="mengmaxiangbig" />
+		<data id="secret_agent" name="密探" type="0" attackRank="7" defenseRank="3" healthRank="3" speedRank="7" exp="0" ai="" dialog="" tag="Humanoid,Soldier,Zhongyuan,Leader" lootId="" artkey="spy" />
+		<data id="sprite" name="花妖" type="0" attackRank="6" defenseRank="3" healthRank="2" speedRank="8" exp="0" ai="" dialog="" tag="Elemental,Humanoid" lootId="" artkey="bailang" />
+		<data id="the_bear" name="熊" type="0" attackRank="7" defenseRank="7" healthRank="7" speedRank="6" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="zongxiong" />
+		<data id="the_commander_of_the_huns" name="匈奴人指挥官" type="1" attackRank="8" defenseRank="7" healthRank="8" speedRank="6" exp="0" ai="" dialog="" tag="Humanoid，Barbarian,Soldier，Leader" lootId="" artkey="scout" />
+		<data id="the_han_army_generaa" name="汉军将军（步兵）" type="1" attackRank="7" defenseRank="8" healthRank="8" speedRank="5" exp="0" ai="" dialog="" tag="Humanoid，Zhongyuan,Soldier，Leader" lootId="" artkey="bubing" />
+		<data id="the_hyena" name="鬣狗" type="0" attackRank="4" defenseRank="3" healthRank="3" speedRank="6" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="liegou" />
+		<data id="the_sorcerer" name="妲己的妖术师" type="0" attackRank="7" defenseRank="3" healthRank="3" speedRank="5" exp="0" ai="" dialog="" tag="Beast,Ghost" lootId="" artkey="daji" />
+		<data id="the_undead_shooter" name="亡灵射手" type="0" attackRank="5" defenseRank="5" healthRank="7" speedRank="3" exp="0" ai="" dialog="" tag="Ghost,Soldier" lootId="" artkey="gongjian" />
+		<data id="thieves_archer" name="山贼射手" type="0" attackRank="6" defenseRank="3" healthRank="3" speedRank="3" exp="0" ai="" dialog="" tag="Humanoid,Rogue" lootId="" artkey="shanzeigongjian" />
+		<data id="tigers" name="猛虎" type="0" attackRank="8" defenseRank="5" healthRank="6" speedRank="8" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="bailang" />
+		<data id="water_ghosts" name="水鬼" type="0" attackRank="3" defenseRank="3" healthRank="3" speedRank="1" exp="0" ai="" dialog="" tag="Ghost,Amphibious" lootId="" artkey="ghost" />
+		<data id="wiad_boar" name="野猪" type="0" attackRank="7" defenseRank="7" healthRank="7" speedRank="7" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="bailang" />
+		<data id="woaf" name="狼" type="0" attackRank="6" defenseRank="4" healthRank="6" speedRank="7" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="bailang" />
+		<data id="wooden_puppet" name="木傀儡" type="0" attackRank="5" defenseRank="6" healthRank="6" speedRank="1" exp="0" ai="" dialog="" tag="Machine" lootId="" artkey="puppet" />
+		<data id="xiezi" name="蝎子" type="0" attackRank="4" defenseRank="3" healthRank="3" speedRank="6" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="xiezi" />
+		<data id="xiongnu_cavaary" name="匈奴骑兵" type="0" attackRank="6" defenseRank="4" healthRank="6" speedRank="8" exp="0" ai="" dialog="" tag="Barbarian,Soldier" lootId="" artkey="scout" />
+		<data id="yaksha" name="夜叉" type="1" attackRank="6" defenseRank="6" healthRank="6" speedRank="3" exp="0" ai="" dialog="" tag="Ghost,Amphibious,Leader" lootId="" artkey="yecha" />
+		<data id="yan_Dan" name="燕丹" type="2" attackRank="6" defenseRank="4" healthRank="4" speedRank="5" exp="0" ai="" dialog="" tag="Machine,Leader" lootId="" artkey="yan_Dan" />
+		<data id="young_giant_beast" name="幼年巨兽" type="0" attackRank="6" defenseRank="8" healthRank="8" speedRank="5" exp="0" ai="" dialog="" tag="Beast" lootId="" artkey="mengmaxiang" />
+	</table>
+
+	<table name ="Place">
+		<data id="place_senlin" name="森林" userThreshold="200" maxInstance="5" onPick="Place_LeastUser" />
+		<data id="place_shamo" name="沙漠" userThreshold="200" maxInstance="5" onPick="Place_LeastUser" />
+	</table>
+
+	<table name ="Property">
+		<data id="0" key="health" name="最大生命" icon="" baseValue="100" minValue="1" maxValue="9999999" viewOrder="3" />
+		<data id="1" key="attack" name="攻击" icon="" baseValue="10" minValue="0" maxValue="9999" viewOrder="1" />
+		<data id="2" key="defense" name="防御" icon="" baseValue="10" minValue="0" maxValue="9999" viewOrder="2" />
+		<data id="3" key="criticalRate" name="暴击率" icon="" baseValue="5" minValue="0" maxValue="100" viewOrder="4" />
+		<data id="4" key="criticalDamage" name="暴击伤害" icon="" baseValue="50" minValue="0" maxValue="500" viewOrder="5" />
+		<data id="5" key="moveSpeed" name="移动速度" icon="" baseValue="6" minValue="0" maxValue="20" viewOrder="6" />
+	</table>
+
+	<table name ="PropertyType">
+		<data id="0" key="Total" name="总的" />
+		<data id="1" key="Base" name="玩家基础属性" />
+		<data id="2" key="BuffedPlus" name="Buff增加值" />
+		<data id="3" key="BuffedTimes" name="Buff倍率值" />
+		<data id="4" key="Equipment" name="来自装备" />
+		<data id="5" key="Hero" name="英雄养成倍率" />
+	</table>
+
+	<table name ="Quest">
+		<data id="Android_inherited" subQuest="Android_inherited_01" name="人造人的传承" image="" signText="委托人：BOSS接待员" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Assassination" subQuest="Assassination_01" name="刺秦" image="" signText="委托人：数据管理员" type="0" firstReward="" normalReward="" isKey="1" isBoss="1" mapId="place_senlin" startLocationId="re_1" condition="(UserQuest[Hunt],({star} &gt;= 0)" tag="" description="进入燕秦交战的隔离罩内，刺秦与刺燕只在你的选择。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="aware" subQuest="aware_01" name="察觉" image="" signText="委托人：蜂巢公司" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="deep" subQuest="deep_01" name="更深的地方" image="" signText="委托人：科研团团长" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Doubt" subQuest="Doubt_01" name="可疑疑点" image="" signText="委托人：看板娘" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_xueshan" startLocationId="re_1" condition="" tag="" description="分析科研团的数据，发现了异样，前往出事地点调查" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Dragon_Hunter" subQuest="Dragon_Hunter_01" name="猎龙者" image="" signText="委托人：Boss招待" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_xueshan" startLocationId="re_1" condition="(UserQuest[Wake],({star} &gt;= 0)" tag="" description="罩内出现恶龙，BOSS招待员急招英雄前去屠龙。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Examine" subQuest="Examine_01" name="例行检查" image="" signText="委托人：蜂巢高层" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="" tag="" description="每年一度的例行检查来临了，玩家需要前去检查。不过在哪之前，先找到老猎人。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="hero_Hunter" subQuest="hero_Hunter_01" name="英灵水晶猎人" image="" signText="委托人：数据管理员" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Hunt" subQuest="Hunt_01" name="追捕" image="" signText="委托人：数据管理员" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="(UserQuest[Leather_Understand],({star} &gt;= 0)" tag="" description="蜂巢公司紧急通讯，命令新新号的猎杀者追击叛逃的人造人。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Hunt3" subQuest="Hunt3_01" name="追捕3" image="" signText="委托人：蜂巢高层" type="0" firstReward="" normalReward="" isKey="1" isBoss="1" mapId="place_senlin" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Kill_Libai" subQuest="Kill_01" name="讨伐李白" image="image_100" signText="委托人：太空舱" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="Map_01" startLocationId="re_1" condition="" tag="" description="李白失控了，你这次任务就是狩猎李白。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Leather_Understand" subQuest="Leather_Understand_Navigate_01" name="皮革，你懂得" image="" signText="委托人：商人" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="(UserQuest[Wake],({star} &gt;= 0)" tag="" description="飞船上的皮革不够了，你去草原帮我搞一些来" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Love" subQuest="Love_01" name="恋爱" image="" signText="委托人：看板娘" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="(UserQuest[Leather_Understand],({star} &gt;= 0)" tag="" description="看板娘让勒普给她送来一束天堂鸟，还必须是勒亲手摘的。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Machinist_Drawings" subQuest="Machinist_Drawings_01" name="机械师的图纸" image="" signText="委托人：机械师" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_caoyuan" startLocationId="re_1" condition="(UserQuest[Leather_Understand],({star} &gt;= 0)" tag="" description="机械师误将蜂巢送来的图纸损毁了，该怎么办呢？" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Missing" subQuest="Missing_01" name="科研团的失踪" image="" signText="委托人：竞技场招待员" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="" tag="" description="找到在森林中失踪的科研团。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="new_Android" subQuest="new_Android_01" name="新款人造人" image="" signText="委托人：蜂巢管理员" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_xueshan" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Observer" subQuest="Observer_01" name="观察者" image="" signText="委托人：隔离罩观察人员" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="" tag="" description="真在观察隔离罩的人造人发来紧急通讯，你前去支援，看看究竟发生了什么事。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Rebel" subQuest="Rebel_01" name="叛军" image="" signText="委托人：蜂巢高层" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_xueshan" startLocationId="re_1" condition="" tag="" description="看到了人造人袭击科研团的数据后，蜂巢高层怀疑与人造人叛军有关。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Reveal" subQuest="Reveal_01" name="冰山一角" image="" signText="委托人：资源管理" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="" tag="" description="前往隔离罩内协助资源管理员调查" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Test_Power" subQuest="Test_Power_Navigate_01" name="测试力量数据" image="" signText="委托人：看板娘" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="(UserQuest[Wake],({star} &gt;= 0)" tag="" description="之前那个白痴去杀水怪还没回来，你去看看怎么回事" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Variation" subQuest="Variation_01" name="变异" image="" signText="委托人：BOSS悬赏" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="" tag="" description="隔离罩内的BOSS 产生了变异，找寻那些发生变异的BOSS，并将其抹杀。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Variation02" subQuest="Variation02_01" name="变异02" image="" signText="委托人：BOSS悬赏" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_xueshan" startLocationId="re_1" condition="" tag="" description="隔离罩内的BOSS 产生了变异，找寻那些发生变异的BOSS，并将其抹杀。" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Wake" subQuest="Wake_Mobile_01" name="苏醒" image="" signText="委托人：教授" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="" tag="" description="脑内回响着一个熟悉的声音，激励你消灭你面前的敌人" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="what" subQuest="what_01" name="到底是怎么回事" image="" signText="委托人：科研团团长" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_shamo" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Yum_memory" subQuest="Yum_memory_01" name="尤姆的记忆卡" image="" signText="委托人：铁匠" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_xueshan" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Yum_memory2" subQuest="Yum_memory2_01" name="尤姆的记忆卡2" image="" signText="委托人：尤姆" type="0" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_caoyuan" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+		<data id="Yum_memory3" subQuest="Yum_memory3_01" name="尤姆的记忆卡3" image="" signText="委托人：尤姆" type="1" firstReward="" normalReward="" isKey="1" isBoss="0" mapId="place_senlin" startLocationId="re_1" condition="" tag="" description="" starReward="" viewFirstReward="" viewNormalReward="" viewExp="" />
+	</table>
+
+	<table name ="RandomName">
+		<data id="1" word="支" position="1" />
+		<data id="2" word="余" position="1" />
+		<data id="3" word="贲" position="1" />
+		<data id="4" word="赵" position="1" />
+		<data id="5" word="慕" position="1" />
+		<data id="6" word="巫" position="1" />
+		<data id="7" word="太叔" position="1" />
+		<data id="8" word="方" position="1" />
+		<data id="9" word="诸" position="1" />
+		<data id="10" word="元" position="1" />
+		<data id="11" word="邓" position="1" />
+		<data id="12" word="孙" position="1" />
+		<data id="13" word="萧" position="1" />
+		<data id="14" word="乔" position="1" />
+		<data id="15" word="尉迟" position="1" />
+		<data id="16" word="柳" position="1" />
+		<data id="17" word="朱" position="1" />
+		<data id="18" word="卜" position="1" />
+		<data id="19" word="单" position="1" />
+		<data id="20" word="李" position="1" />
+		<data id="21" word="姚" position="1" />
+		<data id="22" word="燕" position="1" />
+		<data id="23" word="东方" position="1" />
+		<data id="24" word="叶" position="1" />
+		<data id="25" word="尤" position="1" />
+		<data id="26" word="顾" position="1" />
+		<data id="27" word="杭" position="1" />
+		<data id="28" word="周" position="1" />
+		<data id="29" word="邵" position="1" />
+		<data id="30" word="牧" position="1" />
+		<data id="31" word="诸葛" position="1" />
+		<data id="32" word="唐" position="1" />
+		<data id="33" word="许" position="1" />
+		<data id="34" word="穆" position="1" />
+		<data id="35" word="洪" position="1" />
+		<data id="36" word="郑" position="1" />
+		<data id="37" word="狄" position="1" />
+		<data id="38" word="侯" position="1" />
+		<data id="39" word="夏侯" position="1" />
+		<data id="40" word="吕" position="1" />
+		<data id="41" word="尹" position="1" />
+		<data id="42" word="包" position="1" />
+		<data id="43" word="王" position="1" />
+		<data id="44" word="宋" position="1" />
+		<data id="45" word="秋" position="1" />
+		<data id="46" word="欧阳" position="1" />
+		<data id="47" word="曹" position="1" />
+		<data id="48" word="堪" position="1" />
+		<data id="49" word="诸" position="1" />
+		<data id="50" word="冯" position="1" />
+		<data id="51" word="庞" position="1" />
+		<data id="52" word="仲" position="1" />
+		<data id="53" word="皇甫" position="1" />
+		<data id="54" word="严" position="1" />
+		<data id="55" word="汪" position="1" />
+		<data id="56" word="左" position="1" />
+		<data id="57" word="陈" position="1" />
+		<data id="58" word="叶" position="1" />
+		<data id="59" word="宫" position="1" />
+		<data id="60" word="上官" position="1" />
+		<data id="61" word="华" position="1" />
+		<data id="62" word="祁" position="1" />
+		<data id="63" word="石" position="1" />
+		<data id="64" word="卫" position="1" />
+		<data id="65" word="阮" position="1" />
+		<data id="66" word="宁" position="1" />
+		<data id="67" word="司马" position="1" />
+		<data id="68" word="陶" position="1" />
+		<data id="69" word="禹" position="1" />
+		<data id="70" word="崔" position="1" />
+		<data id="71" word="蒋" position="1" />
+		<data id="72" word="郦" position="1" />
+		<data id="73" word="仇" position="1" />
+		<data id="74" word="司空" position="1" />
+		<data id="75" word="姜" position="1" />
+		<data id="76" word="屈" position="1" />
+		<data id="77" word="吉" position="1" />
+		<data id="78" word="沈" position="1" />
+		<data id="79" word="童" position="1" />
+		<data id="80" word="祖" position="1" />
+		<data id="81" word="鲜于" position="1" />
+		<data id="82" word="柏" position="1" />
+		<data id="83" word="项" position="1" />
+		<data id="84" word="钮" position="1" />
+		<data id="85" word="韩" position="1" />
+		<data id="86" word="颜" position="1" />
+		<data id="87" word="武" position="1" />
+		<data id="88" word="长孙" position="1" />
+		<data id="89" word="章" position="1" />
+		<data id="90" word="董" position="1" />
+		<data id="91" word="龚" position="1" />
+		<data id="92" word="杨" position="1" />
+		<data id="93" word="白" position="1" />
+		<data id="94" word="轩辕" position="1" />
+		<data id="95" word="潘" position="1" />
+		<data id="96" word="粱" position="1" />
+		<data id="97" word="程" position="1" />
+		<data id="98" word="秦" position="1" />
+		<data id="99" word="韶" position="1" />
+		<data id="100" word="闾丘" position="1" />
+		<data id="101" word="彭" position="1" />
+		<data id="102" word="罗" position="1" />
+		<data id="103" word="荣" position="1" />
+		<data id="104" word="何" position="1" />
+		<data id="105" word="郜" position="1" />
+		<data id="106" word="东郭" position="1" />
+		<data id="107" word="昌" position="1" />
+		<data id="108" word="席" position="1" />
+		<data id="109" word="荀" position="1" />
+		<data id="110" word="施" position="1" />
+		<data id="111" word="蔺" position="1" />
+		<data id="112" word="令狐" position="1" />
+		<data id="113" word="马" position="1" />
+		<data id="114" word="阎" position="1" />
+		<data id="115" word="羊" position="1" />
+		<data id="116" word="孔" position="1" />
+		<data id="117" word="徐" position="1" />
+		<data id="118" word="淳于" position="1" />
+		<data id="119" word="酆" position="1" />
+		<data id="120" word="贾" position="1" />
+		<data id="121" word="於" position="1" />
+		<data id="122" word="魏" position="1" />
+		<data id="123" word="邱" position="1" />
+		<data id="124" word="南宫" position="1" />
+		<data id="125" word="鲍" position="1" />
+		<data id="126" word="江" position="1" />
+		<data id="127" word="惠" position="1" />
+		<data id="128" word="戚" position="1" />
+		<data id="129" word="闵" position="1" />
+		<data id="130" word="百里" position="1" />
+		<data id="131" word="岑" position="1" />
+		<data id="132" word="黎" position="1" />
+		<data id="133" word="甄" position="1" />
+		<data id="134" word="谢" position="1" />
+		<data id="135" word="樊" position="1" />
+		<data id="136" word="单于" position="1" />
+		<data id="137" word="雷" position="1" />
+		<data id="138" word="鄂" position="1" />
+		<data id="139" word="魏" position="1" />
+		<data id="140" word="邹" position="1" />
+		<data id="141" word="温" position="1" />
+		<data id="142" word="宇文" position="1" />
+		<data id="143" word="汤" position="1" />
+		<data id="144" word="夏" position="1" />
+		<data id="145" word="家" position="1" />
+		<data id="146" word="卓" position="1" />
+		<data id="147" word="凌" position="1" />
+		<data id="148" word="赫连" position="1" />
+		<data id="149" word="滕" position="1" />
+		<data id="150" word="高" position="1" />
+		<data id="151" word="封" position="1" />
+		<data id="152" word="窦" position="1" />
+		<data id="153" word="霍" position="1" />
+		<data id="154" word="乐正" position="1" />
+		<data id="155" word="聂" position="1" />
+		<data id="156" word="蔡" position="1" />
+		<data id="157" word="宓" position="1" />
+		<data id="158" word="翟" position="1" />
+		<data id="159" word="虞" position="1" />
+		<data id="160" word="子车" position="1" />
+		<data id="161" word="廉" position="1" />
+		<data id="162" word="田" position="1" />
+		<data id="163" word="符" position="1" />
+		<data id="164" word="苏" position="1" />
+		<data id="165" word="柯" position="1" />
+		<data id="166" word="慕容" position="1" />
+		<data id="167" word="毕" position="1" />
+		<data id="168" word="万" position="1" />
+		<data id="169" word="刘" position="1" />
+		<data id="170" word="范" position="1" />
+		<data id="171" word="莫" position="1" />
+		<data id="172" word="司徒" position="1" />
+		<data id="173" word="郝" position="1" />
+		<data id="174" word="支" position="1" />
+		<data id="175" word="景" position="1" />
+		<data id="176" word="鲁" position="1" />
+		<data id="177" word="缪" position="1" />
+		<data id="178" word="阳佟" position="1" />
+		<data id="179" word="史" position="1" />
+		<data id="180" word="咎" position="1" />
+		<data id="181" word="詹" position="1" />
+		<data id="182" word="韦" position="1" />
+		<data id="183" word="宗" position="1" />
+		<data id="184" word="归海" position="1" />
+		<data id="185" word="邬" position="1" />
+		<data id="186" word="管" position="1" />
+		<data id="187" word="钱" position="1" />
+		<data id="188" word="苗" position="1" />
+		<data id="189" word="宣" position="1" />
+		<data id="190" word="司空" position="1" />
+		<data id="191" word="安" position="1" />
+		<data id="192" word="卢" position="1" />
+		<data id="193" word="吴" position="1" />
+		<data id="194" word="方" position="1" />
+		<data id="195" word="郁" position="1" />
+		<data id="196" word="西门" position="1" />
+		<data id="197" word="常" position="1" />
+		<data id="198" word="经" position="1" />
+		<data id="199" word="张" position="1" />
+		<data id="200" word="任" position="1" />
+		<data id="201" word="嵇" position="1" />
+		<data id="202" word="左丘" position="1" />
+		<data id="203" word="于" position="1" />
+		<data id="204" word="房" position="1" />
+		<data id="205" word="喻" position="1" />
+		<data id="206" word="袁" position="1" />
+		<data id="207" word="邢" position="1" />
+		<data id="208" word="伯赏" position="1" />
+		<data id="209" word="傅" position="1" />
+		<data id="210" word="裘" position="1" />
+		<data id="211" word="俞" position="1" />
+		<data id="212" word="柳" position="1" />
+		<data id="213" word="向" position="1" />
+		<data id="214" word="巫马" position="1" />
+		<data id="215" word="赫" position="1" />
+		<data id="216" word="费" position="1" />
+		<data id="217" word="唐" position="1" />
+		<data id="218" word="裴" position="1" />
+		<data id="219" word="谷粱" position="1" />
+		<data id="220" word="连" position="1" />
+		<data id="221" word="解" position="1" />
+		<data id="222" word="纪" position="1" />
+		<data id="223" word="薛" position="1" />
+		<data id="224" word="陆" position="1" />
+		<data id="225" word="公西" position="1" />
+		<data id="226" word="齐" position="1" />
+		<data id="227" word="应" position="1" />
+		<data id="228" word="骆" position="1" />
+		<data id="229" word="贺" position="1" />
+		<data id="230" word="翁" position="1" />
+		<data id="231" word="公冶" position="1" />
+		<data id="232" word="伍" position="1" />
+		<data id="233" word="丁" position="1" />
+		<data id="234" word="车" position="1" />
+		<data id="235" word="孟" position="1" />
+		<data id="236" word="段" position="1" />
+		<data id="237" word="濮阳" position="1" />
+		<data id="238" word="邑" position="2" />
+		<data id="239" word="乾" position="2" />
+		<data id="240" word="绯" position="2" />
+		<data id="241" word="擎汉" position="2" />
+		<data id="242" word="豪英" position="2" />
+		<data id="243" word="剑愁" position="2" />
+		<data id="244" word="一笑" position="2" />
+		<data id="245" word="逊" position="2" />
+		<data id="246" word="蹇" position="2" />
+		<data id="247" word="涔" position="2" />
+		<data id="248" word="酬海" position="2" />
+		<data id="249" word="成败" position="2" />
+		<data id="250" word="冥幽" position="2" />
+		<data id="251" word="天问" position="2" />
+		<data id="252" word="紊" position="2" />
+		<data id="253" word="剑" position="2" />
+		<data id="254" word="臻" position="2" />
+		<data id="255" word="复天" position="2" />
+		<data id="256" word="忘幽" position="2" />
+		<data id="257" word="士萧" position="2" />
+		<data id="258" word="山河" position="2" />
+		<data id="259" word="凡" position="2" />
+		<data id="260" word="鞯" position="2" />
+		<data id="261" word="珩" position="2" />
+		<data id="262" word="严青" position="2" />
+		<data id="263" word="成危" position="2" />
+		<data id="264" word="中道" position="2" />
+		<data id="265" word="仇天" position="2" />
+		<data id="266" word="嵩" position="2" />
+		<data id="267" word="达" position="2" />
+		<data id="268" word="鹤" position="2" />
+		<data id="269" word="不斜" position="2" />
+		<data id="270" word="成风" position="2" />
+		<data id="271" word="道天" position="2" />
+		<data id="272" word="一斩" position="2" />
+		<data id="273" word="豪" position="2" />
+		<data id="274" word="烙" position="2" />
+		<data id="275" word="鞅" position="2" />
+		<data id="276" word="不可" position="2" />
+		<data id="277" word="成仁" position="2" />
+		<data id="278" word="道消" position="2" />
+		<data id="279" word="不二" position="2" />
+		<data id="280" word="裘" position="2" />
+		<data id="281" word="冥" position="2" />
+		<data id="282" word="霸" position="2" />
+		<data id="283" word="不正" position="2" />
+		<data id="284" word="无施" position="2" />
+		<data id="285" word="道罡" position="2" />
+		<data id="286" word="无剑" position="2" />
+		<data id="287" word="匪" position="2" />
+		<data id="288" word="惮" position="2" />
+		<data id="289" word="寇" position="2" />
+		<data id="290" word="无声" position="2" />
+		<data id="291" word="不斜" position="2" />
+		<data id="292" word="不凡" position="2" />
+		<data id="293" word="断天" position="2" />
+		<data id="294" word="戾" position="2" />
+		<data id="295" word="雍" position="2" />
+		<data id="296" word="博" position="2" />
+		<data id="297" word="百招" position="2" />
+		<data id="298" word="靖仇" position="2" />
+		<data id="299" word="不尤" position="2" />
+		<data id="300" word="远侵" position="2" />
+		<data id="301" word="瑛" position="2" />
+		<data id="302" word="鑫" position="2" />
+		<data id="303" word="匕" position="2" />
+		<data id="304" word="千万" position="2" />
+		<data id="305" word="若风" position="2" />
+		<data id="306" word="千筹" position="2" />
+		<data id="307" word="一刀" position="2" />
+		<data id="308" word="铭" position="2" />
+		<data id="309" word="靖" position="2" />
+		<data id="310" word="弼" position="2" />
+		<data id="311" word="随阴" position="2" />
+		<data id="312" word="若剑" position="2" />
+		<data id="313" word="断秋" position="2" />
+		<data id="314" word="碧空" position="2" />
+		<data id="315" word="霆" position="2" />
+		<data id="316" word="紊" position="2" />
+		<data id="317" word="碧" position="2" />
+		<data id="318" word="一手" position="2" />
+		<data id="319" word="若之" position="2" />
+		<data id="320" word="断缘" position="2" />
+		<data id="321" word="仇血" position="2" />
+		<data id="322" word="驳" position="2" />
+		<data id="323" word="钧" position="2" />
+		<data id="324" word="捕" position="2" />
+		<data id="325" word="三毒" position="2" />
+		<data id="326" word="亿先" position="2" />
+		<data id="327" word="道之" position="2" />
+		<data id="328" word="万声" position="2" />
+		<data id="329" word="疾" position="2" />
+		<data id="330" word="隶" position="2" />
+		<data id="331" word="败" position="2" />
+		<data id="332" word="三德" position="2" />
+		<data id="333" word="人达" position="2" />
+		<data id="334" word="剑心" position="2" />
+		<data id="335" word="万天" position="2" />
+		<data id="336" word="威" position="2" />
+		<data id="337" word="沅" position="2" />
+		<data id="338" word="悲" position="2" />
+		<data id="339" word="一德" position="2" />
+		<data id="340" word="人英" position="2" />
+		<data id="341" word="剑成" position="2" />
+		<data id="342" word="送终" position="2" />
+		<data id="343" word="祥" position="2" />
+		<data id="344" word="翎" position="2" />
+		<data id="345" word="羿" position="2" />
+		<data id="346" word="老九" position="2" />
+		<data id="347" word="人杰" position="2" />
+		<data id="348" word="剑封" position="2" />
+		<data id="349" word="绝山" position="2" />
+		<data id="350" word="誉" position="2" />
+		<data id="351" word="戎" position="2" />
+		<data id="352" word="储" position="2" />
+		<data id="353" word="老五" position="2" />
+		<data id="354" word="人雄" position="2" />
+		<data id="355" word="万言" position="2" />
+		<data id="356" word="绝义" position="2" />
+		<data id="357" word="枫" position="2" />
+		<data id="358" word="擎" position="2" />
+		<data id="359" word="靳" position="2" />
+		<data id="360" word="老四" position="2" />
+		<data id="361" word="元龙" position="2" />
+		<data id="362" word="绝悟" position="2" />
+		<data id="363" word="沧海" position="2" />
+		<data id="364" word="凛" position="2" />
+		<data id="365" word="荆" position="2" />
+		<data id="366" word="汲" position="2" />
+		<data id="367" word="十三" position="2" />
+		<data id="368" word="成威" position="2" />
+		<data id="369" word="绝施" position="2" />
+		<data id="370" word="万仇" position="2" />
+		<data id="371" word="涛" position="2" />
+		<data id="372" word="丑" position="2" />
+		<data id="373" word="邴" position="2" />
+		<data id="374" word="如豹" position="2" />
+		<data id="375" word="成协" position="2" />
+		<data id="376" word="乘风" position="2" />
+		<data id="377" word="万怨" position="2" />
+		<data id="378" word="卿" position="2" />
+		<data id="379" word="坤" position="2" />
+		<data id="380" word="糜" position="2" />
+		<data id="381" word="连虎" position="2" />
+		<data id="382" word="不评" position="2" />
+		<data id="383" word="乘云" position="2" />
+		<data id="384" word="万恶" position="2" />
+		<data id="385" word="豁" position="2" />
+		<data id="386" word="耷" position="2" />
+		<data id="387" word="松" position="2" />
+		<data id="388" word="似狮" position="2" />
+		<data id="389" word="老三" position="2" />
+		<data id="390" word="世开" position="2" />
+		<data id="391" word="恶天" position="2" />
+		<data id="392" word="焱" position="2" />
+		<data id="393" word="磬" position="2" />
+		<data id="394" word="井" position="2" />
+		<data id="395" word="大楚" position="2" />
+		<data id="396" word="广山" position="2" />
+		<data id="397" word="剑鬼" position="2" />
+		<data id="398" word="灭龙" position="2" />
+		<data id="399" word="虔" position="2" />
+		<data id="400" word="函" position="2" />
+		<data id="401" word="富" position="2" />
+		<data id="402" word="定帮" position="2" />
+		<data id="403" word="不言" position="2" />
+		<data id="404" word="远锋" position="2" />
+		<data id="405" word="剑身" position="2" />
+		<data id="406" word="契" position="2" />
+		<data id="407" word="翰" position="2" />
+		<data id="408" word="乌" position="2" />
+		<data id="409" word="伟帮" position="2" />
+		<data id="410" word="追命" position="2" />
+		<data id="411" word="远望" position="2" />
+		<data id="412" word="无敌" position="2" />
+		<data id="413" word="罡" position="2" />
+		<data id="414" word="遥" position="2" />
+		<data id="415" word="焦" position="2" />
+		<data id="416" word="大有" position="2" />
+		<data id="417" word="难敌" position="2" />
+		<data id="418" word="远山" position="2" />
+		<data id="419" word="半鬼" position="2" />
+		<data id="420" word="鸿" position="2" />
+		<data id="421" word="萧" position="2" />
+		<data id="422" word="奎" position="2" />
+		<data id="423" word="高烽" position="2" />
+		<data id="424" word="难破" position="2" />
+		<data id="425" word="广缘" position="2" />
+		<data id="426" word="行天" position="2" />
+		<data id="427" word="胜" position="2" />
+		<data id="428" word="嚣" position="2" />
+		<data id="429" word="稀" position="2" />
+		<data id="430" word="自中" position="2" />
+		<data id="431" word="难摧" position="2" />
+		<data id="432" word="天与" position="2" />
+		<data id="433" word="浩天" position="2" />
+		<data id="434" word="鹰" position="2" />
+		<data id="435" word="骁" position="2" />
+		<data id="436" word="班" position="2" />
+		<data id="437" word="天川" position="2" />
+		<data id="438" word="难胜" position="2" />
+		<data id="439" word="天抒" position="2" />
+		<data id="440" word="天寿" position="2" />
+		<data id="441" word="卿" position="2" />
+		<data id="442" word="鲂" position="2" />
+		<data id="443" word="仰" position="2" />
+		<data id="444" word="大开" position="2" />
+		<data id="445" word="德地" position="2" />
+		<data id="446" word="天奇" position="2" />
+		<data id="447" word="无血" position="2" />
+		<data id="448" word="城" position="2" />
+		<data id="449" word="剑" position="2" />
+		<data id="450" word="伊" position="2" />
+		<data id="451" word="傀儡" position="2" />
+		<data id="452" word="德天" position="2" />
+		<data id="453" word="半仙" position="2" />
+		<data id="454" word="聋五" position="2" />
+		<data id="455" word="康" position="2" />
+		<data id="456" word="筮" position="2" />
+		<data id="457" word="栾" position="2" />
+		<data id="458" word="羊青" position="2" />
+		<data id="459" word="世平" position="2" />
+		<data id="460" word="一鸣" position="2" />
+		<data id="461" word="如花" position="2" />
+		<data id="462" word="阁" position="2" />
+		<data id="463" word="勒" position="2" />
+		<data id="464" word="厉" position="2" />
+		<data id="465" word="牛青" position="2" />
+		<data id="466" word="世德" position="2" />
+		<data id="467" word="文龙" position="2" />
+		<data id="468" word="三问" position="2" />
+		<data id="469" word="穆" position="2" />
+		<data id="470" word="炳" position="2" />
+		<data id="471" word="戎" position="2" />
+		<data id="472" word="开山" position="2" />
+		<data id="473" word="世立" position="2" />
+		<data id="474" word="元正" position="2" />
+		<data id="475" word="非笑" position="2" />
+		<data id="476" word="扬" position="2" />
+		<data id="477" word="斩" position="2" />
+		<data id="478" word="天德" position="2" />
+		<data id="479" word="中恶" position="2" />
+		<data id="480" word="浩阑" position="2" />
+		<data id="481" word="蓝血" position="2" />
+		<data id="482" word="垣" position="2" />
+		<data id="483" word="颤" position="2" />
+		<data id="484" word="铁身" position="2" />
+		<data id="485" word="延恶" position="2" />
+		<data id="486" word="士晋" position="2" />
+		<data id="487" word="无招" position="2" />
+		<data id="488" word="师" position="2" />
+		<data id="489" word="孱" position="2" />
+		<data id="490" word="老黑" position="2" />
+		<data id="491" word="百川" position="2" />
+		<data id="492" word="铸海" position="2" />
+		<data id="493" word="无极" position="2" />
+		<data id="494" word="翼" position="2" />
+		<data id="495" word="续" position="2" />
+		<data id="496" word="半邪" position="2" />
+		<data id="497" word="世倌" position="2" />
+		<data id="498" word="人龙" position="2" />
+		<data id="499" word="鬼神" position="2" />
+		<data id="500" word="秋" position="2" />
+		<data id="501" word="岩" position="2" />
+		<data id="502" word="半山" position="2" />
+		<data id="503" word="连碧" position="2" />
+		<data id="504" word="伯云" position="2" />
+		<data id="505" word="满天" position="2" />
+		<data id="506" word="傥" position="2" />
+		<data id="507" word="奄" position="2" />
+		<data id="508" word="一江" position="2" />
+		<data id="509" word="岱周" position="2" />
+		<data id="510" word="老头" position="2" />
+		<data id="511" word="飞扬" position="2" />
+		<data id="512" word="乞" position="2" />
+		<data id="513" word="箴" position="2" />
+		<data id="514" word="十八" position="2" />
+		<data id="515" word="行恶" position="2" />
+		<data id="516" word="剑通" position="2" />
+		<data id="517" word="行恶" position="2" />
+		<data id="518" word="剑通" position="2" />
+		<data id="519" word="致远" position="2" />
+		<data id="520" word="俊驰" position="2" />
+		<data id="521" word="雨泽" position="2" />
+		<data id="522" word="烨磊" position="2" />
+		<data id="523" word="晟睿" position="2" />
+		<data id="524" word="天佑" position="2" />
+		<data id="525" word="文昊" position="2" />
+		<data id="526" word="修洁" position="2" />
+		<data id="527" word="黎昕" position="2" />
+		<data id="528" word="远航" position="2" />
+		<data id="529" word="旭尧" position="2" />
+		<data id="530" word="鸿涛" position="2" />
+		<data id="531" word="伟祺" position="2" />
+		<data id="532" word="荣轩" position="2" />
+		<data id="533" word="越泽" position="2" />
+		<data id="534" word="浩宇" position="2" />
+		<data id="535" word="瑾瑜" position="2" />
+		<data id="536" word="皓轩" position="2" />
+		<data id="537" word="擎苍" position="2" />
+		<data id="538" word="擎宇" position="2" />
+		<data id="539" word="志泽" position="2" />
+		<data id="540" word="子轩" position="2" />
+		<data id="541" word="睿渊" position="2" />
+		<data id="542" word="弘文" position="2" />
+		<data id="543" word="哲瀚" position="2" />
+		<data id="544" word="雨泽" position="2" />
+		<data id="545" word="楷瑞" position="2" />
+		<data id="546" word="建辉" position="2" />
+		<data id="547" word="晋鹏" position="2" />
+		<data id="548" word="天磊" position="2" />
+		<data id="549" word="绍辉" position="2" />
+		<data id="550" word="泽洋" position="2" />
+		<data id="551" word="鑫磊" position="2" />
+		<data id="552" word="鹏煊" position="2" />
+		<data id="553" word="昊强" position="2" />
+		<data id="554" word="伟宸" position="2" />
+		<data id="555" word="博超" position="2" />
+		<data id="556" word="君浩" position="2" />
+		<data id="557" word="子骞" position="2" />
+		<data id="558" word="鹏涛" position="2" />
+		<data id="559" word="炎彬" position="2" />
+		<data id="560" word="鹤轩" position="2" />
+		<data id="561" word="越彬" position="2" />
+		<data id="562" word="风华" position="2" />
+		<data id="563" word="靖琪" position="2" />
+		<data id="564" word="明辉" position="2" />
+		<data id="565" word="伟诚" position="2" />
+		<data id="566" word="明轩" position="2" />
+		<data id="567" word="健柏" position="2" />
+		<data id="568" word="修杰" position="2" />
+		<data id="569" word="志泽" position="2" />
+		<data id="570" word="弘文" position="2" />
+		<data id="571" word="峻熙" position="2" />
+		<data id="572" word="嘉懿" position="2" />
+		<data id="573" word="煜城" position="2" />
+		<data id="574" word="懿轩" position="2" />
+		<data id="575" word="烨伟" position="2" />
+		<data id="576" word="苑博" position="2" />
+		<data id="577" word="伟泽" position="2" />
+		<data id="578" word="熠彤" position="2" />
+		<data id="579" word="鸿煊" position="2" />
+		<data id="580" word="博涛" position="2" />
+		<data id="581" word="烨霖" position="2" />
+		<data id="582" word="烨华" position="2" />
+		<data id="583" word="煜祺" position="2" />
+		<data id="584" word="智宸" position="2" />
+		<data id="585" word="正豪" position="2" />
+		<data id="586" word="明杰" position="2" />
+		<data id="587" word="立诚" position="2" />
+		<data id="588" word="立轩" position="2" />
+		<data id="589" word="立辉" position="2" />
+		<data id="590" word="峻熙" position="2" />
+		<data id="591" word="弘文" position="2" />
+		<data id="592" word="熠彤" position="2" />
+		<data id="593" word="鸿煊" position="2" />
+		<data id="594" word="烨霖" position="2" />
+		<data id="595" word="鑫鹏" position="2" />
+		<data id="596" word="天思" position="2" />
+		<data id="597" word="聪展" position="2" />
+		<data id="598" word="鹏笑" position="2" />
+		<data id="599" word="愚志" position="2" />
+		<data id="600" word="强炫" position="2" />
+		<data id="601" word="明雪" position="2" />
+		<data id="602" word="松思" position="2" />
+		<data id="603" word="源智" position="2" />
+		<data id="604" word="渊思" position="2" />
+		<data id="605" word="晓啸" position="2" />
+		<data id="606" word="天宇" position="2" />
+		<data id="607" word="浩然" position="2" />
+		<data id="608" word="文轩" position="2" />
+		<data id="609" word="鹭洋" position="2" />
+		<data id="610" word="振家" position="2" />
+		<data id="611" word="乐驹" position="2" />
+		<data id="612" word="晓博" position="2" />
+		<data id="613" word="文博" position="2" />
+		<data id="614" word="昊焱" position="2" />
+		<data id="615" word="立果" position="2" />
+		<data id="616" word="金鑫" position="2" />
+		<data id="617" word="锦程" position="2" />
+		<data id="618" word="嘉熙" position="2" />
+		<data id="619" word="鹏飞" position="2" />
+		<data id="620" word="子默" position="2" />
+		<data id="621" word="思远" position="2" />
+		<data id="622" word="浩轩" position="2" />
+		<data id="623" word="语堂" position="2" />
+		<data id="624" word="聪健" position="2" />
+		<data id="625" word="问旋" position="2" />
+		<data id="626" word="白易" position="2" />
+		<data id="627" word="问筠" position="2" />
+		<data id="628" word="听白" position="2" />
+		<data id="629" word="半雪" position="2" />
+		<data id="630" word="山柳" position="2" />
+		<data id="631" word="谷雪" position="2" />
+		<data id="632" word="靖易" position="2" />
+		<data id="633" word="代桃" position="2" />
+		<data id="634" word="冷之" position="2" />
+		<data id="635" word="盼秋" position="2" />
+		<data id="636" word="秋寒" position="2" />
+		<data id="637" word="慕蕊" position="2" />
+		<data id="638" word="海亦" position="2" />
+		<data id="639" word="初晴" position="2" />
+		<data id="640" word="盼旋" position="2" />
+		<data id="641" word="幼旋" position="2" />
+		<data id="642" word="尔蓝" position="2" />
+		<data id="643" word="沛山" position="2" />
+		<data id="644" word="代丝" position="2" />
+		<data id="645" word="觅松" position="2" />
+		<data id="646" word="夜白" position="2" />
+		<data id="647" word="冷安" position="2" />
+		<data id="648" word="灵竹" position="2" />
+		<data id="649" word="醉薇" position="2" />
+		<data id="650" word="幼南" position="2" />
+		<data id="651" word="凡梦" position="2" />
+		<data id="652" word="尔曼" position="2" />
+		<data id="653" word="念波" position="2" />
+		<data id="654" word="迎松" position="2" />
+		<data id="655" word="青寒" position="2" />
+		<data id="656" word="笑天" position="2" />
+		<data id="657" word="问安" position="2" />
+		<data id="658" word="雅阳" position="2" />
+		<data id="659" word="友绿" position="2" />
+		<data id="660" word="南松" position="2" />
+		<data id="661" word="诗云" position="2" />
+		<data id="662" word="飞风" position="2" />
+		<data id="663" word="寄灵" position="2" />
+		<data id="664" word="书芹" position="2" />
+		<data id="665" word="水云" position="2" />
+		<data id="666" word="访琴" position="2" />
+		<data id="667" word="谷波" position="2" />
+		<data id="668" word="笑白" position="2" />
+		<data id="669" word="妙海" position="2" />
+		<data id="670" word="孤风" position="2" />
+		<data id="671" word="从安" position="2" />
+		<data id="672" word="绮彤" position="2" />
+		<data id="673" word="之玉" position="2" />
+		<data id="674" word="雨珍" position="2" />
+		<data id="675" word="秋白" position="2" />
+		<data id="676" word="冰安" position="2" />
+		<data id="677" word="秋白" position="2" />
+		<data id="678" word="南风" position="2" />
+		<data id="679" word="醉山" position="2" />
+		<data id="680" word="初彤" position="2" />
+		<data id="681" word="凝海" position="2" />
+		<data id="682" word="映波" position="2" />
+		<data id="683" word="平文" position="2" />
+		<data id="684" word="青文" position="2" />
+		<data id="685" word="寻菡" position="2" />
+		<data id="686" word="沛白" position="2" />
+		<data id="687" word="平灵" position="2" />
+		<data id="688" word="芷烟" position="2" />
+		<data id="689" word="白易" position="2" />
+		<data id="690" word="尔阳" position="2" />
+		<data id="691" word="怜烟" position="2" />
+		<data id="692" word="谷槐" position="2" />
+		<data id="693" word="觅云" position="2" />
+		<data id="694" word="斌" position="2" />
+		<data id="695" word="莹" position="2" />
+		<data id="696" word="妍" position="2" />
+		<data id="697" word="鸣凤" position="2" />
+		<data id="698" word="不二" position="2" />
+		<data id="699" word="茗" position="2" />
+		<data id="700" word="颖" position="2" />
+		<data id="701" word="嫣" position="2" />
+		<data id="702" word="无颜" position="2" />
+		<data id="703" word="千愁" position="2" />
+		<data id="704" word="摇伽" position="2" />
+		<data id="705" word="敏" position="2" />
+		<data id="706" word="盈" position="2" />
+		<data id="707" word="芫" position="2" />
+		<data id="708" word="莫言" position="2" />
+		<data id="709" word="稚晴" position="2" />
+		<data id="710" word="菲鹰" position="2" />
+		<data id="711" word="莆" position="2" />
+		<data id="712" word="樱" position="2" />
+		<data id="713" word="凤" position="2" />
+		<data id="714" word="无色" position="2" />
+		<data id="715" word="英姑" position="2" />
+		<data id="716" word="冰颜" position="2" />
+		<data id="717" word="姝" position="2" />
+		<data id="718" word="荧" position="2" />
+		<data id="719" word="珠" position="2" />
+		<data id="720" word="亚男" position="2" />
+		<data id="721" word="若颜" position="2" />
+		<data id="722" word="无心" position="2" />
+		<data id="723" word="涟妖" position="2" />
+		<data id="724" word="彤" position="2" />
+		<data id="725" word="萤" position="2" />
+		<data id="726" word="洙" position="2" />
+		<data id="727" word="素阴" position="2" />
+		<data id="728" word="飞飞" position="2" />
+		<data id="729" word="藏鸟" position="2" />
+		<data id="730" word="虔纹" position="2" />
+		<data id="731" word="桐" position="2" />
+		<data id="732" word="莺" position="2" />
+		<data id="733" word="竺" position="2" />
+		<data id="734" word="若男" position="2" />
+		<data id="735" word="妙芹" position="2" />
+		<data id="736" word="若冰" position="2" />
+		<data id="737" word="若魔" position="2" />
+		<data id="738" word="芝" position="2" />
+		<data id="739" word="瑛" position="2" />
+		<data id="740" word="萝" position="2" />
+		<data id="741" word="灭男" position="2" />
+		<data id="742" word="珊珊" position="2" />
+		<data id="743" word="嫣娆" position="2" />
+		<data id="744" word="绾绾" position="2" />
+		<data id="745" word="芷" position="2" />
+		<data id="746" word="璎" position="2" />
+		<data id="747" word="翠" position="2" />
+		<data id="748" word="高丽" position="2" />
+		<data id="749" word="如雪" position="2" />
+		<data id="750" word="唯雪" position="2" />
+		<data id="751" word="艳血" position="2" />
+		<data id="752" word="姿" position="2" />
+		<data id="753" word="芙" position="2" />
+		<data id="754" word="萃" position="2" />
+		<data id="755" word="妖丽" position="2" />
+		<data id="756" word="雪一" position="2" />
+		<data id="757" word="菲音" position="2" />
+		<data id="758" word="绝音" position="2" />
+		<data id="759" word="茈" position="2" />
+		<data id="760" word="芾" position="2" />
+		<data id="761" word="柔" position="2" />
+		<data id="762" word="三颜" position="2" />
+		<data id="763" word="茗茗" position="2" />
+		<data id="764" word="如冰" position="2" />
+		<data id="765" word="血茗" position="2" />
+		<data id="766" word="涫" position="2" />
+		<data id="767" word="湘" position="2" />
+		<data id="768" word="沁" position="2" />
+		<data id="769" word="代男" position="2" />
+		<data id="770" word="荧荧" position="2" />
+		<data id="771" word="如娆" position="2" />
+		<data id="772" word="凤妖" position="2" />
+		<data id="773" word="秀" position="2" />
+		<data id="774" word="襄" position="2" />
+		<data id="775" word="芹" position="2" />
+		<data id="776" word="踏歌" position="2" />
+		<data id="777" word="赛凤" position="2" />
+		<data id="778" word="如音" position="2" />
+		<data id="779" word="若血" position="2" />
+		<data id="780" word="蓉" position="2" />
+		<data id="781" word="香" position="2" />
+		<data id="782" word="衫" position="2" />
+		<data id="783" word="芙蓉" position="2" />
+		<data id="784" word="柏柳" position="2" />
+		<data id="785" word="一曲" position="2" />
+		<data id="786" word="雪冥" position="2" />
+		<data id="787" word="青" position="2" />
+		<data id="788" word="玲" position="2" />
+		<data id="789" word="珊" position="2" />
+		<data id="790" word="雁开" position="2" />
+		<data id="791" word="艳一" position="2" />
+		<data id="792" word="灵煌" position="2" />
+		<data id="793" word="冰姬" position="2" />
+		<data id="794" word="卿" position="2" />
+		<data id="795" word="灵" position="2" />
+		<data id="796" word="琳" position="2" />
+		<data id="797" word="东蒽" position="2" />
+		<data id="798" word="宝川" position="2" />
+		<data id="799" word="宫苴" position="2" />
+		<data id="800" word="绝音" position="2" />
+		<data id="801" word="清" position="2" />
+		<data id="802" word="绫" position="2" />
+		<data id="803" word="莛" position="2" />
+		<data id="804" word="沉鱼" position="2" />
+		<data id="805" word="宝莹" position="2" />
+		<data id="806" word="涔雨" position="2" />
+		<data id="807" word="邪欢" position="2" />
+		<data id="808" word="惠" position="2" />
+		<data id="809" word="翎" position="2" />
+		<data id="810" word="葶" position="2" />
+		<data id="811" word="落雁" position="2" />
+		<data id="812" word="不弱" position="2" />
+		<data id="813" word="太君" position="2" />
+		<data id="814" word="老姆" position="2" />
+		<data id="815" word="荟" position="2" />
+		<data id="816" word="丝" position="2" />
+		<data id="817" word="芮" position="2" />
+		<data id="818" word="凡英" position="2" />
+		<data id="819" word="不惜" position="2" />
+		<data id="820" word="莫茗" position="2" />
+		<data id="821" word="黎云" position="2" />
+		<data id="822" word="筝" position="2" />
+		<data id="823" word="姒" position="2" />
+		<data id="824" word="赛君" position="2" />
+		<data id="825" word="可仁" position="2" />
+		<data id="826" word="莫英" position="2" />
+		<data id="827" word="凤凰" position="2" />
+		<data id="828" word="真" position="2" />
+		<data id="829" word="苠" position="2" />
+		<data id="830" word="闭月" position="2" />
+		<data id="831" word="可兰" position="2" />
+		<data id="832" word="朝雪" position="2" />
+		<data id="833" word="一寡" position="2" />
+		<data id="834" word="贞" position="2" />
+		<data id="835" word="绮" position="2" />
+		<data id="836" word="羞花" position="2" />
+		<data id="837" word="可燕" position="2" />
+		<data id="838" word="老太" position="2" />
+		<data id="839" word="颜演" position="2" />
+		<data id="840" word="珍" position="2" />
+		<data id="841" word="淇" position="2" />
+		<data id="842" word="不愁" position="2" />
+		<data id="843" word="可愁" position="2" />
+		<data id="844" word="茹嫣" position="2" />
+		<data id="845" word="幻然" position="2" />
+		<data id="846" word="宛" position="2" />
+		<data id="847" word="荠" position="2" />
+		<data id="848" word="盛男" position="2" />
+		<data id="849" word="可冥" position="2" />
+		<data id="850" word="丹妗" position="2" />
+		<data id="851" word="幻悲" position="2" />
+		<data id="852" word="娩" position="2" />
+		<data id="853" word="琦" position="2" />
+		<data id="854" word="青荷" position="2" />
+		<data id="855" word="梨愁" position="2" />
+		<data id="856" word="缘郡" position="2" />
+		<data id="857" word="幻雪" position="2" />
+		<data id="858" word="莞" position="2" />
+		<data id="859" word="衣" position="2" />
+		<data id="860" word="清涟" position="2" />
+		<data id="861" word="不悔" position="2" />
+		<data id="862" word="冥茗" position="2" />
+		<data id="863" word="幻嫣" position="2" />
+		<data id="864" word="菀" position="2" />
+		<data id="865" word="沂" position="2" />
+		<data id="866" word="一兰" position="2" />
+		<data id="867" word="不乐" position="2" />
+		<data id="868" word="溪灵" position="2" />
+		<data id="869" word="葵阴" position="2" />
+		<data id="870" word="素" position="2" />
+		<data id="871" word="苡" position="2" />
+		<data id="872" word="如花" position="2" />
+		<data id="873" word="起眸" position="2" />
+		<data id="874" word="惋清" position="2" />
+		<data id="875" word="灭绝" position="2" />
+		<data id="876" word="愫" position="2" />
+		<data id="877" word="怡" position="2" />
+		<data id="878" word="聋五" position="2" />
+		<data id="879" word="惋庭" position="2" />
+		<data id="880" word="太英" position="2" />
+		<data id="881" word="夜阑" position="2" />
+		<data id="882" word="涑" position="2" />
+		<data id="883" word="悒" position="2" />
+		<data id="884" word="绣连" position="2" />
+		<data id="885" word="香芦" position="2" />
+		<data id="886" word="太清" position="2" />
+		<data id="887" word="藏今" position="2" />
+		<data id="888" word="兰" position="2" />
+		<data id="889" word="芳" position="2" />
+		<data id="890" word="金连" position="2" />
+		<data id="891" word="飞凤" position="2" />
+		<data id="892" word="善斓" position="2" />
+		<data id="893" word="幻姬" position="2" />
+		<data id="894" word="澜" position="2" />
+		<data id="895" word="芸" position="2" />
+		<data id="896" word="大凄" position="2" />
+		<data id="897" word="无春" position="2" />
+		<data id="898" word="善愁" position="2" />
+		<data id="899" word="茹妖" position="2" />
+		<data id="900" word="蓝" position="2" />
+		<data id="901" word="笙" position="2" />
+		<data id="902" word="傻姑" position="2" />
+		<data id="903" word="紫烟" position="2" />
+		<data id="904" word="善若" position="2" />
+		<data id="905" word="香魔" position="2" />
+		<data id="906" word="斓" position="2" />
+		<data id="907" word="忻" position="2" />
+		<data id="908" word="蛟凤" position="2" />
+		<data id="909" word="双双" position="2" />
+		<data id="910" word="嫣然" position="2" />
+		<data id="911" word="魂幽" position="2" />
+		<data id="912" word="纹" position="2" />
+		<data id="913" word="芯" position="2" />
+		<data id="914" word="莹芝" position="2" />
+		<data id="915" word="汝燕" position="2" />
+		<data id="916" word="阑悦" position="2" />
+		<data id="917" word="藏花" position="2" />
+		<data id="918" word="雯" position="2" />
+		<data id="919" word="紫" position="2" />
+		<data id="920" word="中蓝" position="2" />
+		<data id="921" word="玉兰" position="2" />
+		<data id="922" word="阑香" position="2" />
+		<data id="923" word="妖妖" position="2" />
+		<data id="924" word="若" position="2" />
+		<data id="925" word="茈" position="2" />
+		<data id="926" word="太兰" position="2" />
+		<data id="927" word="婷冉" position="2" />
+		<data id="928" word="岂愈" position="2" />
+		<data id="929" word="一凤" position="2" />
+		<data id="930" word="弱" position="2" />
+		<data id="931" word="芷" position="2" />
+		<data id="932" word="寡妇" position="2" />
+		<data id="933" word="秋尽" position="2" />
+		<data id="934" word="紫伊" position="2" />
+		<data id="935" word="芸遥" position="2" />
+		<data id="936" word="萍" position="2" />
+		<data id="937" word="颜" position="2" />
+		<data id="938" word="外绣" position="2" />
+		<data id="939" word="凤灵" position="2" />
+		<data id="940" word="清炎" position="2" />
+		<data id="941" word="行云" position="2" />
+		<data id="942" word="颦" position="2" />
+		<data id="943" word="艳" position="2" />
+		<data id="944" word="不平" position="2" />
+		<data id="945" word="媚颜" position="2" />
+		<data id="946" word="清涟" position="2" />
+		<data id="947" word="舞仙" position="2" />
+		<data id="948" word="婴" position="2" />
+		<data id="949" word="雁" position="2" />
+		<data id="950" word="毒娘" position="2" />
+		<data id="951" word="问晴" position="2" />
+		<data id="952" word="苑睐" position="2" />
+		<data id="953" word="小小" position="2" />
+		<data id="954" word="梦琪" position="2" />
+		<data id="955" word="之桃" position="2" />
+		<data id="956" word="慕青" position="2" />
+		<data id="957" word="尔岚" position="2" />
+		<data id="958" word="初夏" position="2" />
+		<data id="959" word="沛菡" position="2" />
+		<data id="960" word="傲珊" position="2" />
+		<data id="961" word="曼文" position="2" />
+		<data id="962" word="乐菱" position="2" />
+		<data id="963" word="惜文" position="2" />
+		<data id="964" word="香寒" position="2" />
+		<data id="965" word="新柔" position="2" />
+		<data id="966" word="语蓉" position="2" />
+		<data id="967" word="海安" position="2" />
+		<data id="968" word="夜蓉" position="2" />
+		<data id="969" word="涵柏" position="2" />
+		<data id="970" word="水桃" position="2" />
+		<data id="971" word="醉蓝" position="2" />
+		<data id="972" word="语琴" position="2" />
+		<data id="973" word="从彤" position="2" />
+		<data id="974" word="傲晴" position="2" />
+		<data id="975" word="语兰" position="2" />
+		<data id="976" word="又菱" position="2" />
+		<data id="977" word="碧彤" position="2" />
+		<data id="978" word="元霜" position="2" />
+		<data id="979" word="怜梦" position="2" />
+		<data id="980" word="紫寒" position="2" />
+		<data id="981" word="妙彤" position="2" />
+		<data id="982" word="曼易" position="2" />
+		<data id="983" word="南莲" position="2" />
+		<data id="984" word="紫翠" position="2" />
+		<data id="985" word="雨寒" position="2" />
+		<data id="986" word="易烟" position="2" />
+		<data id="987" word="如萱" position="2" />
+		<data id="988" word="若南" position="2" />
+		<data id="989" word="寻真" position="2" />
+		<data id="990" word="晓亦" position="2" />
+		<data id="991" word="向珊" position="2" />
+		<data id="992" word="慕灵" position="2" />
+		<data id="993" word="以蕊" position="2" />
+		<data id="994" word="映易" position="2" />
+		<data id="995" word="雪柳" position="2" />
+		<data id="996" word="海云" position="2" />
+		<data id="997" word="凝天" position="2" />
+		<data id="998" word="沛珊" position="2" />
+		<data id="999" word="寒云" position="2" />
+		<data id="1000" word="冰旋" position="2" />
+		<data id="1001" word="宛儿" position="2" />
+		<data id="1002" word="无畏的" position="0" />
+		<data id="1003" word="天真的" position="0" />
+		<data id="1004" word="强大的" position="0" />
+		<data id="1005" word="伟大的" position="0" />
+		<data id="1006" word="聪彗的" position="0" />
+		<data id="1007" word="狡诈的" position="0" />
+		<data id="1008" word="恐怖的" position="0" />
+		<data id="1009" word="贪婪的" position="0" />
+		<data id="1010" word="优雅的" position="0" />
+		<data id="1011" word="冷静的" position="0" />
+		<data id="1012" word="外向的" position="0" />
+		<data id="1013" word="善良的" position="0" />
+		<data id="1014" word="开朗的" position="0" />
+		<data id="1015" word="活泼的" position="0" />
+		<data id="1016" word="好动的" position="0" />
+		<data id="1017" word="轻松的" position="0" />
+		<data id="1018" word="愉快的" position="0" />
+		<data id="1019" word="热情的" position="0" />
+		<data id="1020" word="可亲的" position="0" />
+		<data id="1021" word="豁达的" position="0" />
+		<data id="1022" word="稳重的" position="0" />
+		<data id="1023" word="幽默的" position="0" />
+		<data id="1024" word="真诚的" position="0" />
+		<data id="1025" word="豪爽的" position="0" />
+		<data id="1026" word="耿直的" position="0" />
+		<data id="1027" word="成熟的" position="0" />
+		<data id="1028" word="独立的" position="0" />
+		<data id="1029" word="果断的" position="0" />
+		<data id="1030" word="健谈的" position="0" />
+		<data id="1031" word="机敏的" position="0" />
+		<data id="1032" word="深沉的" position="0" />
+		<data id="1033" word="坚强的" position="0" />
+		<data id="1034" word="兴奋的" position="0" />
+		<data id="1035" word="热情的" position="0" />
+		<data id="1036" word="率直的" position="0" />
+		<data id="1037" word="毅力的" position="0" />
+		<data id="1038" word="友爱的" position="0" />
+		<data id="1039" word="风趣的" position="0" />
+		<data id="1040" word="沉静的" position="0" />
+		<data id="1041" word="谨慎的" position="0" />
+		<data id="1042" word="忠诚的" position="0" />
+		<data id="1043" word="友善的" position="0" />
+		<data id="1044" word="严肃的" position="0" />
+		<data id="1045" word="忠心的" position="0" />
+		<data id="1046" word="乐观的" position="0" />
+		<data id="1047" word="坦率的" position="0" />
+		<data id="1048" word="勇敢的" position="0" />
+		<data id="1049" word="自信的" position="0" />
+		<data id="1050" word="自立的" position="0" />
+		<data id="1051" word="沉著的" position="0" />
+		<data id="1052" word="执著的" position="0" />
+		<data id="1053" word="容忍的" position="0" />
+		<data id="1054" word="体贴的" position="0" />
+		<data id="1055" word="满足的" position="0" />
+		<data id="1056" word="积极的" position="0" />
+		<data id="1057" word="有趣的" position="0" />
+		<data id="1058" word="知足的" position="0" />
+		<data id="1059" word="勤劳的" position="0" />
+		<data id="1060" word="和气的" position="0" />
+		<data id="1061" word="无畏的" position="0" />
+		<data id="1062" word="务实的" position="0" />
+		<data id="1063" word="轻浮的" position="0" />
+		<data id="1064" word="冲动的" position="0" />
+		<data id="1065" word="幼稚的" position="0" />
+		<data id="1066" word="自私的" position="0" />
+		<data id="1067" word="依赖的" position="0" />
+		<data id="1068" word="任性的" position="0" />
+		<data id="1069" word="自负的" position="0" />
+		<data id="1070" word="拜金的" position="0" />
+		<data id="1071" word="暴躁的" position="0" />
+		<data id="1072" word="倔强的" position="0" />
+		<data id="1073" word="虚伪的" position="0" />
+		<data id="1074" word="孤僻的" position="0" />
+		<data id="1075" word="刻薄的" position="0" />
+		<data id="1076" word="武断的" position="0" />
+		<data id="1077" word="内向的" position="0" />
+		<data id="1078" word="脆弱的" position="0" />
+		<data id="1079" word="自卑的" position="0" />
+		<data id="1080" word="害羞的" position="0" />
+		<data id="1081" word="敏感的" position="0" />
+		<data id="1082" word="迟钝的" position="0" />
+		<data id="1083" word="柔弱的" position="0" />
+		<data id="1084" word="畏缩的" position="0" />
+		<data id="1085" word="顺从的" position="0" />
+		<data id="1086" word="胆小的" position="0" />
+		<data id="1087" word="安静的" position="0" />
+		<data id="1088" word="寡言的" position="0" />
+		<data id="1089" word="保守的" position="0" />
+		<data id="1090" word="被动的" position="0" />
+		<data id="1091" word="忍让的" position="0" />
+		<data id="1092" word="浮躁的" position="0" />
+		<data id="1093" word="莽撞的" position="0" />
+		<data id="1094" word="易怒的" position="0" />
+		<data id="1095" word="轻率的" position="0" />
+		<data id="1096" word="善变的" position="0" />
+		<data id="1097" word="狡猾的" position="0" />
+		<data id="1098" word="易怒的" position="0" />
+		<data id="1099" word="多疑的" position="0" />
+		<data id="1100" word="懒惰的" position="0" />
+		<data id="1101" word="专横的" position="0" />
+		<data id="1102" word="顽固的" position="0" />
+		<data id="1103" word="猜疑的" position="0" />
+		<data id="1104" word="挑衅的" position="0" />
+		<data id="1105" word="冷漠的" position="0" />
+		<data id="1106" word="抑郁的" position="0" />
+		<data id="1107" word="谨慎的" position="0" />
+		<data id="1108" word="胆怯的" position="0" />
+		<data id="1109" word="温和的" position="0" />
+		<data id="1110" word="老实的" position="0" />
+		<data id="1111" word="平和的" position="0" />
+		<data id="1112" word="顺服的" position="0" />
+		<data id="1113" word="含蓄的" position="0" />
+		<data id="1114" word="迁就的" position="0" />
+		<data id="1115" word="羞涩的" position="0" />
+		<data id="1116" word="忸怩的" position="0" />
+		<data id="1117" word="缓慢的" position="0" />
+		<data id="1118" word="乏味的" position="0" />
+		<data id="1119" word="散漫的" position="0" />
+		<data id="1120" word="虚荣的" position="0" />
+		<data id="1121" word="冷淡的" position="0" />
+		<data id="1122" word="反覆的" position="0" />
+		<data id="1123" word="跋扈的" position="0" />
+		<data id="1124" word="自负的" position="0" />
+		<data id="1125" word="逆反的" position="0" />
+		<data id="1126" word="怨恨的" position="0" />
+		<data id="1127" word="鲁莽的" position="0" />
+		<data id="1128" word="放任的" position="0" />
+		<data id="1129" word="贫乏的" position="0" />
+		<data id="1130" word="固执的" position="0" />
+		<data id="1131" word="迟缓的" position="0" />
+		<data id="1132" word="罗嗦的" position="0" />
+		<data id="1133" word="耐性的" position="0" />
+		<data id="1134" word="悲观的" position="0" />
+		<data id="1135" word="消极的" position="0" />
+		<data id="1136" word="拖延的" position="0" />
+		<data id="1137" word="烦躁的" position="0" />
+		<data id="1138" word="妥协的" position="0" />
+		<data id="1139" word="唠叨的" position="0" />
+	</table>
+
+	<table name ="Setting">
+		<data name="startLocationId" value="re_1" type="user" isExport="0" description="玩家出生点（位于地图内）" />
+		<data name="startMap" value="place_senlin" type="user" isExport="0" description="玩家出生地图" />
+	</table>
+
+	<table name ="Skill">
+		<data id="Baiqi_deathChain" name="死亡链接" maxLevel="10" cd="12" description="投射死亡链接，链接目标，当白起受到伤害时，被链接的目标也会承受X%的伤害，超过距离时，效果结束" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Baiqi_earthSpliting" name="裂地重斧" maxLevel="10" cd="4" description="对扇形区域造成伤害，将击中的目标拖拽至白起的面前" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Baiqi_subsidence" name="坑杀" maxLevel="10" cd="45" description="以自身为中心生成区域，目标在区域内承受持续伤害，目标脱离区域时造成减速" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Caoren_shield" name="举起盾牌" maxLevel="10" cd="3" description="进入持盾模式，降低自身移动速度30%，使你的格挡触发率提高至50%，切换模式有10秒的冷却" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Caoren_strike" name="猛击" maxLevel="10" cd="6" description="立刻拍打离自身最近的目标，造成伤害，并沉默目标2秒，如果你处于持盾模式，则对前方扇形区域造成的伤害，并击晕目标2秒，解除持盾效果" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Caoren_taunt" name="嘲讽" maxLevel="10" cd="20" description="发出嘲讽，以自身为中心，沉默周围敌人，并强制对方攻击你，持续3秒，期间你无法攻击和释放技能，但是格挡率提高100%" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Daji_charm" name="魅惑" maxLevel="10" cd="8" description="弹道技能，对命中的第一个目标造成迷惑，造成伤害并使其强制向你的位置移动（无法释放技能），持续X秒" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Daji_foxFire" name="狐火" maxLevel="10" cd="3" description="发射一枚能量弹，沿直线飞行，飞行至最大距离后，能量弹将返回至妲己位置（可造成多次伤害）" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Daji_soulFire" name="灵魂之火" maxLevel="10" cd="30" description="召唤灵魂之火，持续X秒，灵魂火存在期间，你的基础技能与普通攻击造成伤害时，灵魂之火对目标进行追击，造成XXX伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Daqiao_bigSnowball" name="大号雪球" maxLevel="10" cd="20" description="向前释放滚雪球，碰到的第一个单位将其变成为雪人，持续N秒，每秒造成N的伤害。变雪人期间无法攻击和移动" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Daqiao_snowball" name="弹射雪球" maxLevel="10" cd="3" description="朝一个目标释放雪球在敌人之间弹跳N次，每次对目标造成N的伤害。" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Daqiao_snowStorm" name="暴风雪" maxLevel="10" cd="8" description="向指定范围释放暴风雪，造成N的伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Diaochan_frontGarland" name="归还" maxLevel="10" cd="3" description="向前方直线投射花环，达到位置后，返回至貂蝉位置" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Diaochan_throwGarland" name="散落" maxLevel="10" cd="25" description="向高空投射花圈，X秒后，花圈从空中落下，立刻对区域内敌人造成伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Diaochan_twoGarlands" name="二花" maxLevel="10" cd="3" description="先两侧投掷花环，并向后跳跃，花环将返回至貂蝉位置" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Guiguzi_blackhole" name="扭曲虚空" maxLevel="10" cd="45" description="以自身为中心，将X范围内所有敌人向自己缓慢拖拽，并造成伤害与减速，效果结束时对范围内所有敌人造成高额伤害，并沉默" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Guiguzi_devilEye" name="恶意凝视" maxLevel="10" cd="2" description="选定目标位置，X秒后，在目标位置打开虚空之眼，被击中的目标将会被诅咒（持续掉血，并被揭露位置）" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Guiguzi_strangeEnergy" name="诡异能量" maxLevel="10" cd="6" description="发射扭曲能量球，能量球将会沿释放路径弹射3次，被能量球击中将会受到伤害，并被赋予dot，可叠加3次" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Huamulan_doubleAttack" name="二连击" maxLevel="10" cd="6" description="激活下，下一次攻击将连续攻击2次，并且在下一次进行攻击时会进行短距离的冲锋" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Huamulan_Headhunting" name="猎头" maxLevel="10" cd="30" description="跳目标，并造成0.1秒的眩晕效果，对目标造成一次重击，使其防御降低X%，对生命低于X%的单位，造成额外XXXX点伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Huamulan_pounce" name="突袭" maxLevel="10" cd="6" description="沿直线冲刺一段距离，随后重回释放技能的位置（路径内的单位可被攻击2次）" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Jingke_backChop" name="拖刀" maxLevel="10" cd="4" description="向后方进行位移，在位移前对前方发动横扫" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Jingke_dagger" name="不归之匕" maxLevel="10" cd="6" description="向指定方向投射一枚匕首，击中第一个目标时造成伤害与定身效果，会被无法通过的地形所阻挡，如果你处于图穷匕现状态下，造成额外伤害并沉默" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Jingke_frontChop" name="十步一杀" maxLevel="10" cd="15" description="激活后，为长刀附魔，持续期间普通攻击，向攻击方向短距离突进并造成扇形范围AOE伤害持续X秒" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Libai_liquor" name="酒" maxLevel="10" cd="3" description="使用时无法移动在2秒为自身恢复一定量的生命，获得闪避与暴击加成，但是会减少普通攻击命中，使你获得1个酒印记" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Libai_sword" name="剑" maxLevel="10" cd="3" description="挥出一道剑气，袭击前方直线区域，使用后3秒内可再次激活该技能，将李白自身移动至剑气所在位置，使用该技能使你获得1个剑印记" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Libai_swordDance" name="剑舞二连" maxLevel="10" cd="15" description="跃向空中向下方，劈砍两次，立刻造成伤害。劈砍留下的剑气在1.5秒后爆炸，对范围内的敌人造成额外伤害，消耗所有印记，每一层剑印记提高技能基础伤害，每一层酒印记降低剑气延迟时间" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Liguang_piercingArrow" name="贯通箭" maxLevel="10" cd="5" description="对前方直线区域造成伤害，并击退范围内的敌人" icon="NullIcon" maxCharge="1" fx="Fx_liguang_skill_1" onCast="Skill_Liguang_PiercingArrow()" />
+		<data id="Liguang_sniper" name="狙击模式" maxLevel="10" cd="30" description="进入无法移动狙击模式，提高普通攻击的射程，降低技能冷却,再次使用返回基础形态" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Liguang_trap" name="捕兽陷阱" maxLevel="10" cd="4" description="在向目标位置埋设3个无法侦测的陷阱，进入陷阱的单位会被定身，持续X秒" icon="NullIcon" maxCharge="2" fx="Fx_liguang_skill_7" onCast="Skill_Liguang_Trap()" />
+		<data id="Lixiaolong_blink" name="闪击" maxLevel="10" cd="3" description="向目标位置移动，如果该区域内有敌对单位，则立刻释放一次普通攻击" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Lixiaolong_kicking" name="踢飞" maxLevel="10" cd="30" description="使用脚踢扫荡自身前方扇形区域，造成伤害并击飞范围内所有敌对单位" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Lixiaolong_straightPunch" name="直拳连击" maxLevel="10" cd="4" description="激活后，你的下一次普攻攻击获得连击效果，攻击速度大幅提高，攻击范围转化为直线3米，但是伤害会降低X%" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Liyuanba_drainLife" name="生命抽取" maxLevel="10" cd="10" description="向前方目投射能量锁链，命中后链接目标与自身，链接持续期间，对目标造成持续伤害，并为自身持续恢复生命值，需要持续施法，最大持续3秒，对方与自身距离大于6米时，锁链移除" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Liyuanba_dread" name="恐惧" maxLevel="10" cd="30" description="0.5秒后，目标区域（直接5米的圆）造成伤害，并对命中单位赋予恐惧效果持续2秒" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Liyuanba_earthSpliting" name="砸碎" maxLevel="10" cd="3" description="猛击前方区域，造成伤害，可连续释放3次，被连续击中的目标将会昏迷2秒" icon="NullIcon" maxCharge="3" fx="" onCast="" />
+		<data id="Liyuanba_shadowCurse" name="暗影诅咒" maxLevel="10" cd="6" description="以自目标位置为起点，向前方对一个方向3道诅咒，每道诅咒圈直接约2米，每次命中时赋予dot，多次命中dot时间延长" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Liyuanba_sweep" name="回天击" maxLevel="10" cd="3" description="短暂蓄力后，攻击周身240°的所有敌人，将其击退" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Liyuanba_whirlWind" name="旋风" maxLevel="10" cd="30" description="进入蓄力状态，期间无法进行普通攻击，但是移动速度提高，蓄力时间超过2秒则进入旋风斩状态，对周围敌人造成持续伤害，旋风斩最大持续5秒" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Lvbu_earthSpliting" name="裂地斩" maxLevel="10" cd="3" description="对前方扇形区域造成AOE伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Lvbu_springAttack" name="跳跃冲击" maxLevel="10" cd="25" description="跳向目标区域，对该区域内敌人造成伤害，对血量低于X%的单位造成恐慌效果" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Lvbu_whirlWind" name="旋风斩" maxLevel="10" cd="6" description="以自身为中心，造成AOE伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Mozi_flameSpray" name="火焰放射" maxLevel="10" cd="8" description="使用后，数秒内持续向正前方喷射火焰造成持续伤害，可移动施法，移动速度降低X%" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Mozi_Hook" name="钩斧" maxLevel="10" cd="10" description="弹出机甲上的斧子，如果击中目标，则将其拖拽至墨子身边" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Mozi_overload" name="过载" maxLevel="10" cd="30" description="激活后，大幅降低技能冷却，但是会逐渐扣除自身生命X%，持续X秒" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Nezha_fireShield" name="神火罩" maxLevel="10" cd="3" description="开启后，持续性的消耗自身生命值，提升自身造成的伤害，受到攻击时，对目标造成X点伤害，再次使用可关闭该技能" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Nezha_marching" name="多段突" maxLevel="10" cd="5" description="对目标位置进行短距离突击，对路径上所有单位造成伤害，该技能在释放后3秒内可再次释放" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Nezha_whirlWind" name="三头八臂" maxLevel="10" cd="45" description="以自身为中心，对周围区域造成持续伤害，释放时，自身移动降低X%" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Qinshihuang_kingsArmy" name="禁卫" maxLevel="10" cd="30" description="立刻召唤3个禁卫出现在你的面前，并且消耗你的剩余的士兵，组成整列，数秒后，整列向前方突进，对路径上的敌人造成伤害，消耗的士兵将增强整列造成的伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Qinshihuang_kingsGuard" name="护驾" maxLevel="10" cd="8" description="在你的位置召唤一个士兵来保护你，在保护范围内，你受到的伤害降低X%，释放该技能时，如果存在其他甲兵，则会想你的位置冲来，对路径上的敌人再次造成伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Qinshihuang_kingsOrder" name="皇帝的命令" maxLevel="10" cd="5" description="召唤一个士兵向你指定的位置前进，击退路径上的敌人，士兵到达位置后，会在该位置存在一段时间，造成持续的伤害，每当你释放该技能时，剩余的士兵将从他当前位置向你指定的位置前进" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="skill_for_test" name="Test" maxLevel="10" cd="10" description="Test" icon="NullIcon" maxCharge="1" fx="" onCast="Skill_Test" />
+		<data id="Xiaoqiao_blink" name="灵动" maxLevel="10" cd="20" description="立刻闪烁至目标英雄位置，并释放一次被动技能，该技能每X秒恢复1层，最大可叠加3层" icon="NullIcon" maxCharge="3" fx="" onCast="" />
+		<data id="Xiaoqiao_fish" name="变鱼术" maxLevel="10" cd="12" description="将目标变成一条咸鱼（沉默，并大幅降低移动速度）" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Xiaoqiao_lightBall" name="光球" maxLevel="10" cd="6" description="投射一个能量光球，如果击中目标，则降低该技能与被动冷却" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Yangguifei_echo" name="回声" maxLevel="10" cd="30" description="在你的选择的目标位置召唤幻影，每当你释放技能时，幻影将在X秒后释放，相同的技能，音律效果相反，幻影不会进行普通攻击，持续X秒" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Yangguifei_strongSoundWave" name="强音波" maxLevel="10" cd="3" description="先前方发射强音波，总计触发3次，对命中的目标施加【强音】最多叠加3层，每次叠加时，刷新BUFF时间，存在【强音律】的单位被弱音波攻击时受到的伤害提高5%/7%/10%" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Yangguifei_weakSoundWave" name="弱音波" maxLevel="10" cd="3" description="以自身为中心发生弱音波，自动攻击周围，对被击中的目标附加【弱音】最多叠加3层，持续X秒，每次叠加时，刷新BUFF时间，存在【弱音律】的单位被强音波攻击时将被减速20%/30%/40%" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Zhangliang_eightDiagram" name="八阵图" maxLevel="10" cd="30" description="X秒后，在目标区域召唤八阵图，触碰八阵将会造成伤害与减速 神机妙算；八阵图变的更为复杂" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Zhangliang_fireStorm" name="烈焰风暴" maxLevel="10" cd="6" description="在目标区域引燃烈焰，立刻对区域内目标造成伤害，神机妙算：区域会持续燃烧，对进入区域的单位造成伤害" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Zhangliang_storm" name="狂风席卷" maxLevel="10" cd="6" description="召唤飓风席卷前方区域，对沿途目标造成伤害，并击飞。神机妙算：同时召唤三道飓风席卷战场" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Zhaoyun_charge" name="带头冲锋" maxLevel="10" cd="4" description="冲向目标区域，对沿途敌人造成伤害，如果击中敌人，则暂时提高你的攻击速度X%" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Zhaoyun_counterAttack" name="反击" maxLevel="10" cd="30" description="X秒内进入无敌状态，无法进行攻击，期间受到攻击时则立刻以自身为中心对周围单位造成伤害，重置死战冷却" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+		<data id="Zhaoyun_lancePoke" name="枪裘" maxLevel="10" cd="6" description="对前方扇形区域造成持续AOE（总计3次伤害），持续3秒，期间赵云无法移动，每次命中1个及以上目标时降低被动冷却X秒" icon="NullIcon" maxCharge="1" fx="" onCast="" />
+	</table>
+
+	<table name ="StartHero">
+		<data id="1" heroId="Liguang" desc="化身成李白，一个近战输出型作战体，输出力强但要面对近距离作战环境的压力，适合于擅长近身输出的玩家。" skill="800" attack="900" defend="300" />
+		<data id="2" heroId="Zhangliang" desc="化身成张量，一个远程控制型作战体，安逸的远距离输出，但相对较低的输出能力，适合于擅长玩远程输出的玩家。" skill="600" attack="700" defend="500" />
+		<data id="3" heroId="Huamulan" desc="化身为花木兰，一个战士型作战体，攻守较为平衡，适合于喜欢连续作战的玩家。" skill="600" attack="600" defend="600" />
+	</table>
+
+	<table name ="SubQuest">
+		<data id="Android_inherited_02" name="与第一位导师交流" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_02_01" selectUIHint="" />
+		<data id="Android_inherited_02_01" name="前往浅水区" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_02_02" selectUIHint="" />
+		<data id="Android_inherited_02_02" name="消灭足够数量的敌人" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_02_03" selectUIHint="" />
+		<data id="Android_inherited_02_03" name="前往城寨" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_02_04" selectUIHint="" />
+		<data id="Android_inherited_02_04" name="消灭毒尸" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Android_inherited_03" name="与第二位导师交流" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_03_01" selectUIHint="" />
+		<data id="Android_inherited_03_01" name="前往军营" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_03_02" selectUIHint="" />
+		<data id="Android_inherited_03_02" name="消灭军营内的头目" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_05" selectUIHint="" />
+		<data id="Android_inherited_04" name="与第三位导师交流" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_04_01" selectUIHint="" />
+		<data id="Android_inherited_04_01" name="前往盗贼营地" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_04_02" selectUIHint="" />
+		<data id="Android_inherited_04_02" name="消灭足盗贼头目" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_05" selectUIHint="" />
+		<data id="Android_inherited_05" name="前往大本营" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Android_inherited_05_01" selectUIHint="" />
+		<data id="Android_inherited_05_01" name="击杀指挥官" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Assassination_02" name="找到难民营的首领" description="找到难民营的首领" icon="image_01" acceptBuff="Assassination_02" questBuff="Assassination_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_01,Assassination_02_Program_02,Assassination_02_Program_03" selectUIHint="" />
+		<data id="Assassination_02_Program_01" name="屠戮者" description="击败营地卫士" icon="image_01" acceptBuff="Assassination_02_Program_01" questBuff="Assassination_02_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_01_01" selectUIHint="" />
+		<data id="Assassination_02_Program_01_01" name="罪魁祸首" description="消灭燕丹" icon="image_01" acceptBuff="Assassination_02_Program_01_01" questBuff="Assassination_02_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02" selectUIHint="" />
+		<data id="Assassination_02_Program_02" name="帮助难民" description="去寻访难民看看有什么可以帮忙的" icon="image_01" acceptBuff="Assassination_02_Program_02" questBuff="Assassination_02_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_01,Assassination_02_Program_02_02" selectUIHint="" />
+		<data id="Assassination_02_Program_02_01" name="前往北方森林" description="前往北方森林寻找孩子" icon="image_01" acceptBuff="Assassination_02_Program_02_01" questBuff="Assassination_02_Program_02_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_01_02" selectUIHint="" />
+		<data id="Assassination_02_Program_02_01_01" name="消灭土匪" description="消灭土匪" icon="image_01" acceptBuff="Assassination_02_Program_02_01_01" questBuff="Assassination_02_Program_02_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_01_02" selectUIHint="" />
+		<data id="Assassination_02_Program_02_01_02" name="与秦军士兵交谈" description="与秦军士兵交谈" icon="image_01" acceptBuff="Assassination_02_Program_02_01_02" questBuff="Assassination_02_Program_02_01_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_01_03" selectUIHint="" />
+		<data id="Assassination_02_Program_02_01_03" name="寻找酒" description="在附近找寻酒水" icon="image_01" acceptBuff="Assassination_02_Program_02_01_03" questBuff="Assassination_02_Program_02_01_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_01_04" selectUIHint="" />
+		<data id="Assassination_02_Program_02_01_04" name="放置酒" description="将酒水放置在敌人营地内" icon="image_01" acceptBuff="Assassination_02_Program_02_01_04" questBuff="Assassination_02_Program_02_01_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_01_05" selectUIHint="" />
+		<data id="Assassination_02_Program_02_01_05" name="清理土匪营地" description="清理土匪营地的敌人" icon="image_01" acceptBuff="Assassination_02_Program_02_01_05" questBuff="Assassination_02_Program_02_01_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03" selectUIHint="" />
+		<data id="Assassination_02_Program_02_02" name="前往南方城市" description="前往南方城市寻找孩子" icon="image_01" acceptBuff="Assassination_02_Program_02_02" questBuff="Assassination_02_Program_02_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_02_02" selectUIHint="" />
+		<data id="Assassination_02_Program_02_02_01" name="消灭流寇" description="消灭流寇" icon="image_01" acceptBuff="Assassination_02_Program_02_02_01" questBuff="Assassination_02_Program_02_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_02_02" selectUIHint="" />
+		<data id="Assassination_02_Program_02_02_02" name="与燕丹交谈" description="与燕丹交谈" icon="image_01" acceptBuff="Assassination_02_Program_02_02_02" questBuff="Assassination_02_Program_02_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_02_03" selectUIHint="" />
+		<data id="Assassination_02_Program_02_02_03" name="寻找酒" description="在附近找寻酒水" icon="image_01" acceptBuff="Assassination_02_Program_02_02_03" questBuff="Assassination_02_Program_02_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_02_04" selectUIHint="" />
+		<data id="Assassination_02_Program_02_02_04" name="放置酒" description="将酒水放置在敌人营地内" icon="image_01" acceptBuff="Assassination_02_Program_02_02_04" questBuff="Assassination_02_Program_02_02_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_02_05" selectUIHint="" />
+		<data id="Assassination_02_Program_02_02_05" name="清理流寇营地" description="清理流寇营地内的敌人" icon="image_01" acceptBuff="Assassination_02_Program_02_02_05" questBuff="Assassination_02_Program_02_02_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03" name="回去找难民首领" description="回去找难民首领" icon="image_01" acceptBuff="Assassination_02_Program_02_03" questBuff="Assassination_02_Program_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_01,Assassination_02_Program_02_03_02" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_01" name="击败燕国刺客荆轲" description="击败燕国刺客荆轲" icon="image_01" acceptBuff="Assassination_02_Program_02_03_01" questBuff="Assassination_02_Program_02_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_01_01" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_01_01" name="回去找难民首领" description="荆轲已死回去找难民首领" icon="image_01" acceptBuff="Assassination_02_Program_02_03_01_01" questBuff="Assassination_02_Program_02_03_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_01_02,Assassination_02_Program_01_01" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_01_02" name="收集马蜂窝" description="收集马蜂窝" icon="image_01" acceptBuff="Assassination_02_Program_02_03_01_02" questBuff="Assassination_02_Program_02_03_01_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_01_03" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_01_03" name="放置马蜂窝" description="放置马蜂窝" icon="image_01" acceptBuff="Assassination_02_Program_02_03_01_03" questBuff="Assassination_02_Program_02_03_01_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_01_04" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_01_04" name="击败燕丹" description="马蜂成功的削弱了燕丹，现在去击败燕丹" icon="image_01" acceptBuff="Assassination_02_Program_02_03_01_04" questBuff="Assassination_02_Program_02_03_01_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_02" name="击败秦国将军白起" description="击败秦国将军白起" icon="image_01" acceptBuff="Assassination_02_Program_02_03_02" questBuff="Assassination_02_Program_02_03_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_02_01" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_02_01" name="回去找难民首领" description="白起已死回去找难民首领" icon="image_01" acceptBuff="Assassination_02_Program_02_03_02_01" questBuff="Assassination_02_Program_02_03_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_02_02,Assassination_02_Program_03_01" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_02_02" name="击败山贼收集财宝" description="击败山贼收集财宝" icon="image_01" acceptBuff="Assassination_02_Program_02_03_02_02" questBuff="Assassination_02_Program_02_03_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_02_03_02_03" selectUIHint="" />
+		<data id="Assassination_02_Program_02_03_02_03" name="击败嬴政" description="现在带着财宝去秦军营地击败嬴政吧" icon="image_01" acceptBuff="Assassination_02_Program_02_03_02_03" questBuff="Assassination_02_Program_02_03_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Assassination_02_Program_03" name="屠戮秦军" description="前往秦军营地击败秦国军人" icon="image_01" acceptBuff="Assassination_02_Program_03" questBuff="Assassination_02_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Assassination_02_Program_03_01" selectUIHint="" />
+		<data id="Assassination_02_Program_03_01" name="刺秦" description="击败嬴政" icon="image_01" acceptBuff="Assassination_02_Program_03_01" questBuff="Assassination_02_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="aware_01_01" name="消灭周围暴怒的野兽" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_01_02" selectUIHint="" />
+		<data id="aware_01_02" name="前往其他地点寻找科研团的踪迹" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_02" selectUIHint="" />
+		<data id="aware_02" name="与科研团团长交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_03,aware_04" selectUIHint="" />
+		<data id="aware_03" name="前往标记点a" description="前往科研团团长标记的地点" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_03_01" selectUIHint="" />
+		<data id="aware_03_01" name="消灭古代敌人" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_03_02" selectUIHint="" />
+		<data id="aware_03_02" name="消灭古代首领" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_03_03" selectUIHint="" />
+		<data id="aware_03_03" name="收集线索" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_03_04" selectUIHint="" />
+		<data id="aware_03_04" name="返回找科研团团长汇报" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="aware_04" name="前往标记点b" description="前往科研团团长标记的地点" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_04_01" selectUIHint="" />
+		<data id="aware_04_01" name="消灭暴怒野兽" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_04_02" selectUIHint="" />
+		<data id="aware_04_02" name="消灭野兽领袖" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="aware_04_03" selectUIHint="" />
+		<data id="aware_04_03" name="调查探险家的残骸" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="deep_01_Program_01" name="前往记忆卡标记的地点" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_01_Program_01_01" selectUIHint="" />
+		<data id="deep_01_Program_01_01" name="收集人造人的残骸" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_02" selectUIHint="" />
+		<data id="deep_01_Program_02" name="前往水道附近" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_01_Program_02_01" selectUIHint="" />
+		<data id="deep_01_Program_02_01" name="消灭水道内的怪物" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_01_Program_01_01" selectUIHint="" />
+		<data id="deep_01_Program_03" name="前往遇难点附近的森林" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_01_Program_03_01" selectUIHint="" />
+		<data id="deep_01_Program_03_01" name="消灭森林中的怪物" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_03" selectUIHint="" />
+		<data id="deep_02" name="消灭水道中的BOSS" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_02_01" selectUIHint="" />
+		<data id="deep_02_01" name="收集剩余残骸" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_02_02" selectUIHint="" />
+		<data id="deep_02_02" name="返回与科考团团长交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="deep_03" name="返回与科考团团长交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_03_01" selectUIHint="" />
+		<data id="deep_03_01" name="前往遇难点附近的水道" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_03_02" selectUIHint="" />
+		<data id="deep_03_02" name="消灭水中的怪物" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_03_03" selectUIHint="" />
+		<data id="deep_03_03" name="消灭水中的BOSS" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_03_04" selectUIHint="" />
+		<data id="deep_03_04" name="收集线索" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="deep_03_05" selectUIHint="" />
+		<data id="deep_03_05" name="返回与科考团团长交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Destory_01" name="摧毁哨兵营地" description="用火把烧毁哨塔,或者击败指挥官" icon="image_02" acceptBuff="Destory_01" questBuff="Destory_01_01,Destory_01_02" uiKey="" rewardThing="warrior" unlockCondition="(warrior&gt;0)||(magic&gt;0)" nextSubQuest="Horse_01" selectUIHint="" />
+		<data id="Destory_02" name="摧毁后勤营地" description="击杀营地守卫,或者摧毁补给品" icon="image_04" acceptBuff="Destory_02" questBuff="Destory_02_01,Destory_02_02" uiKey="" rewardThing="warrior" unlockCondition="" nextSubQuest="Kill_02" selectUIHint="从后勤营地发现一封关于附近山贼巢穴的情报。感觉这里的敌人有点厉害,我真的还要正面突入吗？" />
+		<data id="Destory_03" name="正面突入《二》" description="摧毁大营内的防御工事,或者击杀大营守护者" icon="image_06" acceptBuff="Destory_03" questBuff="Destory_03_01,Destory_03_02" uiKey="" rewardThing="warrior" unlockCondition="" nextSubQuest="Kill_03" selectUIHint="" />
+		<data id="Destory_04" name="摧毁哨兵营地" description="用火把烧毁哨塔,或者击败指挥官" icon="image_02" acceptBuff="Destory_04" questBuff="Destory_04_01,Destory_04_02" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="Horse_02" selectUIHint="" />
+		<data id="Destory_05" name="拦路贼" description="击败强盗喽啰,或者强盗头目" icon="image_10" acceptBuff="Destory_05" questBuff="Destory_05_01,Destory_05_02" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="Enterarea_01" selectUIHint="" />
+		<data id="Doubt_01_Program_01" name="前往水怪湖盗贼营地" description="前往水怪湖盗贼营地" icon="image_01" acceptBuff="Doubt_01_Program_01" questBuff="Doubt_01_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_01_01" selectUIHint="" />
+		<data id="Doubt_01_Program_01_01" name="清理盗贼" description="清理盗贼" icon="image_01" acceptBuff="Doubt_01_Program_01_01" questBuff="Doubt_01_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_01_02" selectUIHint="" />
+		<data id="Doubt_01_Program_01_02" name="寻访老者" description="寻问在北边的老者" icon="image_01" acceptBuff="Doubt_01_Program_01_02" questBuff="Doubt_01_Program_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_03,Doubt_01_Program_04,Doubt_02" selectUIHint="" />
+		<data id="Doubt_01_Program_02" name="前往奇怪的村庄" description="前往奇怪的村庄" icon="image_01" acceptBuff="Doubt_01_Program_02" questBuff="Doubt_01_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_02_01" selectUIHint="" />
+		<data id="Doubt_01_Program_02_01" name="击败村民" description="击败村民" icon="image_01" acceptBuff="Doubt_01_Program_02_01" questBuff="Doubt_01_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_02_02" selectUIHint="" />
+		<data id="Doubt_01_Program_02_02" name="寻访妇人" description="寻问在南边的妇人" icon="image_01" acceptBuff="Doubt_01_Program_02_02" questBuff="Doubt_01_Program_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_05,Doubt_01_Program_06,Doubt_02" selectUIHint="" />
+		<data id="Doubt_01_Program_03" name="前往北方洞窟" description="前往北方洞窟" icon="image_01" acceptBuff="Doubt_01_Program_03" questBuff="Doubt_01_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_03_01" selectUIHint="" />
+		<data id="Doubt_01_Program_03_01" name="清理野兽" description="清理野兽" icon="image_01" acceptBuff="Doubt_01_Program_03_01" questBuff="Doubt_01_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_02_03" selectUIHint="" />
+		<data id="Doubt_01_Program_04" name="前往北方的山上" description="前往北方的山上" icon="image_01" acceptBuff="Doubt_01_Program_04" questBuff="Doubt_01_Program_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_04_01" selectUIHint="" />
+		<data id="Doubt_01_Program_04_01" name="清理奇怪的村民" description="清理奇怪的村民" icon="image_01" acceptBuff="Doubt_01_Program_04_01" questBuff="Doubt_01_Program_04_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_02_03" selectUIHint="" />
+		<data id="Doubt_01_Program_05" name="往北走" description="往北走" icon="image_01" acceptBuff="Doubt_01_Program_05" questBuff="Doubt_01_Program_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_05_01" selectUIHint="" />
+		<data id="Doubt_01_Program_05_01" name="清理野兽" description="清理野兽" icon="image_01" acceptBuff="Doubt_01_Program_05_01" questBuff="Doubt_01_Program_05_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_07" selectUIHint="" />
+		<data id="Doubt_01_Program_06" name="前往村庄" description="前往村庄" icon="image_01" acceptBuff="Doubt_01_Program_06" questBuff="Doubt_01_Program_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_06_01" selectUIHint="" />
+		<data id="Doubt_01_Program_06_01" name="清理村人" description="清理村人" icon="image_01" acceptBuff="Doubt_01_Program_06_01" questBuff="Doubt_01_Program_06_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_07" selectUIHint="" />
+		<data id="Doubt_01_Program_07" name="调查线索" description="查看红色的毛发" icon="image_01" acceptBuff="Doubt_01_Program_07" questBuff="Doubt_01_Program_07" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_01_Program_07_01" selectUIHint="" />
+		<data id="Doubt_01_Program_07_01" name="询问孩子" description="询问孩子" icon="image_01" acceptBuff="Doubt_01_Program_07_01" questBuff="Doubt_01_Program_07_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_02_01,Doubt_03" selectUIHint="" />
+		<data id="Doubt_02" name="寻找拿着资料的孩子" description="去森林当中寻找拿着资料的孩子" icon="image_01" acceptBuff="Doubt_02" questBuff="Doubt_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_02_01" selectUIHint="" />
+		<data id="Doubt_02_01" name="前往北方的山峦" description="前往北方的山峦" icon="image_01" acceptBuff="Doubt_02_01" questBuff="Doubt_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_02_02" selectUIHint="" />
+		<data id="Doubt_02_02" name="消灭狐狸" description="消灭狐狸" icon="image_01" acceptBuff="Doubt_02_02" questBuff="Doubt_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_02_03" selectUIHint="" />
+		<data id="Doubt_02_03" name="染血的人造人" description="消灭染血的人造人" icon="image_01" acceptBuff="Doubt_02_03" questBuff="Doubt_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Doubt_03" name="前往妲己的巢穴" description="前往妲己的巢穴" icon="image_01" acceptBuff="Doubt_03" questBuff="Doubt_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Doubt_03_01" selectUIHint="" />
+		<data id="Doubt_03_01" name="击败妲己" description="击败妲己" icon="image_01" acceptBuff="Doubt_03_01" questBuff="Doubt_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_01" name="正确的方法" description="询问勒普击杀BOSS 的方法" icon="image_01" acceptBuff="Dragon_Hunter_Program_01" questBuff="Dragon_Hunter_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Dragon_Hunter_Program_01_01,Dragon_Hunter_Program_02_01" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_01_01" name="击败火狐" description="在拥有冰霜BUFF的情况下击败火狐狸" icon="image_01" acceptBuff="Dragon_Hunter_Program_01_01" questBuff="Dragon_Hunter_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_02" name="强杀火狐" description="直接强杀火狐" icon="image_01" acceptBuff="Dragon_Hunter_Program_02" questBuff="Dragon_Hunter_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_02_01" name="寻找老者" description="找到老者，满足他的愿望，自然会得到地图" icon="image_01" acceptBuff="Dragon_Hunter_Program_02_01" questBuff="Dragon_Hunter_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Dragon_Hunter_Program_02_01_01,Dragon_Hunter_Program_02_01_02,Dragon_Hunter_Program_02" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_02_01_01" name="狩猎猴子" description="愿望1击杀猴子抢回他的酒 " icon="image_01" acceptBuff="Dragon_Hunter_Program_02_01_01" questBuff="Dragon_Hunter_Program_02_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Dragon_Hunter_Program_02_01_01_01" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_02_01_01_01" name="实现愿望" description="返回寻找老者获得强化" icon="image_01" acceptBuff="Dragon_Hunter_Program_02_01_01_01" questBuff="Dragon_Hunter_Program_02_01_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Dragon_Hunter_Program_02" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_02_01_02" name="狩猎狼" description="愿望2击杀林中老狼获得狼皮" icon="image_01" acceptBuff="Dragon_Hunter_Program_02_01_02" questBuff="Dragon_Hunter_Program_02_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Dragon_Hunter_Program_02_01_01_01" selectUIHint="" />
+		<data id="Dragon_Hunter_Program_03" name="询问帮手" description="找到勒普询问帮手" icon="image_01" acceptBuff="Dragon_Hunter_Program_03" questBuff="Dragon_Hunter_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Dragon_Hunter_Program_02_01" selectUIHint="" />
+		<data id="Enterarea_01" name="偷偷潜入" description="通过密道潜入大本营" icon="image_12" acceptBuff="Enterarea_01" questBuff="Enterarea_01_01" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="Kill_03" selectUIHint="" />
+		<data id="Examine_02" name="前往老猎人所在位置" description="前往老猎人所在位置" icon="image_01" acceptBuff="Examine_02" questBuff="Examine_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_03" selectUIHint="" />
+		<data id="Examine_03" name="与老猎人交谈" description="与老猎人交谈" icon="image_01" acceptBuff="Examine_03" questBuff="Examine_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_03_Program_01,Examine_03_Program_02,Examine_03_Program_03" selectUIHint="" />
+		<data id="Examine_03_Program_01" name="前往收集遗失的物资的地点" description="前往收集遗失的物资的地点" icon="image_01" acceptBuff="Examine_03_Program_01" questBuff="Examine_03_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_03_Program_01_01" selectUIHint="" />
+		<data id="Examine_03_Program_01_01" name="收集遗失的物资" description="收集遗失的物资" icon="image_01" acceptBuff="Examine_03_Program_01_01" questBuff="Examine_03_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_04" selectUIHint="" />
+		<data id="Examine_03_Program_02" name="前往匈奴营地" description="前往匈奴营地" icon="image_01" acceptBuff="Examine_03_Program_02" questBuff="Examine_03_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_03_Program_02_01" selectUIHint="" />
+		<data id="Examine_03_Program_02_01" name="击败匈奴人" description="击败匈奴人，获得物资" icon="image_01" acceptBuff="Examine_03_Program_02_01" questBuff="Examine_03_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_04" selectUIHint="" />
+		<data id="Examine_03_Program_03" name="与老猎人继续交谈" description="与老猎人继续交谈" icon="image_01" acceptBuff="Examine_03_Program_03" questBuff="Examine_03_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_03_Program_03_01" selectUIHint="" />
+		<data id="Examine_03_Program_03_01" name="前往寻找老猎人的好友" description="" icon="image_01" acceptBuff="Examine_03_Program_03_01" questBuff="Examine_03_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_05" selectUIHint="" />
+		<data id="Examine_04" name="寻找一些花朵" description="" icon="image_01" acceptBuff="Examine_04" questBuff="Examine_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_04_01" selectUIHint="" />
+		<data id="Examine_04_01" name="消灭周围的野兽" description="" icon="image_01" acceptBuff="Examine_04_01" questBuff="Examine_04_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06" selectUIHint="" />
+		<data id="Examine_05" name="与老猎人的好友交流" description="与老猎人的好友交流" icon="image_01" acceptBuff="Examine_05" questBuff="Examine_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_05_01" selectUIHint="" />
+		<data id="Examine_05_01" name="返回寻找老猎人" description="返回寻找老猎人" icon="image_01" acceptBuff="Examine_05_01" questBuff="Examine_05_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_05_02" selectUIHint="" />
+		<data id="Examine_05_02" name="与老猎人交谈" description="与老猎人交谈" icon="image_01" acceptBuff="Examine_05_02" questBuff="Examine_05_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Examine_06" name="带着花与老猎人的好友交流" description="与老猎人的好友交流" icon="image_01" acceptBuff="Examine_06" questBuff="Examine_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06_01" selectUIHint="" />
+		<data id="Examine_06_01" name="继续交谈" description="他确实认识这种花朵，继续交谈寻找线索" icon="image_01" acceptBuff="Examine_06_01" questBuff="Examine_06_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06_02" selectUIHint="" />
+		<data id="Examine_06_02" name="前往狼穴" description="前往狼穴" icon="image_01" acceptBuff="Examine_06_02" questBuff="Examine_06_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06_03" selectUIHint="" />
+		<data id="Examine_06_03" name="击杀狼群" description="击杀狼群获得肉" icon="image_01" acceptBuff="Examine_06_03" questBuff="Examine_06_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06_04" selectUIHint="" />
+		<data id="Examine_06_04" name="前往河床" description="前往河床" icon="image_01" acceptBuff="Examine_06_04" questBuff="Examine_06_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06_05" selectUIHint="" />
+		<data id="Examine_06_05" name="采集盐" description="采集盐" icon="image_01" acceptBuff="Examine_06_05" questBuff="Examine_06_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06_06" selectUIHint="" />
+		<data id="Examine_06_06" name="返回老猎人处" description="返回老猎人处" icon="image_01" acceptBuff="Examine_06_06" questBuff="Examine_06_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Examine_06_07" selectUIHint="" />
+		<data id="Examine_06_07" name="与老猎人交谈" description="与老猎人交谈" icon="image_01" acceptBuff="Examine_06_07" questBuff="Examine_06_07" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="hero_Hunter_01_01" name="前往标记地点调查" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_01_02" selectUIHint="" />
+		<data id="hero_Hunter_01_02" name="消灭周围的野兽" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_01_03" selectUIHint="" />
+		<data id="hero_Hunter_01_03" name="调查线索" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_01_04" selectUIHint="" />
+		<data id="hero_Hunter_01_04" name="前往猎人可能出现的地点" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_01_05" selectUIHint="" />
+		<data id="hero_Hunter_01_05" name="与猎人交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_02,hero_Hunter_03" selectUIHint="" />
+		<data id="hero_Hunter_02" name="前往汉军营地" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_02_01" selectUIHint="" />
+		<data id="hero_Hunter_02_01" name="击败周围的士兵" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_02_02" selectUIHint="" />
+		<data id="hero_Hunter_02_02" name="收集秘药" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_02_03" selectUIHint="" />
+		<data id="hero_Hunter_02_03" name="前往boss所在地" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_02_04" selectUIHint="" />
+		<data id="hero_Hunter_02_04" name="击杀BOSS" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_03_01" selectUIHint="" />
+		<data id="hero_Hunter_03" name="击杀BOSS" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="hero_Hunter_03_01" selectUIHint="" />
+		<data id="hero_Hunter_03_01" name="前往猎人所在的地方" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Horse_01" name="快速离开" description="骑上牧场里的马,离开这里" icon="image_03" acceptBuff="Horse_01" questBuff="Ride_01" uiKey="" rewardThing="warrior" unlockCondition="" nextSubQuest="Talk_03" selectUIHint="" />
+		<data id="Horse_02" name="快速离开" description="骑上牧场里的马,离开这里" icon="image_03" acceptBuff="Horse_02" questBuff="Ride_02" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="Talk_02" selectUIHint="" />
+		<data id="Hunt3_01_01" name="前往秦军大营" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_01_01_01" selectUIHint="" />
+		<data id="Hunt3_01_01_01" name="消灭秦军士兵" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_01_01_02" selectUIHint="" />
+		<data id="Hunt3_01_01_02" name="调查线索" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_02" selectUIHint="" />
+		<data id="Hunt3_01_02" name="野兽潜伏的森林" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_01_02_01" selectUIHint="" />
+		<data id="Hunt3_01_02_01" name="消灭林中野兽" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_01_02_02" selectUIHint="" />
+		<data id="Hunt3_01_02_02" name="调查线索" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_02" selectUIHint="" />
+		<data id="Hunt3_02" name="前往北方的森林" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_02_01" selectUIHint="" />
+		<data id="Hunt3_02_01" name="与人造人交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_03,Hunt3_04" selectUIHint="" />
+		<data id="Hunt3_03" name="继续向北方的森林前进" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_03_01" selectUIHint="" />
+		<data id="Hunt3_03_01" name="与另一个人造人交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_03_02" selectUIHint="" />
+		<data id="Hunt3_03_02" name="前往秦军大营" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_03_03" selectUIHint="" />
+		<data id="Hunt3_03_03" name="消灭周围的秦军" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_03_04" selectUIHint="" />
+		<data id="Hunt3_03_04" name="调查线索" description="似乎让人造人跑了，可恶" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Hunt3_04" name="虽然怀疑，但还是继续向北方的森林前进" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_04_01" selectUIHint="" />
+		<data id="Hunt3_04_01" name="消灭狂暴的野兽" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_04_02" selectUIHint="" />
+		<data id="Hunt3_04_02" name="与人造人交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_04_03" selectUIHint="" />
+		<data id="Hunt3_04_03" name="消灭四周的野兽" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt3_04_04" selectUIHint="" />
+		<data id="Hunt3_04_04" name="与人造人交谈" description="告诉他已经清理了周围的野兽，让他赶紧离开" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Hunt_Program_01" name="狩猎凶猛猎物" description="找寻追踪凶猛猎物的猎人" icon="image_01" acceptBuff="Hunt_Program_01" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt_Program_01_01,Hunt_Program_01_02" selectUIHint="" />
+		<data id="Hunt_Program_01_01" name="只有暴力才能解决真正的问题" description="前往解决猎物" icon="image_01" acceptBuff="Hunt_Program_01_01_1,Hunt_Program_01_01_2" questBuff="Hunt_Program_01_01_1,Hunt_Program_01_01_2" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Hunt_Program_01_02" name="收集毒草" description="采集有毒的草药" icon="image_01" acceptBuff="Hunt_Program_01_02" questBuff="Hunt_Program_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt_Program_01_02_01" selectUIHint="" />
+		<data id="Hunt_Program_01_02_01" name="下毒" description="前往水池将药剂投入" icon="image_01" acceptBuff="Hunt_Program_01_02_01" questBuff="Hunt_Program_01_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt_Program_01_02_02" selectUIHint="" />
+		<data id="Hunt_Program_01_02_02" name="击败弱化的BOSS" description="击败被药剂削弱的BOSS" icon="image_01" acceptBuff="Hunt_Program_01_02_02" questBuff="Hunt_Program_01_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Hunt_Program_02" name="狩猎狡诈猎物" description="找寻追踪狡诈猎物的猎人" icon="image_01" acceptBuff="Hunt_Program_02" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt_Program_02_01,Hunt_Program_02_02" selectUIHint="" />
+		<data id="Hunt_Program_02_01" name="一力降十技" description="前往解决猎物" icon="image_01" acceptBuff="Hunt_Program_02_01_1,Hunt_Program_02_01_2" questBuff="Hunt_Program_02_01_1,Hunt_Program_02_01_2" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Hunt_Program_02_02" name="寻找机关" description="寻找机关" icon="image_01" acceptBuff="Hunt_Program_02_02" questBuff="Hunt_Program_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt_Program_02_02_01" selectUIHint="" />
+		<data id="Hunt_Program_02_02_01" name="找寻抗毒材料" description="找寻抗毒材料" icon="image_01" acceptBuff="Hunt_Program_02_02_01" questBuff="Hunt_Program_02_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Hunt_Program_02_02_02" selectUIHint="" />
+		<data id="Hunt_Program_02_02_02" name="击败被你克制的BOSS" description="击败被你克制的BOSS" icon="image_01" acceptBuff="Hunt_Program_02_02_02" questBuff="Hunt_Program_02_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Kill_01" name="解救传令官" description="击杀3个围攻传令官的喽啰" icon="image_01" acceptBuff="Kill_01" questBuff="Kill_01_01" uiKey="" rewardThing="" unlockCondition="(warrior&gt;0)&amp;&amp;(magic&gt;0)" nextSubQuest="Destory_01,Talk_01" selectUIHint="传令官告诉你可以从正面进攻,同时也有一条隐秘通道,究竟从哪边走呢" />
+		<data id="Kill_02" name="正面突入《一》" description="击门口的两名守卫" icon="image_05" acceptBuff="Kill_02" questBuff="Kill_02_01" uiKey="" rewardThing="warrior" unlockCondition="" nextSubQuest="Destory_03" selectUIHint="" />
+		<data id="Kill_03" name="击败李白" description="击败李白" icon="image_07" acceptBuff="Kill_03" questBuff="Kill_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Leather_Understand_Navigate_01" name="寻找猎物" description="找到野兽的聚集地" icon="image_02" acceptBuff="Leather_Understand_Navigate_01" questBuff="Leather_Understand_Navigate_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Leather_Understand_Program_01,Leather_Understand_Program_02" selectUIHint="" />
+		<data id="Leather_Understand_Program_01" name="狩猎狼群" description="击杀野狼获得6个毛皮" icon="image_02" acceptBuff="Leather_Understand_Program_01" questBuff="Leather_Understand_Program_01" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Leather_Understand_Program_02" name="杀死兽王" description="击杀头狼获得高价的皮毛" icon="image_02" acceptBuff="Leather_Understand_Program_02" questBuff="Leather_Understand_Program_02" uiKey="" rewardThing="warrior" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Love_Program_01" name="抵御野兽" description="帮勒普抵御猛兽    " icon="image_01" acceptBuff="Love_Program_01" questBuff="Love_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Love_Program_01_01,Love_Program_01_02" selectUIHint="" />
+		<data id="Love_Program_01_01" name="击杀人造人" description="击杀遭遇到的人造人" icon="image_01" acceptBuff="Love_Program_01_01" questBuff="Love_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Love_Program_01_01_01,Love_Program_01_01_02" selectUIHint="" />
+		<data id="Love_Program_01_01_01" name="找寻传送器" description="找到传送器" icon="image_01" acceptBuff="Love_Program_01_01_01" questBuff="Love_Program_01_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Love_Program_01_01_02" name="于凯普交谈" description="让凯普解决剩下的问题" icon="image_01" acceptBuff="Love_Program_01_01_02" questBuff="Love_Program_01_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Love_Program_01_02" name="击杀森林野兽" description="击杀森林当中的野兽" icon="image_01" acceptBuff="Love_Program_01_02" questBuff="Love_Program_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Love_Program_01_02_01,Love_Program_01_02_02" selectUIHint="" />
+		<data id="Love_Program_01_02_01" name="击败人造人" description="击败人造人" icon="image_01" acceptBuff="Love_Program_01_02_01" questBuff="Love_Program_01_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Love_Program_01_02_02" name="去传送装置" description="去传送装置" icon="image_01" acceptBuff="Love_Program_01_02_02" questBuff="Love_Program_01_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Love_Program_02" name="寻找书信" description="勒普让你去找给看板娘的回信" icon="image_01" acceptBuff="Love_Program_02" questBuff="Love_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Love_Program_01_02" selectUIHint="" />
+		<data id="Machinist_Drawings_Program_01" name="前往草原" description="传送前往草原，击杀一定数量的怪物获得碎片" icon="image_01" acceptBuff="Machinist_Drawings_Program_01" questBuff="Machinist_Drawings_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Machinist_Drawings_Program_01_01" selectUIHint="" />
+		<data id="Machinist_Drawings_Program_01_01" name="击败头目" description="击败拥有图纸的头目，获得图纸" icon="image_01" acceptBuff="Machinist_Drawings_Program_01_01" questBuff="Machinist_Drawings_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Machinist_Drawings_Program_02" name="寻找商人" description="去神秘商人那里再买一份图纸" icon="image_01" acceptBuff="Machinist_Drawings_Program_02" questBuff="Machinist_Drawings_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Machinist_Drawings_Program_02_01,Machinist_Drawings_Program_02_02" selectUIHint="" />
+		<data id="Machinist_Drawings_Program_02_01" name="收集草药" description="前往收集贵重的草药" icon="image_01" acceptBuff="Machinist_Drawings_Program_02_01" questBuff="Machinist_Drawings_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Machinist_Drawings_Program_02_03" selectUIHint="" />
+		<data id="Machinist_Drawings_Program_02_02" name="收集皮毛" description="前往收集野兽的毛皮" icon="image_01" acceptBuff="Machinist_Drawings_Program_02_02" questBuff="Machinist_Drawings_Program_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Machinist_Drawings_Program_02_03" selectUIHint="" />
+		<data id="Machinist_Drawings_Program_02_03" name="交易" description="返回商人处，索要图纸" icon="image_01" acceptBuff="Machinist_Drawings_Program_02_03" questBuff="Machinist_Drawings_Program_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Machinist_Drawings_Program_03" name="图纸存放处" description="去地图内的牧场，再偷一份" icon="image_01" acceptBuff="Machinist_Drawings_Program_03" questBuff="Machinist_Drawings_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Missing_01_02" name="返回人造人处" description="向人造人高手汇报情况" icon="image_01" acceptBuff="Missing_01_02" questBuff="Missing_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_03,Missing_Program_04" selectUIHint="" />
+		<data id="Missing_01_03" name="返回人造人处" description="汇报线索" icon="image_01" acceptBuff="Missing_01_03" questBuff="Missing_01_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_05,Missing_Program_06" selectUIHint="" />
+		<data id="Missing_02" name="与人造人高手对话" description="与人造人高手对话" icon="image_01" acceptBuff="Missing_02" questBuff="Missing_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_01,Missing_Program_02,Missing_02_01" selectUIHint="" />
+		<data id="Missing_02_01" name="前往山贼营地" description="前往山贼营地" icon="image_01" acceptBuff="Missing_02_01" questBuff="Missing_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_02_02" selectUIHint="" />
+		<data id="Missing_02_02" name="清剿山贼" description="清理山贼营地的山贼" icon="image_01" acceptBuff="Missing_02_02" questBuff="Missing_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_02_03" selectUIHint="" />
+		<data id="Missing_02_03" name="查看科研机器" description="查看科研机器，找寻线索" icon="image_01" acceptBuff="Missing_02_03" questBuff="Missing_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_02_04" selectUIHint="" />
+		<data id="Missing_02_04" name="前往干涸峡谷" description="前往干涸的峡谷找寻犯人" icon="image_01" acceptBuff="Missing_02_04" questBuff="Missing_02_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_02_05" selectUIHint="" />
+		<data id="Missing_02_05" name="击败山贼头领" description="击败山贼头目，夺回数据" icon="image_01" acceptBuff="Missing_02_05" questBuff="Missing_02_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Missing_Program_01" name="清理沙丘的野兽" description="前往清理沙丘的野兽" icon="image_01" acceptBuff="Missing_Program_01" questBuff="Missing_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_01_02" selectUIHint="" />
+		<data id="Missing_Program_02" name="清理水边的野兽" description="前往清理水边的野兽" icon="image_01" acceptBuff="Missing_Program_02" questBuff="Missing_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_01_02" selectUIHint="" />
+		<data id="Missing_Program_03" name="前往盗贼旅店" description="前往盗贼占据的旅店,清理盗贼" icon="image_01" acceptBuff="Missing_Program_03" questBuff="Missing_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_03_01" selectUIHint="" />
+		<data id="Missing_Program_03_01" name="调查旅店线索" description="调查旅店线索" icon="image_01" acceptBuff="Missing_Program_03_01" questBuff="Missing_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_01_03" selectUIHint="" />
+		<data id="Missing_Program_04" name="前往船坞" description="前往盗贼占据的船坞,清理盗贼" icon="image_01" acceptBuff="Missing_Program_04" questBuff="Missing_Program_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_04_01" selectUIHint="" />
+		<data id="Missing_Program_04_01" name="调查船坞线索" description="调查船坞线索" icon="image_01" acceptBuff="Missing_Program_04_01" questBuff="Missing_Program_04_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_01_03" selectUIHint="" />
+		<data id="Missing_Program_05" name="前往叛军营地" description="前往叛军营地" icon="image_01" acceptBuff="Missing_Program_05" questBuff="Missing_Program_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_05_01" selectUIHint="" />
+		<data id="Missing_Program_05_01" name="清理叛军营地" description="清理叛军营地的敌人" icon="image_01" acceptBuff="Missing_Program_05_01" questBuff="Missing_Program_05_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_05_02" selectUIHint="" />
+		<data id="Missing_Program_05_02" name="收集残骸" description="收集科研残骸" icon="image_01" acceptBuff="Missing_Program_05_02" questBuff="Missing_Program_05_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Missing_Program_06" name="前往荒野" description="前往荒野" icon="image_01" acceptBuff="Missing_Program_06" questBuff="Missing_Program_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_06_01" selectUIHint="" />
+		<data id="Missing_Program_06_01" name="清理荒野" description="清理荒野的敌人" icon="image_01" acceptBuff="Missing_Program_06_01" questBuff="Missing_Program_06_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Missing_Program_06_02" selectUIHint="" />
+		<data id="Missing_Program_06_02" name="收集残骸" description="收集科研残骸" icon="image_01" acceptBuff="Missing_Program_06_02" questBuff="Missing_Program_06_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="new_Android_02" name="前往洞穴" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="new_Android_02_01" selectUIHint="" />
+		<data id="new_Android_02_01" name="击败洞穴的首领" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="new_Android_02_02" selectUIHint="" />
+		<data id="new_Android_02_02" name="返回与管理员交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="new_Android_02_03" selectUIHint="" />
+		<data id="new_Android_02_03" name="前往贼窝" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="new_Android_02_04" name="消灭贼窝的首领" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="new_Android_02_05" selectUIHint="" />
+		<data id="new_Android_02_05" name="与管理员交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="new_Android_03" name="前往挑战营地" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="new_Android_03_01" selectUIHint="" />
+		<data id="new_Android_03_01" name="击败营地领袖" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="new_Android_03_02" selectUIHint="" />
+		<data id="new_Android_03_02" name="返回与管理员交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="new_Android_02_04" selectUIHint="" />
+		<data id="Observer_01_Program_01" name="前往观察点1" description="前往观察点1,着手例行调查" icon="image_01" acceptBuff="Observer_01_Program_01" questBuff="Observer_01_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_01" selectUIHint="" />
+		<data id="Observer_01_Program_01_01" name="击杀异变的怪物" description="击杀异变的怪物" icon="image_01" acceptBuff="Observer_01_Program_01_01" questBuff="Observer_01_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_02" selectUIHint="" />
+		<data id="Observer_01_Program_01_02" name="前往观察点3" description="前往观察点3，进行调查" icon="image_01" acceptBuff="Observer_01_Program_01_02" questBuff="Observer_01_Program_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_03" selectUIHint="" />
+		<data id="Observer_01_Program_01_03" name="调查线索" description="调查线索" icon="image_01" acceptBuff="Observer_01_Program_01_03" questBuff="Observer_01_Program_01_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_04" selectUIHint="" />
+		<data id="Observer_01_Program_01_04" name="消灭异变的怪物" description="消灭异变的怪物" icon="image_01" acceptBuff="Observer_01_Program_01_04" questBuff="Observer_01_Program_01_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_05,Observer_01_Program_02" selectUIHint="" />
+		<data id="Observer_01_Program_01_05" name="返回观察员处" description="返回观察员处" icon="image_01" acceptBuff="Observer_01_Program_01_05" questBuff="Observer_01_Program_01_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_06" selectUIHint="" />
+		<data id="Observer_01_Program_01_06" name="前往森林" description="前往森林" icon="image_01" acceptBuff="Observer_01_Program_01_06" questBuff="Observer_01_Program_01_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_07" selectUIHint="" />
+		<data id="Observer_01_Program_01_07" name="清理熊收集熊皮" description="清理熊收集熊皮" icon="image_01" acceptBuff="Observer_01_Program_01_07" questBuff="Observer_01_Program_01_07" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_08" selectUIHint="" />
+		<data id="Observer_01_Program_01_08" name="返回观察员处" description="返回观察员处" icon="image_01" acceptBuff="Observer_01_Program_01_08" questBuff="Observer_01_Program_01_08" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_01_09" selectUIHint="" />
+		<data id="Observer_01_Program_01_09" name="找到孩子" description="找到孩子并将玩具给他" icon="image_01" acceptBuff="Observer_01_Program_01_09" questBuff="Observer_01_Program_01_09" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Observer_01_Program_02" name="前往观察点4" description="前往观察点4,寻找孩子的踪迹" icon="image_01" acceptBuff="Observer_01_Program_02" questBuff="Observer_01_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_02_01" selectUIHint="" />
+		<data id="Observer_01_Program_02_01" name="调查人造人的残骸" description="调查人造人的残骸" icon="image_01" acceptBuff="Observer_01_Program_02_01" questBuff="Observer_01_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_02_02" selectUIHint="" />
+		<data id="Observer_01_Program_02_02" name="前往观察点2" description="前往观察点2，追踪消息" icon="image_01" acceptBuff="Observer_01_Program_02_02" questBuff="Observer_01_Program_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_02_03" selectUIHint="" />
+		<data id="Observer_01_Program_02_03" name="调查留言" description="调查留言" icon="image_01" acceptBuff="Observer_01_Program_02_03" questBuff="Observer_01_Program_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_02_04" selectUIHint="" />
+		<data id="Observer_01_Program_02_04" name="消灭异变的怪物" description="消灭异变的怪物" icon="image_01" acceptBuff="Observer_01_Program_02_04" questBuff="Observer_01_Program_02_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_02_05" selectUIHint="" />
+		<data id="Observer_01_Program_02_05" name="前往留言地点" description="前往留言地点" icon="image_01" acceptBuff="Observer_01_Program_02_05" questBuff="Observer_01_Program_02_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_02_06" selectUIHint="" />
+		<data id="Observer_01_Program_02_06" name="与孩子交谈" description="与孩子交谈" icon="image_01" acceptBuff="Observer_01_Program_02_06" questBuff="Observer_01_Program_02_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Observer_01_Program_02_07" selectUIHint="" />
+		<data id="Observer_01_Program_02_07" name="消灭周围的野兽" description="消灭周围的野兽" icon="image_01" acceptBuff="Observer_01_Program_02_07" questBuff="Observer_01_Program_02_07" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Rebel_01_Program_01" name="前往叛军出没点" description="前往叛军出没点" icon="image_01" acceptBuff="Rebel_01_Program_01" questBuff="Rebel_01_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_01_Program_01_01" selectUIHint="" />
+		<data id="Rebel_01_Program_01_01" name="消灭野兽" description="消灭野兽" icon="image_01" acceptBuff="Rebel_01_Program_01_01" questBuff="Rebel_01_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_02" selectUIHint="" />
+		<data id="Rebel_01_Program_02" name="前往洞窟" description="前往洞窟" icon="image_01" acceptBuff="Rebel_01_Program_02" questBuff="Rebel_01_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_01_Program_02_01" selectUIHint="" />
+		<data id="Rebel_01_Program_02_01" name="消灭叛军" description="消灭叛军" icon="image_01" acceptBuff="Rebel_01_Program_02_01" questBuff="Rebel_01_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_02" selectUIHint="" />
+		<data id="Rebel_02" name="找到人造人哈珀" description="找到人造人哈珀" icon="image_01" acceptBuff="Rebel_02" questBuff="Rebel_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_01,Rebel_02_Program_02,Rebel_02_Program_03" selectUIHint="" />
+		<data id="Rebel_02_Program_01" name="前往兽穴" description="前往兽穴" icon="image_01" acceptBuff="Rebel_02_Program_01" questBuff="Rebel_02_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_01_01" selectUIHint="" />
+		<data id="Rebel_02_Program_01_01" name="清理野兽" description="清理野兽" icon="image_01" acceptBuff="Rebel_02_Program_01_01" questBuff="Rebel_02_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_01_02" selectUIHint="" />
+		<data id="Rebel_02_Program_01_02" name="找到野兽巢穴" description="找到野兽巢穴" icon="image_01" acceptBuff="Rebel_02_Program_01_02" questBuff="Rebel_02_Program_01_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_01_03" selectUIHint="" />
+		<data id="Rebel_02_Program_01_03" name="与受伤人造人交谈" description="与受伤人造人交谈" icon="image_01" acceptBuff="Rebel_02_Program_01_03" questBuff="Rebel_02_Program_01_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_01_04" selectUIHint="" />
+		<data id="Rebel_02_Program_01_04" name="前往哪吒营地" description="前往哪吒营地" icon="image_01" acceptBuff="Rebel_02_Program_01_04" questBuff="Rebel_02_Program_01_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Rebel_02_Program_01_05" name="击杀营地内的士兵" description="击杀营地内的士兵收集传送器碎片" icon="image_01" acceptBuff="Rebel_02_Program_01_05" questBuff="Rebel_02_Program_01_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_01_06" selectUIHint="" />
+		<data id="Rebel_02_Program_01_06" name="找到并修复传送器" description="找到并修复传送器" icon="image_01" acceptBuff="Rebel_02_Program_01_06" questBuff="Rebel_02_Program_01_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Rebel_02_Program_02" name="前往哨塔" description="前往哨塔" icon="image_01" acceptBuff="Rebel_02_Program_02" questBuff="Rebel_02_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_02_01" selectUIHint="" />
+		<data id="Rebel_02_Program_02_01" name="清理野兽" description="清理野兽" icon="image_01" acceptBuff="Rebel_02_Program_02_01" questBuff="Rebel_02_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_02_02" selectUIHint="" />
+		<data id="Rebel_02_Program_02_02" name="与哈珀交谈" description="与哈珀交谈" icon="image_01" acceptBuff="Rebel_02_Program_02_02" questBuff="Rebel_02_Program_02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_01_04,Rebel_02_Program_02_03" selectUIHint="" />
+		<data id="Rebel_02_Program_02_03" name="前往山上" description="前往山上寻找定位装置" icon="image_01" acceptBuff="Rebel_02_Program_02_03" questBuff="Rebel_02_Program_02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_02_04" selectUIHint="" />
+		<data id="Rebel_02_Program_02_04" name="消灭野兽" description="消灭野兽" icon="image_01" acceptBuff="Rebel_02_Program_02_04" questBuff="Rebel_02_Program_02_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_02_05" selectUIHint="" />
+		<data id="Rebel_02_Program_02_05" name="前往标记传送器所在地" description="前往标记传送器所在地" icon="image_01" acceptBuff="Rebel_02_Program_02_05" questBuff="Rebel_02_Program_02_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Rebel_02_Program_03" name="前往洞窟" description="前往洞窟" icon="image_01" acceptBuff="Rebel_02_Program_03" questBuff="Rebel_02_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_03_01" selectUIHint="" />
+		<data id="Rebel_02_Program_03_01" name="击杀叛军" description="击杀叛军" icon="image_01" acceptBuff="Rebel_02_Program_03_01" questBuff="Rebel_02_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_03_02" selectUIHint="" />
+		<data id="Rebel_02_Program_03_02" name="找到人造人藏匿的巢穴" description="找到人造人藏匿的巢穴" icon="image_01" acceptBuff="Rebel_02_Program_03_02" questBuff="Rebel_02_Program_03_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Rebel_02_Program_03_03" selectUIHint="" />
+		<data id="Rebel_02_Program_03_03" name="消灭人造人" description="消灭人造人" icon="image_01" acceptBuff="Rebel_02_Program_03_03" questBuff="Rebel_02_Program_03_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Reveal_02" name="前往森林" description="前往森林" icon="image_01" acceptBuff="Reveal_02" questBuff="Reveal_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_03" selectUIHint="" />
+		<data id="Reveal_03" name="与资源管理者交谈了解情况" description="与资源管理者交谈了解情况" icon="image_01" acceptBuff="Reveal_03" questBuff="Reveal_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_03_Program_01,Reveal_03_Program_02,Reveal_03_Program_03" selectUIHint="" />
+		<data id="Reveal_03_Program_01" name="调查培养所四周" description="调查培养所四周" icon="image_01" acceptBuff="Reveal_03_Program_01" questBuff="Reveal_03_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_03_Program_01_01" selectUIHint="" />
+		<data id="Reveal_03_Program_01_01" name="消灭野兽" description="消灭野兽" icon="image_01" acceptBuff="Reveal_03_Program_01_01" questBuff="Reveal_03_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04" selectUIHint="" />
+		<data id="Reveal_03_Program_02" name="调查培养所的植物" description="调查培养所的植物" icon="image_01" acceptBuff="Reveal_03_Program_02" questBuff="Reveal_03_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_03_Program_02_01" selectUIHint="" />
+		<data id="Reveal_03_Program_02_01" name="消灭野兽" description="消灭野兽" icon="image_01" acceptBuff="Reveal_03_Program_02_01" questBuff="Reveal_03_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04,Reveal_05" selectUIHint="" />
+		<data id="Reveal_03_Program_03" name="在周围区域找到可疑的人" description="在周围区域找到可疑的人" icon="image_01" acceptBuff="Reveal_03_Program_03" questBuff="Reveal_03_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_03_Program_03_01" selectUIHint="" />
+		<data id="Reveal_03_Program_03_01" name="与人造人交谈" description="与人造人交谈" icon="image_01" acceptBuff="Reveal_03_Program_03_01" questBuff="Reveal_03_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_05" selectUIHint="" />
+		<data id="Reveal_04" name="将消息反馈给管理员" description="将消息反馈给管理员" icon="image_01" acceptBuff="Reveal_04" questBuff="Reveal_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04_01" selectUIHint="" />
+		<data id="Reveal_04_01" name="前往管理员标记地点" description="前往管理员标记地点" icon="image_01" acceptBuff="Reveal_04_01" questBuff="Reveal_04_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04_02" selectUIHint="" />
+		<data id="Reveal_04_02" name="消灭人造人" description="消灭人造人" icon="image_01" acceptBuff="Reveal_04_02" questBuff="Reveal_04_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04_03" selectUIHint="" />
+		<data id="Reveal_04_03" name="调查人造人留下的线索" description="调查人造人留下的线索" icon="image_01" acceptBuff="Reveal_04_03" questBuff="Reveal_04_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04_04" selectUIHint="" />
+		<data id="Reveal_04_04" name="消灭管理员手下的人造人" description="消灭管理员手下的人造人" icon="image_01" acceptBuff="Reveal_04_04" questBuff="Reveal_04_04" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04_05" selectUIHint="" />
+		<data id="Reveal_04_05" name="找到监守自盗的管理员" description="找到监守自盗的管理员" icon="image_01" acceptBuff="Reveal_04_05" questBuff="Reveal_04_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_04_06" selectUIHint="" />
+		<data id="Reveal_04_06" name="消灭变异的管理员" description="消灭变异的管理员" icon="image_01" acceptBuff="Reveal_04_06" questBuff="Reveal_04_06" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Reveal_05" name="回去找管理员交谈" description="回去找管理员交谈" icon="image_01" acceptBuff="Reveal_05" questBuff="Reveal_05" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_05_01" selectUIHint="" />
+		<data id="Reveal_05_01" name="调查人造人的线索" description="调查人造人的线索" icon="image_01" acceptBuff="Reveal_05_01" questBuff="Reveal_05_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_05_02" selectUIHint="" />
+		<data id="Reveal_05_02" name="击杀周围的野兽" description="击杀周围的野兽" icon="image_01" acceptBuff="Reveal_05_02" questBuff="Reveal_05_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Reveal_05_03" selectUIHint="" />
+		<data id="Reveal_05_03" name="消灭人造人" description="消灭人造人" icon="image_01" acceptBuff="Reveal_05_03" questBuff="Reveal_05_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Talk_01" name="绕路而行" description="去传令官二号那里获得隐秘通路相关的情报" icon="image_08" acceptBuff="Talk_01" questBuff="Talk_01_01" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="Destory_04" selectUIHint="" />
+		<data id="Talk_02" name="隐秘通路" description="去传令官三号那里获得情报" icon="image_09" acceptBuff="Talk_02" questBuff="Talk_02_01" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="Destory_05,Kill_02" selectUIHint="传令官三号告诉你现在后勤营地已经混乱,正面突入难度降低,你还要继续从隐秘道路潜入吗？" />
+		<data id="Talk_03" name="战事信息" description="找到前方的传令官" icon="image_13" acceptBuff="Talk_03" questBuff="Talk_03_01" uiKey="" rewardThing="warrior" unlockCondition="" nextSubQuest="Destory_02,Destory_05" selectUIHint="" />
+		<data id="Test_Power_Navigate_01" name="支援" description="找到“老练的”狩猎者" icon="image_03" acceptBuff="Test_Power_Navigate_01" questBuff="Test_Power_Navigate_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Test_Power_Program_01,Test_Power_Program_02" selectUIHint="" />
+		<data id="Test_Power_Program_01" name="找药水" description="去周围的草丛里拾取药剂" icon="image_03" acceptBuff="Test_Power_Navigate_01" questBuff="Test_Power_Navigate_01" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="Test_Power_Program_01_01" selectUIHint="" />
+		<data id="Test_Power_Program_01_01" name="特效药" description="将药剂投入水中" icon="image_03" acceptBuff="Test_Power_Navigate_01_01" questBuff="Test_Power_Navigate_01_01" uiKey="" rewardThing="magic" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Test_Power_Program_02" name="莽上去" description="击杀8个水鬼" icon="image_03" acceptBuff="Test_Power_Program_02" questBuff="Test_Power_Program_02" uiKey="" rewardThing="warrior" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Variation02_02" name="与向导交谈" description="寻求解决异变的方法" icon="image_01" acceptBuff="Variation02_02" questBuff="Variation02_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation02_02_Program_01,Variation02_02_Program_02,Variation02_02_Program_03" selectUIHint="" />
+		<data id="Variation02_02_Program_01" name="前往汉军营地" description="前往汉军营地" icon="image_01" acceptBuff="Variation02_02_Program_01" questBuff="Variation02_02_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation02_02_Program_01_01" selectUIHint="" />
+		<data id="Variation02_02_Program_01_01" name="击杀汉军" description="击杀汉军获得海盐" icon="image_01" acceptBuff="Variation02_02_Program_01_01" questBuff="Variation02_02_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation02_03" selectUIHint="" />
+		<data id="Variation02_02_Program_02" name="前往游牧营地" description="前往游牧营地" icon="image_01" acceptBuff="Variation02_02_Program_02" questBuff="Variation02_02_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation02_02_Program_02_01" selectUIHint="" />
+		<data id="Variation02_02_Program_02_01" name="击杀游牧" description="击杀游牧获得爆炸瓶" icon="image_01" acceptBuff="Variation02_02_Program_02_01" questBuff="Variation02_02_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation02_03" selectUIHint="" />
+		<data id="Variation02_02_Program_03" name="前往异变boss所在地" description="前往异变boss所在地" icon="image_01" acceptBuff="Variation02_02_Program_03" questBuff="Variation02_02_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation02_02_Program_03_01" selectUIHint="" />
+		<data id="Variation02_02_Program_03_01" name="击败变异boss" description="击败变异boss" icon="image_01" acceptBuff="Variation02_02_Program_03_01" questBuff="Variation02_02_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Variation02_03" name="前往异变boss所在地" description="前往异变boss所在地" icon="image_01" acceptBuff="Variation02_03" questBuff="Variation02_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation02_03_01" selectUIHint="" />
+		<data id="Variation02_03_01" name="击败变异boss" description="击败变异boss" icon="image_01" acceptBuff="Variation02_03_01" questBuff="Variation02_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Variation_02" name="与向导交谈" description="寻求解决异变的方法" icon="image_01" acceptBuff="Variation_02" questBuff="Variation_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation_02_Program_01,Variation_02_Program_02,Variation_02_Program_03" selectUIHint="" />
+		<data id="Variation_02_Program_01" name="前往死亡要塞" description="前往死亡要塞" icon="image_01" acceptBuff="Variation_02_Program_01" questBuff="Variation_02_Program_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation_02_Program_01_01" selectUIHint="" />
+		<data id="Variation_02_Program_01_01" name="击杀原住民" description="击杀原住民获得病原体" icon="image_01" acceptBuff="Variation_02_Program_01_01" questBuff="Variation_02_Program_01_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation_03" selectUIHint="" />
+		<data id="Variation_02_Program_02" name="前往沙漠" description="前往沙漠" icon="image_01" acceptBuff="Variation_02_Program_02" questBuff="Variation_02_Program_02" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation_02_Program_02_01" selectUIHint="" />
+		<data id="Variation_02_Program_02_01" name="击杀蝎子" description="击杀蝎子获得蝎毒" icon="image_01" acceptBuff="Variation_02_Program_02_01" questBuff="Variation_02_Program_02_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation_03" selectUIHint="" />
+		<data id="Variation_02_Program_03" name="前往异变boss所在地" description="前往异变boss所在地" icon="image_01" acceptBuff="Variation_02_Program_03" questBuff="Variation_02_Program_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation_02_Program_03_01" selectUIHint="" />
+		<data id="Variation_02_Program_03_01" name="击败变异boss" description="击败变异boss" icon="image_01" acceptBuff="Variation_02_Program_03_01" questBuff="Variation_02_Program_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Variation_03" name="前往异变boss所在地" description="前往异变boss所在地" icon="image_01" acceptBuff="Variation_03" questBuff="Variation_03" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Variation_03_01" selectUIHint="" />
+		<data id="Variation_03_01" name="击败变异boss" description="击败变异boss" icon="image_01" acceptBuff="Variation_03_01" questBuff="Variation_03_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Wake_Kill_01" name="击败试验体" description="击败实验体" icon="image_01" acceptBuff="Wake_Kill_01" questBuff="Wake_Kill_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Wake_Mobile_01" name="移动" description="前往打开的大门" icon="image_01" acceptBuff="Wake_Mobile_01" questBuff="Wake_Mobile_01" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Wake_Kill_01" selectUIHint="" />
+		<data id="what_02" name="前往湖中心" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_02_01" selectUIHint="" />
+		<data id="what_02_01" name="消灭原住民" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_02_02" selectUIHint="" />
+		<data id="what_02_02" name="前往吕布营地" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_02_03" selectUIHint="" />
+		<data id="what_02_03" name="消灭士兵" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_02_04" selectUIHint="" />
+		<data id="what_02_04" name="调查附近的印记" description="在营地内找到了蜂巢的印记" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_02_05" selectUIHint="" />
+		<data id="what_02_05" name="前往北方的源头" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_02_06" selectUIHint="" />
+		<data id="what_02_06" name="消灭水中的BOSS" description="消灭水中的BOSS，这个boss长相有点眼熟" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="what_03" name="前往森林" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_03_01" selectUIHint="" />
+		<data id="what_03_01" name="消灭水中的怪物" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_03_02" selectUIHint="" />
+		<data id="what_03_02" name="返回团长处汇报" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_03_03" selectUIHint="" />
+		<data id="what_03_03" name="前往区域b" description="前往区域b继续调查" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_03_04" selectUIHint="" />
+		<data id="what_03_04" name="消灭故障的人造人" description="消灭故障的人造人" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="what_03_05" selectUIHint="" />
+		<data id="what_03_05" name="返回与团长汇报情况" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Yum_memory2_02" name="消灭周围的原住民" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_02_01" selectUIHint="" />
+		<data id="Yum_memory2_02_01" name="调查线索" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_02_02" selectUIHint="" />
+		<data id="Yum_memory2_02_02" name="返回与尤姆交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Yum_memory2_03" name="前往岗哨进行调查" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_03_01" selectUIHint="" />
+		<data id="Yum_memory2_03_01" name="调查线索" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_03_02" selectUIHint="" />
+		<data id="Yum_memory2_03_02" name="击杀人造人" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_03_03" selectUIHint="" />
+		<data id="Yum_memory2_03_03" name="返回与尤姆交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Yum_memory2_04" name="前往标记地点调查" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_04_01" selectUIHint="" />
+		<data id="Yum_memory2_04_01" name="消灭周围的怪物" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_04_02" selectUIHint="" />
+		<data id="Yum_memory2_04_02" name="返回与尤姆交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_04_03" selectUIHint="" />
+		<data id="Yum_memory2_04_03" name="前往boss营地" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_04_04" selectUIHint="" />
+		<data id="Yum_memory2_04_04" name="击败boss" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory2_04_05" selectUIHint="" />
+		<data id="Yum_memory2_04_05" name="返回与尤姆交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Yum_memory3_02" name="与尤姆交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory3_03" selectUIHint="" />
+		<data id="Yum_memory3_03" name="前往盗贼巢穴" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory3_04" selectUIHint="" />
+		<data id="Yum_memory3_04" name="消灭盗贼巢穴内的盗贼" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory3_05" selectUIHint="" />
+		<data id="Yum_memory3_05" name="击败盗贼头目" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory3_06" selectUIHint="" />
+		<data id="Yum_memory3_06" name="向尤姆汇报情况" description="告知尤姆，盗贼的巢穴已经安全，可以先躲藏起来" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Yum_memory_02" name="前往森林" description="前往森林寻找尤姆" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory_02_01" selectUIHint="" />
+		<data id="Yum_memory_02_01" name="消灭野兽" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory_02_02" selectUIHint="" />
+		<data id="Yum_memory_02_02" name="与尤姆交谈" description="尤姆似乎受伤了" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory_04,Yum_memory_05" selectUIHint="" />
+		<data id="Yum_memory_03" name="前往浅水滩" description="前往浅水滩，看看有没有人能够认识记忆卡" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory_03_01" selectUIHint="" />
+		<data id="Yum_memory_03_01" name="与少妇交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory_02" selectUIHint="" />
+		<data id="Yum_memory_04" name="击杀四周的生物" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory_04_01" selectUIHint="" />
+		<data id="Yum_memory_04_01" name="再次与尤姆交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+		<data id="Yum_memory_05" name="击杀四周的野兽，获得肉" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="Yum_memory_05_01" selectUIHint="" />
+		<data id="Yum_memory_05_01" name="再次与尤姆交谈" description="" icon="" acceptBuff="" questBuff="" uiKey="" rewardThing="" unlockCondition="" nextSubQuest="" selectUIHint="" />
+	</table>
+</root>

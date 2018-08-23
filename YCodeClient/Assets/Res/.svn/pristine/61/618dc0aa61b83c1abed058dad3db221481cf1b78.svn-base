@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="UIPanels_subb" fileURL="Assets/Res/Data/Source/Tree/Panel/UIPanels_subb.tree" fileName="UIPanels_subb.tree" type="PanelManager">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="panelModule" module="Social">
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="ChatPanel_social_subb" mediatorType="0" prefab="Assets/Res/Arts/UI/temp/Panel/Social/ChatPanel_social.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelAutoClose" policy="2" />
+        <cell treeOpen="True" editName="" cellType="panelChild_normal">
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_0" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/subb/chat/ChatSubMediator0_Content_subb.lua|7d5fa05a2ba9364429e5848282e1c5f3" />
+          </cell>
+          <cell treeOpen="True" editName="sub_1" cellType="panelCell" mediatorName="sub_1" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/subb/chat/ChatSubMediator2_Input_subb.lua|e36360ca1cc04a54181e56fa1d4f9b16" />
+          </cell>
+        </cell>
+        <cell treeOpen="True" editName="" cellType="panelChild_manual">
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_2" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="True" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/subb/chat/ChatSubMediator1_EmoList_subb.lua|4e87ede9398bfb04597a8e00a53fae76" />
+            <cell treeOpen="True" editName="" cellType="panelAutoClose" policy="2" />
+          </cell>
+        </cell>
+      </cell>
+    </cell>
+    <cell treeOpen="False" editName="" cellType="panelModule" module="DebugControl">
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="PromptPanel_sceneList" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Debug/Debug_PromptPanel_1_preloading.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelAutoClose" policy="2" />
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/subb/debugInput/PromptMediator_sceneList.lua|0273e806f48ea874ebb2b19948d2daad" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="PromptPanel_luaScript" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Debug/Debug_PromptPanel_0_preloading.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelAutoClose" policy="2" />
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/subb/debugInput/PromptMediator_luaScript.lua|c81f13dcf3c4e494f967a4c394a56ffb" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="SwitchRolePanel_preloading" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Debug/Debug_SwitchRolePanel_preloading.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelScene" sceneAsset="Assets/Res/Arts/Scene/UIScene/background_0_sp/RoleBackground_0_output.unity|15bdb59415b8fa843a103c2d59671d65" />
+        <cell treeOpen="False" editName="" cellType="panelCull" mode="12" />
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/subb/debugInput/SwitchRoleMediator_preloading.lua|8b9390dc94701e244b1377220d3b46f9" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="PromptPanel_cmdList" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Debug/Debug_PromptPanel_2_preloading.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelAutoClose" policy="2" />
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/subb/debugInput/PromptMediator_cmdList.lua|449f8c0ffaa606e4e943a934b2e17c71" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

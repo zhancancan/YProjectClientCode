@@ -1,0 +1,15 @@
+require "UnsaveProxy"
+local class = require "Class"
+local base	= require "UnsaveProxy"
+local this 	= class("Proxy_LoginMasterResponse",base)
+
+function this:ctor()
+	self._proxycenter=require"ProxyCenter"
+end
+function this:pushData(buffer,_)
+	local data=self:_parseData(buffer)
+	if not data then return end
+	print("Proxy_LoginMasterResponse",data)
+end
+
+return this

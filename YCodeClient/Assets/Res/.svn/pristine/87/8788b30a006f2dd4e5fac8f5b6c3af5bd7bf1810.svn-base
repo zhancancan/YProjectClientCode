@@ -1,0 +1,10 @@
+﻿using edit.pure.machine.core;
+using game.entity.game.machine;
+
+namespace plugins.machine.canvas.login.actions {
+    [MacActon(false, "Login/Mode = 0", new[] {typeof (LoginMachineChart)})]
+    internal class LogAct_LoadBuddleVer : Mac_Action {
+        public override string actionType { get { return LoginCenter.ACT_LOGIN; } }
+        public override string renderContent { get { return "Login Mode 0"; } set { } }
+    }
+}

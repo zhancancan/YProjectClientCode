@@ -1,0 +1,1956 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RS>
+  <place name="Haha" enviorPath="Assets/Res/Arts/Scene/temp/xinshou_Test/xinshou_output.unity" enviorName="xinshou" fileName="Haha" filePath="Assets/Res/Data/Source/Place/Haha/Haha.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="Path" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="pathwaypoint" id="0" radius="0.2" type="0">
+          <point pos="117.0248:33.33313:58.25429" />
+          <point pos="119.028:33.32937:48.36349" />
+          <point pos="130.1375:33.62946:58.88505" />
+          <point pos="135.9009:33.90567:48.82291" />
+        </mono>
+        <mono monoType="customData" />
+      </object>
+      <object name="NpcArea_0" position="124.89:33.37499:53.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="Npc1000" position="123.64:33.33942:53.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="21" icon="sv_label_4">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="1" ignoreMask="-536870913" />
+          <mono monoType="customData">
+            <kv key="tele" value="0" />
+            <kv key="tele" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="npc" value="10" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+          </mono>
+        </object>
+      </object>
+    </object>
+    <nav>
+      <triangle id="0" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="1" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="2" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="3" v0="10" v1="10" v2="10" terrain="1" layer="0" />
+      <triangle id="4" v0="44" v1="44" v2="44" terrain="1" layer="0" />
+      <triangle id="5" v0="48" v1="48" v2="48" terrain="1" layer="0" />
+      <triangle id="6" v0="127" v1="127" v2="127" terrain="1" layer="0" />
+      <triangle id="7" v0="130" v1="130" v2="130" terrain="1" layer="0" />
+      <triangle id="8" v0="131" v1="131" v2="131" terrain="1" layer="0" />
+      <triangle id="9" v0="95" v1="95" v2="95" terrain="1" layer="0" />
+      <triangle id="10" v0="125" v1="125" v2="125" terrain="1" layer="0" />
+      <triangle id="11" v0="132" v1="132" v2="132" terrain="1" layer="0" />
+      <triangle id="12" v0="81" v1="81" v2="81" terrain="1" layer="0" />
+      <triangle id="13" v0="58" v1="58" v2="58" terrain="1" layer="0" />
+      <triangle id="14" v0="2" v1="2" v2="2" terrain="1" layer="0" />
+      <triangle id="15" v0="110" v1="110" v2="110" terrain="0" layer="0" />
+      <triangle id="16" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="17" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="18" v0="4" v1="4" v2="4" terrain="0" layer="0" />
+      <triangle id="19" v0="4" v1="4" v2="4" terrain="1" layer="0" />
+      <triangle id="20" v0="22" v1="22" v2="22" terrain="0" layer="0" />
+      <triangle id="21" v0="23" v1="23" v2="23" terrain="1" layer="0" />
+      <triangle id="22" v0="46" v1="46" v2="46" terrain="1" layer="0" />
+      <triangle id="23" v0="50" v1="50" v2="50" terrain="0" layer="0" />
+      <triangle id="24" v0="91" v1="91" v2="91" terrain="1" layer="0" />
+      <triangle id="25" v0="85" v1="85" v2="85" terrain="1" layer="0" />
+      <triangle id="26" v0="103" v1="103" v2="103" terrain="1" layer="0" />
+      <triangle id="27" v0="103" v1="103" v2="103" terrain="1" layer="0" />
+      <triangle id="28" v0="131" v1="131" v2="131" terrain="1" layer="0" />
+      <triangle id="29" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="30" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="31" v0="126" v1="126" v2="126" terrain="1" layer="0" />
+      <triangle id="32" v0="126" v1="126" v2="126" terrain="1" layer="0" />
+      <triangle id="33" v0="132" v1="132" v2="132" terrain="1" layer="0" />
+      <triangle id="34" v0="82" v1="82" v2="82" terrain="1" layer="0" />
+      <triangle id="35" v0="82" v1="82" v2="82" terrain="1" layer="0" />
+      <triangle id="36" v0="80" v1="80" v2="80" terrain="0" layer="0" />
+      <triangle id="37" v0="57" v1="57" v2="57" terrain="1" layer="0" />
+      <triangle id="38" v0="59" v1="59" v2="59" terrain="1" layer="0" />
+      <triangle id="39" v0="14" v1="14" v2="14" terrain="1" layer="0" />
+      <triangle id="40" v0="134" v1="134" v2="134" terrain="0" layer="0" />
+      <triangle id="41" v0="134" v1="134" v2="134" terrain="0" layer="0" />
+      <triangle id="42" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="43" v0="110" v1="110" v2="110" terrain="0" layer="0" />
+      <triangle id="44" v0="7" v1="7" v2="7" terrain="1" layer="0" />
+      <triangle id="45" v0="9" v1="9" v2="9" terrain="0" layer="0" />
+      <triangle id="46" v0="23" v1="23" v2="23" terrain="0" layer="0" />
+      <triangle id="47" v0="43" v1="43" v2="43" terrain="1" layer="0" />
+      <triangle id="48" v0="45" v1="45" v2="45" terrain="1" layer="0" />
+      <triangle id="49" v0="50" v1="50" v2="50" terrain="0" layer="0" />
+      <triangle id="50" v0="49" v1="49" v2="49" terrain="0" layer="0" />
+      <triangle id="51" v0="49" v1="49" v2="49" terrain="1" layer="0" />
+      <triangle id="52" v0="85" v1="85" v2="85" terrain="1" layer="0" />
+      <triangle id="53" v0="86" v1="86" v2="86" terrain="0" layer="0" />
+      <triangle id="54" v0="128" v1="128" v2="128" terrain="1" layer="0" />
+      <triangle id="55" v0="129" v1="129" v2="129" terrain="1" layer="0" />
+      <triangle id="56" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="57" v0="102" v1="102" v2="102" terrain="0" layer="0" />
+      <triangle id="58" v0="102" v1="102" v2="102" terrain="0" layer="0" />
+      <triangle id="59" v0="102" v1="102" v2="102" terrain="0" layer="0" />
+      <triangle id="60" v0="133" v1="133" v2="133" terrain="1" layer="0" />
+      <triangle id="61" v0="81" v1="81" v2="81" terrain="0" layer="0" />
+      <triangle id="62" v0="132" v1="132" v2="132" terrain="0" layer="0" />
+      <triangle id="63" v0="77" v1="77" v2="77" terrain="0" layer="0" />
+      <triangle id="64" v0="78" v1="78" v2="78" terrain="1" layer="0" />
+      <triangle id="65" v0="54" v1="54" v2="54" terrain="0" layer="0" />
+      <triangle id="66" v0="60" v1="60" v2="60" terrain="0" layer="0" />
+      <triangle id="67" v0="29" v1="29" v2="29" terrain="1" layer="0" />
+      <triangle id="68" v0="13" v1="13" v2="13" terrain="0" layer="0" />
+      <triangle id="69" v0="3" v1="3" v2="3" terrain="1" layer="0" />
+      <triangle id="70" v0="3" v1="3" v2="3" terrain="0" layer="0" />
+      <triangle id="71" v0="136" v1="136" v2="136" terrain="0" layer="0" />
+      <triangle id="72" v0="113" v1="113" v2="113" terrain="0" layer="0" />
+      <triangle id="73" v0="113" v1="113" v2="113" terrain="1" layer="0" />
+      <triangle id="74" v0="9" v1="9" v2="9" terrain="1" layer="0" />
+      <triangle id="75" v0="11" v1="11" v2="11" terrain="0" layer="0" />
+      <triangle id="76" v0="21" v1="21" v2="21" terrain="1" layer="0" />
+      <triangle id="77" v0="41" v1="41" v2="41" terrain="1" layer="0" />
+      <triangle id="78" v0="42" v1="42" v2="42" terrain="0" layer="0" />
+      <triangle id="79" v0="42" v1="42" v2="42" terrain="0" layer="0" />
+      <triangle id="80" v0="51" v1="51" v2="51" terrain="0" layer="0" />
+      <triangle id="81" v0="51" v1="51" v2="51" terrain="0" layer="0" />
+      <triangle id="82" v0="63" v1="63" v2="63" terrain="1" layer="0" />
+      <triangle id="83" v0="90" v1="90" v2="90" terrain="1" layer="0" />
+      <triangle id="84" v0="86" v1="86" v2="86" terrain="1" layer="0" />
+      <triangle id="85" v0="128" v1="128" v2="128" terrain="0" layer="0" />
+      <triangle id="86" v0="129" v1="129" v2="129" terrain="1" layer="0" />
+      <triangle id="87" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="88" v0="118" v1="118" v2="118" terrain="0" layer="0" />
+      <triangle id="89" v0="124" v1="124" v2="124" terrain="0" layer="0" />
+      <triangle id="90" v0="124" v1="124" v2="124" terrain="1" layer="0" />
+      <triangle id="91" v0="116" v1="116" v2="116" terrain="0" layer="0" />
+      <triangle id="92" v0="116" v1="116" v2="116" terrain="0" layer="0" />
+      <triangle id="93" v0="104" v1="104" v2="104" terrain="0" layer="0" />
+      <triangle id="94" v0="78" v1="78" v2="78" terrain="0" layer="0" />
+      <triangle id="95" v0="56" v1="56" v2="56" terrain="1" layer="0" />
+      <triangle id="96" v0="56" v1="56" v2="56" terrain="0" layer="0" />
+      <triangle id="97" v0="60" v1="60" v2="60" terrain="0" layer="0" />
+      <triangle id="98" v0="36" v1="36" v2="36" terrain="1" layer="0" />
+      <triangle id="99" v0="31" v1="31" v2="31" terrain="1" layer="0" />
+      <triangle id="100" v0="28" v1="28" v2="28" terrain="1" layer="0" />
+      <triangle id="101" v0="16" v1="16" v2="16" terrain="0" layer="0" />
+      <triangle id="102" v0="114" v1="114" v2="114" terrain="1" layer="0" />
+      <triangle id="103" v0="12" v1="12" v2="12" terrain="1" layer="0" />
+      <triangle id="104" v0="136" v1="136" v2="136" terrain="0" layer="0" />
+      <triangle id="105" v0="6" v1="6" v2="6" terrain="0" layer="0" />
+      <triangle id="106" v0="6" v1="6" v2="6" terrain="0" layer="0" />
+      <triangle id="107" v0="6" v1="6" v2="6" terrain="1" layer="0" />
+      <triangle id="108" v0="8" v1="8" v2="8" terrain="1" layer="0" />
+      <triangle id="109" v0="8" v1="8" v2="8" terrain="0" layer="0" />
+      <triangle id="110" v0="12" v1="12" v2="12" terrain="0" layer="0" />
+      <triangle id="111" v0="109" v1="109" v2="109" terrain="1" layer="0" />
+      <triangle id="112" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="113" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="114" v0="42" v1="42" v2="42" terrain="1" layer="0" />
+      <triangle id="115" v0="52" v1="52" v2="52" terrain="0" layer="0" />
+      <triangle id="116" v0="52" v1="52" v2="52" terrain="0" layer="0" />
+      <triangle id="117" v0="53" v1="53" v2="53" terrain="1" layer="0" />
+      <triangle id="118" v0="53" v1="53" v2="53" terrain="1" layer="0" />
+      <triangle id="119" v0="68" v1="68" v2="68" terrain="1" layer="0" />
+      <triangle id="120" v0="68" v1="68" v2="68" terrain="1" layer="0" />
+      <triangle id="121" v0="89" v1="89" v2="89" terrain="0" layer="0" />
+      <triangle id="122" v0="92" v1="92" v2="92" terrain="1" layer="0" />
+      <triangle id="123" v0="100" v1="100" v2="100" terrain="0" layer="0" />
+      <triangle id="124" v0="119" v1="119" v2="119" terrain="1" layer="0" />
+      <triangle id="125" v0="119" v1="119" v2="119" terrain="0" layer="0" />
+      <triangle id="126" v0="121" v1="121" v2="121" terrain="0" layer="0" />
+      <triangle id="127" v0="124" v1="124" v2="124" terrain="0" layer="0" />
+      <triangle id="128" v0="118" v1="118" v2="118" terrain="1" layer="0" />
+      <triangle id="129" v0="118" v1="118" v2="118" terrain="1" layer="0" />
+      <triangle id="130" v0="104" v1="104" v2="104" terrain="0" layer="0" />
+      <triangle id="131" v0="76" v1="76" v2="76" terrain="1" layer="0" />
+      <triangle id="132" v0="76" v1="76" v2="76" terrain="1" layer="0" />
+      <triangle id="133" v0="76" v1="76" v2="76" terrain="1" layer="0" />
+      <triangle id="134" v0="55" v1="55" v2="55" terrain="0" layer="0" />
+      <triangle id="135" v0="61" v1="61" v2="61" terrain="0" layer="0" />
+      <triangle id="136" v0="37" v1="37" v2="37" terrain="1" layer="0" />
+      <triangle id="137" v0="35" v1="35" v2="35" terrain="1" layer="0" />
+      <triangle id="138" v0="35" v1="35" v2="35" terrain="1" layer="0" />
+      <triangle id="139" v0="30" v1="30" v2="30" terrain="0" layer="0" />
+      <triangle id="140" v0="30" v1="30" v2="30" terrain="0" layer="0" />
+      <triangle id="141" v0="16" v1="16" v2="16" terrain="1" layer="0" />
+      <triangle id="142" v0="108" v1="108" v2="108" terrain="0" layer="0" />
+      <triangle id="143" v0="108" v1="108" v2="108" terrain="1" layer="0" />
+      <triangle id="144" v0="12" v1="12" v2="12" terrain="1" layer="0" />
+      <triangle id="145" v0="136" v1="136" v2="136" terrain="1" layer="0" />
+      <triangle id="146" v0="107" v1="107" v2="107" terrain="0" layer="0" />
+      <triangle id="147" v0="106" v1="106" v2="106" terrain="1" layer="0" />
+      <triangle id="148" v0="11" v1="11" v2="11" terrain="0" layer="0" />
+      <triangle id="149" v0="107" v1="107" v2="107" terrain="1" layer="0" />
+      <triangle id="150" v0="109" v1="109" v2="109" terrain="0" layer="0" />
+      <triangle id="151" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="152" v0="33" v1="33" v2="33" terrain="1" layer="0" />
+      <triangle id="153" v0="40" v1="40" v2="40" terrain="1" layer="0" />
+      <triangle id="154" v0="39" v1="39" v2="39" terrain="0" layer="0" />
+      <triangle id="155" v0="53" v1="53" v2="53" terrain="1" layer="0" />
+      <triangle id="156" v0="62" v1="62" v2="62" terrain="1" layer="0" />
+      <triangle id="157" v0="69" v1="69" v2="69" terrain="0" layer="0" />
+      <triangle id="158" v0="89" v1="89" v2="89" terrain="1" layer="0" />
+      <triangle id="159" v0="92" v1="92" v2="92" terrain="0" layer="0" />
+      <triangle id="160" v0="93" v1="93" v2="93" terrain="0" layer="0" />
+      <triangle id="161" v0="93" v1="93" v2="93" terrain="0" layer="0" />
+      <triangle id="162" v0="119" v1="119" v2="119" terrain="0" layer="0" />
+      <triangle id="163" v0="123" v1="123" v2="123" terrain="0" layer="0" />
+      <triangle id="164" v0="117" v1="117" v2="117" terrain="0" layer="0" />
+      <triangle id="165" v0="120" v1="120" v2="120" terrain="0" layer="0" />
+      <triangle id="166" v0="120" v1="120" v2="120" terrain="0" layer="0" />
+      <triangle id="167" v0="120" v1="120" v2="120" terrain="0" layer="0" />
+      <triangle id="168" v0="75" v1="75" v2="75" terrain="1" layer="0" />
+      <triangle id="169" v0="66" v1="66" v2="66" terrain="1" layer="0" />
+      <triangle id="170" v0="66" v1="66" v2="66" terrain="1" layer="0" />
+      <triangle id="171" v0="64" v1="64" v2="64" terrain="1" layer="0" />
+      <triangle id="172" v0="64" v1="64" v2="64" terrain="1" layer="0" />
+      <triangle id="173" v0="37" v1="37" v2="37" terrain="0" layer="0" />
+      <triangle id="174" v0="34" v1="34" v2="34" terrain="0" layer="0" />
+      <triangle id="175" v0="34" v1="34" v2="34" terrain="1" layer="0" />
+      <triangle id="176" v0="32" v1="32" v2="32" terrain="1" layer="0" />
+      <triangle id="177" v0="33" v1="33" v2="33" terrain="0" layer="0" />
+      <triangle id="178" v0="26" v1="26" v2="26" terrain="0" layer="0" />
+      <triangle id="179" v0="27" v1="27" v2="27" terrain="1" layer="0" />
+      <triangle id="180" v0="18" v1="18" v2="18" terrain="0" layer="0" />
+      <triangle id="181" v0="109" v1="109" v2="109" terrain="0" layer="0" />
+      <triangle id="182" v0="109" v1="109" v2="109" terrain="0" layer="0" />
+      <triangle id="183" v0="107" v1="107" v2="107" terrain="1" layer="0" />
+      <triangle id="184" v0="106" v1="106" v2="106" terrain="0" layer="0" />
+      <triangle id="185" v0="107" v1="107" v2="107" terrain="0" layer="0" />
+      <triangle id="186" v0="107" v1="107" v2="107" terrain="0" layer="0" />
+      <triangle id="187" v0="19" v1="19" v2="19" terrain="1" layer="0" />
+      <triangle id="188" v0="30" v1="30" v2="30" terrain="1" layer="0" />
+      <triangle id="189" v0="38" v1="38" v2="38" terrain="1" layer="0" />
+      <triangle id="190" v0="38" v1="38" v2="38" terrain="1" layer="0" />
+      <triangle id="191" v0="39" v1="39" v2="39" terrain="0" layer="0" />
+      <triangle id="192" v0="37" v1="37" v2="37" terrain="0" layer="0" />
+      <triangle id="193" v0="62" v1="62" v2="62" terrain="1" layer="0" />
+      <triangle id="194" v0="64" v1="64" v2="64" terrain="0" layer="0" />
+      <triangle id="195" v0="64" v1="64" v2="64" terrain="0" layer="0" />
+      <triangle id="196" v0="89" v1="89" v2="89" terrain="1" layer="0" />
+      <triangle id="197" v0="93" v1="93" v2="93" terrain="0" layer="0" />
+      <triangle id="198" v0="122" v1="122" v2="122" terrain="0" layer="0" />
+      <triangle id="199" v0="123" v1="123" v2="123" terrain="0" layer="0" />
+      <triangle id="200" v0="117" v1="117" v2="117" terrain="0" layer="0" />
+      <triangle id="201" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="202" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="203" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="204" v0="105" v1="105" v2="105" terrain="0" layer="0" />
+      <triangle id="205" v0="74" v1="74" v2="74" terrain="1" layer="0" />
+      <triangle id="206" v0="74" v1="74" v2="74" terrain="1" layer="0" />
+      <triangle id="207" v0="64" v1="64" v2="64" terrain="1" layer="0" />
+      <triangle id="208" v0="62" v1="62" v2="62" terrain="0" layer="0" />
+      <triangle id="209" v0="52" v1="52" v2="52" terrain="0" layer="0" />
+      <triangle id="210" v0="39" v1="39" v2="39" terrain="0" layer="0" />
+      <triangle id="211" v0="32" v1="32" v2="32" terrain="1" layer="0" />
+      <triangle id="212" v0="33" v1="33" v2="33" terrain="0" layer="0" />
+      <triangle id="213" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="214" v0="27" v1="27" v2="27" terrain="0" layer="0" />
+      <triangle id="215" v0="17" v1="17" v2="17" terrain="0" layer="0" />
+      <triangle id="216" v0="17" v1="17" v2="17" terrain="0" layer="0" />
+      <triangle id="217" v0="19" v1="19" v2="19" terrain="0" layer="0" />
+      <triangle id="218" v0="19" v1="19" v2="19" terrain="0" layer="0" />
+      <triangle id="219" v0="18" v1="18" v2="18" terrain="1" layer="0" />
+      <triangle id="220" v0="32" v1="32" v2="32" terrain="0" layer="0" />
+      <triangle id="221" v0="39" v1="39" v2="39" terrain="1" layer="0" />
+      <triangle id="222" v0="61" v1="61" v2="61" terrain="0" layer="0" />
+      <triangle id="223" v0="65" v1="65" v2="65" terrain="0" layer="0" />
+      <triangle id="224" v0="70" v1="70" v2="70" terrain="1" layer="0" />
+      <triangle id="225" v0="122" v1="122" v2="122" terrain="0" layer="0" />
+      <triangle id="226" v0="123" v1="123" v2="123" terrain="0" layer="0" />
+      <triangle id="227" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="228" v0="105" v1="105" v2="105" terrain="0" layer="0" />
+      <triangle id="229" v0="74" v1="74" v2="74" terrain="0" layer="0" />
+      <triangle id="230" v0="73" v1="73" v2="73" terrain="1" layer="0" />
+      <triangle id="231" v0="65" v1="65" v2="65" terrain="0" layer="0" />
+      <triangle id="232" v0="38" v1="38" v2="38" terrain="0" layer="0" />
+      <triangle id="233" v0="38" v1="38" v2="38" terrain="0" layer="0" />
+      <triangle id="234" v0="18" v1="18" v2="18" terrain="1" layer="0" />
+      <triangle id="235" v0="25" v1="25" v2="25" terrain="0" layer="0" />
+      <triangle id="236" v0="25" v1="25" v2="25" terrain="0" layer="0" />
+      <triangle id="237" v0="25" v1="25" v2="25" terrain="1" layer="0" />
+      <triangle id="238" v0="70" v1="70" v2="70" terrain="0" layer="0" />
+      <triangle id="239" v0="71" v1="71" v2="71" terrain="1" layer="0" />
+      <triangle id="240" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="241" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="242" v0="72" v1="72" v2="72" terrain="0" layer="0" />
+      <triangle id="243" v0="73" v1="73" v2="73" terrain="1" layer="0" />
+      <triangle id="244" v0="67" v1="67" v2="67" terrain="1" layer="0" />
+      <triangle id="245" v0="67" v1="67" v2="67" terrain="0" layer="0" />
+      <triangle id="246" v0="25" v1="25" v2="25" terrain="1" layer="0" />
+      <triangle id="247" v0="67" v1="67" v2="67" terrain="0" layer="0" />
+      <triangle id="248" v0="72" v1="72" v2="72" terrain="0" layer="0" />
+      <triangle id="249" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="250" v0="71" v1="71" v2="71" terrain="0" layer="0" />
+      <triangle id="251" v0="73" v1="73" v2="73" terrain="1" layer="0" />
+      <triangle id="252" v0="72" v1="72" v2="72" terrain="1" layer="0" />
+      <triangle id="253" v0="72" v1="72" v2="72" terrain="0" layer="0" />
+      <vertex id="0" x="16.5957432" y="6.74324131" z="53.6358948" />
+      <vertex id="1" x="18.25608" y="6.792819" z="49.333744" />
+      <vertex id="2" x="24.9434338" y="6.84845448" z="46.70014" />
+      <vertex id="3" x="28.4457455" y="6.817178" z="48.4530754" />
+      <vertex id="4" x="25.7897224" y="6.945142" z="59.1456566" />
+      <vertex id="5" x="21.661253" y="6.743243" z="59.5622749" />
+      <vertex id="6" x="29.0469685" y="6.74321461" z="58.2411232" />
+      <vertex id="7" x="33.7485924" y="27.5784149" z="58.6546326" />
+      <vertex id="8" x="36.0378952" y="27.5784149" z="58.5523949" />
+      <vertex id="9" x="37.9469032" y="27.5784149" z="60.20137" />
+      <vertex id="10" x="40.2370338" y="27.5784149" z="62.3882332" />
+      <vertex id="11" x="35.7329025" y="27.5784149" z="54.4437332" />
+      <vertex id="12" x="37.91511" y="27.44573" z="50.40195" />
+      <vertex id="13" x="45.16737" y="27.64915" z="44.3456955" />
+      <vertex id="14" x="44.82654" y="27.60387" z="42.7875862" />
+      <vertex id="15" x="48.7541733" y="27.52187" z="41.7240143" />
+      <vertex id="16" x="50.52225" y="27.5773678" z="43.8836441" />
+      <vertex id="17" x="52.6963539" y="27.617981" z="49.12176" />
+      <vertex id="18" x="51.56479" y="27.5773659" z="50.9793549" />
+      <vertex id="19" x="49.8592529" y="27.5773678" z="52.8788338" />
+      <vertex id="20" x="50.12676" y="27.5784149" z="56.66247" />
+      <vertex id="21" x="47.93409" y="27.578413" z="57.9179955" />
+      <vertex id="22" x="45.06434" y="27.5784149" z="59.92099" />
+      <vertex id="23" x="46.293026" y="27.5784149" z="62.89411" />
+      <vertex id="24" x="43.4989777" y="27.5784149" z="63.92913" />
+      <vertex id="25" x="53.9798546" y="27.6367283" z="48.9497375" />
+      <vertex id="26" x="59.2938423" y="28.2871189" z="48.9168053" />
+      <vertex id="27" x="53.9827881" y="27.6162872" z="45.91221" />
+      <vertex id="28" x="59.6004181" y="28.3972645" z="45.6425" />
+      <vertex id="29" x="64.06" y="29.5333118" z="46.06334" />
+      <vertex id="30" x="63.8" y="29.5390053" z="49.030674" />
+      <vertex id="31" x="67.679924" y="30.027832" z="47.10452" />
+      <vertex id="32" x="70.75726" y="30.34967" z="49.1236267" />
+      <vertex id="33" x="69.5029" y="30.310812" z="51.80079" />
+      <vertex id="34" x="74.22452" y="30.2142467" z="49.4967422" />
+      <vertex id="35" x="74.53928" y="30.2142467" z="47.3154945" />
+      <vertex id="36" x="77.1483" y="30.2828312" z="46.90866" />
+      <vertex id="37" x="79.6214752" y="30.28283" z="48.3248634" />
+      <vertex id="38" x="72.79214" y="30.2142487" z="53.99759" />
+      <vertex id="39" x="74.87586" y="30.28283" z="55.2414551" />
+      <vertex id="40" x="74.31059" y="30.2828312" z="57.2084427" />
+      <vertex id="41" x="73.84874" y="30.2142467" z="58.6555557" />
+      <vertex id="42" x="75.488945" y="30.2828312" z="60.7747574" />
+      <vertex id="43" x="76.85518" y="30.2828312" z="64.10517" />
+      <vertex id="44" x="79.74086" y="30.28283" z="65.53613" />
+      <vertex id="45" x="84.4079056" y="30.2828312" z="63.9326935" />
+      <vertex id="46" x="86.542984" y="30.28283" z="65.47154" />
+      <vertex id="47" x="88.57156" y="30.28283" z="67.82321" />
+      <vertex id="48" x="91.83641" y="30.28283" z="67.7792" />
+      <vertex id="49" x="93.7296" y="30.1391678" z="65.84037" />
+      <vertex id="50" x="91.81197" y="30.2828312" z="63.26641" />
+      <vertex id="51" x="89.58461" y="30.2828331" z="61.6602554" />
+      <vertex id="52" x="88.26382" y="30.2828312" z="58.4528122" />
+      <vertex id="53" x="89.73232" y="30.3646069" z="56.8234367" />
+      <vertex id="54" x="90.7564545" y="30.2828331" z="49.5053635" />
+      <vertex id="55" x="92.43228" y="30.27707" z="46.69637" />
+      <vertex id="56" x="92.0860443" y="30.28283" z="44.7012825" />
+      <vertex id="57" x="89.5303345" y="30.24409" z="42.51496" />
+      <vertex id="58" x="85.88791" y="30.2074547" z="42.5633926" />
+      <vertex id="59" x="84.79994" y="30.1847038" z="42.991848" />
+      <vertex id="60" x="83.57154" y="30.2828331" z="45.3128967" />
+      <vertex id="61" x="90.0347" y="30.21425" z="52.3395538" />
+      <vertex id="62" x="90.16287" y="30.3646049" z="55.3206177" />
+      <vertex id="63" x="103.267761" y="32.68402" z="56.3295364" />
+      <vertex id="64" x="103.2641" y="32.7409859" z="53.762558" />
+      <vertex id="65" x="104.891586" y="32.7409859" z="52.9628" />
+      <vertex id="66" x="105.6008" y="32.7409859" z="50.9401779" />
+      <vertex id="67" x="107.806625" y="32.6313858" z="51.0342" />
+      <vertex id="68" x="104.674911" y="32.6322823" z="57.2899628" />
+      <vertex id="69" x="106.406349" y="32.75977" z="55.8189621" />
+      <vertex id="70" x="108.664185" y="32.771553" z="54.1745" />
+      <vertex id="71" x="111.179245" y="33.4599571" z="54.66771" />
+      <vertex id="72" x="111.275757" y="33.4373932" z="51.11644" />
+      <vertex id="73" x="111.303505" y="33.4725533" z="48.6802864" />
+      <vertex id="74" x="112.740463" y="33.4725533" z="47.2138634" />
+      <vertex id="75" x="115.5699" y="33.4725533" z="45.6087265" />
+      <vertex id="76" x="115.401031" y="33.4725571" z="43.09004" />
+      <vertex id="77" x="118.412178" y="33.4725571" z="41.92621" />
+      <vertex id="78" x="117.909828" y="33.4725571" z="39.846283" />
+      <vertex id="79" x="121.989449" y="33.4357033" z="39.07791" />
+      <vertex id="80" x="124.240051" y="33.4565849" z="41.4483337" />
+      <vertex id="81" x="126.694847" y="33.4394951" z="40.9573822" />
+      <vertex id="82" x="130.059814" y="33.4543877" z="41.74427" />
+      <vertex id="83" x="132.264343" y="33.47256" z="41.13214" />
+      <vertex id="84" x="134.704483" y="33.4458275" z="41.9680023" />
+      <vertex id="85" x="122.815247" y="33.4725533" z="66.24841" />
+      <vertex id="86" x="120.191071" y="33.4725533" z="65.2216949" />
+      <vertex id="87" x="23.4795322" y="6.7432375" z="59.965416" />
+      <vertex id="88" x="18.7657185" y="6.74324131" z="57.55418" />
+      <vertex id="89" x="112.036613" y="33.3272247" z="58.39102" />
+      <vertex id="90" x="111.838081" y="33.33022" z="61.91046" />
+      <vertex id="91" x="113.606194" y="33.3302231" z="63.8318443" />
+      <vertex id="92" x="116.674629" y="33.3302231" z="64.15273" />
+      <vertex id="93" x="118.521469" y="33.3302231" z="63.90938" />
+      <vertex id="94" x="137.214554" y="33.3302231" z="45.2331" />
+      <vertex id="95" x="138.032852" y="33.8877563" z="49.3893356" />
+      <vertex id="96" x="140.747925" y="34.0755234" z="54.3742523" />
+      <vertex id="97" x="137.971161" y="34.0755272" z="61.533905" />
+      <vertex id="98" x="136.6622" y="33.83327" z="64.87091" />
+      <vertex id="99" x="126.348526" y="33.3272247" z="53.15735" />
+      <vertex id="100" x="127.4104" y="33.3272247" z="57.81433" />
+      <vertex id="101" x="130.999039" y="33.8927422" z="54.16983" />
+      <vertex id="102" x="132.94162" y="33.9358749" z="49.53518" />
+      <vertex id="103" x="130.5542" y="33.96885" z="59.9466972" />
+      <vertex id="104" x="118.153763" y="33.33022" z="45.1477966" />
+      <vertex id="105" x="112.066147" y="33.3302231" z="49.16587" />
+      <vertex id="106" x="30.40979" y="27.7473087" z="57.87536" />
+      <vertex id="107" x="31.7565" y="27.78697" z="54.060585" />
+      <vertex id="108" x="43.82667" y="27.580368" z="47.873394" />
+      <vertex id="109" x="48.6718674" y="27.580368" z="55.2262726" />
+      <vertex id="110" x="25.0336952" y="7.11184025" z="54.2903328" />
+      <vertex id="111" x="21.1387215" y="7.030032" z="56.42453" />
+      <vertex id="112" x="20.9684086" y="6.9258337" z="47.27549" />
+      <vertex id="113" x="27.68297" y="6.93859959" z="58.542717" />
+      <vertex id="114" x="41.86728" y="27.6682816" z="48.21955" />
+      <vertex id="115" x="130.346466" y="33.3302231" z="70.44023" />
+      <vertex id="116" x="128.140884" y="33.3272247" z="48.65595" />
+      <vertex id="117" x="128.1337" y="33.9866447" z="53.3283844" />
+      <vertex id="118" x="129.422379" y="33.9866447" z="49.8788338" />
+      <vertex id="119" x="129.230347" y="33.9866447" z="56.8661728" />
+      <vertex id="120" x="127.019478" y="33.3272247" z="50.4631424" />
+      <vertex id="121" x="128.618683" y="33.9866447" z="51.362648" />
+      <vertex id="122" x="126.677765" y="33.3463364" z="55.83506" />
+      <vertex id="123" x="128.329483" y="33.9866447" z="55.2809029" />
+      <vertex id="124" x="131.397568" y="33.9506645" z="48.7058945" />
+      <vertex id="125" x="133.332443" y="33.9873276" z="47.67144" />
+      <vertex id="126" x="134.567749" y="33.916" z="48.2230263" />
+      <vertex id="127" x="127.791649" y="33.3272247" z="63.41066" />
+      <vertex id="128" x="128.322433" y="33.3272247" z="60.07566" />
+      <vertex id="129" x="130.799438" y="33.9506645" z="57.9414" />
+      <vertex id="130" x="134.105652" y="34.0799" z="59.49695" />
+      <vertex id="131" x="138.084915" y="33.8877563" z="58.3998222" />
+      <vertex id="132" x="129.31134" y="33.3272247" z="45.38804" />
+      <vertex id="133" x="130.5096" y="33.45173" z="47.3303833" />
+      <vertex id="134" x="25.8949165" y="6.92618656" z="49.4071655" />
+      <vertex id="135" x="16.9943771" y="6.82321072" z="50.9015045" />
+      <vertex id="136" x="29.1018162" y="6.87295437" z="51.7470322" />
+      <edge start="0" end="88" leftTri="-1" rightTri="0" />
+      <edge start="135" end="0" leftTri="-1" rightTri="17" />
+      <edge start="0" end="111" leftTri="0" rightTri="17" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="15" />
+      <edge start="1" end="135" leftTri="-1" rightTri="16" />
+      <edge start="110" end="1" leftTri="15" rightTri="42" />
+      <edge start="1" end="111" leftTri="16" rightTri="42" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="2" leftTri="14" rightTri="39" />
+      <edge start="2" end="112" leftTri="14" rightTri="40" />
+      <edge start="14" end="2" leftTri="39" rightTri="69" />
+      <edge start="2" end="134" leftTri="40" rightTri="70" />
+      <edge start="2" end="3" leftTri="70" rightTri="69" />
+      <edge start="14" end="3" leftTri="69" rightTri="103" />
+      <edge start="3" end="134" leftTri="70" rightTri="104" />
+      <edge start="12" end="3" leftTri="103" rightTri="145" />
+      <edge start="3" end="136" leftTri="104" rightTri="145" />
+      <edge start="111" end="4" leftTri="18" rightTri="43" />
+      <edge start="87" end="4" leftTri="19" rightTri="18" />
+      <edge start="4" end="10" leftTri="19" rightTri="44" />
+      <edge start="110" end="4" leftTri="43" rightTri="72" />
+      <edge start="4" end="7" leftTri="44" rightTri="73" />
+      <edge start="4" end="113" leftTri="73" rightTri="72" />
+      <edge start="88" end="5" leftTri="-1" rightTri="1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="2" />
+      <edge start="5" end="111" leftTri="2" rightTri="1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="136" end="6" leftTri="105" rightTri="146" />
+      <edge start="110" end="6" leftTri="106" rightTri="105" />
+      <edge start="113" end="6" leftTri="107" rightTri="106" />
+      <edge start="6" end="7" leftTri="107" rightTri="147" />
+      <edge start="107" end="6" leftTri="146" rightTri="184" />
+      <edge start="6" end="106" leftTri="147" rightTri="184" />
+      <edge start="7" end="10" leftTri="44" rightTri="74" />
+      <edge start="113" end="7" leftTri="73" rightTri="107" />
+      <edge start="7" end="9" leftTri="74" rightTri="108" />
+      <edge start="7" end="8" leftTri="108" rightTri="148" />
+      <edge start="106" end="7" leftTri="147" rightTri="185" />
+      <edge start="7" end="11" leftTri="148" rightTri="186" />
+      <edge start="7" end="107" leftTri="186" rightTri="185" />
+      <edge start="9" end="8" leftTri="109" rightTri="108" />
+      <edge start="11" end="8" leftTri="148" rightTri="109" />
+      <edge start="10" end="9" leftTri="45" rightTri="74" />
+      <edge start="9" end="22" leftTri="45" rightTri="75" />
+      <edge start="9" end="11" leftTri="75" rightTri="109" />
+      <edge start="87" end="10" leftTri="3" rightTri="19" />
+      <edge start="10" end="24" leftTri="3" rightTri="20" />
+      <edge start="10" end="22" leftTri="20" rightTri="45" />
+      <edge start="11" end="22" leftTri="75" rightTri="110" />
+      <edge start="11" end="12" leftTri="110" rightTri="149" />
+      <edge start="11" end="107" leftTri="149" rightTri="186" />
+      <edge start="14" end="12" leftTri="103" rightTri="144" />
+      <edge start="12" end="22" leftTri="110" rightTri="150" />
+      <edge start="114" end="12" leftTri="144" rightTri="182" />
+      <edge start="12" end="136" leftTri="145" rightTri="183" />
+      <edge start="12" end="107" leftTri="183" rightTri="149" />
+      <edge start="12" end="109" leftTri="150" rightTri="182" />
+      <edge start="15" end="13" leftTri="68" rightTri="101" />
+      <edge start="13" end="14" leftTri="68" rightTri="102" />
+      <edge start="16" end="13" leftTri="101" rightTri="142" />
+      <edge start="13" end="114" leftTri="102" rightTri="143" />
+      <edge start="13" end="108" leftTri="143" rightTri="142" />
+      <edge start="15" end="14" leftTri="39" rightTri="68" />
+      <edge start="114" end="14" leftTri="102" rightTri="144" />
+      <edge start="79" end="15" leftTri="-1" rightTri="13" />
+      <edge start="15" end="112" leftTri="-1" rightTri="14" />
+      <edge start="58" end="15" leftTri="13" rightTri="38" />
+      <edge start="59" end="15" leftTri="38" rightTri="67" />
+      <edge start="29" end="15" leftTri="67" rightTri="100" />
+      <edge start="28" end="15" leftTri="100" rightTri="141" />
+      <edge start="15" end="16" leftTri="101" rightTri="141" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="28" end="16" leftTri="141" rightTri="179" />
+      <edge start="16" end="108" leftTri="142" rightTri="180" />
+      <edge start="27" end="16" leftTri="179" rightTri="215" />
+      <edge start="16" end="18" leftTri="180" rightTri="216" />
+      <edge start="16" end="17" leftTri="216" rightTri="215" />
+      <edge start="27" end="17" leftTri="215" rightTri="236" />
+      <edge start="17" end="18" leftTri="216" rightTri="237" />
+      <edge start="17" end="25" leftTri="237" rightTri="236" />
+      <edge start="18" end="108" leftTri="180" rightTri="217" />
+      <edge start="18" end="19" leftTri="217" rightTri="219" />
+      <edge start="20" end="18" leftTri="234" rightTri="219" />
+      <edge start="18" end="26" leftTri="234" rightTri="246" />
+      <edge start="18" end="25" leftTri="246" rightTri="237" />
+      <edge start="109" end="19" leftTri="187" rightTri="218" />
+      <edge start="19" end="20" leftTri="187" rightTri="219" />
+      <edge start="108" end="19" leftTri="218" rightTri="217" />
+      <edge start="21" end="20" leftTri="112" rightTri="151" />
+      <edge start="23" end="20" leftTri="113" rightTri="112" />
+      <edge start="20" end="41" leftTri="113" rightTri="152" />
+      <edge start="109" end="20" leftTri="151" rightTri="187" />
+      <edge start="20" end="33" leftTri="152" rightTri="188" />
+      <edge start="20" end="30" leftTri="188" rightTri="213" />
+      <edge start="20" end="26" leftTri="213" rightTri="234" />
+      <edge start="22" end="21" leftTri="76" rightTri="111" />
+      <edge start="21" end="23" leftTri="76" rightTri="112" />
+      <edge start="109" end="21" leftTri="111" rightTri="151" />
+      <edge start="22" end="24" leftTri="20" rightTri="46" />
+      <edge start="22" end="23" leftTri="46" rightTri="76" />
+      <edge start="22" end="109" leftTri="111" rightTri="150" />
+      <edge start="24" end="23" leftTri="21" rightTri="46" />
+      <edge start="23" end="44" leftTri="21" rightTri="47" />
+      <edge start="23" end="43" leftTri="47" rightTri="77" />
+      <edge start="23" end="41" leftTri="77" rightTri="113" />
+      <edge start="87" end="24" leftTri="-1" rightTri="3" />
+      <edge start="24" end="47" leftTri="-1" rightTri="4" />
+      <edge start="24" end="44" leftTri="4" rightTri="21" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="26" end="25" leftTri="235" rightTri="246" />
+      <edge start="27" end="25" leftTri="236" rightTri="235" />
+      <edge start="30" end="26" leftTri="178" rightTri="213" />
+      <edge start="26" end="28" leftTri="178" rightTri="214" />
+      <edge start="26" end="27" leftTri="214" rightTri="235" />
+      <edge start="28" end="27" leftTri="179" rightTri="214" />
+      <edge start="29" end="28" leftTri="100" rightTri="140" />
+      <edge start="30" end="28" leftTri="140" rightTri="178" />
+      <edge start="59" end="29" leftTri="67" rightTri="99" />
+      <edge start="31" end="29" leftTri="99" rightTri="139" />
+      <edge start="29" end="30" leftTri="140" rightTri="139" />
+      <edge start="31" end="30" leftTri="139" rightTri="177" />
+      <edge start="30" end="33" leftTri="188" rightTri="177" />
+      <edge start="59" end="31" leftTri="99" rightTri="138" />
+      <edge start="35" end="31" leftTri="138" rightTri="176" />
+      <edge start="32" end="31" leftTri="176" rightTri="212" />
+      <edge start="31" end="33" leftTri="177" rightTri="212" />
+      <edge start="35" end="32" leftTri="176" rightTri="211" />
+      <edge start="34" end="32" leftTri="211" rightTri="233" />
+      <edge start="32" end="33" leftTri="212" rightTri="220" />
+      <edge start="38" end="32" leftTri="233" rightTri="220" />
+      <edge start="33" end="41" leftTri="152" rightTri="189" />
+      <edge start="33" end="38" leftTri="189" rightTri="220" />
+      <edge start="37" end="34" leftTri="174" rightTri="210" />
+      <edge start="36" end="34" leftTri="175" rightTri="174" />
+      <edge start="34" end="35" leftTri="175" rightTri="211" />
+      <edge start="39" end="34" leftTri="210" rightTri="232" />
+      <edge start="34" end="38" leftTri="233" rightTri="232" />
+      <edge start="36" end="35" leftTri="137" rightTri="175" />
+      <edge start="59" end="35" leftTri="138" rightTri="137" />
+      <edge start="60" end="36" leftTri="98" rightTri="136" />
+      <edge start="36" end="59" leftTri="98" rightTri="137" />
+      <edge start="37" end="36" leftTri="136" rightTri="174" />
+      <edge start="60" end="37" leftTri="136" rightTri="173" />
+      <edge start="61" end="37" leftTri="173" rightTri="209" />
+      <edge start="39" end="37" leftTri="192" rightTri="210" />
+      <edge start="52" end="37" leftTri="209" rightTri="192" />
+      <edge start="41" end="38" leftTri="190" rightTri="189" />
+      <edge start="38" end="40" leftTri="190" rightTri="221" />
+      <edge start="38" end="39" leftTri="221" rightTri="232" />
+      <edge start="42" end="39" leftTri="154" rightTri="191" />
+      <edge start="39" end="52" leftTri="154" rightTri="192" />
+      <edge start="40" end="39" leftTri="191" rightTri="221" />
+      <edge start="41" end="40" leftTri="153" rightTri="190" />
+      <edge start="40" end="42" leftTri="153" rightTri="191" />
+      <edge start="41" end="43" leftTri="77" rightTri="114" />
+      <edge start="41" end="42" leftTri="114" rightTri="153" />
+      <edge start="43" end="42" leftTri="78" rightTri="114" />
+      <edge start="44" end="42" leftTri="79" rightTri="78" />
+      <edge start="42" end="45" leftTri="79" rightTri="115" />
+      <edge start="42" end="52" leftTri="115" rightTri="154" />
+      <edge start="43" end="44" leftTri="47" rightTri="78" />
+      <edge start="44" end="47" leftTri="4" rightTri="22" />
+      <edge start="44" end="46" leftTri="22" rightTri="48" />
+      <edge start="44" end="45" leftTri="48" rightTri="79" />
+      <edge start="45" end="46" leftTri="48" rightTri="80" />
+      <edge start="45" end="51" leftTri="80" rightTri="116" />
+      <edge start="45" end="52" leftTri="116" rightTri="115" />
+      <edge start="46" end="47" leftTri="22" rightTri="49" />
+      <edge start="46" end="50" leftTri="49" rightTri="81" />
+      <edge start="46" end="51" leftTri="81" rightTri="80" />
+      <edge start="47" end="115" leftTri="-1" rightTri="5" />
+      <edge start="47" end="48" leftTri="5" rightTri="23" />
+      <edge start="47" end="50" leftTri="23" rightTri="49" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="48" end="115" leftTri="5" rightTri="24" />
+      <edge start="50" end="48" leftTri="23" rightTri="50" />
+      <edge start="48" end="91" leftTri="24" rightTri="51" />
+      <edge start="48" end="49" leftTri="51" rightTri="50" />
+      <edge start="50" end="49" leftTri="50" rightTri="82" />
+      <edge start="49" end="91" leftTri="51" rightTri="83" />
+      <edge start="63" end="49" leftTri="82" rightTri="119" />
+      <edge start="49" end="90" leftTri="83" rightTri="120" />
+      <edge start="49" end="68" leftTri="120" rightTri="119" />
+      <edge start="51" end="50" leftTri="81" rightTri="117" />
+      <edge start="50" end="63" leftTri="82" rightTri="118" />
+      <edge start="50" end="53" leftTri="118" rightTri="117" />
+      <edge start="52" end="51" leftTri="116" rightTri="155" />
+      <edge start="51" end="53" leftTri="117" rightTri="155" />
+      <edge start="52" end="53" leftTri="155" rightTri="193" />
+      <edge start="52" end="62" leftTri="193" rightTri="222" />
+      <edge start="61" end="52" leftTri="209" rightTri="222" />
+      <edge start="53" end="63" leftTri="118" rightTri="156" />
+      <edge start="53" end="62" leftTri="156" rightTri="193" />
+      <edge start="57" end="54" leftTri="65" rightTri="96" />
+      <edge start="54" end="58" leftTri="65" rightTri="97" />
+      <edge start="56" end="54" leftTri="96" rightTri="134" />
+      <edge start="54" end="60" leftTri="97" rightTri="135" />
+      <edge start="55" end="54" leftTri="134" rightTri="171" />
+      <edge start="54" end="61" leftTri="135" rightTri="172" />
+      <edge start="54" end="64" leftTri="172" rightTri="171" />
+      <edge start="56" end="55" leftTri="134" rightTri="170" />
+      <edge start="66" end="55" leftTri="170" rightTri="207" />
+      <edge start="55" end="64" leftTri="171" rightTri="207" />
+      <edge start="78" end="56" leftTri="95" rightTri="133" />
+      <edge start="57" end="56" leftTri="96" rightTri="95" />
+      <edge start="76" end="56" leftTri="133" rightTri="169" />
+      <edge start="56" end="66" leftTri="170" rightTri="169" />
+      <edge start="79" end="57" leftTri="37" rightTri="64" />
+      <edge start="57" end="58" leftTri="37" rightTri="65" />
+      <edge start="78" end="57" leftTri="64" rightTri="95" />
+      <edge start="79" end="58" leftTri="13" rightTri="37" />
+      <edge start="58" end="59" leftTri="38" rightTri="66" />
+      <edge start="58" end="60" leftTri="66" rightTri="97" />
+      <edge start="60" end="59" leftTri="66" rightTri="98" />
+      <edge start="61" end="60" leftTri="135" rightTri="173" />
+      <edge start="64" end="61" leftTri="172" rightTri="208" />
+      <edge start="61" end="62" leftTri="222" rightTri="208" />
+      <edge start="62" end="63" leftTri="156" rightTri="194" />
+      <edge start="62" end="64" leftTri="194" rightTri="208" />
+      <edge start="63" end="68" leftTri="119" rightTri="157" />
+      <edge start="63" end="69" leftTri="157" rightTri="195" />
+      <edge start="63" end="64" leftTri="195" rightTri="194" />
+      <edge start="64" end="69" leftTri="195" rightTri="223" />
+      <edge start="66" end="64" leftTri="207" rightTri="231" />
+      <edge start="64" end="65" leftTri="223" rightTri="231" />
+      <edge start="65" end="69" leftTri="223" rightTri="238" />
+      <edge start="66" end="65" leftTri="231" rightTri="245" />
+      <edge start="65" end="70" leftTri="238" rightTri="247" />
+      <edge start="65" end="67" leftTri="247" rightTri="245" />
+      <edge start="76" end="66" leftTri="169" rightTri="206" />
+      <edge start="74" end="66" leftTri="206" rightTri="230" />
+      <edge start="73" end="66" leftTri="230" rightTri="244" />
+      <edge start="66" end="67" leftTri="245" rightTri="244" />
+      <edge start="73" end="67" leftTri="244" rightTri="252" />
+      <edge start="67" end="70" leftTri="247" rightTri="253" />
+      <edge start="67" end="72" leftTri="253" rightTri="252" />
+      <edge start="68" end="90" leftTri="120" rightTri="158" />
+      <edge start="69" end="68" leftTri="157" rightTri="196" />
+      <edge start="68" end="89" leftTri="158" rightTri="196" />
+      <edge start="69" end="89" leftTri="196" rightTri="224" />
+      <edge start="69" end="70" leftTri="224" rightTri="238" />
+      <edge start="70" end="89" leftTri="224" rightTri="239" />
+      <edge start="70" end="71" leftTri="239" rightTri="248" />
+      <edge start="70" end="72" leftTri="248" rightTri="253" />
+      <edge start="71" end="89" leftTri="239" rightTri="249" />
+      <edge start="71" end="72" leftTri="250" rightTri="248" />
+      <edge start="71" end="99" leftTri="249" rightTri="250" />
+      <edge start="99" end="72" leftTri="242" rightTri="250" />
+      <edge start="72" end="105" leftTri="242" rightTri="251" />
+      <edge start="72" end="73" leftTri="251" rightTri="252" />
+      <edge start="74" end="73" leftTri="230" rightTri="243" />
+      <edge start="105" end="73" leftTri="243" rightTri="251" />
+      <edge start="75" end="74" leftTri="205" rightTri="229" />
+      <edge start="76" end="74" leftTri="206" rightTri="205" />
+      <edge start="105" end="74" leftTri="229" rightTri="243" />
+      <edge start="104" end="75" leftTri="168" rightTri="204" />
+      <edge start="75" end="76" leftTri="168" rightTri="205" />
+      <edge start="105" end="75" leftTri="204" rightTri="229" />
+      <edge start="104" end="76" leftTri="131" rightTri="168" />
+      <edge start="77" end="76" leftTri="132" rightTri="131" />
+      <edge start="78" end="76" leftTri="133" rightTri="132" />
+      <edge start="80" end="77" leftTri="63" rightTri="93" />
+      <edge start="77" end="79" leftTri="63" rightTri="94" />
+      <edge start="104" end="77" leftTri="93" rightTri="131" />
+      <edge start="77" end="78" leftTri="94" rightTri="132" />
+      <edge start="79" end="78" leftTri="64" rightTri="94" />
+      <edge start="83" end="79" leftTri="-1" rightTri="12" />
+      <edge start="81" end="79" leftTri="12" rightTri="36" />
+      <edge start="80" end="79" leftTri="36" rightTri="63" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="81" end="80" leftTri="36" rightTri="62" />
+      <edge start="132" end="80" leftTri="62" rightTri="92" />
+      <edge start="116" end="80" leftTri="92" rightTri="130" />
+      <edge start="80" end="104" leftTri="93" rightTri="130" />
+      <edge start="83" end="81" leftTri="12" rightTri="35" />
+      <edge start="81" end="82" leftTri="61" rightTri="35" />
+      <edge start="132" end="81" leftTri="61" rightTri="62" />
+      <edge start="132" end="82" leftTri="34" rightTri="61" />
+      <edge start="83" end="82" leftTri="35" rightTri="34" />
+      <edge start="84" end="83" leftTri="-1" rightTri="11" />
+      <edge start="132" end="83" leftTri="11" rightTri="34" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="10" />
+      <edge start="125" end="84" leftTri="10" rightTri="33" />
+      <edge start="84" end="132" leftTri="11" rightTri="33" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="85" leftTri="25" rightTri="52" />
+      <edge start="85" end="127" leftTri="25" rightTri="53" />
+      <edge start="91" end="85" leftTri="52" rightTri="84" />
+      <edge start="85" end="86" leftTri="53" rightTri="84" />
+      <edge start="86" end="127" leftTri="53" rightTri="85" />
+      <edge start="91" end="86" leftTri="84" rightTri="122" />
+      <edge start="86" end="128" leftTri="85" rightTri="123" />
+      <edge start="92" end="86" leftTri="122" rightTri="160" />
+      <edge start="86" end="100" leftTri="123" rightTri="161" />
+      <edge start="86" end="93" leftTri="161" rightTri="160" />
+      <edge start="111" end="87" leftTri="2" rightTri="18" />
+      <edge start="88" end="111" leftTri="1" rightTri="0" />
+      <edge start="90" end="89" leftTri="121" rightTri="158" />
+      <edge start="89" end="91" leftTri="121" rightTri="159" />
+      <edge start="89" end="92" leftTri="159" rightTri="197" />
+      <edge start="89" end="93" leftTri="197" rightTri="225" />
+      <edge start="89" end="122" leftTri="225" rightTri="240" />
+      <edge start="89" end="99" leftTri="240" rightTri="249" />
+      <edge start="90" end="91" leftTri="83" rightTri="121" />
+      <edge start="91" end="115" leftTri="24" rightTri="52" />
+      <edge start="91" end="92" leftTri="122" rightTri="159" />
+      <edge start="92" end="93" leftTri="160" rightTri="197" />
+      <edge start="93" end="100" leftTri="161" rightTri="198" />
+      <edge start="93" end="122" leftTri="198" rightTri="225" />
+      <edge start="96" end="94" leftTri="-1" rightTri="9" />
+      <edge start="95" end="94" leftTri="9" rightTri="31" />
+      <edge start="94" end="125" leftTri="10" rightTri="32" />
+      <edge start="94" end="126" leftTri="32" rightTri="31" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="95" leftTri="9" rightTri="30" />
+      <edge start="101" end="95" leftTri="30" rightTri="57" />
+      <edge start="95" end="126" leftTri="31" rightTri="58" />
+      <edge start="95" end="102" leftTri="58" rightTri="57" />
+      <edge start="97" end="96" leftTri="-1" rightTri="8" />
+      <edge start="131" end="96" leftTri="8" rightTri="29" />
+      <edge start="96" end="101" leftTri="30" rightTri="29" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="7" />
+      <edge start="130" end="97" leftTri="7" rightTri="28" />
+      <edge start="97" end="131" leftTri="8" rightTri="28" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="6" />
+      <edge start="127" end="98" leftTri="6" rightTri="26" />
+      <edge start="98" end="130" leftTri="7" rightTri="27" />
+      <edge start="98" end="103" leftTri="27" rightTri="26" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="117" end="99" leftTri="201" rightTri="227" />
+      <edge start="121" end="99" leftTri="202" rightTri="201" />
+      <edge start="120" end="99" leftTri="203" rightTri="202" />
+      <edge start="99" end="104" leftTri="203" rightTri="228" />
+      <edge start="123" end="99" leftTri="227" rightTri="241" />
+      <edge start="99" end="105" leftTri="228" rightTri="242" />
+      <edge start="122" end="99" leftTri="241" rightTri="240" />
+      <edge start="100" end="128" leftTri="123" rightTri="162" />
+      <edge start="100" end="119" leftTri="162" rightTri="199" />
+      <edge start="122" end="100" leftTri="198" rightTri="226" />
+      <edge start="100" end="123" leftTri="199" rightTri="226" />
+      <edge start="131" end="101" leftTri="29" rightTri="56" />
+      <edge start="130" end="101" leftTri="56" rightTri="87" />
+      <edge start="101" end="102" leftTri="57" rightTri="88" />
+      <edge start="129" end="101" leftTri="87" rightTri="125" />
+      <edge start="101" end="118" leftTri="88" rightTri="126" />
+      <edge start="119" end="101" leftTri="125" rightTri="163" />
+      <edge start="101" end="121" leftTri="126" rightTri="164" />
+      <edge start="123" end="101" leftTri="163" rightTri="200" />
+      <edge start="101" end="117" leftTri="164" rightTri="200" />
+      <edge start="126" end="102" leftTri="59" rightTri="58" />
+      <edge start="102" end="125" leftTri="59" rightTri="89" />
+      <edge start="118" end="102" leftTri="88" rightTri="127" />
+      <edge start="102" end="124" leftTri="89" rightTri="127" />
+      <edge start="127" end="103" leftTri="26" rightTri="54" />
+      <edge start="103" end="130" leftTri="27" rightTri="55" />
+      <edge start="128" end="103" leftTri="54" rightTri="86" />
+      <edge start="103" end="129" leftTri="55" rightTri="86" />
+      <edge start="116" end="104" leftTri="130" rightTri="167" />
+      <edge start="120" end="104" leftTri="167" rightTri="203" />
+      <edge start="104" end="105" leftTri="204" rightTri="228" />
+      <edge start="107" end="106" leftTri="184" rightTri="185" />
+      <edge start="136" end="107" leftTri="146" rightTri="183" />
+      <edge start="108" end="114" leftTri="143" rightTri="181" />
+      <edge start="108" end="109" leftTri="181" rightTri="218" />
+      <edge start="114" end="109" leftTri="182" rightTri="181" />
+      <edge start="112" end="110" leftTri="15" rightTri="41" />
+      <edge start="134" end="110" leftTri="41" rightTri="71" />
+      <edge start="110" end="111" leftTri="42" rightTri="43" />
+      <edge start="136" end="110" leftTri="71" rightTri="105" />
+      <edge start="110" end="113" leftTri="72" rightTri="106" />
+      <edge start="135" end="111" leftTri="17" rightTri="16" />
+      <edge start="112" end="134" leftTri="41" rightTri="40" />
+      <edge start="115" end="127" leftTri="6" rightTri="25" />
+      <edge start="133" end="116" leftTri="91" rightTri="129" />
+      <edge start="132" end="116" leftTri="92" rightTri="91" />
+      <edge start="118" end="116" leftTri="129" rightTri="166" />
+      <edge start="116" end="120" leftTri="167" rightTri="166" />
+      <edge start="117" end="121" leftTri="164" rightTri="201" />
+      <edge start="123" end="117" leftTri="200" rightTri="227" />
+      <edge start="121" end="118" leftTri="126" rightTri="165" />
+      <edge start="118" end="124" leftTri="127" rightTri="128" />
+      <edge start="133" end="118" leftTri="129" rightTri="128" />
+      <edge start="118" end="120" leftTri="166" rightTri="165" />
+      <edge start="128" end="119" leftTri="124" rightTri="162" />
+      <edge start="129" end="119" leftTri="125" rightTri="124" />
+      <edge start="119" end="123" leftTri="163" rightTri="199" />
+      <edge start="121" end="120" leftTri="165" rightTri="202" />
+      <edge start="122" end="123" leftTri="226" rightTri="241" />
+      <edge start="125" end="124" leftTri="90" rightTri="89" />
+      <edge start="124" end="133" leftTri="90" rightTri="128" />
+      <edge start="126" end="125" leftTri="32" rightTri="59" />
+      <edge start="125" end="132" leftTri="33" rightTri="60" />
+      <edge start="125" end="133" leftTri="60" rightTri="90" />
+      <edge start="127" end="128" leftTri="54" rightTri="85" />
+      <edge start="128" end="129" leftTri="86" rightTri="124" />
+      <edge start="129" end="130" leftTri="55" rightTri="87" />
+      <edge start="130" end="131" leftTri="28" rightTri="56" />
+      <edge start="133" end="132" leftTri="60" rightTri="91" />
+      <edge start="134" end="136" leftTri="71" rightTri="104" />
+      <path id="0" radius="1">
+        <point x="20.7983418" y="20.7983418" z="20.7983418" />
+        <point x="26.7765961" y="26.7765961" z="26.7765961" />
+        <point x="33.0809479" y="33.0809479" z="33.0809479" />
+      </path>
+    </nav>
+  </place>
+  <place name="xinshou" enviorPath="Assets/Res/Arts/Scene/Copy/xinshou_sp/xinshou_output.unity" enviorName="xinshou_output" fileName="xinshou" filePath="Assets/Res/Data/Source/Place/xinshou/xinshou.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="RP_diaochan_0" position="24:7:51" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="21" prefab="Assets/Res/Arts/Role/Hero/diaochan/diaochan_0_sp/RP_diaochan_0.prefab" />
+    </object>
+    <nav>
+      <triangle id="0" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="1" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="2" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="3" v0="10" v1="10" v2="10" terrain="1" layer="0" />
+      <triangle id="4" v0="44" v1="44" v2="44" terrain="1" layer="0" />
+      <triangle id="5" v0="48" v1="48" v2="48" terrain="1" layer="0" />
+      <triangle id="6" v0="127" v1="127" v2="127" terrain="1" layer="0" />
+      <triangle id="7" v0="130" v1="130" v2="130" terrain="1" layer="0" />
+      <triangle id="8" v0="131" v1="131" v2="131" terrain="1" layer="0" />
+      <triangle id="9" v0="95" v1="95" v2="95" terrain="1" layer="0" />
+      <triangle id="10" v0="125" v1="125" v2="125" terrain="1" layer="0" />
+      <triangle id="11" v0="132" v1="132" v2="132" terrain="1" layer="0" />
+      <triangle id="12" v0="81" v1="81" v2="81" terrain="1" layer="0" />
+      <triangle id="13" v0="58" v1="58" v2="58" terrain="1" layer="0" />
+      <triangle id="14" v0="2" v1="2" v2="2" terrain="1" layer="0" />
+      <triangle id="15" v0="110" v1="110" v2="110" terrain="0" layer="0" />
+      <triangle id="16" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="17" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="18" v0="4" v1="4" v2="4" terrain="0" layer="0" />
+      <triangle id="19" v0="4" v1="4" v2="4" terrain="1" layer="0" />
+      <triangle id="20" v0="22" v1="22" v2="22" terrain="0" layer="0" />
+      <triangle id="21" v0="23" v1="23" v2="23" terrain="1" layer="0" />
+      <triangle id="22" v0="46" v1="46" v2="46" terrain="1" layer="0" />
+      <triangle id="23" v0="50" v1="50" v2="50" terrain="0" layer="0" />
+      <triangle id="24" v0="91" v1="91" v2="91" terrain="1" layer="0" />
+      <triangle id="25" v0="85" v1="85" v2="85" terrain="1" layer="0" />
+      <triangle id="26" v0="103" v1="103" v2="103" terrain="1" layer="0" />
+      <triangle id="27" v0="103" v1="103" v2="103" terrain="1" layer="0" />
+      <triangle id="28" v0="131" v1="131" v2="131" terrain="1" layer="0" />
+      <triangle id="29" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="30" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="31" v0="126" v1="126" v2="126" terrain="1" layer="0" />
+      <triangle id="32" v0="126" v1="126" v2="126" terrain="1" layer="0" />
+      <triangle id="33" v0="132" v1="132" v2="132" terrain="1" layer="0" />
+      <triangle id="34" v0="82" v1="82" v2="82" terrain="1" layer="0" />
+      <triangle id="35" v0="82" v1="82" v2="82" terrain="1" layer="0" />
+      <triangle id="36" v0="80" v1="80" v2="80" terrain="0" layer="0" />
+      <triangle id="37" v0="57" v1="57" v2="57" terrain="1" layer="0" />
+      <triangle id="38" v0="59" v1="59" v2="59" terrain="1" layer="0" />
+      <triangle id="39" v0="14" v1="14" v2="14" terrain="1" layer="0" />
+      <triangle id="40" v0="134" v1="134" v2="134" terrain="0" layer="0" />
+      <triangle id="41" v0="134" v1="134" v2="134" terrain="0" layer="0" />
+      <triangle id="42" v0="111" v1="111" v2="111" terrain="0" layer="0" />
+      <triangle id="43" v0="110" v1="110" v2="110" terrain="0" layer="0" />
+      <triangle id="44" v0="7" v1="7" v2="7" terrain="1" layer="0" />
+      <triangle id="45" v0="9" v1="9" v2="9" terrain="0" layer="0" />
+      <triangle id="46" v0="23" v1="23" v2="23" terrain="0" layer="0" />
+      <triangle id="47" v0="43" v1="43" v2="43" terrain="1" layer="0" />
+      <triangle id="48" v0="45" v1="45" v2="45" terrain="1" layer="0" />
+      <triangle id="49" v0="50" v1="50" v2="50" terrain="0" layer="0" />
+      <triangle id="50" v0="49" v1="49" v2="49" terrain="0" layer="0" />
+      <triangle id="51" v0="49" v1="49" v2="49" terrain="1" layer="0" />
+      <triangle id="52" v0="85" v1="85" v2="85" terrain="1" layer="0" />
+      <triangle id="53" v0="86" v1="86" v2="86" terrain="0" layer="0" />
+      <triangle id="54" v0="128" v1="128" v2="128" terrain="1" layer="0" />
+      <triangle id="55" v0="129" v1="129" v2="129" terrain="1" layer="0" />
+      <triangle id="56" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="57" v0="102" v1="102" v2="102" terrain="0" layer="0" />
+      <triangle id="58" v0="102" v1="102" v2="102" terrain="0" layer="0" />
+      <triangle id="59" v0="102" v1="102" v2="102" terrain="0" layer="0" />
+      <triangle id="60" v0="133" v1="133" v2="133" terrain="1" layer="0" />
+      <triangle id="61" v0="81" v1="81" v2="81" terrain="0" layer="0" />
+      <triangle id="62" v0="132" v1="132" v2="132" terrain="0" layer="0" />
+      <triangle id="63" v0="77" v1="77" v2="77" terrain="0" layer="0" />
+      <triangle id="64" v0="78" v1="78" v2="78" terrain="1" layer="0" />
+      <triangle id="65" v0="54" v1="54" v2="54" terrain="0" layer="0" />
+      <triangle id="66" v0="60" v1="60" v2="60" terrain="0" layer="0" />
+      <triangle id="67" v0="29" v1="29" v2="29" terrain="1" layer="0" />
+      <triangle id="68" v0="13" v1="13" v2="13" terrain="0" layer="0" />
+      <triangle id="69" v0="3" v1="3" v2="3" terrain="1" layer="0" />
+      <triangle id="70" v0="3" v1="3" v2="3" terrain="0" layer="0" />
+      <triangle id="71" v0="136" v1="136" v2="136" terrain="0" layer="0" />
+      <triangle id="72" v0="113" v1="113" v2="113" terrain="0" layer="0" />
+      <triangle id="73" v0="113" v1="113" v2="113" terrain="1" layer="0" />
+      <triangle id="74" v0="9" v1="9" v2="9" terrain="1" layer="0" />
+      <triangle id="75" v0="11" v1="11" v2="11" terrain="0" layer="0" />
+      <triangle id="76" v0="21" v1="21" v2="21" terrain="1" layer="0" />
+      <triangle id="77" v0="41" v1="41" v2="41" terrain="1" layer="0" />
+      <triangle id="78" v0="42" v1="42" v2="42" terrain="0" layer="0" />
+      <triangle id="79" v0="42" v1="42" v2="42" terrain="0" layer="0" />
+      <triangle id="80" v0="51" v1="51" v2="51" terrain="0" layer="0" />
+      <triangle id="81" v0="51" v1="51" v2="51" terrain="0" layer="0" />
+      <triangle id="82" v0="63" v1="63" v2="63" terrain="1" layer="0" />
+      <triangle id="83" v0="90" v1="90" v2="90" terrain="1" layer="0" />
+      <triangle id="84" v0="86" v1="86" v2="86" terrain="1" layer="0" />
+      <triangle id="85" v0="128" v1="128" v2="128" terrain="0" layer="0" />
+      <triangle id="86" v0="129" v1="129" v2="129" terrain="1" layer="0" />
+      <triangle id="87" v0="101" v1="101" v2="101" terrain="0" layer="0" />
+      <triangle id="88" v0="118" v1="118" v2="118" terrain="0" layer="0" />
+      <triangle id="89" v0="124" v1="124" v2="124" terrain="0" layer="0" />
+      <triangle id="90" v0="124" v1="124" v2="124" terrain="1" layer="0" />
+      <triangle id="91" v0="116" v1="116" v2="116" terrain="0" layer="0" />
+      <triangle id="92" v0="116" v1="116" v2="116" terrain="0" layer="0" />
+      <triangle id="93" v0="104" v1="104" v2="104" terrain="0" layer="0" />
+      <triangle id="94" v0="78" v1="78" v2="78" terrain="0" layer="0" />
+      <triangle id="95" v0="56" v1="56" v2="56" terrain="1" layer="0" />
+      <triangle id="96" v0="56" v1="56" v2="56" terrain="0" layer="0" />
+      <triangle id="97" v0="60" v1="60" v2="60" terrain="0" layer="0" />
+      <triangle id="98" v0="36" v1="36" v2="36" terrain="1" layer="0" />
+      <triangle id="99" v0="31" v1="31" v2="31" terrain="1" layer="0" />
+      <triangle id="100" v0="28" v1="28" v2="28" terrain="1" layer="0" />
+      <triangle id="101" v0="16" v1="16" v2="16" terrain="0" layer="0" />
+      <triangle id="102" v0="114" v1="114" v2="114" terrain="1" layer="0" />
+      <triangle id="103" v0="12" v1="12" v2="12" terrain="1" layer="0" />
+      <triangle id="104" v0="136" v1="136" v2="136" terrain="0" layer="0" />
+      <triangle id="105" v0="6" v1="6" v2="6" terrain="0" layer="0" />
+      <triangle id="106" v0="6" v1="6" v2="6" terrain="0" layer="0" />
+      <triangle id="107" v0="6" v1="6" v2="6" terrain="1" layer="0" />
+      <triangle id="108" v0="8" v1="8" v2="8" terrain="1" layer="0" />
+      <triangle id="109" v0="8" v1="8" v2="8" terrain="0" layer="0" />
+      <triangle id="110" v0="12" v1="12" v2="12" terrain="0" layer="0" />
+      <triangle id="111" v0="109" v1="109" v2="109" terrain="1" layer="0" />
+      <triangle id="112" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="113" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="114" v0="42" v1="42" v2="42" terrain="1" layer="0" />
+      <triangle id="115" v0="52" v1="52" v2="52" terrain="0" layer="0" />
+      <triangle id="116" v0="52" v1="52" v2="52" terrain="0" layer="0" />
+      <triangle id="117" v0="53" v1="53" v2="53" terrain="1" layer="0" />
+      <triangle id="118" v0="53" v1="53" v2="53" terrain="1" layer="0" />
+      <triangle id="119" v0="68" v1="68" v2="68" terrain="1" layer="0" />
+      <triangle id="120" v0="68" v1="68" v2="68" terrain="1" layer="0" />
+      <triangle id="121" v0="89" v1="89" v2="89" terrain="0" layer="0" />
+      <triangle id="122" v0="92" v1="92" v2="92" terrain="1" layer="0" />
+      <triangle id="123" v0="100" v1="100" v2="100" terrain="0" layer="0" />
+      <triangle id="124" v0="119" v1="119" v2="119" terrain="1" layer="0" />
+      <triangle id="125" v0="119" v1="119" v2="119" terrain="0" layer="0" />
+      <triangle id="126" v0="121" v1="121" v2="121" terrain="0" layer="0" />
+      <triangle id="127" v0="124" v1="124" v2="124" terrain="0" layer="0" />
+      <triangle id="128" v0="118" v1="118" v2="118" terrain="1" layer="0" />
+      <triangle id="129" v0="118" v1="118" v2="118" terrain="1" layer="0" />
+      <triangle id="130" v0="104" v1="104" v2="104" terrain="0" layer="0" />
+      <triangle id="131" v0="76" v1="76" v2="76" terrain="1" layer="0" />
+      <triangle id="132" v0="76" v1="76" v2="76" terrain="1" layer="0" />
+      <triangle id="133" v0="76" v1="76" v2="76" terrain="1" layer="0" />
+      <triangle id="134" v0="55" v1="55" v2="55" terrain="0" layer="0" />
+      <triangle id="135" v0="61" v1="61" v2="61" terrain="0" layer="0" />
+      <triangle id="136" v0="37" v1="37" v2="37" terrain="1" layer="0" />
+      <triangle id="137" v0="35" v1="35" v2="35" terrain="1" layer="0" />
+      <triangle id="138" v0="35" v1="35" v2="35" terrain="1" layer="0" />
+      <triangle id="139" v0="30" v1="30" v2="30" terrain="0" layer="0" />
+      <triangle id="140" v0="30" v1="30" v2="30" terrain="0" layer="0" />
+      <triangle id="141" v0="16" v1="16" v2="16" terrain="1" layer="0" />
+      <triangle id="142" v0="108" v1="108" v2="108" terrain="0" layer="0" />
+      <triangle id="143" v0="108" v1="108" v2="108" terrain="1" layer="0" />
+      <triangle id="144" v0="12" v1="12" v2="12" terrain="1" layer="0" />
+      <triangle id="145" v0="136" v1="136" v2="136" terrain="1" layer="0" />
+      <triangle id="146" v0="107" v1="107" v2="107" terrain="0" layer="0" />
+      <triangle id="147" v0="106" v1="106" v2="106" terrain="1" layer="0" />
+      <triangle id="148" v0="11" v1="11" v2="11" terrain="0" layer="0" />
+      <triangle id="149" v0="107" v1="107" v2="107" terrain="1" layer="0" />
+      <triangle id="150" v0="109" v1="109" v2="109" terrain="0" layer="0" />
+      <triangle id="151" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="152" v0="33" v1="33" v2="33" terrain="1" layer="0" />
+      <triangle id="153" v0="40" v1="40" v2="40" terrain="1" layer="0" />
+      <triangle id="154" v0="39" v1="39" v2="39" terrain="0" layer="0" />
+      <triangle id="155" v0="53" v1="53" v2="53" terrain="1" layer="0" />
+      <triangle id="156" v0="62" v1="62" v2="62" terrain="1" layer="0" />
+      <triangle id="157" v0="69" v1="69" v2="69" terrain="0" layer="0" />
+      <triangle id="158" v0="89" v1="89" v2="89" terrain="1" layer="0" />
+      <triangle id="159" v0="92" v1="92" v2="92" terrain="0" layer="0" />
+      <triangle id="160" v0="93" v1="93" v2="93" terrain="0" layer="0" />
+      <triangle id="161" v0="93" v1="93" v2="93" terrain="0" layer="0" />
+      <triangle id="162" v0="119" v1="119" v2="119" terrain="0" layer="0" />
+      <triangle id="163" v0="123" v1="123" v2="123" terrain="0" layer="0" />
+      <triangle id="164" v0="117" v1="117" v2="117" terrain="0" layer="0" />
+      <triangle id="165" v0="120" v1="120" v2="120" terrain="0" layer="0" />
+      <triangle id="166" v0="120" v1="120" v2="120" terrain="0" layer="0" />
+      <triangle id="167" v0="120" v1="120" v2="120" terrain="0" layer="0" />
+      <triangle id="168" v0="75" v1="75" v2="75" terrain="1" layer="0" />
+      <triangle id="169" v0="66" v1="66" v2="66" terrain="1" layer="0" />
+      <triangle id="170" v0="66" v1="66" v2="66" terrain="1" layer="0" />
+      <triangle id="171" v0="64" v1="64" v2="64" terrain="1" layer="0" />
+      <triangle id="172" v0="64" v1="64" v2="64" terrain="1" layer="0" />
+      <triangle id="173" v0="37" v1="37" v2="37" terrain="0" layer="0" />
+      <triangle id="174" v0="34" v1="34" v2="34" terrain="0" layer="0" />
+      <triangle id="175" v0="34" v1="34" v2="34" terrain="1" layer="0" />
+      <triangle id="176" v0="32" v1="32" v2="32" terrain="1" layer="0" />
+      <triangle id="177" v0="33" v1="33" v2="33" terrain="0" layer="0" />
+      <triangle id="178" v0="26" v1="26" v2="26" terrain="0" layer="0" />
+      <triangle id="179" v0="27" v1="27" v2="27" terrain="1" layer="0" />
+      <triangle id="180" v0="18" v1="18" v2="18" terrain="0" layer="0" />
+      <triangle id="181" v0="109" v1="109" v2="109" terrain="0" layer="0" />
+      <triangle id="182" v0="109" v1="109" v2="109" terrain="0" layer="0" />
+      <triangle id="183" v0="107" v1="107" v2="107" terrain="1" layer="0" />
+      <triangle id="184" v0="106" v1="106" v2="106" terrain="0" layer="0" />
+      <triangle id="185" v0="107" v1="107" v2="107" terrain="0" layer="0" />
+      <triangle id="186" v0="107" v1="107" v2="107" terrain="0" layer="0" />
+      <triangle id="187" v0="19" v1="19" v2="19" terrain="1" layer="0" />
+      <triangle id="188" v0="30" v1="30" v2="30" terrain="1" layer="0" />
+      <triangle id="189" v0="38" v1="38" v2="38" terrain="1" layer="0" />
+      <triangle id="190" v0="38" v1="38" v2="38" terrain="1" layer="0" />
+      <triangle id="191" v0="39" v1="39" v2="39" terrain="0" layer="0" />
+      <triangle id="192" v0="37" v1="37" v2="37" terrain="0" layer="0" />
+      <triangle id="193" v0="62" v1="62" v2="62" terrain="1" layer="0" />
+      <triangle id="194" v0="64" v1="64" v2="64" terrain="0" layer="0" />
+      <triangle id="195" v0="64" v1="64" v2="64" terrain="0" layer="0" />
+      <triangle id="196" v0="89" v1="89" v2="89" terrain="1" layer="0" />
+      <triangle id="197" v0="93" v1="93" v2="93" terrain="0" layer="0" />
+      <triangle id="198" v0="122" v1="122" v2="122" terrain="0" layer="0" />
+      <triangle id="199" v0="123" v1="123" v2="123" terrain="0" layer="0" />
+      <triangle id="200" v0="117" v1="117" v2="117" terrain="0" layer="0" />
+      <triangle id="201" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="202" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="203" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="204" v0="105" v1="105" v2="105" terrain="0" layer="0" />
+      <triangle id="205" v0="74" v1="74" v2="74" terrain="1" layer="0" />
+      <triangle id="206" v0="74" v1="74" v2="74" terrain="1" layer="0" />
+      <triangle id="207" v0="64" v1="64" v2="64" terrain="1" layer="0" />
+      <triangle id="208" v0="62" v1="62" v2="62" terrain="0" layer="0" />
+      <triangle id="209" v0="52" v1="52" v2="52" terrain="0" layer="0" />
+      <triangle id="210" v0="39" v1="39" v2="39" terrain="0" layer="0" />
+      <triangle id="211" v0="32" v1="32" v2="32" terrain="1" layer="0" />
+      <triangle id="212" v0="33" v1="33" v2="33" terrain="0" layer="0" />
+      <triangle id="213" v0="20" v1="20" v2="20" terrain="1" layer="0" />
+      <triangle id="214" v0="27" v1="27" v2="27" terrain="0" layer="0" />
+      <triangle id="215" v0="17" v1="17" v2="17" terrain="0" layer="0" />
+      <triangle id="216" v0="17" v1="17" v2="17" terrain="0" layer="0" />
+      <triangle id="217" v0="19" v1="19" v2="19" terrain="0" layer="0" />
+      <triangle id="218" v0="19" v1="19" v2="19" terrain="0" layer="0" />
+      <triangle id="219" v0="18" v1="18" v2="18" terrain="1" layer="0" />
+      <triangle id="220" v0="32" v1="32" v2="32" terrain="0" layer="0" />
+      <triangle id="221" v0="39" v1="39" v2="39" terrain="1" layer="0" />
+      <triangle id="222" v0="61" v1="61" v2="61" terrain="0" layer="0" />
+      <triangle id="223" v0="65" v1="65" v2="65" terrain="0" layer="0" />
+      <triangle id="224" v0="70" v1="70" v2="70" terrain="1" layer="0" />
+      <triangle id="225" v0="122" v1="122" v2="122" terrain="0" layer="0" />
+      <triangle id="226" v0="123" v1="123" v2="123" terrain="0" layer="0" />
+      <triangle id="227" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="228" v0="105" v1="105" v2="105" terrain="0" layer="0" />
+      <triangle id="229" v0="74" v1="74" v2="74" terrain="0" layer="0" />
+      <triangle id="230" v0="73" v1="73" v2="73" terrain="1" layer="0" />
+      <triangle id="231" v0="65" v1="65" v2="65" terrain="0" layer="0" />
+      <triangle id="232" v0="38" v1="38" v2="38" terrain="0" layer="0" />
+      <triangle id="233" v0="38" v1="38" v2="38" terrain="0" layer="0" />
+      <triangle id="234" v0="18" v1="18" v2="18" terrain="1" layer="0" />
+      <triangle id="235" v0="25" v1="25" v2="25" terrain="0" layer="0" />
+      <triangle id="236" v0="25" v1="25" v2="25" terrain="0" layer="0" />
+      <triangle id="237" v0="25" v1="25" v2="25" terrain="1" layer="0" />
+      <triangle id="238" v0="70" v1="70" v2="70" terrain="0" layer="0" />
+      <triangle id="239" v0="71" v1="71" v2="71" terrain="1" layer="0" />
+      <triangle id="240" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="241" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="242" v0="72" v1="72" v2="72" terrain="0" layer="0" />
+      <triangle id="243" v0="73" v1="73" v2="73" terrain="1" layer="0" />
+      <triangle id="244" v0="67" v1="67" v2="67" terrain="1" layer="0" />
+      <triangle id="245" v0="67" v1="67" v2="67" terrain="0" layer="0" />
+      <triangle id="246" v0="25" v1="25" v2="25" terrain="1" layer="0" />
+      <triangle id="247" v0="67" v1="67" v2="67" terrain="0" layer="0" />
+      <triangle id="248" v0="72" v1="72" v2="72" terrain="0" layer="0" />
+      <triangle id="249" v0="99" v1="99" v2="99" terrain="0" layer="0" />
+      <triangle id="250" v0="71" v1="71" v2="71" terrain="0" layer="0" />
+      <triangle id="251" v0="73" v1="73" v2="73" terrain="1" layer="0" />
+      <triangle id="252" v0="72" v1="72" v2="72" terrain="1" layer="0" />
+      <triangle id="253" v0="72" v1="72" v2="72" terrain="0" layer="0" />
+      <vertex id="0" x="16.5957432" y="6.74324131" z="53.6358948" />
+      <vertex id="1" x="18.25608" y="6.792819" z="49.333744" />
+      <vertex id="2" x="24.9434338" y="6.84845448" z="46.70014" />
+      <vertex id="3" x="28.4457455" y="6.817178" z="48.4530754" />
+      <vertex id="4" x="25.7897224" y="6.945142" z="59.1456566" />
+      <vertex id="5" x="21.661253" y="6.743243" z="59.5622749" />
+      <vertex id="6" x="29.0469685" y="6.74321461" z="58.2411232" />
+      <vertex id="7" x="33.7485924" y="27.5784149" z="58.6546326" />
+      <vertex id="8" x="36.0378952" y="27.5784149" z="58.5523949" />
+      <vertex id="9" x="37.9469032" y="27.5784149" z="60.20137" />
+      <vertex id="10" x="40.2370338" y="27.5784149" z="62.3882332" />
+      <vertex id="11" x="35.7329025" y="27.5784149" z="54.4437332" />
+      <vertex id="12" x="37.91511" y="27.44573" z="50.40195" />
+      <vertex id="13" x="45.16737" y="27.64915" z="44.3456955" />
+      <vertex id="14" x="44.82654" y="27.60387" z="42.7875862" />
+      <vertex id="15" x="48.7541733" y="27.52187" z="41.7240143" />
+      <vertex id="16" x="50.52225" y="27.5773678" z="43.8836441" />
+      <vertex id="17" x="52.6963539" y="27.617981" z="49.12176" />
+      <vertex id="18" x="51.56479" y="27.5773659" z="50.9793549" />
+      <vertex id="19" x="49.8592529" y="27.5773678" z="52.8788338" />
+      <vertex id="20" x="50.12676" y="27.5784149" z="56.66247" />
+      <vertex id="21" x="47.93409" y="27.578413" z="57.9179955" />
+      <vertex id="22" x="45.06434" y="27.5784149" z="59.92099" />
+      <vertex id="23" x="46.293026" y="27.5784149" z="62.89411" />
+      <vertex id="24" x="43.4989777" y="27.5784149" z="63.92913" />
+      <vertex id="25" x="53.9798546" y="27.6367283" z="48.9497375" />
+      <vertex id="26" x="59.2938423" y="28.2871189" z="48.9168053" />
+      <vertex id="27" x="53.9827881" y="27.6162872" z="45.91221" />
+      <vertex id="28" x="59.6004181" y="28.3972645" z="45.6425" />
+      <vertex id="29" x="64.06" y="29.5333118" z="46.06334" />
+      <vertex id="30" x="63.8" y="29.5390053" z="49.030674" />
+      <vertex id="31" x="67.679924" y="30.027832" z="47.10452" />
+      <vertex id="32" x="70.75726" y="30.34967" z="49.1236267" />
+      <vertex id="33" x="69.5029" y="30.310812" z="51.80079" />
+      <vertex id="34" x="74.22452" y="30.2142467" z="49.4967422" />
+      <vertex id="35" x="74.53928" y="30.2142467" z="47.3154945" />
+      <vertex id="36" x="77.1483" y="30.2828312" z="46.90866" />
+      <vertex id="37" x="79.6214752" y="30.28283" z="48.3248634" />
+      <vertex id="38" x="72.79214" y="30.2142487" z="53.99759" />
+      <vertex id="39" x="74.87586" y="30.28283" z="55.2414551" />
+      <vertex id="40" x="74.31059" y="30.2828312" z="57.2084427" />
+      <vertex id="41" x="73.84874" y="30.2142467" z="58.6555557" />
+      <vertex id="42" x="75.488945" y="30.2828312" z="60.7747574" />
+      <vertex id="43" x="76.85518" y="30.2828312" z="64.10517" />
+      <vertex id="44" x="79.74086" y="30.28283" z="65.53613" />
+      <vertex id="45" x="84.4079056" y="30.2828312" z="63.9326935" />
+      <vertex id="46" x="86.542984" y="30.28283" z="65.47154" />
+      <vertex id="47" x="88.57156" y="30.28283" z="67.82321" />
+      <vertex id="48" x="91.83641" y="30.28283" z="67.7792" />
+      <vertex id="49" x="93.7296" y="30.1391678" z="65.84037" />
+      <vertex id="50" x="91.81197" y="30.2828312" z="63.26641" />
+      <vertex id="51" x="89.58461" y="30.2828331" z="61.6602554" />
+      <vertex id="52" x="88.26382" y="30.2828312" z="58.4528122" />
+      <vertex id="53" x="89.73232" y="30.3646069" z="56.8234367" />
+      <vertex id="54" x="90.7564545" y="30.2828331" z="49.5053635" />
+      <vertex id="55" x="92.43228" y="30.27707" z="46.69637" />
+      <vertex id="56" x="92.0860443" y="30.28283" z="44.7012825" />
+      <vertex id="57" x="89.5303345" y="30.24409" z="42.51496" />
+      <vertex id="58" x="85.88791" y="30.2074547" z="42.5633926" />
+      <vertex id="59" x="84.79994" y="30.1847038" z="42.991848" />
+      <vertex id="60" x="83.57154" y="30.2828331" z="45.3128967" />
+      <vertex id="61" x="90.0347" y="30.21425" z="52.3395538" />
+      <vertex id="62" x="90.16287" y="30.3646049" z="55.3206177" />
+      <vertex id="63" x="103.267761" y="32.68402" z="56.3295364" />
+      <vertex id="64" x="103.2641" y="32.7409859" z="53.762558" />
+      <vertex id="65" x="104.891586" y="32.7409859" z="52.9628" />
+      <vertex id="66" x="105.6008" y="32.7409859" z="50.9401779" />
+      <vertex id="67" x="107.806625" y="32.6313858" z="51.0342" />
+      <vertex id="68" x="104.674911" y="32.6322823" z="57.2899628" />
+      <vertex id="69" x="106.406349" y="32.75977" z="55.8189621" />
+      <vertex id="70" x="108.664185" y="32.771553" z="54.1745" />
+      <vertex id="71" x="111.179245" y="33.4599571" z="54.66771" />
+      <vertex id="72" x="111.275757" y="33.4373932" z="51.11644" />
+      <vertex id="73" x="111.303505" y="33.4725533" z="48.6802864" />
+      <vertex id="74" x="112.740463" y="33.4725533" z="47.2138634" />
+      <vertex id="75" x="115.5699" y="33.4725533" z="45.6087265" />
+      <vertex id="76" x="115.401031" y="33.4725571" z="43.09004" />
+      <vertex id="77" x="118.412178" y="33.4725571" z="41.92621" />
+      <vertex id="78" x="117.909828" y="33.4725571" z="39.846283" />
+      <vertex id="79" x="121.989449" y="33.4357033" z="39.07791" />
+      <vertex id="80" x="124.240051" y="33.4565849" z="41.4483337" />
+      <vertex id="81" x="126.694847" y="33.4394951" z="40.9573822" />
+      <vertex id="82" x="130.059814" y="33.4543877" z="41.74427" />
+      <vertex id="83" x="132.264343" y="33.47256" z="41.13214" />
+      <vertex id="84" x="134.704483" y="33.4458275" z="41.9680023" />
+      <vertex id="85" x="122.815247" y="33.4725533" z="66.24841" />
+      <vertex id="86" x="120.191071" y="33.4725533" z="65.2216949" />
+      <vertex id="87" x="23.4795322" y="6.7432375" z="59.965416" />
+      <vertex id="88" x="18.7657185" y="6.74324131" z="57.55418" />
+      <vertex id="89" x="112.036613" y="33.3272247" z="58.39102" />
+      <vertex id="90" x="111.838081" y="33.33022" z="61.91046" />
+      <vertex id="91" x="113.606194" y="33.3302231" z="63.8318443" />
+      <vertex id="92" x="116.674629" y="33.3302231" z="64.15273" />
+      <vertex id="93" x="118.521469" y="33.3302231" z="63.90938" />
+      <vertex id="94" x="137.214554" y="33.3302231" z="45.2331" />
+      <vertex id="95" x="138.032852" y="33.8877563" z="49.3893356" />
+      <vertex id="96" x="140.747925" y="34.0755234" z="54.3742523" />
+      <vertex id="97" x="137.971161" y="34.0755272" z="61.533905" />
+      <vertex id="98" x="136.6622" y="33.83327" z="64.87091" />
+      <vertex id="99" x="126.348526" y="33.3272247" z="53.15735" />
+      <vertex id="100" x="127.4104" y="33.3272247" z="57.81433" />
+      <vertex id="101" x="130.999039" y="33.8927422" z="54.16983" />
+      <vertex id="102" x="132.94162" y="33.9358749" z="49.53518" />
+      <vertex id="103" x="130.5542" y="33.96885" z="59.9466972" />
+      <vertex id="104" x="118.153763" y="33.33022" z="45.1477966" />
+      <vertex id="105" x="112.066147" y="33.3302231" z="49.16587" />
+      <vertex id="106" x="30.40979" y="27.7473087" z="57.87536" />
+      <vertex id="107" x="31.7565" y="27.78697" z="54.060585" />
+      <vertex id="108" x="43.82667" y="27.580368" z="47.873394" />
+      <vertex id="109" x="48.6718674" y="27.580368" z="55.2262726" />
+      <vertex id="110" x="25.0336952" y="7.11184025" z="54.2903328" />
+      <vertex id="111" x="21.1387215" y="7.030032" z="56.42453" />
+      <vertex id="112" x="20.9684086" y="6.9258337" z="47.27549" />
+      <vertex id="113" x="27.68297" y="6.93859959" z="58.542717" />
+      <vertex id="114" x="41.86728" y="27.6682816" z="48.21955" />
+      <vertex id="115" x="130.346466" y="33.3302231" z="70.44023" />
+      <vertex id="116" x="128.140884" y="33.3272247" z="48.65595" />
+      <vertex id="117" x="128.1337" y="33.9866447" z="53.3283844" />
+      <vertex id="118" x="129.422379" y="33.9866447" z="49.8788338" />
+      <vertex id="119" x="129.230347" y="33.9866447" z="56.8661728" />
+      <vertex id="120" x="127.019478" y="33.3272247" z="50.4631424" />
+      <vertex id="121" x="128.618683" y="33.9866447" z="51.362648" />
+      <vertex id="122" x="126.677765" y="33.3463364" z="55.83506" />
+      <vertex id="123" x="128.329483" y="33.9866447" z="55.2809029" />
+      <vertex id="124" x="131.397568" y="33.9506645" z="48.7058945" />
+      <vertex id="125" x="133.332443" y="33.9873276" z="47.67144" />
+      <vertex id="126" x="134.567749" y="33.916" z="48.2230263" />
+      <vertex id="127" x="127.791649" y="33.3272247" z="63.41066" />
+      <vertex id="128" x="128.322433" y="33.3272247" z="60.07566" />
+      <vertex id="129" x="130.799438" y="33.9506645" z="57.9414" />
+      <vertex id="130" x="134.105652" y="34.0799" z="59.49695" />
+      <vertex id="131" x="138.084915" y="33.8877563" z="58.3998222" />
+      <vertex id="132" x="129.31134" y="33.3272247" z="45.38804" />
+      <vertex id="133" x="130.5096" y="33.45173" z="47.3303833" />
+      <vertex id="134" x="25.8949165" y="6.92618656" z="49.4071655" />
+      <vertex id="135" x="16.9943771" y="6.82321072" z="50.9015045" />
+      <vertex id="136" x="29.1018162" y="6.87295437" z="51.7470322" />
+      <edge start="0" end="88" leftTri="-1" rightTri="0" />
+      <edge start="135" end="0" leftTri="-1" rightTri="17" />
+      <edge start="0" end="111" leftTri="0" rightTri="17" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="0" end="88" leftTri="-1" rightTri="-1" />
+      <edge start="135" end="0" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="15" />
+      <edge start="1" end="135" leftTri="-1" rightTri="16" />
+      <edge start="110" end="1" leftTri="15" rightTri="42" />
+      <edge start="1" end="111" leftTri="16" rightTri="42" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="112" end="1" leftTri="-1" rightTri="-1" />
+      <edge start="1" end="135" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="2" leftTri="14" rightTri="39" />
+      <edge start="2" end="112" leftTri="14" rightTri="40" />
+      <edge start="14" end="2" leftTri="39" rightTri="69" />
+      <edge start="2" end="134" leftTri="40" rightTri="70" />
+      <edge start="2" end="3" leftTri="70" rightTri="69" />
+      <edge start="14" end="3" leftTri="69" rightTri="103" />
+      <edge start="3" end="134" leftTri="70" rightTri="104" />
+      <edge start="12" end="3" leftTri="103" rightTri="145" />
+      <edge start="3" end="136" leftTri="104" rightTri="145" />
+      <edge start="111" end="4" leftTri="18" rightTri="43" />
+      <edge start="87" end="4" leftTri="19" rightTri="18" />
+      <edge start="4" end="10" leftTri="19" rightTri="44" />
+      <edge start="110" end="4" leftTri="43" rightTri="72" />
+      <edge start="4" end="7" leftTri="44" rightTri="73" />
+      <edge start="4" end="113" leftTri="73" rightTri="72" />
+      <edge start="88" end="5" leftTri="-1" rightTri="1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="2" />
+      <edge start="5" end="111" leftTri="2" rightTri="1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="88" end="5" leftTri="-1" rightTri="-1" />
+      <edge start="5" end="87" leftTri="-1" rightTri="-1" />
+      <edge start="136" end="6" leftTri="105" rightTri="146" />
+      <edge start="110" end="6" leftTri="106" rightTri="105" />
+      <edge start="113" end="6" leftTri="107" rightTri="106" />
+      <edge start="6" end="7" leftTri="107" rightTri="147" />
+      <edge start="107" end="6" leftTri="146" rightTri="184" />
+      <edge start="6" end="106" leftTri="147" rightTri="184" />
+      <edge start="7" end="10" leftTri="44" rightTri="74" />
+      <edge start="113" end="7" leftTri="73" rightTri="107" />
+      <edge start="7" end="9" leftTri="74" rightTri="108" />
+      <edge start="7" end="8" leftTri="108" rightTri="148" />
+      <edge start="106" end="7" leftTri="147" rightTri="185" />
+      <edge start="7" end="11" leftTri="148" rightTri="186" />
+      <edge start="7" end="107" leftTri="186" rightTri="185" />
+      <edge start="9" end="8" leftTri="109" rightTri="108" />
+      <edge start="11" end="8" leftTri="148" rightTri="109" />
+      <edge start="10" end="9" leftTri="45" rightTri="74" />
+      <edge start="9" end="22" leftTri="45" rightTri="75" />
+      <edge start="9" end="11" leftTri="75" rightTri="109" />
+      <edge start="87" end="10" leftTri="3" rightTri="19" />
+      <edge start="10" end="24" leftTri="3" rightTri="20" />
+      <edge start="10" end="22" leftTri="20" rightTri="45" />
+      <edge start="11" end="22" leftTri="75" rightTri="110" />
+      <edge start="11" end="12" leftTri="110" rightTri="149" />
+      <edge start="11" end="107" leftTri="149" rightTri="186" />
+      <edge start="14" end="12" leftTri="103" rightTri="144" />
+      <edge start="12" end="22" leftTri="110" rightTri="150" />
+      <edge start="114" end="12" leftTri="144" rightTri="182" />
+      <edge start="12" end="136" leftTri="145" rightTri="183" />
+      <edge start="12" end="107" leftTri="183" rightTri="149" />
+      <edge start="12" end="109" leftTri="150" rightTri="182" />
+      <edge start="15" end="13" leftTri="68" rightTri="101" />
+      <edge start="13" end="14" leftTri="68" rightTri="102" />
+      <edge start="16" end="13" leftTri="101" rightTri="142" />
+      <edge start="13" end="114" leftTri="102" rightTri="143" />
+      <edge start="13" end="108" leftTri="143" rightTri="142" />
+      <edge start="15" end="14" leftTri="39" rightTri="68" />
+      <edge start="114" end="14" leftTri="102" rightTri="144" />
+      <edge start="79" end="15" leftTri="-1" rightTri="13" />
+      <edge start="15" end="112" leftTri="-1" rightTri="14" />
+      <edge start="58" end="15" leftTri="13" rightTri="38" />
+      <edge start="59" end="15" leftTri="38" rightTri="67" />
+      <edge start="29" end="15" leftTri="67" rightTri="100" />
+      <edge start="28" end="15" leftTri="100" rightTri="141" />
+      <edge start="15" end="16" leftTri="101" rightTri="141" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="79" end="15" leftTri="-1" rightTri="-1" />
+      <edge start="15" end="112" leftTri="-1" rightTri="-1" />
+      <edge start="28" end="16" leftTri="141" rightTri="179" />
+      <edge start="16" end="108" leftTri="142" rightTri="180" />
+      <edge start="27" end="16" leftTri="179" rightTri="215" />
+      <edge start="16" end="18" leftTri="180" rightTri="216" />
+      <edge start="16" end="17" leftTri="216" rightTri="215" />
+      <edge start="27" end="17" leftTri="215" rightTri="236" />
+      <edge start="17" end="18" leftTri="216" rightTri="237" />
+      <edge start="17" end="25" leftTri="237" rightTri="236" />
+      <edge start="18" end="108" leftTri="180" rightTri="217" />
+      <edge start="18" end="19" leftTri="217" rightTri="219" />
+      <edge start="20" end="18" leftTri="234" rightTri="219" />
+      <edge start="18" end="26" leftTri="234" rightTri="246" />
+      <edge start="18" end="25" leftTri="246" rightTri="237" />
+      <edge start="109" end="19" leftTri="187" rightTri="218" />
+      <edge start="19" end="20" leftTri="187" rightTri="219" />
+      <edge start="108" end="19" leftTri="218" rightTri="217" />
+      <edge start="21" end="20" leftTri="112" rightTri="151" />
+      <edge start="23" end="20" leftTri="113" rightTri="112" />
+      <edge start="20" end="41" leftTri="113" rightTri="152" />
+      <edge start="109" end="20" leftTri="151" rightTri="187" />
+      <edge start="20" end="33" leftTri="152" rightTri="188" />
+      <edge start="20" end="30" leftTri="188" rightTri="213" />
+      <edge start="20" end="26" leftTri="213" rightTri="234" />
+      <edge start="22" end="21" leftTri="76" rightTri="111" />
+      <edge start="21" end="23" leftTri="76" rightTri="112" />
+      <edge start="109" end="21" leftTri="111" rightTri="151" />
+      <edge start="22" end="24" leftTri="20" rightTri="46" />
+      <edge start="22" end="23" leftTri="46" rightTri="76" />
+      <edge start="22" end="109" leftTri="111" rightTri="150" />
+      <edge start="24" end="23" leftTri="21" rightTri="46" />
+      <edge start="23" end="44" leftTri="21" rightTri="47" />
+      <edge start="23" end="43" leftTri="47" rightTri="77" />
+      <edge start="23" end="41" leftTri="77" rightTri="113" />
+      <edge start="87" end="24" leftTri="-1" rightTri="3" />
+      <edge start="24" end="47" leftTri="-1" rightTri="4" />
+      <edge start="24" end="44" leftTri="4" rightTri="21" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="87" end="24" leftTri="-1" rightTri="-1" />
+      <edge start="24" end="47" leftTri="-1" rightTri="-1" />
+      <edge start="26" end="25" leftTri="235" rightTri="246" />
+      <edge start="27" end="25" leftTri="236" rightTri="235" />
+      <edge start="30" end="26" leftTri="178" rightTri="213" />
+      <edge start="26" end="28" leftTri="178" rightTri="214" />
+      <edge start="26" end="27" leftTri="214" rightTri="235" />
+      <edge start="28" end="27" leftTri="179" rightTri="214" />
+      <edge start="29" end="28" leftTri="100" rightTri="140" />
+      <edge start="30" end="28" leftTri="140" rightTri="178" />
+      <edge start="59" end="29" leftTri="67" rightTri="99" />
+      <edge start="31" end="29" leftTri="99" rightTri="139" />
+      <edge start="29" end="30" leftTri="140" rightTri="139" />
+      <edge start="31" end="30" leftTri="139" rightTri="177" />
+      <edge start="30" end="33" leftTri="188" rightTri="177" />
+      <edge start="59" end="31" leftTri="99" rightTri="138" />
+      <edge start="35" end="31" leftTri="138" rightTri="176" />
+      <edge start="32" end="31" leftTri="176" rightTri="212" />
+      <edge start="31" end="33" leftTri="177" rightTri="212" />
+      <edge start="35" end="32" leftTri="176" rightTri="211" />
+      <edge start="34" end="32" leftTri="211" rightTri="233" />
+      <edge start="32" end="33" leftTri="212" rightTri="220" />
+      <edge start="38" end="32" leftTri="233" rightTri="220" />
+      <edge start="33" end="41" leftTri="152" rightTri="189" />
+      <edge start="33" end="38" leftTri="189" rightTri="220" />
+      <edge start="37" end="34" leftTri="174" rightTri="210" />
+      <edge start="36" end="34" leftTri="175" rightTri="174" />
+      <edge start="34" end="35" leftTri="175" rightTri="211" />
+      <edge start="39" end="34" leftTri="210" rightTri="232" />
+      <edge start="34" end="38" leftTri="233" rightTri="232" />
+      <edge start="36" end="35" leftTri="137" rightTri="175" />
+      <edge start="59" end="35" leftTri="138" rightTri="137" />
+      <edge start="60" end="36" leftTri="98" rightTri="136" />
+      <edge start="36" end="59" leftTri="98" rightTri="137" />
+      <edge start="37" end="36" leftTri="136" rightTri="174" />
+      <edge start="60" end="37" leftTri="136" rightTri="173" />
+      <edge start="61" end="37" leftTri="173" rightTri="209" />
+      <edge start="39" end="37" leftTri="192" rightTri="210" />
+      <edge start="52" end="37" leftTri="209" rightTri="192" />
+      <edge start="41" end="38" leftTri="190" rightTri="189" />
+      <edge start="38" end="40" leftTri="190" rightTri="221" />
+      <edge start="38" end="39" leftTri="221" rightTri="232" />
+      <edge start="42" end="39" leftTri="154" rightTri="191" />
+      <edge start="39" end="52" leftTri="154" rightTri="192" />
+      <edge start="40" end="39" leftTri="191" rightTri="221" />
+      <edge start="41" end="40" leftTri="153" rightTri="190" />
+      <edge start="40" end="42" leftTri="153" rightTri="191" />
+      <edge start="41" end="43" leftTri="77" rightTri="114" />
+      <edge start="41" end="42" leftTri="114" rightTri="153" />
+      <edge start="43" end="42" leftTri="78" rightTri="114" />
+      <edge start="44" end="42" leftTri="79" rightTri="78" />
+      <edge start="42" end="45" leftTri="79" rightTri="115" />
+      <edge start="42" end="52" leftTri="115" rightTri="154" />
+      <edge start="43" end="44" leftTri="47" rightTri="78" />
+      <edge start="44" end="47" leftTri="4" rightTri="22" />
+      <edge start="44" end="46" leftTri="22" rightTri="48" />
+      <edge start="44" end="45" leftTri="48" rightTri="79" />
+      <edge start="45" end="46" leftTri="48" rightTri="80" />
+      <edge start="45" end="51" leftTri="80" rightTri="116" />
+      <edge start="45" end="52" leftTri="116" rightTri="115" />
+      <edge start="46" end="47" leftTri="22" rightTri="49" />
+      <edge start="46" end="50" leftTri="49" rightTri="81" />
+      <edge start="46" end="51" leftTri="81" rightTri="80" />
+      <edge start="47" end="115" leftTri="-1" rightTri="5" />
+      <edge start="47" end="48" leftTri="5" rightTri="23" />
+      <edge start="47" end="50" leftTri="23" rightTri="49" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="47" end="115" leftTri="-1" rightTri="-1" />
+      <edge start="48" end="115" leftTri="5" rightTri="24" />
+      <edge start="50" end="48" leftTri="23" rightTri="50" />
+      <edge start="48" end="91" leftTri="24" rightTri="51" />
+      <edge start="48" end="49" leftTri="51" rightTri="50" />
+      <edge start="50" end="49" leftTri="50" rightTri="82" />
+      <edge start="49" end="91" leftTri="51" rightTri="83" />
+      <edge start="63" end="49" leftTri="82" rightTri="119" />
+      <edge start="49" end="90" leftTri="83" rightTri="120" />
+      <edge start="49" end="68" leftTri="120" rightTri="119" />
+      <edge start="51" end="50" leftTri="81" rightTri="117" />
+      <edge start="50" end="63" leftTri="82" rightTri="118" />
+      <edge start="50" end="53" leftTri="118" rightTri="117" />
+      <edge start="52" end="51" leftTri="116" rightTri="155" />
+      <edge start="51" end="53" leftTri="117" rightTri="155" />
+      <edge start="52" end="53" leftTri="155" rightTri="193" />
+      <edge start="52" end="62" leftTri="193" rightTri="222" />
+      <edge start="61" end="52" leftTri="209" rightTri="222" />
+      <edge start="53" end="63" leftTri="118" rightTri="156" />
+      <edge start="53" end="62" leftTri="156" rightTri="193" />
+      <edge start="57" end="54" leftTri="65" rightTri="96" />
+      <edge start="54" end="58" leftTri="65" rightTri="97" />
+      <edge start="56" end="54" leftTri="96" rightTri="134" />
+      <edge start="54" end="60" leftTri="97" rightTri="135" />
+      <edge start="55" end="54" leftTri="134" rightTri="171" />
+      <edge start="54" end="61" leftTri="135" rightTri="172" />
+      <edge start="54" end="64" leftTri="172" rightTri="171" />
+      <edge start="56" end="55" leftTri="134" rightTri="170" />
+      <edge start="66" end="55" leftTri="170" rightTri="207" />
+      <edge start="55" end="64" leftTri="171" rightTri="207" />
+      <edge start="78" end="56" leftTri="95" rightTri="133" />
+      <edge start="57" end="56" leftTri="96" rightTri="95" />
+      <edge start="76" end="56" leftTri="133" rightTri="169" />
+      <edge start="56" end="66" leftTri="170" rightTri="169" />
+      <edge start="79" end="57" leftTri="37" rightTri="64" />
+      <edge start="57" end="58" leftTri="37" rightTri="65" />
+      <edge start="78" end="57" leftTri="64" rightTri="95" />
+      <edge start="79" end="58" leftTri="13" rightTri="37" />
+      <edge start="58" end="59" leftTri="38" rightTri="66" />
+      <edge start="58" end="60" leftTri="66" rightTri="97" />
+      <edge start="60" end="59" leftTri="66" rightTri="98" />
+      <edge start="61" end="60" leftTri="135" rightTri="173" />
+      <edge start="64" end="61" leftTri="172" rightTri="208" />
+      <edge start="61" end="62" leftTri="222" rightTri="208" />
+      <edge start="62" end="63" leftTri="156" rightTri="194" />
+      <edge start="62" end="64" leftTri="194" rightTri="208" />
+      <edge start="63" end="68" leftTri="119" rightTri="157" />
+      <edge start="63" end="69" leftTri="157" rightTri="195" />
+      <edge start="63" end="64" leftTri="195" rightTri="194" />
+      <edge start="64" end="69" leftTri="195" rightTri="223" />
+      <edge start="66" end="64" leftTri="207" rightTri="231" />
+      <edge start="64" end="65" leftTri="223" rightTri="231" />
+      <edge start="65" end="69" leftTri="223" rightTri="238" />
+      <edge start="66" end="65" leftTri="231" rightTri="245" />
+      <edge start="65" end="70" leftTri="238" rightTri="247" />
+      <edge start="65" end="67" leftTri="247" rightTri="245" />
+      <edge start="76" end="66" leftTri="169" rightTri="206" />
+      <edge start="74" end="66" leftTri="206" rightTri="230" />
+      <edge start="73" end="66" leftTri="230" rightTri="244" />
+      <edge start="66" end="67" leftTri="245" rightTri="244" />
+      <edge start="73" end="67" leftTri="244" rightTri="252" />
+      <edge start="67" end="70" leftTri="247" rightTri="253" />
+      <edge start="67" end="72" leftTri="253" rightTri="252" />
+      <edge start="68" end="90" leftTri="120" rightTri="158" />
+      <edge start="69" end="68" leftTri="157" rightTri="196" />
+      <edge start="68" end="89" leftTri="158" rightTri="196" />
+      <edge start="69" end="89" leftTri="196" rightTri="224" />
+      <edge start="69" end="70" leftTri="224" rightTri="238" />
+      <edge start="70" end="89" leftTri="224" rightTri="239" />
+      <edge start="70" end="71" leftTri="239" rightTri="248" />
+      <edge start="70" end="72" leftTri="248" rightTri="253" />
+      <edge start="71" end="89" leftTri="239" rightTri="249" />
+      <edge start="71" end="72" leftTri="250" rightTri="248" />
+      <edge start="71" end="99" leftTri="249" rightTri="250" />
+      <edge start="99" end="72" leftTri="242" rightTri="250" />
+      <edge start="72" end="105" leftTri="242" rightTri="251" />
+      <edge start="72" end="73" leftTri="251" rightTri="252" />
+      <edge start="74" end="73" leftTri="230" rightTri="243" />
+      <edge start="105" end="73" leftTri="243" rightTri="251" />
+      <edge start="75" end="74" leftTri="205" rightTri="229" />
+      <edge start="76" end="74" leftTri="206" rightTri="205" />
+      <edge start="105" end="74" leftTri="229" rightTri="243" />
+      <edge start="104" end="75" leftTri="168" rightTri="204" />
+      <edge start="75" end="76" leftTri="168" rightTri="205" />
+      <edge start="105" end="75" leftTri="204" rightTri="229" />
+      <edge start="104" end="76" leftTri="131" rightTri="168" />
+      <edge start="77" end="76" leftTri="132" rightTri="131" />
+      <edge start="78" end="76" leftTri="133" rightTri="132" />
+      <edge start="80" end="77" leftTri="63" rightTri="93" />
+      <edge start="77" end="79" leftTri="63" rightTri="94" />
+      <edge start="104" end="77" leftTri="93" rightTri="131" />
+      <edge start="77" end="78" leftTri="94" rightTri="132" />
+      <edge start="79" end="78" leftTri="64" rightTri="94" />
+      <edge start="83" end="79" leftTri="-1" rightTri="12" />
+      <edge start="81" end="79" leftTri="12" rightTri="36" />
+      <edge start="80" end="79" leftTri="36" rightTri="63" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="83" end="79" leftTri="-1" rightTri="-1" />
+      <edge start="81" end="80" leftTri="36" rightTri="62" />
+      <edge start="132" end="80" leftTri="62" rightTri="92" />
+      <edge start="116" end="80" leftTri="92" rightTri="130" />
+      <edge start="80" end="104" leftTri="93" rightTri="130" />
+      <edge start="83" end="81" leftTri="12" rightTri="35" />
+      <edge start="81" end="82" leftTri="61" rightTri="35" />
+      <edge start="132" end="81" leftTri="61" rightTri="62" />
+      <edge start="132" end="82" leftTri="34" rightTri="61" />
+      <edge start="83" end="82" leftTri="35" rightTri="34" />
+      <edge start="84" end="83" leftTri="-1" rightTri="11" />
+      <edge start="132" end="83" leftTri="11" rightTri="34" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="84" end="83" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="10" />
+      <edge start="125" end="84" leftTri="10" rightTri="33" />
+      <edge start="84" end="132" leftTri="11" rightTri="33" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="94" end="84" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="85" leftTri="25" rightTri="52" />
+      <edge start="85" end="127" leftTri="25" rightTri="53" />
+      <edge start="91" end="85" leftTri="52" rightTri="84" />
+      <edge start="85" end="86" leftTri="53" rightTri="84" />
+      <edge start="86" end="127" leftTri="53" rightTri="85" />
+      <edge start="91" end="86" leftTri="84" rightTri="122" />
+      <edge start="86" end="128" leftTri="85" rightTri="123" />
+      <edge start="92" end="86" leftTri="122" rightTri="160" />
+      <edge start="86" end="100" leftTri="123" rightTri="161" />
+      <edge start="86" end="93" leftTri="161" rightTri="160" />
+      <edge start="111" end="87" leftTri="2" rightTri="18" />
+      <edge start="88" end="111" leftTri="1" rightTri="0" />
+      <edge start="90" end="89" leftTri="121" rightTri="158" />
+      <edge start="89" end="91" leftTri="121" rightTri="159" />
+      <edge start="89" end="92" leftTri="159" rightTri="197" />
+      <edge start="89" end="93" leftTri="197" rightTri="225" />
+      <edge start="89" end="122" leftTri="225" rightTri="240" />
+      <edge start="89" end="99" leftTri="240" rightTri="249" />
+      <edge start="90" end="91" leftTri="83" rightTri="121" />
+      <edge start="91" end="115" leftTri="24" rightTri="52" />
+      <edge start="91" end="92" leftTri="122" rightTri="159" />
+      <edge start="92" end="93" leftTri="160" rightTri="197" />
+      <edge start="93" end="100" leftTri="161" rightTri="198" />
+      <edge start="93" end="122" leftTri="198" rightTri="225" />
+      <edge start="96" end="94" leftTri="-1" rightTri="9" />
+      <edge start="95" end="94" leftTri="9" rightTri="31" />
+      <edge start="94" end="125" leftTri="10" rightTri="32" />
+      <edge start="94" end="126" leftTri="32" rightTri="31" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="94" leftTri="-1" rightTri="-1" />
+      <edge start="96" end="95" leftTri="9" rightTri="30" />
+      <edge start="101" end="95" leftTri="30" rightTri="57" />
+      <edge start="95" end="126" leftTri="31" rightTri="58" />
+      <edge start="95" end="102" leftTri="58" rightTri="57" />
+      <edge start="97" end="96" leftTri="-1" rightTri="8" />
+      <edge start="131" end="96" leftTri="8" rightTri="29" />
+      <edge start="96" end="101" leftTri="30" rightTri="29" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="97" end="96" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="7" />
+      <edge start="130" end="97" leftTri="7" rightTri="28" />
+      <edge start="97" end="131" leftTri="8" rightTri="28" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="98" end="97" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="6" />
+      <edge start="127" end="98" leftTri="6" rightTri="26" />
+      <edge start="98" end="130" leftTri="7" rightTri="27" />
+      <edge start="98" end="103" leftTri="27" rightTri="26" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="115" end="98" leftTri="-1" rightTri="-1" />
+      <edge start="117" end="99" leftTri="201" rightTri="227" />
+      <edge start="121" end="99" leftTri="202" rightTri="201" />
+      <edge start="120" end="99" leftTri="203" rightTri="202" />
+      <edge start="99" end="104" leftTri="203" rightTri="228" />
+      <edge start="123" end="99" leftTri="227" rightTri="241" />
+      <edge start="99" end="105" leftTri="228" rightTri="242" />
+      <edge start="122" end="99" leftTri="241" rightTri="240" />
+      <edge start="100" end="128" leftTri="123" rightTri="162" />
+      <edge start="100" end="119" leftTri="162" rightTri="199" />
+      <edge start="122" end="100" leftTri="198" rightTri="226" />
+      <edge start="100" end="123" leftTri="199" rightTri="226" />
+      <edge start="131" end="101" leftTri="29" rightTri="56" />
+      <edge start="130" end="101" leftTri="56" rightTri="87" />
+      <edge start="101" end="102" leftTri="57" rightTri="88" />
+      <edge start="129" end="101" leftTri="87" rightTri="125" />
+      <edge start="101" end="118" leftTri="88" rightTri="126" />
+      <edge start="119" end="101" leftTri="125" rightTri="163" />
+      <edge start="101" end="121" leftTri="126" rightTri="164" />
+      <edge start="123" end="101" leftTri="163" rightTri="200" />
+      <edge start="101" end="117" leftTri="164" rightTri="200" />
+      <edge start="126" end="102" leftTri="59" rightTri="58" />
+      <edge start="102" end="125" leftTri="59" rightTri="89" />
+      <edge start="118" end="102" leftTri="88" rightTri="127" />
+      <edge start="102" end="124" leftTri="89" rightTri="127" />
+      <edge start="127" end="103" leftTri="26" rightTri="54" />
+      <edge start="103" end="130" leftTri="27" rightTri="55" />
+      <edge start="128" end="103" leftTri="54" rightTri="86" />
+      <edge start="103" end="129" leftTri="55" rightTri="86" />
+      <edge start="116" end="104" leftTri="130" rightTri="167" />
+      <edge start="120" end="104" leftTri="167" rightTri="203" />
+      <edge start="104" end="105" leftTri="204" rightTri="228" />
+      <edge start="107" end="106" leftTri="184" rightTri="185" />
+      <edge start="136" end="107" leftTri="146" rightTri="183" />
+      <edge start="108" end="114" leftTri="143" rightTri="181" />
+      <edge start="108" end="109" leftTri="181" rightTri="218" />
+      <edge start="114" end="109" leftTri="182" rightTri="181" />
+      <edge start="112" end="110" leftTri="15" rightTri="41" />
+      <edge start="134" end="110" leftTri="41" rightTri="71" />
+      <edge start="110" end="111" leftTri="42" rightTri="43" />
+      <edge start="136" end="110" leftTri="71" rightTri="105" />
+      <edge start="110" end="113" leftTri="72" rightTri="106" />
+      <edge start="135" end="111" leftTri="17" rightTri="16" />
+      <edge start="112" end="134" leftTri="41" rightTri="40" />
+      <edge start="115" end="127" leftTri="6" rightTri="25" />
+      <edge start="133" end="116" leftTri="91" rightTri="129" />
+      <edge start="132" end="116" leftTri="92" rightTri="91" />
+      <edge start="118" end="116" leftTri="129" rightTri="166" />
+      <edge start="116" end="120" leftTri="167" rightTri="166" />
+      <edge start="117" end="121" leftTri="164" rightTri="201" />
+      <edge start="123" end="117" leftTri="200" rightTri="227" />
+      <edge start="121" end="118" leftTri="126" rightTri="165" />
+      <edge start="118" end="124" leftTri="127" rightTri="128" />
+      <edge start="133" end="118" leftTri="129" rightTri="128" />
+      <edge start="118" end="120" leftTri="166" rightTri="165" />
+      <edge start="128" end="119" leftTri="124" rightTri="162" />
+      <edge start="129" end="119" leftTri="125" rightTri="124" />
+      <edge start="119" end="123" leftTri="163" rightTri="199" />
+      <edge start="121" end="120" leftTri="165" rightTri="202" />
+      <edge start="122" end="123" leftTri="226" rightTri="241" />
+      <edge start="125" end="124" leftTri="90" rightTri="89" />
+      <edge start="124" end="133" leftTri="90" rightTri="128" />
+      <edge start="126" end="125" leftTri="32" rightTri="59" />
+      <edge start="125" end="132" leftTri="33" rightTri="60" />
+      <edge start="125" end="133" leftTri="60" rightTri="90" />
+      <edge start="127" end="128" leftTri="54" rightTri="85" />
+      <edge start="128" end="129" leftTri="86" rightTri="124" />
+      <edge start="129" end="130" leftTri="55" rightTri="87" />
+      <edge start="130" end="131" leftTri="28" rightTri="56" />
+      <edge start="133" end="132" leftTri="60" rightTri="91" />
+      <edge start="134" end="136" leftTri="71" rightTri="104" />
+      <path id="0" radius="1">
+        <point x="20.7983418" y="20.7983418" z="20.7983418" />
+        <point x="26.7765961" y="26.7765961" z="26.7765961" />
+        <point x="33.0809479" y="33.0809479" z="33.0809479" />
+      </path>
+    </nav>
+  </place>
+</RS>

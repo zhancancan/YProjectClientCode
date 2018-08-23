@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02832934cd1cecb4ea1fe64ffbe29b27, type: 3}
+  m_Name: PresetDeco
+  m_EditorClassIdentifier: 
+  leftMargin: 300
+  descripts:
+  - name: EmoteTab
+    fields:
+    - fold: 1
+      name: emotes
+      usage: 3
+      targetTable: 
+      targetField: 
+      indexField: 
+      sourceTable: 
+      sourceField: 
+      replace: 
+      listParseReg: 
+  - name: Emote
+    fields:
+    - fold: 1
+      name: tabIndex
+      usage: 0
+      targetTable: EmoteTab
+      targetField: 
+      indexField: id
+      sourceTable: 
+      sourceField: tabIndex
+      replace: 
+      listParseReg: 
+  - name: Hero
+    fields:
+    - fold: 1
+      name: icon
+      usage: 1
+      targetTable: 
+      targetField: 
+      indexField: 
+      sourceTable: 
+      sourceField: 
+      replace: t[k]=string.format('ICON_%s_0',t.artKey)
+      listParseReg: 
+    - fold: 1
+      name: portrait
+      usage: 1
+      targetTable: 
+      targetField: 
+      indexField: 
+      sourceTable: 
+      sourceField: 
+      replace: t[k]=string.format('PRT_%s_0_roleshow',t.artKey)
+      listParseReg: 
+    - fold: 1
+      name: showFx
+      usage: 1
+      targetTable: 
+      targetField: 
+      indexField: 
+      sourceTable: 
+      sourceField: 
+      replace: t[k]=string.format('Fx_%s_HP',t.artKey)
+      listParseReg: 
+    - fold: 1
+      name: heroType
+      usage: 0
+      targetTable: HeroType
+      targetField: 
+      indexField: id
+      sourceTable: 
+      sourceField: heroType
+      replace: 
+      listParseReg: 
+  - name: StartHero
+    fields:
+    - fold: 1
+      name: hero
+      usage: 0
+      targetTable: Hero
+      targetField: 
+      indexField: id
+      sourceTable: 
+      sourceField: heroId
+      replace: 
+      listParseReg: 
+    - fold: 1
+      name: icon
+      usage: 1
+      targetTable: 
+      targetField: 
+      indexField: 
+      sourceTable: 
+      sourceField: 
+      replace: t[k]=t.hero.heroType.icon
+      listParseReg: 
+    - fold: 1
+      name: name
+      usage: 1
+      targetTable: 
+      targetField: 
+      indexField: 
+      sourceTable: 
+      sourceField: 
+      replace: t[k]=t.hero.name
+      listParseReg: 
+  - name: SubQuest
+    fields:
+    - fold: 1
+      name: nextSubQuest
+      usage: 4
+      targetTable: SubQuest
+      targetField: 
+      indexField: id
+      sourceTable: 
+      sourceField: nextSubQuest
+      replace: 
+      listParseReg: ([^,]+),*
+  foldFields: 0
+  foldDecos: 1

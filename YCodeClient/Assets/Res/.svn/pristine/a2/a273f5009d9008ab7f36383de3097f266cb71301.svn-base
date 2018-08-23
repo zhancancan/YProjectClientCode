@@ -1,0 +1,109 @@
+﻿//using pure.ui.imageFiller;
+//using pure.utils.mathTools;
+//using UnityEditor;
+//using UnityEngine;
+//using UnityEngine.UI;
+
+//namespace mono.test {
+//    [ExecuteInEditMode]
+//    public class RotateRect : Image {
+//        [SerializeField]
+//        private float _angle;
+
+//        public float angle {
+//            get { return _angle; }
+//            set {
+//                if (!_angle.Equals(value)) {
+//                    _angle = value;
+//                    SetVerticesDirty();
+//                }
+//            }
+//        }
+
+//        [SerializeField]
+//        private ColorStyle[] _colors = {
+//            new ColorStyle {color = Color.white, ratio = 0},
+//            new ColorStyle {color = Color.green, ratio = 1}
+//        };
+
+//        public ColorStyle[] colors {
+//            get { return _colors; }
+//            set {
+//                _colors = value;
+//                SetVerticesDirty();
+//            }
+//        }
+
+//        protected override void OnPopulateMesh(VertexHelper toFill) {
+//            base.OnPopulateMesh(toFill);
+//            Rect rect = GetPixelAdjustedRect();
+//            Matrix4x4 m = MatrixUtils.BuildGradientBox(rect,180+ _angle);
+//            Rect r2 = rect;
+//            r2.width = 20;
+//            UIVertex[] vertics = new UIVertex[4];
+//            for (int i = 0; i < _colors.Length - 1; i++) {
+//                Vector2[] vs = new Vector2[4];
+//                ColorStyle a = _colors[i];
+//                ColorStyle b = _colors[i + 1];
+//                vertics[0] = new UIVertex {
+//                    position = m.MultiplyPoint(new Vector3(rect.x, rect.y + rect.height*a.ratio, 0)),
+//                    uv0 = new Vector2(0, a.ratio),
+//                    color = new Color(a.color.a, a.color.g, a.color.b, 0.5f)
+//                };
+//                vertics[1] = new UIVertex {
+//                    position = m.MultiplyPoint(new Vector3(rect.xMax, rect.y + rect.height*a.ratio, 0)),
+//                    uv0 = new Vector2(1, a.ratio),
+//                    color = new Color(a.color.a, a.color.g, a.color.b, 0.5f)
+//                };
+//                vertics[2] = new UIVertex {
+//                    position = m.MultiplyPoint(new Vector3(rect.xMax, rect.y + rect.height*b.ratio, 0)),
+//                    uv0 = new Vector2(1, b.ratio),
+//                    color = new Color(b.color.a, b.color.g, b.color.b, 0.5f)
+//                };
+//                vertics[3] = new UIVertex {
+//                    position = m.MultiplyPoint(new Vector3(rect.x, rect.y + rect.height*b.ratio, 0)),
+//                    uv0 = new Vector2(0, b.ratio),
+//                    color = new Color(b.color.a, b.color.g, b.color.b, 0.5f)
+//                };
+//                toFill.AddUIVertexQuad(vertics);
+//                vs[0] = vertics[0].position;
+//                vs[1] = vertics[1].position;
+//                vs[2] = vertics[2].position;
+//                vs[3] = vertics[3].position;
+//                vs = RectMath2F.PolygenIntersect(vs, r2);
+//                foreach (var v in vs) {
+//                    AddPoint(v, toFill, Color.black);
+//                }
+//            }
+//        }
+
+//        private void AddPoint(Vector2 p, VertexHelper tofill, Color c) {
+//            UIVertex[] vertics = new UIVertex[4];
+//            vertics[0] = new UIVertex {
+//                position = new Vector3(p.x - 2, p.y - 2, 0),
+//                uv0 = new Vector2(0, 0),
+//                color = c
+//            };
+//            vertics[1] = new UIVertex {
+//                position = new Vector3(p.x + 2, p.y - 2, 0),
+//                uv0 = new Vector2(1, 0),
+//                color = c
+//            };
+//            vertics[2] = new UIVertex {
+//                position = new Vector3(p.x + 2, p.y + 2, 0),
+//                uv0 = new Vector2(1, 1),
+//                color = c
+//            };
+//            vertics[3] = new UIVertex {
+//                position = new Vector3(p.x - 2, p.y + 2, 0),
+//                uv0 = new Vector2(0, 1),
+//                color = c
+//            };
+//            tofill.AddUIVertexQuad(vertics);
+//        }
+//    }
+
+//    [CustomEditor(typeof (RotateRect))]
+//    public class RectEditor : Editor {
+//    }
+//}

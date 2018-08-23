@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{729F8F94-53B9-8B5C-AE67-D5A562247358}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.5.4p3</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_4;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_4;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PlaymodeTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\behaviorTree\core\ActionCellCore.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\behaviorTree\core\BehaviorCellCore.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\behaviorTree\core\BehaviorDataParameterCheck.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\behaviorTree\core\CompositeCellCore.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\behaviorTree\core\ConditionCellCore.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\behaviorTree\core\DecorateCellCore.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_Boolean.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_Color.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_Config.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_Enum.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_Float.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_Int.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_MultiConfig.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_String.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\Insp_Vector.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\InspectorAttribute.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\PInspectorCore.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\inspector\PInspectorFactory.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\Node.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeCanvas.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeCanvasManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeCanvasSceneSave.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeEditor.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeEditorCallbackReceiver.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeEditorSaveManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeEditorState.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeEditorUserCache.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeInput.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeKnob.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeOutput.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\NodeTypes.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\PInputInfo_Node.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\PNodeConnection.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\PNodeCreate.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\PNodeInputSystem.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\PNodeScene.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\PNodeSelection.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\nodework\node\PNodeTransform.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\ConnectionTypes.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PAllertWindow.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PAssetSaveTools.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PCloneTools.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PDragManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PEditorConsole.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PEditorMouse.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PEditorSelection.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PFocusManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PGUIOverlay.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PGUIStyle.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PGUIStyle_TexturePart.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PGUIUtility.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PInputAttribute.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PInputInfo.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PInputSystem.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PPaintCenter.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PPlayModeControl.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PResourceManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PScaleUtility.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PTypeItem.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PTypePool.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\resource\PWindowArea.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\system\EditInput.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\system\EditorCoroutine.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\system\EditorCoroutineManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\system\IEditRunnable.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TaModifier.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TaPaint.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainAction.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainCenter.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainConfigure.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainEditData.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainGUI.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainLayer.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainModifier.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainShader.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrainShaderTypes.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TerrianEditor.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvCollapse.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvConverter.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvConverter_Part_0_Object2Terrain.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvConverter_Part_0_Unity2Terrain.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvOptmaizer.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvPaint.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvPaint_0_Init.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvPaint_1_Pixel.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvPaint_2_PickMaterial.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvSetting.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\TvSetting_Part0.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\terrain\undoOpt\TextureUndoOperation.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\core\EditorCommand.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\Cost_Altitude.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\Cost_Core.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\Cost_Melax.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\Cost_Quadric.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\Cost_QuadricTri.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\Cost_QuickNormal.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\MeshCollapse.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\MeshModifier.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\MeshModifier_0.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\MeshPepeatVertextCleaner.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\ObjExporter.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\RTriangle.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\tools\meshes\RVertex.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtCanvasManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeCanvas.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeCell.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeCellFactory.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeCellRoot.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeCellType.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeCenter.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeEditorCallBackReceiver.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeInputSystem.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeSaveManager.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeState.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeUserCache.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\EtTreeUtils.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PInputInfo_Tree.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreeCopyPaste.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreeCreate.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreeDrag.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreeDrawer.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreeHistory.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreePool.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreeScene.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\PTreeSelection.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\serialize\EtBinEncode.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\serialize\EtXmlEncode.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\treework\undoOperations\TreeHierarchyOperation.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\ui\EditProgressBar.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\ui\GFilterList.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\ui\GIntSpinner.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\ui\GSpinner.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\ui\GSpinnerVector.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\ui\GTextInput.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\ui\GUIComponent.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\undo\IUndoOperation.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\undo\PropertyUndoOperation.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\undo\UndoQueue.cs" />
+    <Compile Include="Assets\DLLScripts\edit\edit\pure\undo\UndoUtils.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\System\GlobalErrorCaughter.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\System\Print.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\System\Singleton.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\System\Trace.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\byteTools\ByteArray.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\byteTools\ByteKey.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\byteTools\ByteUtils.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\EventReason.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\core\Data.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\core\DataBase.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\core\Data_Description.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\core\Table.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\events\TableEvent.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\interfaces\IData.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\interfaces\IDataBase.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\interfaces\IData_Description.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\interfaces\IData_Model.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\interfaces\ITable.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\structure\priority\IPrioritySetable.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\structure\priority\PrioritySet.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\structure\tree\CompCore.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\structure\tree\CompFactory.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\structure\tree\TreeContainer.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\database\structure\tree\TreeStruct.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\entity\core\ModelEntity.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\entity\interfaces\IAIEntity.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\entity\interfaces\IFightableEntity.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\entity\interfaces\IModelEntity.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\entity\interfaces\IMovable.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\entity\interfaces\IOrientable.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\eventSystem\Dispatcher_Queue.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\eventSystem\Dispatcher_Unit.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\eventSystem\Event.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\eventSystem\EventDispatcher.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\eventSystem\IEventDispatcher.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\eventSystem\TestDispatcher.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\fileTools\OpenFileName.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\memory\CachePool.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\memory\IDispose.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\memory\IRecycle.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\core\Controller.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\core\Model.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\core\View.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\ICommand.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IController.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IFacade.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IGameProxy.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IMediator.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IModel.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\INotification.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\INotifier.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IObserver.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IProxy.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\interfaces\IView.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\Facade.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\command\MacroCommand.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\command\MvcCommand.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\command\PureCommand.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\command\PureFuncCommand.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\command\PureMacroCommand.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\mediator\Mediator.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\observer\Notification.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\observer\Notifier.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\observer\Observer.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\observer\ObserverManager.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\mvc\patterns\proxy\Proxy.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\net\interfaces\IProgressBar.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\net\interfaces\IProgressable.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\DynamicMethodExecutor.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\SimpleFactory.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\cloneFactory\ClonableAttribute.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\cloneFactory\CloneableProperty.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\cloneFactory\CloneableProperty_P0.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\cloneFactory\CloneableProperty_P1.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\serialize\ByteArrayTools.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\refactor\serialize\StringDataTools.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\manager\ISceneData.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\manager\SceneEntity.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\manager\SceneEntityManager.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\mathTools\LineMath2F.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\mathTools\MathCompare.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\mathTools\PlaneMath3F.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\mathTools\RectMath2F.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\mathTools\Vector2FMath.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\misc\LayerType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\InterPoint.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavDelaunay.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavEdge.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavJump.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavJumpFinder.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavJumpManager.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavMesh.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavMeshComponent.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavQTreeNode.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavRayHitInfo.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavTerrainMode.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavTriangle.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\NavVertex.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\geometry\WayPoint.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\serialize\NavMeshDecoder.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\serialize\NavMeshEncoder.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\HeapSet.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\INavPathBuilder.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\INavPathCriteria.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavConnection.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavConnectionIntersection.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavNeighborType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavNode.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavPath.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavPathBuilder_Funnel.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavPathCriteria.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\pathFinder\solver\NavPathSolver.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\shader\ShaderType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\shader\ShaderType_Part_Terrain.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\terrain\TerrainBillboard.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\terrain\TerrainLod.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\terrain\TerrainObject.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\scene\terrain\TerrainPart.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\setting\SettingDB.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\setting\SettingData.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\setting\SettingDataType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\setting\SettingData_NameKey.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\setting\SettingData_NameKeyType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\setting\SettingData_Word.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\setting\SettingFactory.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\core\CompCore.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\core\Entity.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\core\EntityEvent.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\core\EntityTicker.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\core\StateMachine.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\interfaces\IEntity.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\interfaces\IState.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\stateMachine\states\NothingState.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\IServerRequestor.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\ITicker.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\ITickerManager.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\PendExecutor.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\SystemTime.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\TickerCenter.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\TickerHeap.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\TickerManager.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\ticker\TimeChecker.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\TreeDB.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_ExecuteTree.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_FollowPath.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterBack.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterChase.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterDead.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterFight.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterIdle.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterPatrol.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterScreen.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_MonsterWaypoint.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_Talk.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\action\BtAction_Wait.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\composite\BtComposite.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\composite\BtParallelSelector.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\composite\BtParallelSequence.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\composite\BtRandomSelector.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\composite\BtRandomSequence.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\composite\BtSelector.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\composite\BtSequence.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\condition\BtConditional.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\condition\BtHasTarget.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\condition\BtParameter.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\condition\BtRandom.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\core\BehaviorTree.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\core\BtTask.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\core\BtTaskRoot.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\core\ITask.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\core\ITaskAction.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\core\ITaskRunner.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\data\BtInput.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\data\BtOutput.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\decorate\BtDecoFailure.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\decorate\BtDecoInvert.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\decorate\BtDecoSuccess.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\decorate\BtDecorate.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtAbortType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtActionType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtCacuEnum.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtCompositType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtConditionType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtDecorateType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtFactory.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtFactory_Action.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtFactory_Composite.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtFactory_Conditional.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtFactory_Decorate.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\generices\BtTaskStatus.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\monoData\MonoData_Talk.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\serializer\TreeDecoder.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTaskCore.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Back.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Chase.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Dead.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Fight.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Idle.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Patrol.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Screen.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\MonsterTask_Waypoint.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\TaskActionCore.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\TaskCollection.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\Task_FollowPath.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\Task_Talk.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\treeComp\behavior\task\Task_Wait.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Formular.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\IFormularDataRetriever.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operand.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\OperandType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\OperatePriority.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operator.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\OperatorFactory.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\OperatorFactory_Partial.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\OperatorType.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operator_Brace.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operator_Math.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operator_Triangle.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operator_basic.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operator_bitWise.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\caculation\Operator_bool.cs" />
+    <Compile Include="Assets\DLLScripts\pure\pure\src\utils\color\ColorMatrix.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Common\CRC.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Common\CommandLineParser.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Common\InBuffer.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Common\OutBuffer.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LZ\IMatchFinder.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LZ\LzBinTree.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LZ\LzInWindow.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LZ\LzOutWindow.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LZMA\LzmaBase.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LZMA\LzmaDecoder.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LZMA\LzmaEncoder.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LzmaAlone\LzmaAlone.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\LzmaAlone\LzmaBench.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\RangeCoder\RangeCoder.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\Compress\RangeCoder\RangeCoderBitTree.cs" />
+    <Compile Include="Assets\DLLScripts\zip\zip\src\ICoder.cs" />
+    <Compile Include="Assets\Scripts\mono\character\CharacterCameraController.cs" />
+    <Compile Include="Assets\Scripts\mono\character\CharacterMouseController.cs" />
+    <Compile Include="Assets\Scripts\mono\materials\MaterialTools.cs" />
+    <Compile Include="Assets\Scripts\mono\materials\ShaderBeh_ColorMatrix.cs" />
+    <Compile Include="Assets\Scripts\mono\materials\ShaderBeh_FogYAxis.cs" />
+    <Compile Include="Assets\Scripts\mono\materials\ShaderBeh_SpecLightDir.cs" />
+    <Compile Include="Assets\Scripts\mono\screen\ImageEffect_ScreenColor.cs" />
+    <Compile Include="Assets\Scripts\mono\screen\ImageEffect_WaterDrop.cs" />
+    <Compile Include="Assets\Test\AIEditor\AllAroundNode.cs" />
+    <Compile Include="Assets\Test\AIEditor\ExampleNode.cs" />
+    <Compile Include="Assets\Test\AIEditor\FlowNode.cs" />
+    <Compile Include="Assets\Test\AIEditor\RTCanvasCalculator.cs" />
+    <Compile Include="Assets\Test\AIEditor\RTNodeEditor.cs" />
+    <Compile Include="Assets\Test\Test\AITreeWindow.cs" />
+    <Compile Include="Assets\Test\Test\EventDispatcherTest.cs" />
+    <Compile Include="Assets\Test\Test\TestCoroutine.cs" />
+    <Compile Include="Assets\Test\Test\TestMeshCollaps.cs" />
+    <Compile Include="Assets\Test\nodeTest\NodeEditorWindow.cs" />
+    <Compile Include="Assets\Test\nodeTest\RTCanvasCalculatorEditor.cs" />
+    <Compile Include="Assets\Test\nodeTest\RTNodeEditorInspector.cs" />
+    <Compile Include="Assets\Test\system\BuildInIconWindow.cs" />
+    <Compile Include="Assets\Test\system\BuildInResourceWindow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\ToServer\Tree\BehaviorTree.xml" />
+    <None Include="Assets\Data\ToServer\Tree\Default.xml" />
+    <None Include="Assets\Data\ToServer\Tree\SettingTree.xml" />
+    <None Include="Assets\Editor\plugins\collideMesh\CollideShader_ZOff.shader" />
+    <None Include="Assets\Editor\plugins\collideMesh\CollideShader_ZOn.shader" />
+    <None Include="Assets\Editor\shader\LineShader.shader" />
+    <None Include="Assets\Res\Shader\Bake\Bump.shader" />
+    <None Include="Assets\Res\Shader\Bake\BumpSpec.shader" />
+    <None Include="Assets\Res\Shader\Bake\BumpSpec_CutOff.shader" />
+    <None Include="Assets\Res\Shader\Bake\Bump_CutOff.shader" />
+    <None Include="Assets\Res\Shader\Bake\Diffuse.shader" />
+    <None Include="Assets\Res\Shader\Bake\Diffuse_CutOff.shader" />
+    <None Include="Assets\Res\Shader\Bake\bb_bumpSpec_base.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_bumpSpec_map.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_bump_add.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_bump_base.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_bump_map.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_diffuse_add.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_diffuse_base.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_diffuse_map.cginc" />
+    <None Include="Assets\Res\Shader\Bake\bb_shadowCaster.cginc" />
+    <None Include="Assets\Res\Shader\Core\LightSpace.cginc" />
+    <None Include="Assets\Res\Shader\Core\color_tools.cginc" />
+    <None Include="Assets\Res\Shader\Core\dissolve_tools.cginc" />
+    <None Include="Assets\Res\Shader\Core\fog_tools.cginc" />
+    <None Include="Assets\Res\Shader\Core\math_tools.cginc" />
+    <None Include="Assets\Res\Shader\Core\particle_blend_mode.cginc" />
+    <None Include="Assets\Res\Shader\Core\rimlight_tools.cginc" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_Add.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_AddMultiply.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_AddSmooth.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_Alpha_Blend.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_Blend.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_Multiply.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_MultiplyDouble.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_Normal.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\MultiPlane_Premultiply_Blend.shader" />
+    <None Include="Assets\Res\Shader\MultiPlane\mp_diffuse.cginc" />
+    <None Include="Assets\Res\Shader\Particle\Particle Add.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle AddMultiply.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle AddSmooth.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle Alpha Blend.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle Anim Alpha Blend.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle Blend.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle Multiply.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle MultiplyDouble.shader" />
+    <None Include="Assets\Res\Shader\Particle\Particle Premultiply Blend.shader" />
+    <None Include="Assets\Res\Shader\Particle\particle_diffuse.cginc" />
+    <None Include="Assets\Res\Shader\Plane\Plane Add.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane AddMultiply.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane AddSmooth.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane Alpha Blend.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane Blend.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane Multiply.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane MultiplyDouble.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane Normal.shader" />
+    <None Include="Assets\Res\Shader\Plane\Plane Premultiply Blend.shader" />
+    <None Include="Assets\Res\Shader\Plane\plane_diffuse.cginc" />
+    <None Include="Assets\Res\Shader\Screen\ScreenColor.shader" />
+    <None Include="Assets\Res\Shader\Screen\WaterDrop.shader" />
+    <None Include="Assets\Res\Shader\Skinable\Skinnable_Bump.shader" />
+    <None Include="Assets\Res\Shader\Skinable\Skinnable_Diffuse.shader" />
+    <None Include="Assets\Res\Shader\Skinable\skin_bump.cginc" />
+    <None Include="Assets\Res\Shader\Skinable\skin_diffuse.cginc" />
+    <None Include="Assets\Res\Shader\Skinable\skinmerge.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Bump\TerrainFwdAdd_Bump.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Bump\TerrainFwdBase_Bump.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Bump\TerrainStruct_Bump.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Bump\Terrain_LM3_Bump.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Diffuse\TerrainFwdAdd.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Diffuse\TerrainFwdBase.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Diffuse\TerrainShadowCaster.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Diffuse\TerrainStruct.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Diffuse\Terrain_LM_3.cginc" />
+    <None Include="Assets\Res\Shader\Terrain\Previewer.shader" />
+    <None Include="Assets\Res\Shader\Terrain\Texture2_Bump.shader" />
+    <None Include="Assets\Res\Shader\Terrain\Texture2_Diffuse.shader" />
+    <None Include="Assets\Res\Shader\Terrain\Texture3_Bump.shader" />
+    <None Include="Assets\Res\Shader\Terrain\Texture3_Diffuse.shader" />
+    <None Include="Assets\Res\Shader\Terrain\Texture4_Bump.shader" />
+    <None Include="Assets\Res\Shader\Terrain\Texture4_Diffuse.shader" />
+    <None Include="Assets\Res\Shader\Unlit\Diffuse.shader" />
+    <None Include="Assets\Res\Shader\Unlit\Diffuse_CutOff.shader" />
+    <None Include="Assets\Res\Shader\Unlit\simple_unlit.cginc" />
+    <None Include="Assets\Res\Shader\VertexLit\Bump.shader" />
+    <None Include="Assets\Res\Shader\VertexLit\Bump_CutOff.shader" />
+    <None Include="Assets\Res\Shader\VertexLit\Diffuse.shader" />
+    <None Include="Assets\Res\Shader\VertexLit\Diffuse_CutOff.shader" />
+    <None Include="Assets\Res\Shader\VertexLit\vertlit_bump.cginc" />
+    <None Include="Assets\Res\Shader\VertexLit\vertlit_diffuse.cginc" />
+    <None Include="Assets\Res\Shader\Water\WaterLightCG.cginc" />
+    <None Include="Assets\Res\Shader\Water\WaterRef_0.cginc" />
+    <None Include="Assets\Res\Shader\Water\WaterRef_1.cginc" />
+    <None Include="Assets\Res\Shader\Water\Water_Best.shader" />
+    <None Include="Assets\Res\Shader\Water\Water_Medium.shader" />
+    <None Include="Assets\Test\system\IconTypes.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

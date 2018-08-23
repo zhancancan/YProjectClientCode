@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MachineChart fileName="Login" fileURL="Assets/Res/Data/Source/Machine/Login.machine" chartType="Login" panOffset="119.095:56.60019" zoom="1">
+  <machine uuid="1517060997484" name="base machine">
+    <state uuid="1517060997486" stateName="Exit State" isDefault="False" priority="0" type="exit" position="-550:-158" />
+    <state uuid="1517060997485" stateName="Any State" isDefault="False" priority="0" type="any" position="-553:-112" />
+    <state uuid="1517061894616" stateName="Force Re-Install" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="29.5:-208.5">
+      <action uuid="1517061912159" priority="0" panel="" actionType="actForceReinstall" />
+    </state>
+    <state uuid="1517063299097" stateName="Select Hero" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-15.5:125.5">
+      <transition uuid="1519487132825" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517063299097" destiny="1517064954459">
+        <condition uuid="1519487142400" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1519486940513" priority="0" panel="" actionType="actRoleSelect" />
+    </state>
+    <state uuid="1517061438430" stateName="Update Bundle" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="21.5:-145.5">
+      <transition uuid="1517064711052" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517061438430" destiny="1517063696826">
+        <condition uuid="1517064716793" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1517061476893" priority="0" luaFile="Assets/Res/Lua/loadBar/Bar_AssetBundlerDownload.lua|1a047c6a7f7be2c4d993134e034981c0" actionType="actLoadBundle" />
+    </state>
+    <state uuid="1517063653684" stateName="On Data Received" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-250.5:149.5">
+      <transition uuid="1517064973968" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517063653684" destiny="1517064954459">
+        <condition uuid="1519486959313" score="0" compare="False" conditionType="isNewPlayer" />
+      </transition>
+      <transition uuid="1519486912709" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517063653684" destiny="1517063299097">
+        <condition uuid="1519486920895" score="0" compare="True" conditionType="isNewPlayer" />
+      </transition>
+      <action uuid="1517132708306" priority="0" actionType="hidePreload" />
+    </state>
+    <state uuid="1517064954459" stateName="Game Start" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-251.5:226.5" />
+    <state uuid="1517063546300" stateName="Connect_Socket" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-250.5:79.5">
+      <transition uuid="1517064826119" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517063546300" destiny="1517063653684">
+        <condition uuid="1517064847047" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1517132662651" priority="0" actionType="actConnectSocket" />
+    </state>
+    <state uuid="1517062328894" stateName="Pick Server" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-248.5:13.5">
+      <transition uuid="1519486842987" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517062328894" destiny="1517063546300">
+        <condition uuid="1519486871154" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1519486768973" priority="0" actionType="actGetServerList" />
+      <action uuid="1517062342781" priority="0" actionType="actPickServer" />
+    </state>
+    <state uuid="1526454813969" stateName="Init Mediator And UI" isDefault="False" priority="0" useStatePriority="False" order="1" loops="1" type="action" position="-248.5:-42.5">
+      <transition uuid="1526454912224" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1526454813969" destiny="1517062328894">
+        <condition uuid="1526457566047" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1526454813975" priority="0" file="Assets/Res/Data/Output/Tree/PanelManager.bytes|cad0e827a11036b4696b0f9131af7a7f" actionType="actInitMediator" />
+      <action uuid="1526454813976" priority="0" file="prefab/ui/style.ab" actionType="actInitStyle" />
+    </state>
+    <state uuid="1520013061445" stateName="Copy To Persist" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-83.5:-310.5">
+      <transition uuid="1520013132675" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1520013061445" destiny="1519486495807">
+        <condition uuid="1520013144456" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1520013116287" priority="0" luaFile="Assets/Res/Lua/loadBar/Bar_CopyBundleToPersist.lua|9488a0ee5f9ef3b4c8a22576e92dffdc" actionType="actCopyBundle" />
+    </state>
+    <state uuid="1517061023508" stateName="Load Verion.ver" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-250.5:-150.5">
+      <transition uuid="1517062384946" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517061023508" destiny="1517061438430">
+        <condition uuid="1517062391721" score="0" compare="True" conditionType="isVerUpdate" />
+      </transition>
+      <transition uuid="1517062396169" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517061023508" destiny="1517061894616">
+        <condition uuid="1517062403658" score="0" compare="True" conditionType="isLowerCritical" />
+      </transition>
+      <transition uuid="1517064676825" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517061023508" destiny="1517063696826">
+        <condition uuid="1517064693787" score="0" compare="False" conditionType="isVerUpdate" />
+      </transition>
+      <action uuid="1517061059755" priority="0" url="http://192.168.0.218/res" actionType="actLoadVer" />
+    </state>
+    <state uuid="1517063696826" stateName="Init Data And Resource" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-249.5:-96.5">
+      <transition uuid="1526454870381" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517063696826" destiny="1526454813969">
+        <condition uuid="1526454895743" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1519207536516" priority="0" lua="Assets/Res/Lua/lang/LangManager.lua|fcb69da21ad9c5e4d87a0c15f4205211" actionType="actInitLang" />
+      <action uuid="1517132519529" priority="0" actionType="actInitStaticData" />
+      <action uuid="1517132524392" priority="0" actionType="actInitTree" />
+      <action uuid="1517132574551" priority="0" actionType="actInitDiagram" />
+      <action uuid="1517132579105" priority="0" actionType="actInitMachine" />
+    </state>
+    <state uuid="1517064277027" stateName="Init Shader,Lua" isDefault="True" priority="0" useStatePriority="False" order="1" loops="1" type="action" position="-326.5:-491.5">
+      <transition uuid="1527071408406" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517064277027" destiny="1527071360272">
+        <condition uuid="1527071432996" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1519124728693" priority="0" panel="Assets/Res/Arts/UI/Panel/Preloading_SP/LogoPanel_preloading.prefab" duration="1" actionType="actShowEnterLogo" />
+      <action uuid="1517132469933" priority="0" actionType="actInitShader" />
+      <action uuid="1517132473749" priority="0" actionType="actInitLua" />
+    </state>
+    <state uuid="1527071360272" stateName="Init Lang" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-319:-437.6002">
+      <transition uuid="1527071439288" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1527071360272" destiny="1517062416190">
+        <condition uuid="1527071452983" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1527071388627" priority="0" lua="Assets/Res/Lua/lang/LangManager.lua|fcb69da21ad9c5e4d87a0c15f4205211" actionType="actInitLang" />
+    </state>
+    <state uuid="1517062416190" stateName="Hide Logo" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-292.5:-373.5">
+      <transition uuid="1517062880565" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517062416190" destiny="1517062849482">
+        <condition uuid="1517062887234" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1519125003024" priority="0" actionType="actHideEnterLogo" />
+    </state>
+    <state uuid="1517062849482" stateName="Show Preloader" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-287.5:-309.5">
+      <transition uuid="1519486510207" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517062849482" destiny="1519486495807">
+        <condition uuid="1520013160466" score="0" compare="False" conditionType="IsStreamVerHigh" />
+      </transition>
+      <transition uuid="1520013089905" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1517062849482" destiny="1520013061445">
+        <condition uuid="1520013100836" score="0" compare="True" conditionType="IsStreamVerHigh" />
+      </transition>
+      <action uuid="1517062869296" priority="0" panel="Assets/Res/Arts/UI/Panel/Preloading_SP/DownLoadPanel_preloading.prefab" actionType="actShowPreload" />
+    </state>
+    <state uuid="1519486495807" stateName="Get Config" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-252.5:-219.5">
+      <transition uuid="1519486528719" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1519486495807" destiny="1517061023508">
+        <condition uuid="1519486540403" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1527684585941" priority="0" lua="Assets/Res/Lua/machine/login/LoginAct_GetConfig.lua|9252f229291e507439f4fedcf4a154b2" actionType="luaAction" />
+    </state>
+  </machine>
+</MachineChart>

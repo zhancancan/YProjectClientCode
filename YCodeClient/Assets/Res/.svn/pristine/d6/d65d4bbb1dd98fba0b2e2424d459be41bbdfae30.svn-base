@@ -1,0 +1,1222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RS>
+  <place name="Haha" enviorPath="Assets/Res/Arts/Scene/temp/xinshou_Test/xinshou_output.unity" enviorName="xinshou" fileName="Haha" filePath="Assets/Res/Data/Source/Place/Haha/Haha.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="Path" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="pathwaypoint" id="0" radius="0.2" type="0">
+          <point pos="117.0248:33.33313:58.25429" />
+          <point pos="119.028:33.32937:48.36349" />
+          <point pos="130.1375:33.62946:58.88505" />
+          <point pos="135.9009:33.90567:48.82291" />
+        </mono>
+        <mono monoType="customData" />
+      </object>
+      <object name="NpcArea_0" position="124.89:33.37499:53.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="Npc1000" position="123.64:33.33942:53.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="21" icon="sv_label_4">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="1" ignoreMask="-536870913" />
+          <mono monoType="customData">
+            <kv key="tele" value="0" />
+            <kv key="tele" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="npc" value="10" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+          </mono>
+        </object>
+      </object>
+    </object>
+  </place>
+  <place name="place_senlin" enviorPath="Assets/Res/Arts/Scene/Wild/senlin_sp/senlin_output.unity" enviorName="senlin_output" enviorGUID="70a1d74e9d34b97468d8a5e981756164" fileName="place_senlin" filePath="Assets/Res/Data/Source/Place/place_senlin/place_senlin.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="RE" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="re_1" position="96.2:23.21306:261.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff6b" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_2" position="69.2:23.2:145.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff6b" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_3" position="250.9:23.2:34.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff6b" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_4" position="157.7:23.2:115.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff6b" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="qianshui" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="qianshui_1" position="56.13:42.03125:216.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_2" position="73.12:42:182.99" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_3" position="64.8:42:202.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_4" position="59.81:42:223.04" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_5" position="78.04:42:186.53" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_6" position="67.07:42:226.84" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_7" position="65.98:42:216.92" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_8" position="71.62:42:201.23" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_9" position="65.98:42:197.02" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="shaota" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="shaota_1" position="32.82:23.4:171" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_2" position="42.71:23.4:190.15" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_3" position="35.04:23.4:178.11" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_4" position="44.64:23.4:162.02" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_5" position="61.41:23.4:165.52" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_6" position="49.94:23.4:177.06" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_7" position="57.43:23.4:179.79" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_8" position="59.63:23.4:173.88" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaota_9" position="51.05:23.4:188.41" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="muchang" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="muchang_1" position="32.35:20:102.16" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_2" position="32.92:20:139.16" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_3" position="27.28:20:116.18" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_4" position="53.3:20:131.17" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_5" position="48.93:20:143.46" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_6" position="50.99:20:98.71" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_7" position="49.62:20:116.39" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_8" position="27.05:20:128.26" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_9" position="34.48:20:128.26" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_10" position="53.16:20:126.73" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_11" position="49.35:20:140.17" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_12" position="47.8:20:114.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_13" position="51.59:20:107.01" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_14" position="25.46:20:107.65" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_15" position="40.1:20:113.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_16" position="43.1:20:133.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="daying" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="daying_1" position="63.06:20:78.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_2" position="77.46:20:35.08" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_3" position="69:20:77.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_4" position="42.44:20:46.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_5" position="68.17:20:58.85" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_6" position="52.59:20:59.96" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_7" position="73.34:20:52.03" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_8" position="51.52:20:53.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_9" position="43.5:20:31.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_10" position="52.4:20:31.78" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_11" position="44.5:20:31.78" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_12" position="50.33:20:31.59" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_13" position="56.15:20:37.28" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_14" position="58.99:20:39.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_15" position="61.45:20:36.37" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_16" position="78.56:20:39.77" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_17" position="46.78:20:46.42" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_18" position="54.33:20:70.09" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="daoying" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="daoying_1" position="134.65:20:87.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_2" position="125.6:20:80.01" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_3" position="127.25:20:84.68" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_4" position="128.41:20:69.64" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_5" position="144.44:20:84.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_6" position="143.24:20:55.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_7" position="127.64:20:63.08" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_8" position="143.11:20:68.11" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_9" position="152.71:20:79.12" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_10" position="151.68:20:83.18" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_11" position="143.11:20:61.92" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_12" position="145.28:20:51.41" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_13" position="123.7:20:54.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daoying_14" position="123.7:20:48.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="xiaoying" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="xiaoying_1" position="135.89:20:146.65" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_2" position="144.34:20:145.63" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_3" position="139.7:20:168.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_4" position="170.96:20:202.33" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_5" position="175.42:20:198.91" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_6" position="150.5:20:194.19" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_7" position="158.78:20:178.49" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_8" position="142.7:20:171.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_9" position="156.9:20:171.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_10" position="146.3:20:188.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_11" position="139.6:20:163.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="xiaoying_12" position="155.6:20:157" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="panyin" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="panying_1" position="194.3:20:226.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_2" position="216.3:20:200.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_3" position="222.5:20:193.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_4" position="228.3:20:187.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_5" position="197.8:20:186.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_6" position="216.7:20:193.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_7" position="243.7:20:150.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_8" position="249.8:20:148.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_9" position="263.9:20:177" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_10" position="274.6:20:159.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_11" position="257.5:20:170.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_12" position="276.2:20:163.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_13" position="271.9:20:174.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_14" position="265.5:20:141.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_15" position="274.4:20:148.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_16" position="199.4:20:162.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_17" position="206.7:20:151.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_18" position="212.3:20:164.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_19" position="229.8:20:175.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="panying_20" position="234.6:20:170.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="chengsai" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="chengsai_1" position="225.36:25.3:231.22" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_2" position="231.62:20:224.28" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_3" position="220.47:20:253.25" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_4" position="227.8:20:255.33" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_5" position="246.92:20:222.41" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_6" position="269.76:20:231.19" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_7" position="270.15:20:236.86" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_8" position="243.43:20:253.28" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_9" position="251.3:20:252.33" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_10" position="241.43:20:238.41" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_11" position="247.59:20:238.41" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_12" position="243.88:20:234.02" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_13" position="226.5:20:245.16" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_14" position="266.58:20:245.63" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_15" position="262.99:20:251.43" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_16" position="255.13:20:226.61" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_17" position="255.13:20:214.33" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengsai_18" position="256.47:20:220.68" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="haibian" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="haibian_1" position="143.49:20:42.38" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="haibian_2" position="151.21:20:42.56" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="haibian_3" position="134.45:20:37.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="haibian_4" position="145.02:20:41.05" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="haibian_5" position="136.32:20:41.14" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="zhuzha" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="zhuzha_1" position="193.3:20:74.53" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_2" position="187.03:20:58.07" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_3" position="186.1:20:74.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_4" position="201.6:20:63.83" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_5" position="202.04:20:51.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_6" position="206.78:20:37.93" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_7" position="182.79:20:63.02" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_8" position="203:20:57.34" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_9" position="190.68:20:45.36" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_10" position="190.68:20:51.38" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zhuzha_11" position="198.58:20:39.22" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="zeying" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="zeying_1" position="240.48:20:106.98" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeying_2" position="231.02:20:111.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeying_3" position="223.54:20:111.25" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeying_4" position="217.66:20:86.59" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeying_5" position="208.9:20:99.91" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeying_6" position="253.48:20:105.96" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeying_7" position="228.1:20:103.26" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="qianshui2" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="qianshui2_1" position="256.9:20:65.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui2_2" position="266.8:20:71.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui2_3" position="261.7:20:76.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui2_4" position="266:20:62.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui2_5" position="256.7:20:71.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+    </object>
+  </place>
+  <place name="place_shamo" enviorPath="Assets/Res/Arts/Scene/Wild/shamo_sp/shamo_output.unity" enviorName="shamo_output" enviorGUID="11399fa8d5ef98146988f2393a7bbe44" fileName="place_shamo" filePath="Assets/Res/Data/Source/Place/place_shamo/place_shamo.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="re" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="re_1" position="85.5:23.2:168.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_2" position="79.8:23.2:108.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_3" position="145.7:23.2:214.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_4" position="182.4:23.2:143.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_5" position="117.8:23.2:42.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="yaosai" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="yaosai_1" position="39.02:23.2:227.52" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="yaosai_2" position="49.32:23.2:227.52" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="yaosai_3" position="20.34:23.2:227.52" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="yaosai_4" position="21.13:23.2:221.45" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="yaosai_5" position="46.85:23.2:220.09" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="yaosai_6" position="58.26:23.2:217.03" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="yaosai_7" position="65.14:23.2:227.52" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="jvzhuqu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="jvzhuqu_1" position="23.2:23.2:194.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_2" position="36.2:23.2:207.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_3" position="34.1:23.2:202" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_4" position="42.6:23.2:202.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_5" position="48.9:23.2:207.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_6" position="22.1:23.2:202" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_7" position="55.4:23.2:202" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_8" position="58.5:23.2:194" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_9" position="39.6:23.2:194.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jvzhuqu_10" position="59.8:23.2:206.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="muchang" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="muchang_1" position="105.3:23.2:143.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_2" position="107.82:23.2:164.54" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_3" position="91.63:23.2:132.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_4" position="97.72:23.2:134" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_5" position="85.11:23.2:129.29" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_6" position="93:23.2:125.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_7" position="128.86:23.2:138.83" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_8" position="139.4:23.2:133.34" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="muchang_9" position="114.37:23.2:134.95" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="waicheng" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="waicheng_1" position="32.3:23.2:170.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_2" position="42.8:23.2:171.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_3" position="49.9:23.2:164.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_4" position="58.7:23.2:163.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_5" position="39.4:23.2:165" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_6" position="19.8:23.2:159.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_7" position="36.5:23.2:156.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_8" position="60.8:23.2:155.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_9" position="50.7:23.2:171.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_10" position="27.2:23.2:166.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="waicheng_11" position="19.8:23.2:166.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="shaosuo" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="shaosuo_1" position="15.25:23.2:135.74" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaosuo_2" position="20.94:23.2:135.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaosuo_3" position="23.73:23.2:101.97" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaosuo_4" position="14.14:23.2:98.31" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaosuo_5" position="23.73:23.2:117.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaosuo_6" position="23.73:23.2:123.29" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaosuo_7" position="13.05:23.2:123.29" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shaosuo_8" position="12.25:23.2:116.14" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="daying" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="daying_1" position="123.31:23.2:216.62" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_2" position="104.9:23.2:217.22" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_3" position="121.79:23.2:206.36" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_4" position="109.81:23.2:194.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_5" position="113.68:23.2:217.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_6" position="98.8:23.2:201.58" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_7" position="102:23.2:209.97" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_8" position="112.38:23.2:205.88" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="daying_9" position="94.13:23.2:209.97" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="zeishao" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="zeishao_1" position="152.7:23.2:162.65" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeishao_2" position="152.7:23.2:170.49" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeishao_3" position="156.48:23.2:166.81" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeishao_4" position="160.47:23.2:161.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeishao_5" position="160.43:23.2:170.49" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeishao_6" position="165.96:23.2:166.81" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeishao_7" position="137.02:23.2:164.66" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="zeishao_8" position="129.38:23.2:161.74" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="shouxuekou" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="shouxuekou_1" position="191.38:23.2:109.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shouxuekou_2" position="189.49:23.2:104.17" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shouxuekou_3" position="184.77:23.2:112.54" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shouxuekou_4" position="181.59:23.2:99.98" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="shouxuekou_5" position="180.94:23.2:107.24" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="dazhai" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="dazhai_1" position="220.46:23.2:199.36" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_2" position="205.47:23.2:223.64" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_3" position="197.74:23.2:223.64" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_4" position="202.7:23.2:210.45" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_5" position="207.07:23.2:206.84" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_6" position="197.57:23.2:206.16" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_7" position="202.7:23.2:200.87" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_8" position="202.7:23.2:210.45" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_9" position="182.9:23.2:180.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_10" position="203.4:23.2:176.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_11" position="185.7:23.2:183.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_12" position="178.9:23.2:183.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_13" position="178.3:23.2:220.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_14" position="183.4:23.2:224.07" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_15" position="176.1:23.2:224.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_16" position="165.5:23.2:197.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_17" position="162:23.2:201.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dazhai_18" position="220.46:23.2:207.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="dashouxue" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="dashouxue_1" position="228.32:23.2:123.04" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_2" position="224.35:23.2:79.33" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_3" position="228.74:23.2:86.34" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_4" position="220.46:23.2:87.99" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_5" position="225.61:23.2:92.78" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_6" position="230.62:23.2:109.25" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_7" position="207.98:23.2:100.84" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_8" position="209.07:23.2:107.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_9" position="220.46:23.2:122.87" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_10" position="228.95:23.2:104.95" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="dashouxue_11" position="220.46:23.2:107.42" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="sicheng" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="sicheng_1" position="204.59:23.2:53.81" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_2" position="223.81:23.2:47.61" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_3" position="216.16:23.2:48.02" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_4" position="212.18:23.2:48.12" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_5" position="227.23:23.2:47.61" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_6" position="198:23.2:50.51" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_7" position="197.48:23.2:46.58" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_8" position="224.82:23.2:41.78" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_9" position="177.3:23.2:34.18" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_10" position="184.21:23.2:34.18" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_11" position="184.82:23.2:45.08" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="sicheng_12" position="180.06:23.2:39.86" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="siju" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="siju_1" position="194.77:23.2:39.71" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_2" position="194.77:23.2:29.94" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_3" position="203.55:23.2:39.71" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_4" position="210.49:23.2:35.55" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_5" position="210.37:23.2:22.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_6" position="226.5:23.2:32.83" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_7" position="203.5:23.2:27.29" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_8" position="224.96:23.2:17.99" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_9" position="235.23:23.2:17.99" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="siju_10" position="236.12:23.2:32.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="kongbu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="kongbu_1" position="174.91:23.2:9.71" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_2" position="175.51:23.2:16.44" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_3" position="184.93:23.2:18.52" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_4" position="183.89:23.2:8.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_5" position="200.21:23.2:13.08" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_6" position="199.95:23.2:4.35" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_7" position="207.38:23.2:14.37" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_8" position="208.76:23.2:4.87" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_9" position="188.47:23.2:12.13" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="kongbu_10" position="213.6:23.2:12.13" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="lvying2" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="lvying2_1" position="114.23:23.2:15.13" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvying2_2" position="133.96:23.2:14.36" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvying2_3" position="132.82:23.2:24.75" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvying2_4" position="125.39:23.2:15.57" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvying2_5" position="126.27:23.2:21.23" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvying2_6" position="104.44:23.2:22.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvying2_7" position="114.23:23.2:19.97" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="qiwu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="qiwu_1" position="94.81:23.2:68.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qiwu_2" position="96.21:23.2:61.04" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qiwu_3" position="92.14:23.2:62.68" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qiwu_4" position="83.2:23.2:76.77" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qiwu_5" position="87.5:23.2:75.41" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qiwu_6" position="85.12:23.2:75.01" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qiwu_7" position="71.77:23.2:72.24" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qiwu_8" position="73.52:23.2:68.39" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="chengwai" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="chengwai_1" position="23.12:23.2:71.11" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengwai_2" position="32.32:23.2:70.23" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengwai_3" position="19.95:23.2:59.77" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengwai_4" position="35.4:23.2:64.93" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengwai_5" position="31.29:23.2:59.84" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="chengwai_6" position="11.43:23.2:54.64" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="cheng" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="cheng_1" position="47.33:15.16846:45.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_2" position="51.02:15.18587:42.46" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_3" position="64.38:15.03965:24.65" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_4" position="61.6:15.07459:36.69" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_5" position="36.38:15.2906:39.29" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_6" position="66.28:15.07484:31.66" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_7" position="46.01:15.26027:40.29" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_8" position="40.47:15.26513:31.86" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_9" position="18.96:15.35738:38.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_10" position="21.12999:15.12403:46.91" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_11" position="50.45:15.08115:17.79" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="cheng_12" position="57.4:15.01636:14.36" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="hexing" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="hexing_1" position="30.54:15.04:17.42" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="hexing_2" position="31.2:15.09198:23.11" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="hexing_3" position="22.4:15.09:34.14" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="hexing_4" position="26.51:15.09:34.62" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="hexing_5" position="23.69:15.09:18.92" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="hexing_6" position="20.54:15.09198:26.84" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="hexing_7" position="25.65:15.09198:24.92" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="lvzhou" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="lvzhou_1" position="112.08:23.2:108.49" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvzhou_2" position="125.25:23.2:104.64" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvzhou_3" position="117.81:23.2:107.59" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvzhou_4" position="140.3:23.2:101.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvzhou_5" position="147.4:23.2:109.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="lvzhou_6" position="147.2:23.2:118.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffd20101" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+    </object>
+  </place>
+  <place name="Place_xueyuan" enviorPath="Assets/Res/Arts/Scene/Wild/xueyuan_sp/xueyuan_output.unity" enviorName="xueyuan_output" enviorGUID="50144fcb491a0d14ebde0f306960046e" fileName="Place_xueyuan" filePath="Assets/Res/Data/Source/Place/Place_xueyuan/Place_xueyuan.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="re" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="re_1" position="10:36.9:162" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_2" position="97:36.9:223.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_3" position="227.6:36.9:179.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_4" position="200.6:36.8853:138.7" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_5" position="44.1:36.9:18.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_6" position="135.2:36.9:57.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_7" position="213.1:36.9:18.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="re_8" position="97.4:36.9:13.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="binhu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="binhu_1" position="31.05:36.89:230.59" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+        <object name="binhu_2" position="36.5:31.07207:238.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="20" icon="sv_label_4">
+          <mono monoType="locationData" type="0" />
+        </object>
+        <object name="binhu_3" position="57.51:36.89:230.59" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+        <object name="binhu_4" position="51.71:36.89:234.86" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+        <object name="binhu_5" position="27.46:36.89:219.87" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+        <object name="binhu_6" position="19.3:36.89:210.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+        <object name="binhu_7" position="41.91:36.89:213.41" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+        <object name="binhu_8" position="40.3:36.9:230.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+      </object>
+      <object name="qianshui" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="qianshui_1" position="60.7:36.9:201.48" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_2" position="65.56:36.9:204.69" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_3" position="70.97:36.9:212.94" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_4" position="70.97:36.9:208.26" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="qianshui_5" position="46.6:36.9:196.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="famu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="famu_1" position="126.96:36.9:210.36" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="famu_2" position="133.38:36.9:210.36" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="famu_3" position="143.94:36.9:202.88" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="famu_4" position="125.58:36.9:195.45" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="famu_5" position="125.58:36.9:189.93" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="famu_6" position="123.35:36.9:183.14" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="famu_7" position="144.7:36.9:187.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="famu_8" position="150.5:36.9:193.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+      <object name="jushou" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="jushou_1" position="201.7:36.9:228.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jushou_2" position="214.8:36.9:211.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jushou_3" position="196.9:36.9:217.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jushou_4" position="195.4:36.9:202" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jushou_5" position="201.7:36.9:193.5" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jushou_6" position="214.9:36.9:193.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jushou_7" position="231.8:36.9:211.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+        <object name="jushou_8" position="224.8:36.9:228.6" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+          <mono monoType="eventArea" color="ffff0000" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+        </object>
+      </object>
+    </object>
+  </place>
+  <place name="xinshou" enviorPath="Assets/Res/Arts/Scene/Copy/xinshou_sp/xinshou_output.unity" enviorName="xinshou_output" enviorGUID="03fe42af7f3248a47ab669e3fcf6a9ce" fileName="xinshou" filePath="Assets/Res/Data/Source/Place/xinshou/xinshou.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="laoguan1" position="83.90001:30.28283:56" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="20" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="RP_diaochan_0" position="24:7:51" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="21" prefab="Assets/Res/Arts/Role/Hero/diaochan/diaochan_0_sp/RP_diaochan_0.prefab" />
+      <object name="GameObject (1)" position="79.52:30.2762:63.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="eventArea" color="ff00ff00" shape="1" width="5" depth="5" radius="5" ignoreMask="0" />
+      </object>
+      <object name="path" position="78.3:30.28283:54.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="pathwaypoint" id="0" radius="0.2" type="0">
+          <point pos="6.641678:-7.764448:0.03520814" />
+          <point pos="9.474625:-8.809771:0.05204444" />
+          <point pos="9.296921:2.510055:0.02517236" />
+          <point pos="0.5025482:-2.119427:0.03820509" />
+        </mono>
+      </object>
+      <object name="GameObject (2)" position="89.1:30.2762:63.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="eventArea" color="ff00ff00" shape="1" width="5" depth="5" radius="5" ignoreMask="0" />
+      </object>
+      <object name="GameObject" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+    </object>
+  </place>
+</RS>

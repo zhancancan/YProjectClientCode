@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Panel_zcc" fileURL="Assets/Res/Data/Source/Tree/Panel/Panel_zcc.tree" fileName="Panel_zcc.tree" type="PanelManager">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="panelModule" module="Preloading">
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="CreatRolePanel_preloading" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Preloading_SP/CreatRolePanel_login.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelScene" sceneAsset="Assets/Res/Arts/Scene/UIScene/background_0_sp/RoleBackground_0_output.unity|15bdb59415b8fa843a103c2d59671d65" />
+        <cell treeOpen="False" editName="" cellType="panelCull" mode="12" />
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/zcc/preload/hero/CreatRoleMediator_Preloading_zcc.lua|3b5b996671ba57c49a2e6b2abc9c0f3a" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

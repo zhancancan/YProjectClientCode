@@ -1,0 +1,111 @@
+ /*---------------------------------------lua方法----------------------------------*/
+
+//返回1个lua的grid 的控制器
+//pane:IDataPane 实现IDataPane的容器
+//data:object 在这个情况下为游戏数据，应该是1个luaTable
+//index:int  数据在队列中的位置
+//这个方法可以省略了，如果省略，则使用this
+lua createItem(pane,data,index)
+
+//返回渲染需要的prefab的index
+//参数同CreateItem()
+//可以省略, 省略时时默认prefabIndex=0
+lua PickPrefab(pane,data,index)
+
+
+
+
+/*--------------------------------------------- 消息支持 ----------------------------------------------------------*/
+/*-----------------------------  消息触发方法均可省略，省略时不会触发 ---------------------------------------------*/
+
+lua grid:onInit(cell,data,index,column,row)
+
+lua grid:draw(cell,data,index,column,row)
+
+lua grid:onRemove(cell,data,index,column,row)
+
+//SetClickTrigger(child)中child被点击后触发
+lua grid:onClick(cell,data,index,column,row)
+
+
+
+//SetDragTrigger(child)中child拖拽时触发,status @see EventType.DragStatus
+lua grid:onDrag(cell,data,(int)state, index)
+
+//SetDropTrigger(child)中child被drop时,status @see EventType.DragStatus
+//Dropper为c#类型，参数包括
+// 	IDragable draggee 	单项拖动时的拖动对象
+//  IDragable[] draggees 多拖时候的拖动对象数组
+// 	IDraable为1个可拖拽对象
+//  IDragable.data就是拖动对象里面的数据对象
+lua grid:onDrop(cell,data,dropper,index)
+
+//选中变化时触发
+lua grid:onSelectChange(cell,data,selected)
+
+
+/*--------------------------------------------c#支持的方法--------------------------------------------------------*/
+
+//obj为c#方法基类，cell和mediator都是obj的继承
+
+
+//child 子GameObject的名称，上面必须挂有IClickable,child 如果为nil，则表示取消clickTrigger
+C# obj:SetClickTrigger(child)
+
+//child 子GameObject的名称，上面必须挂有IDragable,child 如果为nil，则表示取消dragTrigger
+C# obj:SetDragTrigger(child)
+
+//child 子GameObject的名称，上面必须挂有IDropable,child 如果为nil，则表示取消dropTrigger
+C# obj:SetDropTrigger(child)
+
+
+/*-------------------------------------------以下方法和Mediator公用------------------------------------------------*/
+
+// 给1个IDataPane 设置数据，child 子GameObject的名称, 上边必须挂有IDataPane
+//list 是一个表示数组的LuaTable
+C# obj:SetList(child,list)
+
+//child 子GameObject的名称，  value为boolean，表示显示或隐藏child
+C# obj:SetActive(child, value)
+
+//child 子GameObject的名称， 返回child上的第一个IUIElement组件
+C# obj:GetUI(child)
+
+//child 子GameObject的名称， 返回child 上挂的uievent类型的组件，uievent为int，支持类型看EventType.lua里的UIEvent
+C# obj:GetUI(child,uievent)
+
+//child 子GameObject的名称， 返回child 上挂的type类型的组件，type为C#的类,使用typeof(IClickable),typeof(Animator)...
+//最好不要用
+C# obj:GetUI(child,type)
+
+
+//对子对象上的第一个IUIElement加监听，child 子GameObject的名称，回调时的参数类型根据IUIElement的类型不同而不同
+//return 这个接受监听的Mono
+C# obj:AddListener(child,function)
+
+//对子对象上的第一个IUIElement移除，child 子GameObject的名称
+C# obj:RemoveListener(child,function)
+
+//对子对象上的第一个IUIElement加监听，child 子GameObject的名称，uitype 同上面的GetUI(...)
+//回调时的参数类型根据IUIElement的类型不同而不同
+//return 这个接受监听的Mono
+C# obj:AddListener(child,uitype,function)
+//不同解释了吧
+C# obj:RemoveListener(child,uiType,function)
+
+//子对象上的string类型的getter,setter,比如cell:SetString(txt_0,"dd")等同于cell:GetUI("txt_0").text="dd"，只是为了方便写和CPU优化
+//value为string
+C# obj:SetString(child,value)
+C# obj:GetString(child,value)
+
+//value为int
+C# obj:SetInt(child,value)
+C# obj:GetInt(child,value)
+
+//value为float
+C# obj:SetFloat(child,value)
+C# obj:GetFloat(child,value)
+
+//value为boolean
+C# obj:SetBool(child,value)
+C# obj:GetBool(child,value)

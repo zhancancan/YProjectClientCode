@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MachineChart fileName="scene_0" fileURL="Assets/Res/Data/Source/Machine/scene_0.machine" chartType="Scene" panOffset="-43:81" zoom="1">
+  <machine uuid="1518266895828" name="None">
+    <state uuid="1518266895830" stateName="Exit State" isDefault="False" priority="0" type="exit" position="228:-139" />
+    <state uuid="1518266895829" stateName="Any State" isDefault="False" priority="0" type="any" position="-337:67">
+      <transition uuid="1518267325280" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="3" source="1518266895829" destiny="1518267208598">
+        <condition uuid="1518268380895" score="0" paramId="1518267348582" threshold="0" mode="0" conditionType="parameterchecker" />
+      </transition>
+    </state>
+    <state uuid="1518267208598" stateName="Scene Disposer" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-108.5:65">
+      <action uuid="1518283742149" priority="0" actionType="scClearData" />
+      <action uuid="1518283745222" priority="0" actionType="scClearEntity" />
+      <action uuid="1519377001631" priority="0" actionType="scClosePanel" />
+      <action uuid="1519376949296" priority="0" actionType="scFinalDispose" />
+    </state>
+    <state uuid="1524906662149" stateName="ClearPrev" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-114.5:-267">
+      <transition uuid="1524906995481" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1524906662149" destiny="1519376669047">
+        <condition uuid="1524907007870" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1524906935467" priority="0" actionType="scDisposePrev" />
+      <action uuid="1524906940572" priority="0" actionType="scClearMemory" />
+    </state>
+    <state uuid="1519376669047" stateName="Init Step_1" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-114.5:-197.5">
+      <transition uuid="1519377122255" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1519376669047" destiny="1519376829439">
+        <condition uuid="1519377136461" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1519376762506" priority="0" actionType="scLoadingScene" />
+      <action uuid="1519376784458" priority="0" actionType="scBuildPlace" />
+      <action uuid="1519376798233" priority="0" actionType="scParseGeometry" />
+    </state>
+    <state uuid="1519376829439" stateName="Init Final" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-114:-128.5">
+      <transition uuid="1519377168859" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1519376829439" destiny="1518267239494">
+        <condition uuid="1519381416976" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1519376854979" priority="0" actionType="scOpenPanel" />
+      <action uuid="1519376868684" priority="0" actionType="scHideTransition" />
+      <action uuid="1519376876038" priority="0" actionType="scLoadComplete" />
+    </state>
+    <state uuid="1518267239494" stateName="Scene Runing" isDefault="False" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-114.5:-58">
+      <action uuid="1518283714499" priority="0" actionType="actionNothing" />
+    </state>
+    <state uuid="1518266899029" stateName="Load Place and Transition" isDefault="True" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-114.5:-338">
+      <transition uuid="1524906956113" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1518266899029" destiny="1524906662149">
+        <condition uuid="1524906962318" score="0" conditionType="conditionAny" />
+      </transition>
+      <action uuid="1518267064652" priority="0" actionType="scLoadingPlace" />
+      <action uuid="1518266981988" priority="0" url="Assets/Res/Arts/Scene/UIScene/sceneLoading/SceneLoading_output.unity|3994b6507414d414ba3eff6d8a1da411" luaFile="Assets/Res/Lua/module/scene/Bar_SceneTransition.lua|6cdffd5c1544b8f49ad5c00b4cf5d31a" actionType="scShowTransition" />
+    </state>
+  </machine>
+  <parameter uuid="1518267348582" name="dispose" type="3" defautValue="0" />
+</MachineChart>

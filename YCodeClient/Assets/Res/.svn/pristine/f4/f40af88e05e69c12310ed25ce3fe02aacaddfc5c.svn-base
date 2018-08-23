@@ -1,0 +1,7 @@
+﻿namespace machine.ai {
+    public static class CommandActionType {
+        public const string TEST_MOVE = "cmdAct:testMove";
+        public const string MOVE = "cmdAct:move";
+        public const string STAND = "cmdAct:stand";
+    }
+}

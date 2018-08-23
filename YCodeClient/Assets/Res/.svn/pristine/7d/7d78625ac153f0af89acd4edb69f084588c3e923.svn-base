@@ -1,0 +1,11 @@
+﻿using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.TEST_MOVE)]
+    public class AICommand_TestMove : CpxAction {
+        public override RpxAction GetRuntime() {
+            return null;
+        }
+    }
+}

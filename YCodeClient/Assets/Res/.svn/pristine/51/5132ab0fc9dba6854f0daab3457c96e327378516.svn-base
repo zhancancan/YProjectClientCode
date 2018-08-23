@@ -1,0 +1,341 @@
+﻿//this source code was auto-generated, do not modify it
+using pure.refactor.property;
+using pure.stateMachine.machine.core;
+using System;
+using machine.ai;
+namespace registerWrap {
+	public class PropertyWrap{
+
+        private static bool register;
+        public static void Init(){
+            if(!register){  
+                new PropertyWrap().Register();
+            }
+            register = true;
+        }
+		private RuntimePropertyInfo _info =new RuntimePropertyInfo();
+
+
+        private void Register(){  
+            RegProperty();
+        }
+		internal void RegProperty(){
+			EditableProperty.ClearPropertyCache();
+			AICommand_Buff_PropertyWrap();
+			AICommand_Dead_PropertyWrap();
+			AICommand_FireSkill_PropertyWrap();
+			AICommand_Health_PropertyWrap();
+			AICommand_Move_PropertyWrap();
+			AICommand_MoveElastic_PropertyWrap();
+			AICommand_QuitMove_PropertyWrap();
+			AICommand_Stand_PropertyWrap();
+			AICommand_SteerMove_PropertyWrap();
+		}
+		private void AICommand_Buff_PropertyWrap(){
+			Type t = typeof(AICommand_Buff);
+			EditableProperty[] list = new EditableProperty[3];
+			_info.setter=(a,b)=>{((AICommand_Buff)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_Buff) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_Buff)b).priority=((AICommand_Buff)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Buff)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_Buff) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_Buff)b).useReplace=((AICommand_Buff)a).useReplace;};
+			list[1] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Buff)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_Buff) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_Buff)b).replaceLua=((AICommand_Buff)a).replaceLua;};
+			list[2] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_Dead_PropertyWrap(){
+			Type t = typeof(AICommand_Dead);
+			EditableProperty[] list = new EditableProperty[3];
+			_info.setter=(a,b)=>{((AICommand_Dead)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_Dead) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_Dead)b).priority=((AICommand_Dead)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Dead)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_Dead) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_Dead)b).useReplace=((AICommand_Dead)a).useReplace;};
+			list[1] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Dead)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_Dead) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_Dead)b).replaceLua=((AICommand_Dead)a).replaceLua;};
+			list[2] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_FireSkill_PropertyWrap(){
+			Type t = typeof(AICommand_FireSkill);
+			EditableProperty[] list = new EditableProperty[3];
+			_info.setter=(a,b)=>{((AICommand_FireSkill)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_FireSkill) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_FireSkill)b).priority=((AICommand_FireSkill)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_FireSkill)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_FireSkill) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_FireSkill)b).useReplace=((AICommand_FireSkill)a).useReplace;};
+			list[1] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_FireSkill)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_FireSkill) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_FireSkill)b).replaceLua=((AICommand_FireSkill)a).replaceLua;};
+			list[2] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_Health_PropertyWrap(){
+			Type t = typeof(AICommand_Health);
+			EditableProperty[] list = new EditableProperty[3];
+			_info.setter=(a,b)=>{((AICommand_Health)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_Health) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_Health)b).priority=((AICommand_Health)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Health)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_Health) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_Health)b).useReplace=((AICommand_Health)a).useReplace;};
+			list[1] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Health)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_Health) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_Health)b).replaceLua=((AICommand_Health)a).replaceLua;};
+			list[2] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_Move_PropertyWrap(){
+			Type t = typeof(AICommand_Move);
+			EditableProperty[] list = new EditableProperty[7];
+			_info.setter=(a,b)=>{((AICommand_Move)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_Move) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_Move)b).priority=((AICommand_Move)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Move)a).threshold = (float) b;};
+			_info.getter = a =>((AICommand_Move) a).threshold;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_Move)b).threshold=((AICommand_Move)a).threshold;};
+			list[1] = new EditableProperty("threshold",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Move)a).duration = (float) b;};
+			_info.getter = a =>((AICommand_Move) a).duration;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_Move)b).duration=((AICommand_Move)a).duration;};
+			list[2] = new EditableProperty("duration",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Move)a).forcastLen = (float) b;};
+			_info.getter = a =>((AICommand_Move) a).forcastLen;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_Move)b).forcastLen=((AICommand_Move)a).forcastLen;};
+			list[3] = new EditableProperty("forcastLen",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Move)a).maxSpeedMulitple = (float) b;};
+			_info.getter = a =>((AICommand_Move) a).maxSpeedMulitple;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_Move)b).maxSpeedMulitple=((AICommand_Move)a).maxSpeedMulitple;};
+			list[4] = new EditableProperty("maxSpeedMulitple",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Move)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_Move) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_Move)b).useReplace=((AICommand_Move)a).useReplace;};
+			list[5] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Move)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_Move) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_Move)b).replaceLua=((AICommand_Move)a).replaceLua;};
+			list[6] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_MoveElastic_PropertyWrap(){
+			Type t = typeof(AICommand_MoveElastic);
+			EditableProperty[] list = new EditableProperty[7];
+			_info.setter=(a,b)=>{((AICommand_MoveElastic)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_MoveElastic) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_MoveElastic)b).priority=((AICommand_MoveElastic)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_MoveElastic)a).elastic = (float) b;};
+			_info.getter = a =>((AICommand_MoveElastic) a).elastic;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_MoveElastic)b).elastic=((AICommand_MoveElastic)a).elastic;};
+			list[1] = new EditableProperty("elastic",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_MoveElastic)a).maxSpeed = (float) b;};
+			_info.getter = a =>((AICommand_MoveElastic) a).maxSpeed;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_MoveElastic)b).maxSpeed=((AICommand_MoveElastic)a).maxSpeed;};
+			list[2] = new EditableProperty("maxSpeed",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_MoveElastic)a).duration = (float) b;};
+			_info.getter = a =>((AICommand_MoveElastic) a).duration;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_MoveElastic)b).duration=((AICommand_MoveElastic)a).duration;};
+			list[3] = new EditableProperty("duration",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_MoveElastic)a).updateThreshold = (float) b;};
+			_info.getter = a =>((AICommand_MoveElastic) a).updateThreshold;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_MoveElastic)b).updateThreshold=((AICommand_MoveElastic)a).updateThreshold;};
+			list[4] = new EditableProperty("updateThreshold",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_MoveElastic)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_MoveElastic) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_MoveElastic)b).useReplace=((AICommand_MoveElastic)a).useReplace;};
+			list[5] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_MoveElastic)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_MoveElastic) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_MoveElastic)b).replaceLua=((AICommand_MoveElastic)a).replaceLua;};
+			list[6] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_QuitMove_PropertyWrap(){
+			Type t = typeof(AICommand_QuitMove);
+			EditableProperty[] list = new EditableProperty[5];
+			_info.setter=(a,b)=>{((AICommand_QuitMove)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_QuitMove) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_QuitMove)b).priority=((AICommand_QuitMove)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_QuitMove)a).elastic = (float) b;};
+			_info.getter = a =>((AICommand_QuitMove) a).elastic;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_QuitMove)b).elastic=((AICommand_QuitMove)a).elastic;};
+			list[1] = new EditableProperty("elastic",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_QuitMove)a).threshold = (float) b;};
+			_info.getter = a =>((AICommand_QuitMove) a).threshold;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_QuitMove)b).threshold=((AICommand_QuitMove)a).threshold;};
+			list[2] = new EditableProperty("threshold",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_QuitMove)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_QuitMove) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_QuitMove)b).useReplace=((AICommand_QuitMove)a).useReplace;};
+			list[3] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_QuitMove)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_QuitMove) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_QuitMove)b).replaceLua=((AICommand_QuitMove)a).replaceLua;};
+			list[4] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_Stand_PropertyWrap(){
+			Type t = typeof(AICommand_Stand);
+			EditableProperty[] list = new EditableProperty[5];
+			_info.setter=(a,b)=>{((AICommand_Stand)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_Stand) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_Stand)b).priority=((AICommand_Stand)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Stand)a).updateInterval = (float) b;};
+			_info.getter = a =>((AICommand_Stand) a).updateInterval;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_Stand)b).updateInterval=((AICommand_Stand)a).updateInterval;};
+			list[1] = new EditableProperty("updateInterval",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Stand)a).standModePercent = (float) b;};
+			_info.getter = a =>((AICommand_Stand) a).standModePercent;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_Stand)b).standModePercent=((AICommand_Stand)a).standModePercent;};
+			list[2] = new EditableProperty("standModePercent",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Stand)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_Stand) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_Stand)b).useReplace=((AICommand_Stand)a).useReplace;};
+			list[3] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_Stand)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_Stand) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_Stand)b).replaceLua=((AICommand_Stand)a).replaceLua;};
+			list[4] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+		private void AICommand_SteerMove_PropertyWrap(){
+			Type t = typeof(AICommand_SteerMove);
+			EditableProperty[] list = new EditableProperty[9];
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).priority = (int) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).priority;
+			_info.propertyType = typeof(int);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).priority=((AICommand_SteerMove)a).priority;};
+			list[0] = new EditableProperty("priority",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).mass = (float) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).mass;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).mass=((AICommand_SteerMove)a).mass;};
+			list[1] = new EditableProperty("mass",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).maxSpeed = (float) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).maxSpeed;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).maxSpeed=((AICommand_SteerMove)a).maxSpeed;};
+			list[2] = new EditableProperty("maxSpeed",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).maxForce = (float) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).maxForce;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).maxForce=((AICommand_SteerMove)a).maxForce;};
+			list[3] = new EditableProperty("maxForce",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).arriveThreshold = (float) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).arriveThreshold;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).arriveThreshold=((AICommand_SteerMove)a).arriveThreshold;};
+			list[4] = new EditableProperty("arriveThreshold",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).duration = (float) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).duration;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).duration=((AICommand_SteerMove)a).duration;};
+			list[5] = new EditableProperty("duration",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).lastElasity = (float) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).lastElasity;
+			_info.propertyType = typeof(float);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).lastElasity=((AICommand_SteerMove)a).lastElasity;};
+			list[6] = new EditableProperty("lastElasity",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).useReplace = (bool) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).useReplace;
+			_info.propertyType = typeof(bool);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).useReplace=((AICommand_SteerMove)a).useReplace;};
+			list[7] = new EditableProperty("useReplace",_info);
+			EditableProperty.AddProperties(t,list);
+			_info.setter=(a,b)=>{((AICommand_SteerMove)a).replaceLua = (string) b;};
+			_info.getter = a =>((AICommand_SteerMove) a).replaceLua;
+			_info.propertyType = typeof(string);
+			_info.copier=(a,b)=>{((AICommand_SteerMove)b).replaceLua=((AICommand_SteerMove)a).replaceLua;};
+			list[8] = new EditableProperty("replaceLua",_info);
+			EditableProperty.AddProperties(t,list);
+		}
+	}
+}

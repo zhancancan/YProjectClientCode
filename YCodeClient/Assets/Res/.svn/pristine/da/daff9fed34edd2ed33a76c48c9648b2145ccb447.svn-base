@@ -1,0 +1,25 @@
+
+require "TypeDataInitor"
+local class 		= require "Class"
+local base			= require "SingleProxy"--todo
+local this 			= class("Proxy_CharacterProperty",base)
+local manager 		= require "MessageManager"
+local log 			= require "Logger"
+
+function this:ctor()
+	self.__tostring=function()return "[Proxy_CharacterProperty]" end
+	self._inited=false
+end
+
+
+function this:pushData(buffer,serverId)
+	self:__push(buffer,serverId,self._inited)
+	log:log("Proxy_CharacterProperty pushData todo")
+	if not self._inited then
+		-- local c = require "AppCenter";
+		
+		self._inited=true
+	end
+end
+
+return this

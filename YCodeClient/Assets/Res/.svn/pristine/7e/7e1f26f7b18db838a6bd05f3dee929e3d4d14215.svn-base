@@ -1,0 +1,13 @@
+local this={}
+_G["AppCenter"]=this
+this.playerId="-1"
+require "DefNamespace"
+this.localData=_G["LocalData"].instance
+
+--the info object from native sdk
+this.sdkInfo=nil
+
+--this info object from getconfig,@see LoginAct_GetConfig.lua
+this.configInfo=nil
+
+return this

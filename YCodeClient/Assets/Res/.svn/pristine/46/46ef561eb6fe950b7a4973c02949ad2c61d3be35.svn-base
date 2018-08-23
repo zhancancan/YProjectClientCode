@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad18b649ae94854cbb8a389ab682166, type: 3}
+  m_Name: ArtFont_Number_0_mc
+  m_EditorClassIdentifier: 
+  sprites:
+  - sprite: {fileID: 21300022, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 546
+      y: 0
+      width: 43
+      height: 61
+    key: +
+  - sprite: {fileID: 21300026, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 478
+      y: 0
+      width: 17
+      height: 61
+    key: ','
+  - sprite: {fileID: 21300020, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 499
+      y: 0
+      width: 43
+      height: 61
+    key: '-'
+  - sprite: {fileID: 21300024, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 458
+      y: 0
+      width: 16
+      height: 61
+    key: .
+  - sprite: {fileID: 21300004, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 0
+      width: 43
+      height: 61
+    key: 0
+  - sprite: {fileID: 21300000, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 0
+      width: 26
+      height: 61
+    key: 1
+  - sprite: {fileID: 21300018, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 411
+      y: 0
+      width: 44
+      height: 61
+    key: 3
+  - sprite: {fileID: 21300002, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 0
+      width: 46
+      height: 61
+    key: 2
+  - sprite: {fileID: 21300014, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 317
+      y: 0
+      width: 46
+      height: 61
+    key: 4
+  - sprite: {fileID: 21300012, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 268
+      y: 0
+      width: 46
+      height: 61
+    key: 5
+  - sprite: {fileID: 21300006, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 43
+      height: 61
+    key: 6
+  - sprite: {fileID: 21300010, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 0
+      width: 42
+      height: 61
+    key: 7
+  - sprite: {fileID: 21300008, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 0
+      width: 44
+      height: 61
+    key: 8
+  - sprite: {fileID: 21300016, guid: 6a2b1ca377a231a4aa01d074c4ef4acb, type: 3}
+    rect:
+      serializedVersion: 2
+      x: 366
+      y: 0
+      width: 42
+      height: 61
+    key: 9
+  frameRate: 0

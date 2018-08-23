@@ -1,0 +1,93 @@
+local this={}
+local med
+local manager = require "MessageManager"
+
+
+require "AppCenter"
+local app = _G["AppCenter"]
+require "TimeFormat"
+local TimeFormat =_G["TimeFormat"]
+require "EventType"
+local TableEvent  = _G["TableEvent"]
+
+
+
+---------------------------------item-------------------------------------------------
+
+local channelItem={}
+function channelItem.draw(_,cell,data)
+	cell:SetString("txt",data.name)
+	cell:SetActive("redPoint",data.unread>0)
+end
+
+
+function channelItem.onInit(_,cell)
+	cell:SetClickTrigger("img")
+end
+
+
+local messageItem={}
+function messageItem.pickPrefab(_,data,_)
+	if data.isTime then return 0
+	elseif data.senderId==app.playerId and data.msgType==0 then return 1
+	elseif data.senderId~=app.playerId and data.msgType==0 then return 2
+	elseif data.senderId~=app.playerId and data.msgType==1 then return 3
+	else return 4
+	end
+end
+
+function messageItem.draw(_,cell,data)
+	if not manager then manager = require "MessageManager" end
+	if data.isTime then
+		cell:SetString("txt",TimeFormat.format(data.time*0.001,TimeFormat.hh_mm))
+	else
+		cell:SetString("txt",data.senderName)
+		cell:SetString("richTxt",manager.getDescription(data,false))
+	end
+end
+
+------------------------------------------mediator---------------------------------------------
+
+local currentChannel
+local channelPane
+
+local function onMessageUpdate()
+	-- local a = manager.get(currentChannel)
+	-- for i=1,#a do
+	-- 	print(a[i].msgString)
+	-- end
+	med:SetList("pane_1",manager.get(currentChannel))
+	med:SetFloat("pane_1",1)
+	med:SetList("pane_0", manager.getChannels())
+end
+local function onChannelChange(_,evt)
+	currentChannel=evt.data
+	onMessageUpdate()
+end
+
+function this.show()
+	if not currentChannel then
+		local a = manager.getChannels()
+		currentChannel = a[1]
+	end
+	manager:addListener(TableEvent.UPDATE,this,onMessageUpdate)
+	onMessageUpdate()
+	channelPane.selectedData=currentChannel
+end
+
+function this.hide()
+	med:SetList("pane_0",nil)
+	med:SetList("pane_1",nil)
+	manager:removeListener(TableEvent.UPDATE,this,onMessageUpdate)
+end
+
+function this.initView(_,mediator)
+	med=mediator
+	channelPane = med:AddListener("pane_0",onChannelChange)
+	med:SetPaneFactory("pane_0",channelItem)
+	med:SetPaneFactory("pane_1",messageItem)
+end
+
+
+
+return this;

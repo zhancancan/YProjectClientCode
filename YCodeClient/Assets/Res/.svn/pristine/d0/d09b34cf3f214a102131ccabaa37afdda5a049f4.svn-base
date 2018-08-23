@@ -1,0 +1,121 @@
+local DebugWords = {MSG={},FUNCS={}}
+
+local _call = {}
+local manager = require "MessageManager"
+require "DefNamespace"
+PanelManager = _G["PanelManager"]
+
+
+function DebugWords.InitMsg()
+
+	local t = {}
+	table.insert(t,{key="HELP",id=1,name="Show Cmd Orders",notMenu=1})
+	table.insert(t,{key="SCENE",name="Open Scene List",func=_call.OpenSceneList})
+	table.insert(t,{key="ROLE",name="Show Role List",func=_call.ShowRoleList})
+	table.insert(t,{key="LUATEST",name="Open lua script input",func=_call.OpenLuaScriptTest})
+	table.insert(t,{key="GOLD",name="Change Gold",notMenu=1,func=DebugWords.FUNCS.GOLD})
+
+	----------
+	DebugWords.MSG = t
+end
+
+function DebugWords.GetFormatMsgList()
+	local t = {}
+	for i,v in ipairs(DebugWords.MSG) do
+		if v.notMenu and v.notMenu > 0 then
+		else
+			table.insert(t,v)
+		end
+	end
+	return t
+end
+
+function DebugWords.HoldFunc(msg)
+	if msg.func and type(msg.func) == "function" then
+		msg.func()
+	end
+end
+
+--------------------------FUNCS
+----input cmd +funcName
+--open Menu
+function DebugWords.FUNCS.OPEN()
+	PanelManager.Close("ChatPanel_social_subb")
+	PanelManager.Open("PromptPanel_cmdList")
+end
+function DebugWords.FUNCS.GOLD( pk,pv )
+	pv = tonumber(pv) or 500
+	local str = "Gold"
+	if pk == "GOLD" then
+		str = "Money"
+	elseif pk == "CRYSTAL" then
+		str = "CRYSTAL"
+	end
+	local s = (pv>0) and "+" or ""
+	str = str..s..pv
+	Logger:log(str)
+end
+
+------call func
+--show message in chat panel
+--base 
+function DebugWords.ShowSystemMessage(debugMode,pk,pv)
+	local k,v = pk,pv
+	local content
+
+	if pk == "HELP" then
+		content = "CMD list:\nOPEN:Open CMD Menu\n"
+		for i,item in pairs(DebugWords.MSG) do
+			-- print(item.key)
+			content = content..item.key.." : "..item.name.."\n"
+		end
+	else
+		if not k then
+			content = "Do cmd: %s"
+		else
+			content = "Do CMD: %s  And Get Value: %s"
+		end
+
+		content = string.format(content,k,v)
+	end
+	
+
+
+	local msg = {channel = Channels.SYSTEM,senderId = "-999",name = "DebugControl",
+				msgString = content,msgType = 0,time = SystemTime.time}
+	local m = setmetatable({},{__index=msg})
+	m.senderName = "DebugLv."..debugMode
+	manager.add(m)
+end
+-------
+--match with cmd +key
+---show scene
+function _call.OpenSceneList(pk,pv)
+	PanelManager.Close("PromptPanel_cmdList")
+	PanelManager.Close("ChatPanel_social_subb")
+	PanelManager.Open("PromptPanel_sceneList")
+	
+end
+
+---show lua test script
+function _call.OpenLuaScriptTest(pk,pv)
+	PanelManager.Close("PromptPanel_cmdList")
+	PanelManager.Close("ChatPanel_social_subb")
+	PanelManager.Open("PromptPanel_luaScript")
+	
+end
+
+--- show role
+function _call.ShowRoleList(pk,pv)
+	print("Open SwitchRolePanel_preloading")
+	PanelManager.Close("ChatPanel_social_subb")
+	PanelManager.Close("PromptPanel_cmdList")
+	PanelManager.Open("SwitchRolePanel_preloading")
+	-- PanelManager.Open("CreatRole_0_preloading")
+	
+end
+
+---------------------------init
+DebugWords.InitMsg()
+
+return DebugWords

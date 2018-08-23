@@ -1,0 +1,15 @@
+local this = {}
+local med
+
+function this.show()
+	
+end
+
+function this.hide()
+
+end
+
+function this:initView(mediator)
+	med = mediator
+end
+return this

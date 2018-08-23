@@ -1,0 +1,99 @@
+﻿using LuaInterface;
+using pure.ai.aimachine.runner;
+using pure.database.structure.tree;
+using pure.entity.animation;
+using pure.entity.interfaces;
+using pure.refactor.property;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using pure.ticker;
+using pure.utils.mathTools;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.STEER_MOVE)]
+    public class AICommand_SteerMove : CpxAction {
+        [Editable(0)]
+        public float mass = 1;
+
+        [Editable(1)]
+        public float maxSpeed = 1.2f;
+
+        [Editable(2)]
+        public float maxForce = 2;
+
+        [Editable(3)]
+        public float arriveThreshold = 0.1f;
+
+        [Editable(4)]
+        public float duration = 0.6f;
+
+        public override RpxAction GetRuntime() {
+            return RpxPool<Runtime>.Get().SetSource(this);
+        }
+
+        private class Runtime : ModelCommandImpl<AICommand_SteerMove>, ISpeedSource {
+            //private static Steering prevRunner;
+
+            //private Steering _runner;
+            private long _duetime;
+
+            public override void Enter() {
+                //long now = SystemTime.GetTime();
+                //long extra = (long) (cpx.duration*1000);
+                //_duetime = now + extra;
+                //model.SetAnimator(AnimatorType.IS_RUNNING, AnimatorControllerParameterType.Bool, 1);
+                //if (prevRunner != null) {
+                //    _runner = prevRunner;
+                //    prevRunner = null;
+                //} else {
+                //    _runner = new Steering();
+                //    _runner.Set(model);
+                //    _runner.Set(this, cpx.maxForce, cpx.mass, cpx.arriveThreshold);
+                //}
+                //LuaTable tb = machine.GetRuntimeData<LuaTable>(CpxState.TEMP_DATA);
+                //Vector3 dest = GetPosition(tb, "forcast");
+                //Vector3 pos = GetPosition(tb, "position");
+                //Vector3 dir = dest - pos;
+                //VectorMath.Truncate(ref dir, model.speed*0.1f);
+                //_runner.SetDestiny(dir + pos);
+                //_runner.Enter();
+                //_status = CompStatus.RUNING;
+            }
+
+            public override void UpdateNow(long now) {
+                //if (_runner != null) {
+                //    _runner.UpdateNow(now);
+                //    if (_runner.finished) {
+                //        ClearRunner();
+                //    }
+                //}
+            }
+
+            private void ClearRunner() {
+                //if (_runner != null) {
+                //    _runner.Exit();
+                //    _runner = null;
+                //}
+            }
+
+            public override void Exit() {
+                //prevRunner = _runner;
+                ClearRunner();
+                base.Exit();
+                RpxPool<Runtime>.Release(this);
+            }
+
+            private static Vector3 GetPosition(LuaTable tb, string param) {
+                LuaTable p = (LuaTable) tb[param];
+                return new Vector3(
+                    p.RawGet<string, float>("x"),
+                    p.RawGet<string, float>("y"),
+                    p.RawGet<string, float>("z"));
+            }
+
+            public float speed { get { return model.speed*cpx.maxSpeed; } }
+            public override bool running { get { return SystemTime.GetTime() <= _duetime; } }
+        }
+    }
+}

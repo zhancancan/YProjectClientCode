@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_yingzheng_skill_1" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_yingzheng_skill_1.tree" fileName="Fx_yingzheng_skill_1.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="1.17" durationScaleType="0" actionType="0" anim="Skill_1" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/yingzheng/EP_yingzheng_0_sp/EP_yingzheng_0_skill1.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="1.18" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0.75" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/yingzheng/EP_yingzheng_0_sp/EP_yingzheng_0_skill1_zhaohuan.prefab" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="-1" minArea="0:0:0" maxArea="0:0:0" offset="0:0:2" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.5" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0.57" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/yingzheng/EP_yingzheng_0_sp/EP_qinbing_0_jump.prefab" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="-1" minArea="0:0:0" maxArea="0:0:0" offset="0:0:2" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.43" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="1" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="True" editName="" cellType="seq" groupPhase="0" time="0" timeScaleType="0">
+          <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+            <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/yingzheng/EP_yingzheng_0_sp/EP_qinbing_0_skill0_bullet.prefab" />
+            <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="1" minArea="0:0:0" maxArea="0:0:0" offset="0:0:2" />
+            <cell treeOpen="False" editName="" cellType="fly" groupPhase="0" speed="20" speedScaleType="0" orientMode="0" direction="0" orientDir="0" />
+            <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="2" minArea="0:0:0" maxArea="0:0:0" offset="0:0:-2" />
+            <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.1" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+          </cell>
+          <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="1" destinyMode="1" qtyMode="0">
+            <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/yingzheng/EP_yingzheng_0_sp/EP_qinbing_0_skill1.prefab" />
+            <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="1" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+          </cell>
+        </cell>
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

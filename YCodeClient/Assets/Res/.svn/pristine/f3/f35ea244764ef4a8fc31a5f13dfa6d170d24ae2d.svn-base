@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="bt_test_1" type="BehaviorTree" fileName="bt_test_1.tree" fileURL="Assets/Data/Source/Tree/Behavior/bt_test_1.tree">
+  <state name="MainTreeEditorState" offset="0:0" indent="10" toolTip="False" zoom="1" />
+  <windows area="0:22:262:602" flexible="0.2" visible="True" max="300" min="100" />
+  <windows area="262:22:786.0001:602" flexible="0.6" visible="True" max="3000" min="300" />
+  <windows area="1048:22:262:602" flexible="0.2" visible="True" max="300" min="100" />
+  <cell contentOpen="False" treeOpen="True" cellType="rootcell">
+    <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel">
+      <cell contentOpen="False" treeOpen="False" cellType="act_npcChase" />
+    </cell>
+    <cell contentOpen="False" treeOpen="True" cellType="Pal_Seq">
+      <cell contentOpen="False" treeOpen="False" cellType="act_npcDead" />
+      <cell contentOpen="False" treeOpen="False" cellType="con_parameter" compareType="2" valueType="0" paramType="0" denominatorType="0" targetValue="0" />
+    </cell>
+  </cell>
+</Canvas>

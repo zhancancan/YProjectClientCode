@@ -1,0 +1,129 @@
+﻿using LuaInterface;
+using pure.ai.aimachine.runner;
+using pure.database.structure.tree;
+using pure.entity.animation;
+using pure.entity.interfaces;
+using pure.refactor.property;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using pure.ticker;
+using pure.utils.mathTools;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.STEER_MOVE)]
+    public class AICommand_SteerMove : CpxAction {
+        [Editable(0)]
+        public float mass = 1;
+
+        [Editable(1)]
+        public float maxSpeed = 1.2f;
+
+        [Editable(2)]
+        public float maxForce = 2;
+
+        [Editable(3)]
+        public float arriveThreshold = 0.1f;
+
+        [Editable(4)]
+        public float duration = 0.6f;
+
+        public override RpxAction GetRuntime() {
+            return RpxPool<Runtime>.Get().SetSource(this);
+        }
+
+        private class Runtime : ModelCommandImpl<AICommand_SteerMove>, ISpeedSource {
+            private long _duetime;
+            private Steering _steer;
+
+            private long _prevTime;
+
+            private Vector3 _destiny;
+            private Vector3 _start;
+            private Vector3 _calcPos;
+            private Vector3 _position;
+
+            private bool _isLast;
+            private bool _arrive;
+
+            public override void Enter() {
+                long now = SystemTime.GetTime();
+                long extra = (long) (cpx.duration*1000);
+                _duetime = now + extra;
+                model.SetAnimator(AnimatorType.IS_RUNNING, AnimatorControllerParameterType.Bool, 1);
+                _steer = model.GetAttach<Steering>() ?? model.Attach(new Steering());
+                _start = model.position;
+                _calcPos = _start;
+                _position = _start;
+                LuaTable tb = machine.GetRuntimeData<LuaTable>(CpxState.TEMP_DATA);
+                Vector3 dest = GetPosition(tb, "forcast");
+                Vector3 pos = GetPosition(tb, "position");
+                _isLast = (bool) tb["isLast"];
+                if (_isLast) {
+                    _destiny = pos;
+                } else {
+                    Vector3 dir = dest - pos;
+                    VectorMath.Truncate(ref dir, model.speed*0.1f);
+                    _destiny = dir + pos;
+                }
+                _prevTime = now;
+                _status = CompStatus.RUNING;
+            }
+
+            public override void UpdateNow(long now) {
+                if (now > _duetime) {
+                    _status = CompStatus.COMPLETE;
+                } else {
+                    Calc(now - _prevTime);
+                    _prevTime = now;
+                }
+            }
+
+            private void Calc(long delta) {
+                if (!_arrive) {
+                    float passtime = delta*0.001f;
+                    float maxSpeed = model.speed*cpx.maxSpeed;
+                    Vector3 desireVelocity = (_destiny - _calcPos).normalized*maxSpeed - _steer.velocity;
+                    _steer.force += desireVelocity;
+                    VectorMath.Truncate(ref _steer.force, cpx.maxForce);
+                    _steer.force /= cpx.mass;
+                    _steer.velocity += _steer.force*passtime;
+                    VectorMath.Truncate(ref _steer.velocity, maxSpeed);
+                    Vector3 v = _steer.velocity*passtime;
+                    _calcPos += v;
+                    _position = v;
+                    float lerp = (_calcPos - _start).magnitude/(_destiny - _start).magnitude;
+                    lerp = lerp > 1 ? 1 : lerp;
+                    _position.y = _start.y + (_destiny.y - _start.y)*lerp;
+                    model.MoveTo(_position);
+                    model.orientation = VectorMath.CalcOrientation(_steer.velocity);
+                    if ((_calcPos - _destiny).magnitude < cpx.arriveThreshold) {
+                        _arrive = true;
+                    }
+                } else if (_isLast) {
+                    _status = CompStatus.COMPLETE;
+                }
+            }
+
+            public override void Exit() {
+                if (_isLast && _steer != null) {
+                    _steer.Reset();
+                }
+                _steer = null;
+                base.Exit();
+                RpxPool<Runtime>.Release(this);
+            }
+
+            private static Vector3 GetPosition(LuaTable tb, string param) {
+                LuaTable p = (LuaTable) tb[param];
+                return new Vector3(
+                    p.RawGet<string, float>("x"),
+                    p.RawGet<string, float>("y"),
+                    p.RawGet<string, float>("z"));
+            }
+
+            public float speed { get { return model.speed*cpx.maxSpeed; } }
+            //public override bool running { get { return SystemTime.GetTime() <= _duetime; } }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MachineChart fileName="subPlayerMachine_0" fileURL="Assets/Res/Data/Source/Machine/subPlayerMachine_0.machine" chartType="AIMachine" panOffset="24:-97.39996" zoom="1">
+  <machine uuid="1532014646095" name="base machine">
+    <state uuid="1532014646097" stateName="Exit State" isDefault="False" priority="0" type="exit" position="26:-214" />
+    <state uuid="1532014646096" stateName="Any State" isDefault="False" priority="0" type="any" position="-72:-102">
+      <transition uuid="1532014698049" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1532014646096" destiny="1532014693482">
+        <condition uuid="1532021761766" score="0" compare="True" conditionType="conditionCpxInited" />
+      </transition>
+    </state>
+    <state uuid="1532014654391" stateName="Init" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-294.5:-66.5">
+      <action uuid="1532014881164" priority="0" property="" type="1" actionType="aiInitRenderer" />
+      <action uuid="1532022609448" priority="0" property="horse" requireBone="" boneMode="0" support="B_mount" actionType="aiInitChildRenderer" />
+      <action uuid="1532014888435" priority="0" property="body" requireBone="" boneMode="2" support="B_weapon" actionType="aiInitChildRenderer" />
+      <action uuid="1532021450863" priority="0" property="weapon" requireBone="" boneMode="1" support="" actionType="aiInitChildRenderer" />
+      <action uuid="1532014926431" priority="0" prefab="Assets/Res/Arts/UI/Panel/Hud_SP/HostHud.prefab" lua="Assets/Res/Lua/hud/NpcHud_0.lua|fb2790c2e63179348a620b3972d79ddc" property="" actionType="aiInitLabel" />
+      <action uuid="1532015000494" priority="0" value="True" actionType="actionSetInited" />
+    </state>
+    <state uuid="1532014693482" stateName="Stand" isDefault="True" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-194.5:81.5">
+      <transition uuid="1532014699613" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="1" source="1532014693482" destiny="1532014654391">
+        <condition uuid="1532014835700" score="0" compare="False" conditionType="conditionCpxInited" />
+      </transition>
+      <action uuid="1532014859250" priority="0" standModePercent="0.3" updateInterval="10" actionType="cmdAct:stand" />
+    </state>
+    <state uuid="1532014703135" stateName="Move" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-95.5:181.5">
+      <action uuid="1532428063475" priority="0" elastic="0.2" maxSpeed="1.2" duration="1" updateThreshold="3" actionType="cmdAct:elasticMove" />
+    </state>
+  </machine>
+</MachineChart>

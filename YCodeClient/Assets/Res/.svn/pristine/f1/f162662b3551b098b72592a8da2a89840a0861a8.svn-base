@@ -1,0 +1,51 @@
+local this={}
+local med
+
+local TypeClasses	= require "TypeClasses"
+local typeDB		= require "TypeDB"
+local ns 			= require "CSNamespace"
+
+local error 		= require "ErrorCenter"
+
+local questData		= require "Data_UserQuestState"
+
+
+--Item
+local item={}
+function item.draw(_,cell,data,index)
+	print(data.id)
+end
+
+function item.onInit(_,cell)
+	-- cell:SetClickTrigger("img")
+end
+
+
+local function onBtnClick(btn)
+end
+
+local function onItemClick(_,evt)
+
+end
+
+local function  onErrorReceived(err)
+	print("create med", err.code, err.msg)
+end
+
+--Mediator
+function this.show()
+	local subTask = typeDB.toArray(TypeClasses.TYPE_SUBQUEST)
+	med:SetList("pane",subTask)
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+end
+
+function this.initView(_,meditor)
+	med=meditor
+	med:SetPaneFactory("pane",item)
+	med:AddListener("pane",onItemClick)
+end
+
+return this

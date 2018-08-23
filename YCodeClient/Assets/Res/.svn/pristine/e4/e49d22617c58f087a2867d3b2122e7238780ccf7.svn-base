@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+<!--	<message name="RewardGroup" 	indexField="id">
+		<field name="id" 			type="string"/>
+	</message>
+	
+	<message name="RewardUnit" 		indexField="id|group,type,props">
+		<field name="id"			type="string"/>
+		<field name="group" 		type="string"/>
+		<field name="type" 			type="int" />
+		<field name="props" 		type="string"/>
+		<field name="resourceType" 	type="int"/>
+		<field name="valueType" 	type="int"/>
+		<field name="value" 		type="float"/>
+	</message>
+ 
+	<message name="ResourceType" 	indexField="type">
+		<field name="type" 			type="int"/>
+		<field name="name" 			type="lang"/>
+		<field name="description" 	type="lang"/>
+		<field name="icon" 			type="Icon"/>
+		<field name="bigIcon" 		type="Icon" />
+		<field name="color" 		type="Color"/>
+		<field name="usageType" 	type="int"/>
+	</message>
+	
+	<message name="Color" 			indexField="id">
+		<field name="id" 			type="string"/>		
+		<field name="name" 			type="lang"/>
+		<field name="color" 		type="string"/>
+ 	</message>
+
+	<message name="Icon" 			indexField="id">
+		<field name="id" 			type="string"/>
+		<field name="file" 			type="string"/>	 
+ 	</message>
+	<message name="Props" 			indexField="id">
+		<field name="id" 			type="string"/>	
+		<field name="name" 			type="lang"/> 
+		<field name="description" 	type="lang"/>
+		<field name="icon" 			type="Icon"/>
+		<field name="color" 		type="Color"/>
+ 	</message>-->
+</root>
+

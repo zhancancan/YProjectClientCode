@@ -1,0 +1,40 @@
+local class 		= require "Class"
+local this 			= class("Data_SkillObj",require "Data")
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+local table
+
+
+local function ensureTable()
+	if not table then table = db.getTable(TypeClasses.TYPE_SKILL) end
+end
+local function getter(t,k)
+	if k == "typeData" then
+		ensureTable()
+		local sk = table:selectOne({id = t.skillId})
+		if sk then t.typeData = sk end
+		return sk
+	elseif k == "name"  then
+		if t.typeData then return t.typeData.name end
+	elseif k =="icon" then
+		if t.typeData then return t.typeData.icon end
+	end
+	return nil
+end
+
+local meta = { __index =  getter}
+
+function this:ctor()
+	setmetatable(self._data, meta)
+	self.fireTime = 0
+end
+
+function this:onSelfChange(p)
+	if p == "skillId" then
+		self.typeData = nil
+	end
+end
+
+
+
+return this

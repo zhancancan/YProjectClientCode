@@ -1,0 +1,70 @@
+﻿using System;
+using LuaInterface;
+using pure.ai.aimachine.runner;
+using pure.asset.manager.utils;
+using pure.database.structure.tree;
+using pure.entity.interfaces;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using pure.treeComp.firefx.core;
+using pure.utils.debug;
+using pure.utils.mathTools;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.HEALTH)]
+    public class AICommand_Health : CpxAction {
+        public override RpxAction GetRuntime() {
+            return RpxPool<Runtime>.Get().SetSource(this);
+        }
+
+        private class Runtime : ModelCommandImpl<AICommand_Health> {
+
+            protected override void OnEnter() {
+                Debug.Log("aicmd health onEnter todo");
+                _status = CompStatus.COMPLETE;
+                LuaTable tb = machine.GetRuntimeData<LuaTable>(CpxState.TEMP_DATA);
+                if (tb == null) {
+                    GlobalLogger.LogError("no setting data retrieved");
+                    _status = CompStatus.COMPLETE;
+                    return;
+                }
+                int[] changeValues;
+                if(!tb.TryGet("changeValue",out changeValues)) {
+                    GlobalLogger.LogError(string.Format("{0} require changeValue", this));
+                    _status = CompStatus.COMPLETE;
+                    return;
+                }
+                Vector3 pos;
+                if(!tb.TryGet("position",out pos)) {
+                    GlobalLogger.LogError(string.Format("{0} require position", this));
+                    _status = CompStatus.COMPLETE;
+                    return;
+                }
+                string[] prefab;
+                if (!tb.TryGet("prefab", out prefab)) {
+                    GlobalLogger.LogError(string.Format("{0} require type", this));
+                    _status = CompStatus.COMPLETE;
+                    return;
+                }
+
+
+                FlyTextEntity flyTextEntity = new FlyTextEntity();
+                flyTextEntity.Init(changeValues, pos, prefab);
+
+
+                _status = CompStatus.COMPLETE;
+
+            }
+
+
+            private void OnComplete() {
+                _status = CompStatus.COMPLETE;
+            }
+
+            protected override void OnExit() {
+                RpxPool<Runtime>.Release(this);
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_baonujijia_skill_0" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_baonujijia_skill_0.tree" fileName="Fx_baonujijia_skill_0.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="1" durationScaleType="0" actionType="0" anim="Skill_0" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="4" interval="0.65" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/baonujijia/EP_baonujijia_sp/EP_baonujijia_skill_0.prefab" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="-1" minArea="0:0:0" maxArea="0:0:0" offset="-1.4:1.8:4.8" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.5" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0.3" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="4" interval="0.65" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/baonujijia/EP_baonujijia_sp/EP_baonujijia_skill_0.prefab" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="-1" minArea="0:0:0" maxArea="0:0:0" offset="1.4:1.8:4.8" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.5" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0.32" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="4" interval="0.65" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/baonujijia/EP_baonujijia_sp/EP_baonujijia_skill_0_bullet.prefab" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="-1" minArea="0:0:0" maxArea="0:0:0" offset="-1.4:1.8:5" />
+        <cell treeOpen="False" editName="" cellType="fly" groupPhase="0" speed="35" speedScaleType="0" orientMode="0" direction="0" orientDir="0" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0.62" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="4" interval="0.65" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/baonujijia/EP_baonujijia_sp/EP_baonujijia_skill_0_bullet.prefab" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="-1" minArea="0:0:0" maxArea="0:0:0" offset="1.4:1.8:4.8" />
+        <cell treeOpen="False" editName="" cellType="fly" groupPhase="0" speed="45" speedScaleType="0" orientMode="0" direction="0" orientDir="0" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

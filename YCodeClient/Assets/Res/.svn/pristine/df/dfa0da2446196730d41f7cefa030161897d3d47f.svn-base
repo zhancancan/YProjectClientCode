@@ -1,0 +1,65 @@
+﻿using LuaInterface;
+using pure.database.structure.tree;
+using pure.entity.animation;
+using pure.refactor.property;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.MOVE)]
+    public class AICommand_Move : CpxAction {
+        [Editable(0)]
+        public float threshold;
+
+        public override RpxAction GetRuntime() {
+            return new Runtime(this);
+        }
+
+        private class Runtime : ModelCommandImpl {
+            private long _prevTime = -1;
+            private Vector3 _dest;
+            private float _threshold;
+
+            internal Runtime(AICommand_Move s) : base(s) {
+                _threshold = s.threshold;
+            }
+
+            public override void Enter() {
+                model.SetAnimator(AnimatorType.IS_RUNNING, AnimatorControllerParameterType.Bool, 1);
+                LuaTable tb = machine.GetRuntimeData<LuaTable>(CpxState.TEMP_DATA);
+                Vector3 np = GetPosition(tb, "position");
+                _dest = GetPosition(tb, "forcast");
+                Vector3 p = model.position;
+                float d = (np - p).magnitude;
+                if (d > _threshold) model.MoveTo(np);
+                model.LookAt(_dest);
+                _status = CompStatus.RUNING;
+            }
+
+            public override void UpdateNow(long now) {
+                if (!running) return;
+                if (_prevTime == -1) _prevTime = now;
+                float pass = (now - _prevTime)*0.001f*model.speed;
+                Vector3 p = model.position;
+                Vector3 dir = _dest - p;
+                if (pass >= dir.magnitude) {
+                    model.MoveTo(_dest);
+                    _status = CompStatus.COMPLETE;
+                } else {
+                    p += dir.normalized*pass;
+                    model.MoveTo(p);
+                }
+            }
+
+            public override void Exit() {
+            }
+
+            private static Vector3 GetPosition(LuaTable tb, string param) {
+                LuaTable p = (LuaTable) tb[param];
+                return new Vector3(p.RawGet<string, float>("x"), p.RawGet<string, float>("y"),
+                    p.RawGet<string, float>("z"));
+            }
+        }
+    }
+}

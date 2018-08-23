@@ -1,0 +1,59 @@
+local class 	= require "Class"
+local base 		= require "Data_Action"
+local this 		= class("Data_CmdCast",base)
+local tools 	= require "CommandUtils"
+local tdb		= require "TypeDB"
+local TypeClasses 	= require "TypeClasses"
+local gameticker	= require "GameTicker"
+
+local function shuffle(tb)
+	math.randomseed(gameticker.time)
+	local len = #tb
+	for i=len,1,-1 do
+		local index = math.random(1,len)
+		local temp = tb[i]
+		tb[i] = tb[index]
+		tb[index] = temp
+	end
+
+	return tb
+end
+
+function this:ctor()
+	self.time = 0
+end
+-- - is self
+function this:execute(_)
+	print ("Scene Health to do:"..self.id)
+	-- to do
+	local typeData = tdb.selectOne(TypeClasses.TYPE_BATTLEINFO,self.type)
+
+	local d = self.table:selectOne(self.id)
+	if d and d.entity then
+		self.position = tools.toVector3(self.position)
+
+		local tb = self.changeValue
+		local max = typeData.maxCount
+
+		if #self.changeValue > max then
+			--if tb is a number table--if not todo
+			table.sort( tb, function(a,b)
+				return a > b
+			end )
+			local temp = {}
+			for i=1,max do
+				temp[i] = tb
+			end
+			self.changeValue = temp
+		end
+
+		self.stateName = "ShowHealth"
+		d.entity:ChangeState(self,4)
+
+	end
+
+end
+
+
+
+return this

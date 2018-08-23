@@ -1,0 +1,28 @@
+local class 		= require "Class"
+local this 			=class("Data_Npc",require "Data")
+local Logger 		= require "Logger"
+local db 			= require "TypeDB"
+local classes 		= require "TypeClasses"
+
+local _meta = {
+	__index = function(t,k,v)
+		if not t._npc then
+			t._npc = db[classes.TYPE_NPC]._con._query["id"]._datas[t._data.npcId]
+			
+		end
+		if k == "name" then
+			t.name = t._npc.name
+			return t.name
+		end
+		
+	end
+
+}
+
+
+function this:ctor()
+	setmetatable(self, _meta)
+end
+
+
+return this

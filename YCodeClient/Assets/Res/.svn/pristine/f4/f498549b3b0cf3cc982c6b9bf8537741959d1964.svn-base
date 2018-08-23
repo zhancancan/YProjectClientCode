@@ -1,0 +1,28 @@
+local class 			= require "Class"
+local DataClasses		= require "DataClasses"
+local PropertyGroup		= require "PropertyGroup"
+local log  				= require"Logger"
+
+local this 				= class("Data_Character",require "Data")
+
+local instance
+
+function this:ctor()
+	if instance then
+		log.error("singleton error: Data_Character can create only once")
+		return
+	end
+	local pg = PropertyGroup.new(self,"property")
+	self._data.property = pg
+end
+
+function this:onSelfChange(p)
+	if p == "heroId" then
+		self.hero = self.dbase:selectOne(DataClasses.DATA_USERHERO,self.heroId)
+		self:invoke("hero")
+	end
+end
+
+
+instance = this.new()
+return instance

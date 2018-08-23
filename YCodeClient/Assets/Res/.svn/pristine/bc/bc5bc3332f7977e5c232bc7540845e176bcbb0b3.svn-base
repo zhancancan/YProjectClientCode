@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Panel" fileURL="Assets/Res/Data/Source/Tree/Panel/Panel.tree" fileName="Panel.tree" type="PanelManager">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="False" editName="" cellType="panelModule" module="Preloading" />
+    <cell treeOpen="False" editName="" cellType="panelModule" module="Main">
+      <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="ControlPanel_main" mediatorType="0" prefab="Assets/Res/Arts/UI/temp/Panel/controlPanel_main.prefab" layer="Bottom" sceneType="-1" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/main/ControlMediator_Main.lua|8c500503b678fcb4b9e06ba6462e6e76" />
+      </cell>
+      <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="JoystickPanel_main" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Main_SP/JoystickPanel_main.prefab" layer="Bottom" sceneType="-1" lifeMode="20" />
+      <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="expPanel_main" mediatorType="0" prefab="Assets/Res/Arts/UI/temp/Panel/activityPanel_main.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/main/ExpMediator_Main.lua|24cdde49ba37d034d81108168319350f" />
+      </cell>
+      <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="ChatPanel_main" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Main_SP/ChatPanel_main.prefab" layer="Bottom" sceneType="-1" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/main/ChatSimpleMediator.lua|fd6714e1e4377cb40b959d9ee9ecd032" />
+      </cell>
+    </cell>
+    <cell treeOpen="True" editName="" cellType="panelModule" module="Social">
+      <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="VoicePanel_social" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Social/ChatPanel_SP/VoicePanel_social.prefab" layer="Base" sceneType="0" lifeMode="20" />
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="ChatPanel_social" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Social/ChatPanel_SP/ChatPanel_social.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelAutoClose" policy="2" />
+        <cell treeOpen="True" editName="" cellType="panelChild_normal">
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_0" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/chat/ChatSubMediator0_Content.lua|25b7f565f7132ef4395c5dad3a1b29a4" />
+          </cell>
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_1" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/chat/ChatSubMediator1_EmoList.lua|2fbd54ce2b8696b41bf96c511d5e8f9f" />
+            <cell treeOpen="False" editName="" cellType="panelAutoClose" policy="2" />
+          </cell>
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_2" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/chat/ChatSubMediator2_Input.lua|1de4f823497086346a345f2f50011571" />
+          </cell>
+        </cell>
+        <cell treeOpen="True" editName="" cellType="panelChild_manual" />
+      </cell>
+      <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="ChatSettingPanel_social" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Social/ChatPanel_SP/ChatSettingPanel_social.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/chat/ChatSettingMediator.lua|1cb9b998835f7a445b886008523fd4b8" />
+        <cell treeOpen="False" editName="" cellType="panelAutoClose" policy="2" />
+        <cell treeOpen="False" editName="" cellType="panelOpenToObject" />
+      </cell>
+    </cell>
+    <cell treeOpen="True" editName="" cellType="panelModule" module="System">
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="DialogPanel_sys" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/System_SP/DialogPanel_sys.prefab" layer="Cover" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/module/dialog/DialogMediator.lua|24097bd83e63e6c4bb57818e060a7764" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="CustomDialogPanel_sys" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/System_SP/CustomDialogPanel_sys.prefab" layer="Cover" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/module/dialog/CustomDialogMediator.lua|13449c5264da4ee4eacf1ed6b90646cd" />
+        <cell treeOpen="True" editName="" cellType="panelChild_manual">
+          <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="sub_0" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20" />
+          <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="sub_1" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20" />
+        </cell>
+      </cell>
+    </cell>
+    <cell treeOpen="True" editName="" cellType="panelModule" module="Login">
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="LoginPanel_login" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Login_SP/LoginPanel_login.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="True" editName="" cellType="panelChild_stack" control="closeBtn" closeAsStackEmpty="False" autoOpenFirstChild="False">
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_0" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/login/LoginMediator_Sub_0.lua|94364be0614b2084a9508093bc752b7c" />
+          </cell>
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_1" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/login/LoginMediator_Sub_1.lua|4552ca608cc80de448d8fae85c28aea2" />
+          </cell>
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_2" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/login/LoginMediator_Sub_2.lua|2e7d4f46fe301f748b34c057c2cbc3e3" />
+          </cell>
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_3" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/login/LoginMediator_Sub_3.lua|8e39e808fcc4be34eb766ea0ce008c61" />
+          </cell>
+        </cell>
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/mvc/mediator/login/LoginMediator.lua|8ffe914b864ea874794ae870f023b34c" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

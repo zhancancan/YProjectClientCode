@@ -1,0 +1,27 @@
+﻿using mono.ui.hud;
+using mono.ui.so;
+using UnityEditor;
+
+namespace inspectors.ui {
+    [CustomEditor(typeof (Text3D))]
+    public class Insp_Text3D : Editor {
+        private SerializedProperty _color;
+
+        protected void OnEnable() {
+            _color = serializedObject.FindProperty("_color");
+        }
+
+        public override void OnInspectorGUI() {
+            Text3D t = target as Text3D;
+            if (!t) return;
+            serializedObject.Update();
+            t.spriteCollection =
+                (SpriteCollection)
+                    EditorGUILayout.ObjectField("Sprite", t.spriteCollection, typeof (SpriteCollection), false);
+            t.text = EditorGUILayout.TextField("Text", t.text);
+            EditorGUILayout.PropertyField(_color);
+            //t.size = EditorGUILayout.IntSlider("Size", t.size, 1, 100);
+            serializedObject.ApplyModifiedProperties();
+        }
+    }
+}

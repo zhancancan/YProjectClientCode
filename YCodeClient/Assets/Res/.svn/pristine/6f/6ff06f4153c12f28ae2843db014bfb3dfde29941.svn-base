@@ -1,0 +1,96 @@
+local class 			= require "Class"
+local base 				= require "EventDispatcher"
+local SocketForm 		= require "SocketForm"
+local CommandClasses 	= require "CommandClasses"
+
+local user				= require "Data_Character"
+
+local TypeClasses		= require "TypeClasses"
+local DataClasses		= require "DataClasses"
+
+local dbmgt 	  		= require "DataManager"
+local db		  		= dbmgt.dbase
+
+local GameTicker 		= require "GameTicker"
+local log				= require "Logger"
+
+
+
+local this = class("CharacterUseSkill",base).new()
+
+--todo
+local _meta={}
+local entity
+
+function _meta.doCast(skillId,position,orient,forcast)
+	log.log("do cast:",skillId)
+	log.log(position)
+	log.log(forcast)
+	local form = SocketForm()
+	form.method = CommandClasses.CmdCast
+	form.id = skillId
+	form.position = position
+	form.forcast = forcast
+	form.orient = orient
+	form:send()
+
+
+end
+
+function _meta.getEntity()
+	if not entity then
+		local t = db:getTable(DataClasses.DATA_SCENEOBJ)
+		local data = t:selectOne(user.id)
+		if data then
+			entity = rawget(data,"entity")
+		end
+	end
+	return entity
+
+end
+
+function this.tryCast(skillId)
+	--todo need judge state
+	local isChaos = false
+	log.log("try cast:"..skillId)
+
+	local skills = db:getTable(DataClasses.DATA_SKILLS)
+	if not skills then
+		log.error("not any skills exist")
+		return
+	end
+
+	local skill = skills:selectOne(function(v)
+		if v.skillId == skillId then
+			return true
+		end
+		return false
+	end)
+
+	if not skill then
+		log.error("not this skill exist:"..skillId)
+		return
+	else
+		local cd = tonumber(skill.cooldown)
+		local now = tonumber(GameTicker.time)
+		if cd <= now then
+			skill.cooldown =  skill.setToCooldown + now
+
+			local e = _meta.getEntity()
+			if e then
+				_meta.doCast(skillId,e.position,e.orientation,nil)
+			else
+				log.error("entity not found!")
+			end
+		else
+			log.log("skill is in CD!!!"..cd.."|now: "..now)
+
+		end
+	end
+
+
+
+
+end
+
+return this

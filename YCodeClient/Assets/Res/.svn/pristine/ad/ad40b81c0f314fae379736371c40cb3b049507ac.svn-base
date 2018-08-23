@@ -1,0 +1,86 @@
+﻿using System.Collections;
+using game.entity.game;
+using pure.asset.manager;
+using pure.net.socket;
+using pure.scene.pathFinder.cpp;
+using pure.ticker;
+using pure.utils.fileTools;
+using pure.utils.memory;
+using pure.utils.native;
+using registerWrap;
+using UnityEngine;
+#if UNITY_EDITOR
+using edit.pure.pack;
+using mono.fbx;
+using pure.asset.manager.utils;
+
+#endif
+
+namespace main {
+    public class GameStarter : MonoBehaviour {
+        public string loginMachine;
+        private GameEntity _entity;
+
+        protected void Start() {
+#if UNITY_EDITOR
+            AssetManager.readMode = PackCenter.settingData
+                ? PackCenter.settingData.readMode
+                : AssetManager.ReadMode.AssetDataBase;
+            FxFileUtils.GetFireSetting = PortraitAct_Skill.GetFireSetting;
+#else
+            AssetManager.readMode = AssetManager.ReadMode.AssetBundle; 
+#endif
+            StreamManagerCenter.Reset();
+            DontDestroyOnLoad(gameObject);
+            StartCoroutine(DoStart());
+        }
+
+        private IEnumerator DoStart() {
+            FileTools.Start();
+            TickerCenter.Init();
+            GameTicker.Start(); 
+            NavCpp.Start();
+            NativeRequest_Start s = new NativeRequest_Start();
+            NativeManager.Send(s);
+            while (!s.isComplete) yield return null;
+            IEnumerator e = InitBind();
+            while (e.MoveNext()) yield return null;
+            StopAllCoroutines();
+            _entity = new GameEntity {loginMachine = loginMachine};
+            _entity.Initialize();
+        }
+
+        private IEnumerator InitBind() {
+            IStartRunner[] runners = {
+                new Start_Async {action = MachineWrap.Init},
+                new Start_Async {action = TreeWrap.Init},
+                new Start_Async {action = MediatorWrap.Init},
+                new Start_Async {action = PropertyWrap.Init},
+                new Start_Async {action = MonoWrap.Init},
+                new Starter_Lua()
+            };
+            for (int i = 0, len = runners.Length; i < len; i++) runners[i].Start();
+            while (true) {
+                bool allComplete = true;
+                for (int i = 0, len = runners.Length; i < len; i++) {
+                    if (!runners[i].complete) allComplete = false;
+                }
+                if (allComplete) yield break;
+                yield return null;
+            }
+        }
+
+#if UNITY_EDITOR
+        protected void OnApplicationQuit() {
+            LuaServer.Close();
+            GameObjectPool.FlushPool(GameObjectPool.LifeMode.LongLife);
+            GameObjectPool.FlushPool(GameObjectPool.LifeMode.SceneLife); 
+            Debug.Log("on application quit");
+        }
+
+        protected void OnDestroy() {
+            AssetManager.readMode = AssetManager.ReadMode.AssetDataBase;
+        }
+#endif
+    }
+}

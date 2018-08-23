@@ -1,0 +1,22 @@
+local class 		= require "Class"
+local base			= require "TableProxy"
+local this 			= class("Proxy_Npc",base)
+local ns 			= require "CSNamespace"
+local model			= ns["Data_ModelLua"].new
+local log 			= require "Logger"
+
+function this:pushData(buffer)
+	log.log("Proxy_Npc pushData")
+	local isNew,data=self:_push(buffer)
+	if not data then return end
+	if isNew then
+		data.isHost = false
+		data.ai = "NpcMachine_0"
+		log.log("npc id", data.id, data.npcId,data.name,data.body)
+		local o = model(data)
+		data.model = o
+	end
+
+end
+
+return this

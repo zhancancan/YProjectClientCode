@@ -1,0 +1,14 @@
+require "Class"
+require "Data"
+local superClass =_G["Data"]
+local class=_G["class"]
+local this =class("Data_Character",superClass)
+local instance = this.new()
+_G["Data_Character"]=instance
+
+local log = require"Logger"
+function this.ctor()
+	log:check(not instance,"singleton error: Data_Character can create only once")
+end
+
+return instance

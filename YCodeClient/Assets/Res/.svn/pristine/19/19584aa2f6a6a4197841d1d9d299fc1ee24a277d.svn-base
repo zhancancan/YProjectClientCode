@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Diagram fileName="Mission" fileURL="Assets/Res/Data/Source/Diagram/Mission.diagram" type="Mission" panOffset="-88.45143:-151.626" zoom="1.4">
+  <knob uuid="1509440813691:o:0" type="output" />
+  <knob uuid="1509716994115:o:0" type="output" />
+  <knob uuid="1509368465371:i:0" type="input" connect="1509365348076:o:1" />
+  <knob uuid="1509715958405:i:0" type="input" connect="1509365926165:o:1" />
+  <knob uuid="1509365025001:i:0" type="input" connect="1509365020259:o:1" />
+  <knob uuid="1509368467796:i:0" type="input" connect="1509365926165:o:1" />
+  <knob uuid="1509365260238:i:0" type="input" connect="1509365020259:o:1" />
+  <knob uuid="1509365926170:i:0" type="input" connect="1509365926165:o:1" />
+  <knob uuid="1509366868610:i:0" type="input" connect="1509366868609:o:1" />
+  <knob uuid="1509366868611:i:0" type="input" connect="1509366868609:o:1" />
+  <knob uuid="1509717011825:i:0" type="input" connect="1509366868609:o:1" />
+  <knob uuid="1509365926169:i:0" type="input" connect="1509365926165:o:1" />
+  <knob uuid="1509365926165:i:0" type="input" connect="1509440813691:o:0" />
+  <knob uuid="1509365926165:i:1" type="input" connect="1509365020259:o:0" />
+  <knob uuid="1509365926165:o:0" type="output" />
+  <knob uuid="1509365926165:o:1" type="output" />
+  <knob uuid="1509365348076:i:0" type="input" connect="1509440813691:o:0" />
+  <knob uuid="1509365348076:i:1" type="input" connect="1509365020259:o:0" />
+  <knob uuid="1509365348076:o:0" type="output" />
+  <knob uuid="1509365348076:o:1" type="output" />
+  <knob uuid="1509365020259:i:0" type="input" connect="1509440813691:o:0" />
+  <knob uuid="1509365020259:i:1" type="input" connect="" />
+  <knob uuid="1509365020259:o:0" type="output" />
+  <knob uuid="1509365020259:o:1" type="output" />
+  <knob uuid="1509366868609:i:0" type="input" connect="1509716994115:o:0" />
+  <knob uuid="1509366868609:i:1" type="input" connect="1509365020259:o:0,1509365926165:o:0,1509365348076:o:0" />
+  <knob uuid="1509366868609:o:0" type="output" />
+  <knob uuid="1509366868609:o:1" type="output" />
+  <node type="chapter" uuid="1509440813691" name="chapter" enabled="True" icon="" description="chapter" rect="-513.4:41.2:150:40" />
+  <node type="chapter" uuid="1509716994115" name="chapter" enabled="True" icon="" description="chapter" rect="-429.7999:219.0001:150:40" />
+  <node type="missionNode_kill" uuid="1509368465371" name="mission node" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" description="" rect="531.6082:38.60007:100:40" />
+  <node type="missionNode_submit" uuid="1509715958405" name="mission node" enabled="True" nodeIndex="0" place="Assets/Res/Data/Source/Place/abc/abc.place" npcId="" description="" rect="172.8514:119.604:100:40" />
+  <node type="missionNode_kill" uuid="1509365025001" name="kill xiaopo" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" description="" rect="172.8514:-120.1:100:40" />
+  <node type="missionNode_kill" uuid="1509368467796" name="mission node" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" description="" rect="172.8514:59.678:100:40" />
+  <node type="missionNode_kill" uuid="1509365260238" name="mission node" enabled="True" nodeIndex="1" place="" npcId="" numKill="1" description="" rect="172.8514:-60.174:100:40" />
+  <node type="missionNode_kill" uuid="1509365926170" name="mission node" enabled="True" nodeIndex="1" place="" npcId="" numKill="1" description="" rect="172.8514:179.53:100:40" />
+  <node type="missionNode_kill" uuid="1509366868610" name="mission node" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" description="" rect="172.8514:403.5:100:40" />
+  <node type="missionNode_kill" uuid="1509366868611" name="mission node" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" description="" rect="172.8514:350.6188:100:40" />
+  <node type="missionNode_take" uuid="1509717011825" name="mission node" enabled="True" nodeIndex="0" place="" npcId="" description="" rect="172.8514:297.7375:100:40" />
+  <node type="missionNode_kill" uuid="1509365926169" name="mission node" enabled="False" nodeIndex="2" place="" npcId="" numKill="1" description="" rect="172.8514:239.456:100:40" />
+  <node type="mission" uuid="1509365926165" name="mission" isMain="True" enabled="True" rewardId="none" description="" rect="-231.6:84.89999:150:40" />
+  <node type="mission" uuid="1509365348076" name="mission" isMain="True" enabled="True" rewardId="0" description="" rect="-16.14861:82.35201:150:40" />
+  <node type="mission" uuid="1509365020259" name="mission" isMain="True" enabled="True" rewardId="none" description="" rect="-117.7829:-48.3:150:40" />
+  <node type="mission" uuid="1509366868609" name="mission" isMain="True" enabled="True" rewardId="0" description="" rect="-117.7829:294.7:150:40" />
+</Diagram>

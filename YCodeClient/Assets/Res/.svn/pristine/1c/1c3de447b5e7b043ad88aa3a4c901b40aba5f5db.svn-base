@@ -1,0 +1,24 @@
+local class = require "Class"
+
+local base = require "SingleProxy"
+local this = class("Proxy_UserState",base)
+local log = require "Logger"
+
+function this:ctor()
+	self.__tostring=function()return "[Proxy_UserState]" end
+	self._inited=false
+end
+
+
+function this:pushData(buffer,serverId)
+	self:__push(buffer,serverId,self._inited)
+
+	log:log("proxy userbase pushData")
+	if not self._inited then
+		local c = require "AppCenter";
+		c.playerId=self._data._data.id
+		self._inited=true
+	end
+end
+
+return this

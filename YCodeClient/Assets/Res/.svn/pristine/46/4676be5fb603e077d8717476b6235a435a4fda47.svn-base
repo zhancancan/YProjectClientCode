@@ -1,0 +1,85 @@
+﻿//using System.Collections.Generic;
+//using edit.pure.tools.selection;
+//using mono.scene;
+//using pure.scene.mono;
+//using UnityEditor;
+//using UnityEngine;
+
+//namespace inspectors.place {
+//    [CustomEditor(typeof (CustomData))]
+//    public class Insp_CustomData : Editor {
+//        private class Item : ICustomEditListItem {
+//            internal CustomData_Dll.KeyValue kv;
+
+//            public string renderContent { get; set; }
+
+//            public string renderTips {
+//                get { return string.Empty; }
+//            }
+
+//            public bool itemLabelEditing { get; set; }
+
+//            public void DrawItem(GUIStyle style) {
+//                kv.key = EditorGUILayout.TextField("", kv.key);
+//                kv.value = EditorGUILayout.TextField("", kv.value);
+//            }
+//        }
+
+
+//        private CustomData _data;
+//        private static ListSelectionTools<Item> listRenderer;
+//        private static EditSelection<Item> selection;
+
+
+//        protected void OnEnable() {
+//            _data = target as CustomData;
+//            if (listRenderer == null) {
+//                selection = new EditSelection<Item>();
+//                listRenderer = new ListSelectionTools<Item>();
+//                listRenderer.dragable = true;
+//                listRenderer.dropable = true;
+//            }
+//            listRenderer.afterStructChange -= OnStructChange;
+//            listRenderer.afterStructChange += OnStructChange;
+//        }
+
+//        private void OnStructChange() {
+//        }
+
+//        public override void OnInspectorGUI() {
+//            EditorGUI.BeginChangeCheck();
+//            int numKv = EditorGUILayout.DelayedIntField("Number Data", _data.datas.Length);
+//            if (EditorGUI.EndChangeCheck()) { 
+//                List<Item> items =new List<Item>();
+//                items = new List<Item>();
+
+
+//            }
+//        }
+
+//        protected void OnDisable() {
+//            listRenderer.afterStructChange -= OnStructChange;
+//        }
+//    }
+//} 
+
+
+using pure.scene.mono;
+using UnityEditor;
+using UnityEngine;
+
+namespace inspectors.place {
+    [CustomPropertyDrawer(typeof (CustomData_Dll.KeyValue))]
+    public class KeyValueEditor : PropertyDrawer {
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+            var k = property.FindPropertyRelative("key");
+            var v = property.FindPropertyRelative("value");
+            Rect kr = new Rect(position) {width = 200};
+            Rect vr = new Rect(position) {x = 205, width = position.width - 205};
+            EditorGUIUtility.labelWidth = 50;
+            EditorGUI.PropertyField(kr, k);
+            EditorGUIUtility.labelWidth = 50;
+            EditorGUI.PropertyField(vr, v);
+        }
+    }
+}

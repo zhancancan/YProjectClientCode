@@ -1,0 +1,8 @@
+local class=require "Class"
+local this =class("Data_MoveAction")
+
+-- - is self
+function this.execute(_)
+end
+
+return this

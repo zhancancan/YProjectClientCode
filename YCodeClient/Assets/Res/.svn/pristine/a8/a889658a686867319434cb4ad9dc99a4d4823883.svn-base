@@ -1,0 +1,10 @@
+local class=require "Class"
+local this =class("Data_CharacterProperty",require "Data")
+local log = require"Logger"
+
+
+function this.onSelfChange(_,property,oldValue,newValue)
+	-- body
+end
+
+return this

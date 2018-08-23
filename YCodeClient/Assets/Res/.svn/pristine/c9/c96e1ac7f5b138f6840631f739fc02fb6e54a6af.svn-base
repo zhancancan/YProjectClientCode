@@ -1,0 +1,29 @@
+/*-------------------------------------调用Native的方法   可调用c#接口------------------------------------*/
+void  NativeManager.Call(string func)
+
+void  NativeManager.Call(string func, LuaTable arg)
+
+void  NativeManager.Call(string func, string arg)
+
+void  NativeManager.CallClass(string clazz, string func)
+
+void  NativeManager.CallClass(string clazz, string func, LuaTable arg)
+
+void  NativeManager.CallClass(string clazz, string func, string arg)
+
+void  NativeManager.Dialog(string content)
+
+void  NativeManager.Dialog(string title, string content)
+
+void  NativeManager.RequestLogin()
+
+void  NativeManager.Toast(string content)
+
+void  NativeManager.RequestPermission(string authorize, LuaFunction callBack)
+
+void  NativeManager.Ask(string content, LuaFunction callBack)
+
+void  NativeManager.Ask(string title, string content, LuaFunction callBack)
+
+
+

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="setting" fileURL="Assets/Res/Data/Source/Tree/Setting/setting.tree" fileName="setting.tree" type="SettingTree">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="table" name="resource">
+      <cell treeOpen="False" editName="" cellType="resource" name="金幣" description="金幣&#xA;" key="0" icon="" iconBig="" iconFly="" color="ffffffff" />
+      <cell treeOpen="False" editName="" cellType="resource" name="銀幣" description="none" key="1" icon="" iconBig="" iconFly="" color="ffffffff" />
+      <cell treeOpen="False" editName="" cellType="resource" name="銅幣" description="none" key="2" icon="" iconBig="" iconFly="" color="ffffffff" />
+    </cell>
+    <cell treeOpen="True" editName="" cellType="table" name="property">
+      <cell treeOpen="False" editName="" cellType="property" name="攻擊" description="none" key="0" alias="att" color="ffffffff" />
+      <cell treeOpen="False" editName="" cellType="property" name="防禦" description="none" key="1" alias="def" color="ffffffff" />
+      <cell treeOpen="False" editName="" cellType="property" name="魔法" description="none" key="2" alias="mp" color="ffffffff" />
+      <cell treeOpen="False" editName="" cellType="property" name="血量上限" description="none" key="3" alias="hp" color="ffffffff" />
+    </cell>
+    <cell treeOpen="True" editName="" cellType="table" name="modelType" />
+    <cell treeOpen="True" editName="" cellType="table" name="animation">
+      <cell treeOpen="False" editName="" cellType="animation" name="限制站立0" description="none" animation="stand0" />
+      <cell treeOpen="False" editName="" cellType="animation" name="限制站立1" description="" animation="stand1" />
+      <cell treeOpen="False" editName="" cellType="animation" name="行走0" description="none" animation="run0" />
+      <cell treeOpen="False" editName="" cellType="animation" name="骑马走" description="none" animation="ride0" />
+    </cell>
+    <cell treeOpen="True" editName="" cellType="table" name="sightType">
+      <cell treeOpen="False" editName="" cellType="sightType" name="圆形" description="none" scope="0" />
+      <cell treeOpen="False" editName="" cellType="sightType" name="扇形" description="none" scope="1" />
+    </cell>
+  </cell>
+</Canvas>

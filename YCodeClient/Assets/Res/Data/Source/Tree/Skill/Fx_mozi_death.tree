@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_mozi_death" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_mozi_death.tree" fileName="Fx_mozi_death.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="3" durationScaleType="0" actionType="0" anim="Death" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/mozi/EP_mozi_0_sp/EP_mozi_death_pipe.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="3" durationScaleType="0" boneName="B_pipe" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/mozi/EP_mozi_0_sp/EP_mozi_death_chest.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="3" durationScaleType="0" boneName="B_chest" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="3" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/mozi/EP_mozi_0_sp/EP_mozi_baozha.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="2.05" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

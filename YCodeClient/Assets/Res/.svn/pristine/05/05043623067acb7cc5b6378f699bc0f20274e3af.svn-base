@@ -1,0 +1,21 @@
+
+require "TypeDataInitor"
+local class 		= require "Class"
+local base			= require "TableProxy"--todo
+local this 			= class("Proxy_CharacterProperty",base)
+local manager 		= require "CharacterManager"
+local log 			= require "Logger"
+
+function this:pushData(buffer)
+	log:log("Proxy_CharacterProperty pushData todo")
+	local isNew,data=self:_push(buffer)
+	if not data then return end
+
+	log:log("id",data.id)
+	log:log("sourceType",data.sourceType)
+	log:log("sourceId",data.sourceId)
+	log:log("propertyId",data.propertyId)
+	log:log("value",data.value)
+end
+
+return this

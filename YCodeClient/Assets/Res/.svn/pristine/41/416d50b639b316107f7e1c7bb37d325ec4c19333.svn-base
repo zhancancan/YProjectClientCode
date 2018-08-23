@@ -1,0 +1,17 @@
+local class 		= require "Class"
+local this 			= class("Data_UserCurrentQuest",require "Data")
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+local log			= require "Logger"
+local table
+
+
+function this:ctor()
+	log.error("Data_UserCurrentQuest todo")
+end
+
+function this:onSelfChange(p)
+	
+end
+
+return this

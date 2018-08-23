@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_baonujijia_penyou" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_baonujijia_penyou.tree" fileName="Fx_baonujijia_penyou.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="4" durationScaleType="0" actionType="0" anim="Stand" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="4" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="4" durationScaleType="0" boneName="B_zuojian" position="-0.2:0.3:0" rotate="0:0:0" scale="1:1:1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/baonujijia/EP_baonujijia_sp/EP_baonujijia_diaoyou.prefab" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="4" durationScaleType="0" boneName="B_youjian" position="0.2:0.3:0" rotate="0:0:0" scale="1:1:1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/baonujijia/EP_baonujijia_sp/EP_baonujijia_diaoyou.prefab" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="1" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Boss/baonujijia/EP_baonujijia_sp/EP_baonujijia_diaoyouSJ.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="10" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

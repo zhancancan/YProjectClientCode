@@ -1,0 +1,85 @@
+﻿using edit.pure.etui.utils;
+using edit.pure.resource;
+using mono.ui.elements;
+using pure.ui.imageFiller;
+using UnityEditor;
+using UnityEditor.UI;
+using UnityEngine;
+
+namespace inspectors.ui {
+    [CustomEditor(typeof (PolyImage))]
+    internal class Insp_PolyImage : GraphicEditor {
+        private PolyImage _field;
+        private SerializedProperty _event;
+        private SerializedProperty _sprite;
+
+        protected override void OnEnable() {
+            base.OnEnable();
+            _field = target as PolyImage;
+            _event = serializedObject.FindProperty("_clickEvent");
+            _sprite = serializedObject.FindProperty("_sprite");
+        }
+
+        public override void OnInspectorGUI() {
+            EditorGUI.BeginChangeCheck();
+            EditorGUILayout.PropertyField(_sprite);
+            if (EditorGUI.EndChangeCheck()) {
+                _field.sprite = _sprite.objectReferenceValue as Sprite;
+                EditorUtility.SetDirty(_field);
+            }
+            EditorGUI.BeginChangeCheck();
+            _field.keepAspect = EditorGUILayout.Toggle("Keep Aspect", _field.keepAspect);
+            _field.shape = (ImageShape) EditorGUILayout.EnumPopup("Shape", _field.shape);
+            switch (_field.shape) {
+                case ImageShape.Round:
+                    _field.numEdge = EditorGUILayout.IntSlider("Number Edge:", _field.numEdge, 3, 60);
+                    _field.startAngle = EditorGUILayout.Slider("Start Angle", _field.startAngle, 0, 360);
+                    _field.thickness = EditorGUILayout.Slider("Thickness", _field.thickness, 0.1f, 100);
+                    _field.fillAmount = EditorGUILayout.Slider("Fill Amount", _field.fillAmount, 0.0f, 1.0f);
+                    _field.fillCenter = EditorGUILayout.Toggle("Fill Center", _field.fillCenter);
+                    _field.clockWise = EditorGUILayout.Toggle("Clock Wise", _field.clockWise);
+                    break;
+                case ImageShape.RoundRect:
+                    _field.ellipse = EditorGUILayout.Vector2Field("Ellipse", _field.ellipse);
+                    break;
+            }
+            DrawSeperator();
+            _field.interactable = EditorGUILayout.Toggle("Interactive", _field.interactable);
+            if (EditorGUI.EndChangeCheck()) {
+                EditorUtility.SetDirty(_field);
+            }
+            serializedObject.Update();
+            AppearanceControlsGUI();
+            RaycastControlsGUI();
+            DrawSeperator();
+            EditorGUILayout.PropertyField(_event);
+            serializedObject.ApplyModifiedProperties();
+        }
+
+        private void DrawSeperator() {
+            GUILayout.Space(5);
+            GUILayout.Box("", EditStyles.Border1, GUILayout.Height(1));
+            GUILayout.Space(2);
+        }
+
+        public override bool HasPreviewGUI() {
+            return true;
+        }
+
+        public override void OnPreviewGUI(Rect rect, GUIStyle background) {
+            PolyImage image = target as PolyImage;
+            if (image == null) return;
+            Sprite sf = image.sprite;
+            if (sf == null) return;
+            SpriteDrawUtility.DrawSprite(sf, rect, image.canvasRenderer.GetColor());
+        }
+
+        public override string GetInfoString() {
+            PolyImage image = (PolyImage) target;
+            Sprite sprite = image.sprite;
+            int x = (sprite != null) ? Mathf.RoundToInt(sprite.rect.width) : 0;
+            int y = (sprite != null) ? Mathf.RoundToInt(sprite.rect.height) : 0;
+            return string.Format("Image Size: {0}x{1}", x, y);
+        }
+    }
+}

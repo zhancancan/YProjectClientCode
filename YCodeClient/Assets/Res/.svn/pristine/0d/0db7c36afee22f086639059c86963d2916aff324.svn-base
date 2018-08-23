@@ -1,0 +1,11 @@
+require "Data"
+local superClass =_G["Data"]
+local class=require "Class"
+local this =class("Data",superClass)
+_G["Data_ActionMove"]=this
+
+function this:execute()
+	-- todo
+end
+
+return this

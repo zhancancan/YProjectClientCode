@@ -1,0 +1,45 @@
+/*-------------------------------------支持的消息------------------------------------*/
+//面板显示时触发
+lua mediator:show(obj)
+
+//面板关闭时触发
+lua mediator:hide(obj)
+
+//面板初始化时触发
+//初始化的时机为面板第一次开启之前,子面板也是，如果1个主面板有3个子面板，第2个面板一直没有被开过，是不会init的
+lua mediator:initView(obj)
+
+
+//面板清理化时触发
+//清理时机不定（to do)
+lua mediator:destoryView(obj)
+
+
+
+/*------------------------------------c#支持的调用-----------------------------------*/
+//显示面板, 参数obj可以不设，但最多只支持1个object，其实基本上如果要设多参数，都是可以通过luaTable设置的
+c# mediator:Show(obj)
+
+c# mediator:Hide(obj)
+
+
+//返回子mediator对象
+c# mediator:GetChildByName(child)
+
+//返回兄弟mediator对象
+c# mediator:GetSibling(child)
+
+//开关mediator == if(meddiator.active)hide(obj) else show(obj)
+c# Switch(obj)
+
+//开关字面板
+c# SwitchChild(childName, obj)
+
+
+//开关兄弟面板
+c# SwitchSibling(childName, obj)
+
+
+
+//-------------------------------------------公用方法参考LuaGrid.readme-------------------------------------------
+

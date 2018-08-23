@@ -1,0 +1,12 @@
+local class=require "Class"
+local this =class("Data_Character",require "Data")
+local instance = this.new()
+local log = require"Logger"
+function this.ctor()
+	log:check(not instance,"singleton error: Data_Character can create only once")
+end
+
+
+
+
+return instance

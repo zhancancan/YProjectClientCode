@@ -1,0 +1,10 @@
+require "Class"
+local class= _G["class"]
+local this =class("Type_DataCore")
+_G["Type_DataCore"]=this
+function this:ctor( obj )
+	for k, v in pairs(obj) do
+		rawset(self,k,v)
+	end
+end
+return this

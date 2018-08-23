@@ -1,0 +1,13 @@
+local this = {}
+local Vector3  = Vector3
+
+function this.toVector3(v)
+	if v then
+		Vector3.New(v.x,v.y,v.z)
+	end
+	return  nil
+end
+
+
+
+return this

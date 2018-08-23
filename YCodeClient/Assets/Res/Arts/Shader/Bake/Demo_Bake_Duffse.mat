@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Demo_Bake_Duffse
+  m_Shader: {fileID: 4800000, guid: 64cd80f36afb2514a94c16e9ebb4fe0e, type: 3}
+  m_ShaderKeywords: ENABLE_ILLUMIN
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _IlluminTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 2d37415aaba91684e8e0b388f060c52b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 2d37415aaba91684e8e0b388f060c52b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _Cull
+      second: 2
+    - first:
+        name: _Emission
+      second: 3.5
+    - first:
+        name: _cutThreshhold
+      second: 0.5
+    - first:
+        name: _illumin
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _SpecDir
+      second: {r: -0, g: 0.70710677, b: -0.7071068, a: 0}

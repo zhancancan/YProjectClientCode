@@ -1,0 +1,52 @@
+local class 			= require "Class"
+local TypeClasses		= require "TypeClasses"
+local DataClasses		= require "DataClasses"
+local db 				= require "TypeDB"
+local PropertyGroup		= require "PropertyGroup"
+local log  				= require"Logger"
+
+local this 				= class("Data_Character",require "Data")
+
+local heroDb
+local instance
+
+
+
+local function ensureHero()
+	if not heroDb then
+		heroDb = db.getTable(TypeClasses.TYPE_HERO):selectOne({id=instance.heroId})
+	end
+end
+
+local function split( str,reps )
+    local resultStrList = {}
+    if not str then return str end
+ 		string.gsub(str,'[^'..reps..']+',function ( w )
+        table.insert(resultStrList,w)
+    end)
+    return resultStrList
+end
+
+function this:ctor()
+	if instance then
+		log.error("singleton error: Data_Character can create only once")
+		return
+	end
+	local pg = PropertyGroup.new(self,"property")
+	self._data.property = pg
+end
+
+
+function this.getHeroSkills(isData)
+	if isData then
+		ensureHero()
+		local tb = split(heroDb.skills,",")
+		return tb
+	else
+		local tb = db:getTable(DataClasses.DATA_SKILLS)
+		return tb
+	end
+end
+
+instance = this.new()
+return instance

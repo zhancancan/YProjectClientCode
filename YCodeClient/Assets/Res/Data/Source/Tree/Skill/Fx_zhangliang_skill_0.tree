@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_zhangliang_skill_0" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_zhangliang_skill_0.tree" fileName="Fx_zhangliang_skill_0.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="0.6" durationScaleType="0" actionType="0" anim="Skill_0" paramName="" paramType="0" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0.3" timeScaleType="0" duration="0.5" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="1" minArea="0:0:0" maxArea="0:0:0" offset="0:1.2:0.1" />
+        <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="2" minArea="0:0:0" maxArea="0:0:0" offset="0:1.2:0" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_sp/EP_zhangliang_skill_0_bullet.prefab" />
+        <cell treeOpen="False" editName="" cellType="fly" groupPhase="0" speed="10" speedScaleType="0" orientMode="1" direction="0" orientDir="0" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

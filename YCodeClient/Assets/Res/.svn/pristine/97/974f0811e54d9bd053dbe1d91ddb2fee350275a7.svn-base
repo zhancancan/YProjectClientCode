@@ -1,0 +1,39 @@
+local this ={}
+
+local lang 			= require "LangManager"
+local dbase 		= require "DataBase"
+local user			= require "Data_Character"
+local dialog 		= require "Dialog"
+
+local ns 			= require "CSNamespace"
+local panel  		= ns["PanelManager"]
+local native 		= ns["NativeManager"]
+local server 		= ns["LuaServer"]
+local NativeMethod 	= ns["NativeMethod"]
+
+local testLogin  	= require "TestLogin"
+local byte 			= ns["LuaBytes"]
+
+function this.startLogin()
+	panel.Open("LoginPanel_login")
+end
+native.AddHandler(NativeMethod.START_LOGIN , this.startLogin)
+
+local function doLoginOut(r)
+	if not r then return end
+	server.Close()
+	native.Logout();
+end
+
+function this.logOut()
+	dialog.ask(lang.get("Login.askLogout"),doLoginOut)
+end
+
+function this.login()
+	dbase:clear(true)
+	user.id=-2
+	testLogin.run()
+	panel.Close("LoginPanel_login")
+end
+
+return this

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root type="tree">
+  <file name="setting">
+    <item type="table" name="resource">
+      <item type="resource" name="金幣" key="0" icon="" iconBig="" iconFly="" color="ffffffff" description="金幣&#xA;" />
+      <item type="resource" name="銀幣" key="1" icon="" iconBig="" iconFly="" color="ffffffff" description="none" />
+      <item type="resource" name="銅幣" key="2" icon="" iconBig="" iconFly="" color="ffffffff" description="none" />
+    </item>
+    <item type="table" name="property">
+      <item type="property" name="攻擊" key="0" alias="att" color="ffffffff" description="none" />
+      <item type="property" name="防禦" key="1" alias="def" color="ffffffff" description="none" />
+      <item type="property" name="魔法" key="2" alias="mp" color="ffffffff" description="none" />
+      <item type="property" name="血量上限" key="3" alias="hp" color="ffffffff" description="none" />
+    </item>
+    <item type="table" name="modelType" />
+    <item type="table" name="animation">
+      <item type="animation" name="限制站立0" animation="stand0" description="none" />
+      <item type="animation" name="限制站立1" animation="stand1" description="" />
+      <item type="animation" name="行走0" animation="run0" description="none" />
+      <item type="animation" name="骑马走" animation="ride0" description="none" />
+    </item>
+    <item type="table" name="sightType">
+      <item type="sightType" name="圆形" scope="0" description="none" />
+      <item type="sightType" name="扇形" scope="1" description="none" />
+    </item>
+  </file>
+</root>

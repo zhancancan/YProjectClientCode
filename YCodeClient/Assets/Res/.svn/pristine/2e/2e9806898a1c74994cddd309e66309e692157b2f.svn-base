@@ -1,0 +1,173 @@
+option java_package = "com.changqu.master.protobuf"; 
+
+//code=60001
+message RewardData {
+	required int32 type = 1;	 
+	required int32 secondType = 2;	 
+	required int32 calcMethod = 3;	
+	required float rewardValue = 4;	  
+	repeated float testData = 5;	  
+}
+
+//code=60002
+message Position {
+	required float x =1;
+	required float y =2;
+	required float z =3;  
+}
+
+//code=60004
+message Data_Player {
+	optional bool isRemove = 1;		//删除标记
+	required string id = 2;			
+	optional string name = 3;			
+	optional string description = 4;
+	optional int32 fightScore = 5;		
+	optional string body = 6; 
+	optional string weapon = 7; 
+	optional string horse = 8;
+	optional bool horseVisible = 9; 	
+	optional float speed = 10; 
+	optional Position position = 11;
+	optional uint32 aoiId = 12;			//AOI
+}
+
+//code=60006
+message Data_Scene {
+	required string id = 1;				  
+	required int32 sceneType=2;
+	required string placeFile=3;
+}
+
+//code=60007
+message Data_Equip {
+	required string id = 1;			
+	optional string name = 2;			
+	optional string description = 3;	
+	optional string iconId = 4;	 
+	optional uint32 fightScore = 5;	  
+	repeated RewardData rewards=6;
+}
+
+//code=60008
+message Data_Gem {
+	required string id = 1;			
+	optional string name = 2;			
+	optional string description = 3;	 
+	optional string iconId = 4;		
+}
+
+//code=60009
+message Data_FieldController {
+	required string id = 1;			
+	optional string name = 2;			
+	optional string description = 3;	 
+	optional string iconId = 4;		
+}  
+
+//code=60010
+message Data_ActionMove {
+	required string entityId = 1;			
+	required int32 entityType = 2;			
+	required Position position = 3;	 
+	required Position forcast = 4;		
+	optional int64 time =5;
+}  
+
+// 聊天记录 code=60011
+message Data_ChatMessage {
+	required uint32 channel = 1;				// 聊天频道类型	 2：世界	3：当前	4：帮会	5：私聊  6：求援  7：系统
+	optional string senderName = 2;			// 发送者名称
+	optional uint32 senderLogo = 3;			// 发送者徽章
+	optional uint32 senderLevel = 4;			// 发送者等级
+	optional string toName = 5;				// 接受者名称	私聊用
+	optional uint32 msgType = 6;				// 消息类型  0：文字  1：语音  2：图片
+	optional string msgString = 7;				// 消息内容	非文字类型格式：  byte数据ID#byte消息长度（比如语音消息多少秒）
+	optional uint64 time = 8;					// 发送时间
+	optional uint32 showType = 9;				// 显示类型	0:聊天框 1:公告 2:全部显示
+	optional string senderId = 10;				// 发送者ID
+	optional string toId = 11;					// 接受者ID	私聊用
+	optional string senderUseTitleInfo = 12;	//  发送者当前使用的称号ID,过期时间
+	optional uint32 senderPortrait = 13;		// 发送者头像ID
+}
+
+// NPC数据 code=60012
+message Data_Npc {
+	optional bool isRemove = 1;		//删除标记
+	required string id = 2;			//怪物唯一ID
+	optional string npcId = 3;			//NPC定义ID
+	optional uint32 level = 4;			//怪物等级
+	optional uint32 hp = 5;			//当前血量
+	optional uint32 maxHp = 6;		//最大血量
+	optional Position position = 7;		//位置
+	optional uint32 aoiId = 8;			//AOI
+	optional float speed = 9;			//速度 
+}
+
+//人物属性 code=60013
+message CharacterProperty {
+	required uint32 id = 1;				//无实际作用
+	optional uint32 health = 2;			//生命值
+	optional uint32 attack = 3;			//攻击力
+	optional uint32 defense = 4;			//防御力
+	optional uint32 criticalRate = 5;		//暴击率
+	optional uint32 criticalDamage = 6;		//爆伤
+	optional uint32 moveSpeed = 7;		//移动速度，属性值
+}
+
+//可控状态 code=60014
+message ControlState {
+	required uint32 id = 1;				//无实际作用
+	optional bool canMove = 2;			//能不能移动，这限制的只是来自命令（玩家控制和AI）的移动，但是技能的强制位移依然有效。
+	optional bool canCast = 3;			//能不能放技能，普通攻击也是一种技能。
+	optional bool canTurn = 4;			//能不能转身，转身和移动是2回事，不能转身依然可以向背后移动。
+	optional bool canUseItem = 5;			//能不能主动使用道具，限制的是来自命令的（玩家控制和AI），被技能强制使用道具依然有效。
+	optional bool invincible = 6;			//是否无敌，忽略一切伤害，但相关的Buff流程还是会走。比用Buff在beHurt时候设伤害为0更强。
+	optional bool confused = 7;			//是否混乱，混乱时忽略一切来自命令（玩家控制和AI）的行动请求。
+}
+
+//删除物件命令 code=60015
+message Data_CmdDestroyObject {
+	repeated string ids = 1;				//要删除的物件ID
+}
+
+//场景物件移动一步 code=60016
+message Data_CmdMoveObject {
+	required string id = 1; //物件ID
+	required Position position = 2;
+	required Position forcast = 3;
+	required uint64 time=4; //时间
+	optional bool isLast = 5;
+}
+
+//AOE数据 code=60017
+message Data_Aoe {
+	optional bool isRemove = 1;		//删除标记
+	required string id = 2;			//唯一ID
+	optional string aoeId = 3;			//定义ID
+	optional Position position = 4;		//位置
+	optional uint32 aoiId = 5;			//AOI
+}
+
+//Bullet数据 code=60018
+message Data_Bullet {
+	optional bool isRemove = 1;		//删除标记
+	required string id = 2;			//唯一ID
+	optional string bulletId = 3;			//定义ID
+	optional Position position = 4;		//位置
+	optional uint32 aoiId = 5;			//AOI
+}
+
+//管理命令返回值 code=60019
+message Data_Command {
+	required string result = 1;	// 命令返回值
+}
+
+//场景物件移动到目标 code=60020
+message Data_CmdMoveObjectTo {
+	required string id = 1; //物件ID
+	required Position position = 2;
+	required Position forcast = 3;
+	required uint64 time=4; //时间
+	optional bool isLast = 5;
+}

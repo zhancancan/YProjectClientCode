@@ -1,0 +1,7 @@
+local this={}
+_G["LocalDataKey"]=this
+
+this.Lang="Lang"
+this.ChatSetting="ChatSetting"
+
+return this

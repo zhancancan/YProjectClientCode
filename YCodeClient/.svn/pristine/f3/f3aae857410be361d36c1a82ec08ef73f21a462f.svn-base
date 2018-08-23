@@ -1,0 +1,33 @@
+﻿using System.IO;
+using Assets.Editor.svnUtils;
+using UnityEditor;
+using UnityEngine;
+
+public class EditorSvnCommand {
+    public static bool ignoreUpdateDll;
+
+    [MenuItem("SVN/Commit Res", false, 1001)]
+    public static void SvnCommitRes() {
+        string path = string.Format("{0}/{1}", Application.dataPath, SvnTools.PathRes);
+        if (Directory.Exists(path)) {
+            SvnTools.SvnCommit(path);
+            EditorUtil.ShowMessage("Res Commit Completes");
+        }
+    }
+
+
+    [MenuItem("SVN/Update Res", false, 1000)]
+    public static void SvnUpdatePlugins() {
+        Debug.Log("forrceUpdateDll: " + ignoreUpdateDll);
+        SvnTools.SvnExecute("update", "./");
+        if (!ignoreUpdateDll) {
+            string path = string.Format("{0}/{1}", Application.dataPath, SvnTools.PathDllScripts);
+            if (Directory.Exists(path)) {
+                FileUtil.DeleteFileOrDirectory(path);
+            }
+            SvnTools.SvnUpdate(SvnTools.RepositoryPlugins, SvnTools.PathPlugins);
+        }
+        SvnTools.SvnUpdate(SvnTools.RepositoryRes, SvnTools.PathRes);
+        EditorUtil.ShowMessage("更新游戏资源完成");
+    }
+}

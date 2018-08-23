@@ -1,0 +1,9 @@
+local class 		= require "Class"
+local this 			=class("Data_Command",require "Data")
+local Logger 		= require "Logger"
+
+function this:ctor()
+	Logger:log("scmd result:",self.result)
+end
+
+return this

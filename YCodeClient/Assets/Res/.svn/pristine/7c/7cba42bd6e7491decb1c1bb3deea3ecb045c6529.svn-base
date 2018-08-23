@@ -1,0 +1,26 @@
+local class 		= require "Class"
+local base			= require "SingleProxy"
+local this 			= class("Proxy_UserQuestState",base)
+local log 			= require "Logger"
+
+function this:ctor()
+	self._inited=false
+end
+
+local function onPropertyChanged(_,data,p,o,n)
+	-- print(data,p,o,n)
+end
+
+
+function this:pushData(buffer)
+	self:__push(buffer,self._inited)
+	log.log(string.format("todo Proxy_UserQuestState pushData id: %s ",self.id))
+	if not self._inited then
+		-- self._data.property:addListener(self,onPropertyChanged)
+		self._inited=true
+	end
+end
+
+
+
+return this

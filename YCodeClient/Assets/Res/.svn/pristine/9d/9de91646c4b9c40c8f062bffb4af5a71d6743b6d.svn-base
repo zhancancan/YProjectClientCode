@@ -1,0 +1,18 @@
+//Game->Master 协议
+option java_package = "com.changqu.master.protobuf";
+
+//Worker信息 code=20001
+message WorkerInfo {
+	required uint32 workerId = 1; //WorkerId
+}
+
+//用户换区 code=20002
+message ChangeUserZone {
+	required string userKey = 1; //用户标识
+	required uint32 zoneId = 2; // 区ID
+}
+
+//用户被踢 code=20003
+message KickUser {
+	required string userKey = 1; //用户标识
+}

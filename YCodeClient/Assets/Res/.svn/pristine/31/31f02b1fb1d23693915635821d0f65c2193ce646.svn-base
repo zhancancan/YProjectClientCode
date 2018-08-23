@@ -1,0 +1,25 @@
+
+require "TypeDataInitor"
+local class 		= require "Class"
+local base			= require "UnsaveProxy"
+local this 			= class("Proxy_Message",base)
+local manager 		= require "MessageManager"
+
+
+function this.ctor()
+	local db = require "TypeDB"
+	local TypeClasses = require "TypeClasses"
+	local cs = db.toArray(TypeClasses.TYPE_CHATCHANNEL)
+	for i=1,#cs do
+		manager.createChannel(cs[i])
+	end
+end
+
+function this:pushData(buffer,_)
+	local data=self:_parseData(buffer)
+	if not data then return end
+	manager.add(data)
+	Logger:log("Proxy_ChatMessage add a new message:" + data)
+end
+
+return this

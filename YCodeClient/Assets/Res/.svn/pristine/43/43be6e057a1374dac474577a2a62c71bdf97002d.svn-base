@@ -1,0 +1,7 @@
+local class 		= require "Class"
+local this 			=class("Data_UserCurrency",require "Data")
+local Logger 		= require "Logger"
+
+
+
+return this

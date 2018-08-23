@@ -1,0 +1,5 @@
+require "DataBase"
+local dbClass=_G["DataBase"]
+_G["dbase"] = dbClass.new("gameDB")
+
+return nil

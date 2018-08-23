@@ -1,0 +1,22 @@
+require "Class"
+require "Data"
+local superClass =_G["Data"]
+local class=_G["class"]
+local this =class("Data_UserState",superClass)
+_G["Data_UserState"]=this
+
+
+local _static ={}
+function _static.getInstance()
+	if not _static.instance then _static.instance =this.new()end
+	return _static.instance
+end
+for k,v in pairs(_static)do rawset(this,k,v)end
+
+local log = require"Logger"
+function this:ctor()
+	log:check(not _static.instance,"singleton error: Data_UserState can create only once")
+	_static.instance =self
+end
+
+return this

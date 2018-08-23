@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RS>
+  <place name="Haha" enviorPath="Assets/Res/Arts/Scene/temp/xinshou_Test/xinshou_output.unity" enviorName="xinshou" fileName="Haha" filePath="Assets/Res/Data/Source/Place/Haha/Haha.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="Path" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="pathwaypoint" id="0" radius="0.2" type="0">
+          <point pos="117.0248:33.33313:58.25429" />
+          <point pos="119.028:33.32937:48.36349" />
+          <point pos="130.1375:33.62946:58.88505" />
+          <point pos="135.9009:33.90567:48.82291" />
+        </mono>
+        <mono monoType="customData" />
+      </object>
+      <object name="NpcArea_0" position="124.89:33.37499:53.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <object name="Npc1000" position="123.64:33.33942:53.21" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="21" icon="sv_label_4">
+          <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="1" ignoreMask="-536870913" />
+          <mono monoType="customData">
+            <kv key="tele" value="0" />
+            <kv key="tele" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="npc" value="10" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+            <kv key="hah" value="a" />
+          </mono>
+        </object>
+      </object>
+    </object>
+  </place>
+  <place name="place_senlin" enviorPath="Assets/Res/Arts/Scene/Wild/senlin_sp/senlin_output.unity" enviorName="senglin_output" enviorGUID="70a1d74e9d34b97468d8a5e981756164" fileName="place_senlin" filePath="Assets/Res/Data/Source/Place/place_senlin/place_senlin.place" />
+  <place name="place_shamo" enviorPath="Assets/Res/Arts/Scene/Wild/shamo/shamo_output.unity" enviorName="shamo_output" fileName="place_shamo" filePath="Assets/Res/Data/Source/Place/place_shamo/place_shamo.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" />
+  </place>
+  <place name="xinshou" enviorPath="Assets/Res/Arts/Scene/Copy/xinshou_sp/xinshou_output.unity" enviorName="xinshou_output" enviorGUID="03fe42af7f3248a47ab669e3fcf6a9ce" fileName="xinshou" filePath="Assets/Res/Data/Source/Place/xinshou/xinshou.place">
+    <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="RP_diaochan_0" position="24:7:51" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="21" prefab="Assets/Res/Arts/Role/Hero/diaochan/diaochan_0_sp/RP_diaochan_0.prefab" />
+    </object>
+  </place>
+</RS>

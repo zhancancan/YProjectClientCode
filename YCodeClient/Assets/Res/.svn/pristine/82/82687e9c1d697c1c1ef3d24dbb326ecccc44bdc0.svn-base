@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MachineChart fileName="subPlayerMachine_0" fileURL="Assets/Res/Data/Source/Machine/subPlayerMachine_0.machine" chartType="AIMachine" panOffset="95:-78.8002" zoom="1">
+  <machine uuid="1532014646095" name="base machine">
+    <state uuid="1532014646097" stateName="Exit State" isDefault="False" priority="0" type="exit" position="26:-214" />
+    <state uuid="1532625660021" stateName="MoveTo" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-315.5:184.5">
+      <action uuid="1532625698771" priority="0" threshhold="10" duration="0.6" forcastLen="0.1" maxSpeedMulitple="1.2" useReplace="False" replaceLua="" actionType="cmdAct:move" />
+    </state>
+    <state uuid="1532014693482" stateName="Stand" isDefault="True" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-194.5:81.5">
+      <transition uuid="1532014699613" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="1" source="1532014693482" destiny="1532014654391">
+        <condition uuid="1532014835700" score="0" compare="False" useReplace="False" replaceLua="" conditionType="conditionCpxInited" />
+      </transition>
+      <action uuid="1532014859250" priority="0" updateInterval="10" standModePercent="0.3" useReplace="False" replaceLua="" actionType="cmdAct:stand" />
+    </state>
+    <state uuid="1532014646096" stateName="Any State" isDefault="False" priority="0" type="any" position="-72:-102">
+      <transition uuid="1532014698049" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1532014646096" destiny="1532014693482">
+        <condition uuid="1532021761766" score="0" compare="True" useReplace="False" replaceLua="" conditionType="conditionCpxInited" />
+        <condition uuid="1533813491913" score="0" paramId="1532717580045" threshold="0" mode="0" useReplace="False" replaceLua="" conditionType="parameterchecker" />
+      </transition>
+    </state>
+    <state uuid="1532716489333" stateName="FireSkill" isDefault="False" priority="10" useStatePriority="True" order="0" loops="1" type="action" position="-93:248.8002">
+      <action uuid="1532778900746" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:fireSkill" />
+    </state>
+    <state uuid="1532014703135" stateName="Move" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-95.5:181.5">
+      <action uuid="1532526577480" priority="0" mass="1" maxSpeed="1" maxForce="30" arriveThreshold="0.2" duration="1" lastElasity="0.1" useReplace="False" replaceLua="" actionType="cmdAct:steerMove" />
+      <action uuid="1532539663323" priority="0" elastic="0.3" threshold="0.05" useReplace="False" replaceLua="" actionType="cmdAct:quitMove" />
+    </state>
+    <state uuid="1532718143884" stateName="Dead" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-24:130.8002">
+      <action uuid="1533737208560" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:dead" />
+      <action uuid="1533813509905" priority="0" paramId="1532717580045" targetValue="1" useReplace="False" replaceLua="" actionType="paramSetter" />
+    </state>
+    <state uuid="1532014654391" stateName="Init" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-294.5:-66.5">
+      <action uuid="1532014881164" priority="0" property="" type="1" useReplace="False" replaceLua="" actionType="aiInitRenderer" />
+      <action uuid="1532022609448" priority="0" property="horse" requireBone="" boneMode="0" support="B_mount" useReplace="False" replaceLua="" actionType="aiInitChildRenderer" />
+      <action uuid="1532014888435" priority="0" property="body" requireBone="" boneMode="2" support="B_weapon" useReplace="False" replaceLua="" actionType="aiInitChildRenderer" />
+      <action uuid="1532021450863" priority="0" property="weapon" requireBone="" boneMode="1" support="" useReplace="False" replaceLua="" actionType="aiInitChildRenderer" />
+      <action uuid="1532014926431" priority="0" prefab="Assets/Res/Arts/UI/Panel/Hud_SP/CharacterRedPanel_hud.prefab" lua="Assets/Res/Lua/hud/HostHud_0.lua|09ef1e8dd7009d343a333ce8ccf5d838" useReplace="False" replaceLua="" actionType="aiInitLabel" />
+      <action uuid="1532015000494" priority="0" value="True" useReplace="False" replaceLua="" actionType="actionSetInited" />
+    </state>
+  </machine>
+  <machine uuid="1533756577826" name="cmdLayer">
+    <state uuid="1533756577828" stateName="Exit State" isDefault="False" priority="0" type="exit" position="-27:-95" />
+    <state uuid="1533756577827" stateName="Any State" isDefault="False" priority="0" type="any" position="0:0">
+      <transition uuid="1533756601463" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="3" source="1533756577827" destiny="1533756587225" />
+    </state>
+    <state uuid="1533756587225" stateName="Default" isDefault="True" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-321.5:7.800201" />
+    <state uuid="1533756594585" stateName="AddBuff" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-197.5:124.8002">
+      <action uuid="1533997868924" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:addBuff" />
+    </state>
+    <state uuid="1533756596290" stateName="FloatText" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-6.5:188.8002">
+      <action uuid="1533997874885" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:floatText" />
+    </state>
+  </machine>
+  <machine uuid="1532717771581" name="OverStatus">
+    <state uuid="1532717771582" stateName="Any State" isDefault="False" priority="0" type="any" position="0:0">
+      <transition uuid="1532717795310" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="3" source="1532717771582" destiny="1532717790261">
+        <condition uuid="1532718036120" score="0" paramId="1532717512174" threshold="1" mode="0" useReplace="False" replaceLua="" conditionType="parameterchecker" />
+      </transition>
+      <transition uuid="1532717797175" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="3" source="1532717771582" destiny="1532717788492">
+        <condition uuid="1532718045172" score="0" paramId="1532717512174" threshold="0" mode="0" useReplace="False" replaceLua="" conditionType="parameterchecker" />
+        <condition uuid="1532718051399" score="0" paramId="1532717533661" threshold="1" mode="0" useReplace="False" replaceLua="" conditionType="parameterchecker" />
+      </transition>
+      <transition uuid="1532717799007" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="3" source="1532717771582" destiny="1532717785446" />
+    </state>
+    <state uuid="1532717790261" stateName="FightMode" isDefault="False" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-28:180.8002">
+      <action uuid="1532717833433" priority="0" animKey="inFightMode" threshhold="True" useReplace="False" replaceLua="" actionType="animBoolSetter" />
+    </state>
+    <state uuid="1532717788492" stateName="Mount" isDefault="False" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-327:186.8002">
+      <action uuid="1532717947376" priority="0" animKey="hasHorse" threshhold="True" useReplace="False" replaceLua="" actionType="animBoolSetter" />
+    </state>
+    <state uuid="1532717785446" stateName="Default" isDefault="True" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-368:75.8002">
+      <action uuid="1532718078521" priority="0" useReplace="False" replaceLua="" actionType="actionNothing" />
+    </state>
+    <state uuid="1532717771583" stateName="Exit State" isDefault="False" priority="0" type="exit" position="-218:-67" />
+  </machine>
+  <parameter uuid="1532717512174" name="inFightMode" type="0" defautValue="0" />
+  <parameter uuid="1532717533661" name="hasHorse" type="0" defautValue="0" />
+  <parameter uuid="1532717547512" name="skillTrigger" type="3" defautValue="0" />
+  <parameter uuid="1532717580045" name="isDead" type="0" defautValue="0" />
+  <parameter uuid="1532717594528" name="inited" type="0" defautValue="0" />
+  <parameter uuid="1532717609696" name="sceneType" type="2" defautValue="0" />
+</MachineChart>

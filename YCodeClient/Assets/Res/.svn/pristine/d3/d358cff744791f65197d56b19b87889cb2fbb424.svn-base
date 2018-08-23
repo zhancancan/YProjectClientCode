@@ -1,0 +1,62 @@
+local class 		= require "Class"
+local base 			= require "Data_Model"
+local this 			= class("Data_Npc",base)
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+
+local table
+
+
+
+local function getTypeNpc(self)
+	if not table then table = db.getTable(TypeClasses.TYPE_AOE)	end
+
+	if self then
+		local aoe = rawget(self,"aoe")
+		if not aoe then
+			aoe = table:selectOne({id=self.aoeId})
+			rawset(self, "aoe",aoe)
+		end
+		return aoe
+	end
+	return nil
+end
+
+
+
+local meta = {
+	__index = function(t,k)
+		if k == "name"  then
+			local  def = getTypeNpc(t)
+			if def then return def.name end
+
+		elseif k == "body" then
+			print("TODO:  correct temp getter aoe body ")
+			return "EP_chuansong_0"   -- test
+			-- local  def = getTypeNpc(t)
+			--print("npc get body", def.body)
+			-- if def then return def.fx end
+		end
+		return nil
+	end
+
+}
+
+function this:ctor()
+	setmetatable(self._data, meta)
+end
+
+
+function this:onSelfChange(p,_,n)
+	local en = rawget (self, "entity")
+	if not en then return end
+	if p == "aoeId" then
+		rawset(self,"aoe",nil) -- clear the npc cache
+		en:ChangeModel("body",self.body)
+	elseif p == "speed" then
+		en.speed = n
+	end
+end
+
+
+return this

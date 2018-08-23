@@ -1,0 +1,21 @@
+//Client->Master 协议
+option java_package = "com.changqu.master.protobuf";
+
+//心跳响应（客户端返回给服务器） code=50000
+message Ping {
+	required string msg = 1;	// 消息
+}
+
+//用户登录 code=50001
+message UserLogin {
+	required uint32 type = 1;			// 登录模式    0：测试   1：正式
+	optional string code = 2;			// 登录令牌
+	optional uint32 zoneId = 3;			// 区ID
+	optional bool isReconnect = 4;	// 是否为重连
+}
+
+//用户创角 code=50002
+message UserRegister {
+	required string name = 1;		// 用户名称
+	required string heroId = 2;	// 初始英雄Id
+}

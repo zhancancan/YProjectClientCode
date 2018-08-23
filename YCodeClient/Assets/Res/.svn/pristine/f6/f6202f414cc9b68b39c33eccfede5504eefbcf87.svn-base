@@ -1,0 +1,23 @@
+//Master->Game 协议
+option java_package = "com.changqu.master.protobuf";
+
+//用户上线 code=30001
+message UserOnline {
+	required uint32 zoneId = 1; //当前区服ID
+	required uint32 belongZoneId = 2;
+}
+
+//用户下线 code=30002
+message UserOffline {
+	required uint32 zoneId = 1; //当前区服ID
+	required uint32 belongZoneId = 2;
+}
+
+//创建用户 code=70006
+message UserCreate {
+	required string account = 1;		// 用户账号
+	required uint32 belongZoneId = 2; //创角区服ID
+	required string name = 3;		// 用户名称
+	required string heroId = 4;	// 初始英雄Id
+	optional string from = 5; //来自渠道
+}

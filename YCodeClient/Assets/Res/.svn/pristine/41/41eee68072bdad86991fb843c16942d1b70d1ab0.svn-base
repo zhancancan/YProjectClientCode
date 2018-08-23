@@ -1,0 +1,13 @@
+local this = class("NpcHud",HudCore);
+function this:enter(c,d)
+	self.hud =c;
+	self.data = d
+	self.txt=c:GetUI("txt_0");
+	self.txt.text=d.name;
+	-- print(d.name)
+end
+
+function this:onDataChanged(property,oldV,newV)
+
+end
+return this;

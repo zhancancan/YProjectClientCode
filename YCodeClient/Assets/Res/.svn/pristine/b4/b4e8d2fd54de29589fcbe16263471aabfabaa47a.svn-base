@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<place name="place_shamo" enviorPath="Assets/Res/Arts/Scene/Wild/shamo_sp/shamo_output.unity" enviorName="shamo_output" enviorGUID="11399fa8d5ef98146988f2393a7bbe44" fileName="place_shamo" filePath="Assets/Res/Data/Source/Place/place_shamo/place_shamo.place">
+  <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+    <object name="re" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="re_1" position="85.19:15.2141:168.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="eventArea" color="ff00ff00" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+      </object>
+      <object name="re_2" position="79.8:15.16398:108.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+      </object>
+      <object name="re_3" position="145.7:15.18404:214.8" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+      </object>
+      <object name="re_4" position="182.4:15.20398:143.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+      </object>
+      <object name="re_5" position="117.8:15.21408:42.9" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+        <mono monoType="eventArea" color="ff01d201" shape="0" width="5" depth="5" radius="5" ignoreMask="0" />
+      </object>
+    </object>
+    <object name="yaosai" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="yaosai_1" position="39.02:17.23265:227.52" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="yaosai_2" position="49.32:17.22676:227.52" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="yaosai_3" position="20.34:16.75726:227.52" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="yaosai_4" position="21.13:16.30524:221.45" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="yaosai_5" position="46.84999:16.45513:220.09" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="yaosai_6" position="58.25999:16.30524:217.03" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="yaosai_7" position="65.14:16.95285:227.52" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="jvzhuqu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="jvzhuqu_1" position="23.2:16.30524:194.6" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_2" position="36.2:16.46836:207.7" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_3" position="34.1:16.46836:202" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_4" position="42.6:16.46836:202.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_5" position="48.9:16.46836:207.5" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_6" position="22.1:16.30524:202" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_7" position="55.4:16.2989:202" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_8" position="58.5:16.30598:194" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_9" position="39.6:16.36414:194.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="jvzhuqu_10" position="59.8:16.28754:206.7" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="muchang" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="muchang_1" position="105.3:15.03725:143.3" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_2" position="107.82:15.03725:164.54" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_3" position="91.62999:15.03725:132.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_4" position="97.72:15.03725:134" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_5" position="85.11:15.03725:129.29" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_6" position="93:15.03725:125.1" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_7" position="128.86:15.02139:138.83" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_8" position="139.4:15.03292:133.34" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="muchang_9" position="114.37:15.03688:134.95" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="waicheng" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="waicheng_1" position="32.3:15.31661:170.9" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_2" position="42.8:15.5621:171.5" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_3" position="49.9:15.15948:164.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_4" position="58.7:15.08249:163.1" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_5" position="39.4:15.06605:165" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_6" position="19.8:15.2923:159.1" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_7" position="36.5:15.03725:156.7" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_8" position="60.8:15.03494:155.4" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_9" position="50.7:15.92079:171.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_10" position="27.2:15.18352:166.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="waicheng_11" position="19.8:15.18923:166.2" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="shaosuo" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="shaosuo_1" position="15.25:15.03725:135.74" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shaosuo_2" position="20.94:15.03725:135.4" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shaosuo_3" position="23.73:15.03725:101.97" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shaosuo_4" position="14.14:15.03725:98.31" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shaosuo_5" position="23.73:15.03725:117.4" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shaosuo_6" position="23.73:15.03725:123.29" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shaosuo_7" position="13.05:15.03725:123.29" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shaosuo_8" position="12.25:15.03725:116.14" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="daying" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="daying_1" position="123.31:15.03725:216.62" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_2" position="104.9:15.03835:217.22" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_3" position="121.79:15.00403:206.36" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_4" position="109.81:15.08575:194.2" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_5" position="113.68:15.03725:217.1" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_6" position="98.80001:15.08219:201.58" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_7" position="102:15.01934:209.97" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_8" position="112.38:15.03533:205.88" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="daying_9" position="94.13:15.01685:209.97" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="zeishao" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="zeishao_1" position="152.7:15.03725:162.65" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="zeishao_2" position="152.7:15.02719:170.49" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="zeishao_3" position="156.48:15.1072:166.81" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="zeishao_4" position="160.47:15.05387:161.4" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="zeishao_5" position="160.43:15.48769:170.49" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="zeishao_6" position="165.96:15.32568:166.81" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="zeishao_7" position="137.02:15.03725:164.66" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="zeishao_8" position="129.38:15.00811:161.74" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="shouxuekou" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="shouxuekou_1" position="191.38:15.01803:109.3" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shouxuekou_2" position="189.49:15.03725:104.17" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shouxuekou_3" position="184.77:15.02243:112.54" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shouxuekou_4" position="181.59:15.03725:99.98" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="shouxuekou_5" position="180.94:15.03725:107.24" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="dazhai" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="dazhai_1" position="220.46:22.5264:199.36" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_2" position="205.47:22.53588:223.64" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_3" position="197.74:22.51816:223.64" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_4" position="202.7:22.48511:210.45" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_5" position="207.07:22.50151:206.84" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_6" position="197.57:22.48919:206.16" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_7" position="202.7:22.5152:200.87" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_8" position="202.7:22.48511:210.45" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_9" position="182.9:22.53588:180.3" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_10" position="203.4:22.53588:176.4" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_11" position="185.7:22.53588:183.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_12" position="178.9:22.53588:183.6" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_13" position="178.3:22.50316:220.9" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_14" position="183.4:22.50665:224.07" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_15" position="176.1:22.47898:224.4" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_16" position="165.5:19.19324:197.3" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_17" position="162:19.11017:201.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dazhai_18" position="220.46:22.5277:207.5" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="dashouxue" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="dashouxue_1" position="228.32:13.09007:123.04" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_2" position="224.35:13.04128:79.32999" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_3" position="228.74:13.0995:86.34" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_4" position="220.46:13.04128:87.99" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_5" position="225.61:13.1193:92.78" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_6" position="230.62:13.57705:109.25" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_7" position="207.98:13.69803:100.84" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_8" position="209.07:13.29352:107.8" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_9" position="220.46:13.18821:122.87" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_10" position="228.95:13.53109:104.95" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="dashouxue_11" position="220.46:13.11008:107.42" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="sicheng" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="sicheng_1" position="204.59:16.0374:53.81" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_2" position="223.81:16.03309:47.61" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_3" position="216.16:16.03679:48.02" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_4" position="212.18:16.0444:48.12" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_5" position="227.23:16.04642:47.61" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_6" position="198:16.00733:50.51" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_7" position="197.48:15.94839:46.58" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_8" position="224.82:16.10474:41.78" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_9" position="177.3:15.03725:34.18" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_10" position="184.21:15.03725:34.18" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_11" position="184.82:15.03003:45.08" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="sicheng_12" position="180.06:15.03725:39.86" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="siju" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="siju_1" position="194.77:15.82432:39.71" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_2" position="194.77:15.84853:29.94" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_3" position="203.55:16.0444:39.71" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_4" position="210.49:16.0444:35.55" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_5" position="210.37:16.82189:22.9" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_6" position="226.5:18.02984:32.83" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_7" position="203.5:16.0444:27.29" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_8" position="224.96:18.03644:17.99" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_9" position="235.23:18.00303:17.99" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="siju_10" position="236.12:18.04005:32.6" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="kongbu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="kongbu_1" position="174.91:18.02237:9.710001" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_2" position="175.51:18.04037:16.44" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_3" position="184.93:18.0004:18.52" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_4" position="183.89:18.03584:8.5" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_5" position="200.21:18.04037:13.08" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_6" position="199.95:18.04037:4.350001" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_7" position="207.38:18.04037:14.37" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_8" position="208.76:18.04037:4.87" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_9" position="188.47:18.01734:12.13" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="kongbu_10" position="213.6:18.04037:12.13" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="lvying2" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="lvying2_1" position="114.23:14.57208:15.13" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvying2_2" position="133.96:14.71063:14.36" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvying2_3" position="132.82:15.01072:24.75" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvying2_4" position="125.39:15.0021:15.57" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvying2_5" position="126.27:15.04:21.23" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvying2_6" position="104.44:15.05066:22.5" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvying2_7" position="114.23:15.03725:19.97" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="qiwu" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="qiwu_1" position="94.81:15.03725:68.3" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="qiwu_2" position="96.21:15.03725:61.04" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="qiwu_3" position="92.14:15.03795:62.68" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="qiwu_4" position="83.19999:15.0468:76.76999" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="qiwu_5" position="87.5:15.04216:75.41" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="qiwu_6" position="85.12001:15.04802:75.01" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="qiwu_7" position="71.77:15.23419:72.24" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="qiwu_8" position="73.52:15.19149:68.39" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="chengwai" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="chengwai_1" position="23.12:15.2384:71.11" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="chengwai_2" position="32.32:15.15335:70.23" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="chengwai_3" position="19.95:15.05374:59.77" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="chengwai_4" position="35.4:15.03725:64.93" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="chengwai_5" position="31.29:15.09146:59.84" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="chengwai_6" position="11.43:15.10145:54.64" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="cheng" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="cheng_1" position="47.33:15.16846:45.3" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_2" position="51.02:15.18587:42.46" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_3" position="64.38:15.03965:24.65" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_4" position="61.6:15.07459:36.69" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_5" position="36.38:15.2906:39.29" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_6" position="66.28:15.07484:31.66" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_7" position="46.01:15.26027:40.29" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_8" position="40.47:15.26513:31.86" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_9" position="18.96:15.35738:38.21" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_10" position="21.12999:15.12403:46.91" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_11" position="50.45:15.08115:17.79" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="cheng_12" position="57.4:15.01636:14.36" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="hexing" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="hexing_1" position="30.54:15.05781:17.42" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="hexing_2" position="31.2:15.03743:23.11" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="hexing_3" position="22.4:15.38595:34.14" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="hexing_4" position="26.51:15.34679:34.62" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="hexing_5" position="23.69:15.04188:18.92" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="hexing_6" position="20.54:15.11279:26.84" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="hexing_7" position="25.65:15.08789:24.92" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+    <object name="lvzhou" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <object name="lvzhou_1" position="112.08:14.93004:108.49" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvzhou_2" position="125.25:14.89618:104.64" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvzhou_3" position="117.81:14.72548:107.59" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvzhou_4" position="140.3:15.00913:101.5" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvzhou_5" position="147.4:14.73854:109.4" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+      <object name="lvzhou_6" position="147.2:14.85806:118.7" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4">
+        <mono monoType="locationData" type="0" />
+      </object>
+    </object>
+  </object>
+</place>

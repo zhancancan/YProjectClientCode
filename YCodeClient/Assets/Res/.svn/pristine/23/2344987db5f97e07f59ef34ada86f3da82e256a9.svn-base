@@ -1,0 +1,7 @@
+local HudCore= class("HudCore");
+local this = HudCore;
+function this:enter(hud)
+	self.hud =hud;
+end
+
+return this;

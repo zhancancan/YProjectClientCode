@@ -1,0 +1,46 @@
+﻿using LuaInterface;
+using pure.ai.aimachine.runner;
+using pure.database.structure.tree;
+using pure.entity.animation;
+using pure.entity.interfaces;
+using pure.refactor.property;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using pure.ticker;
+using pure.utils.debug;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.BUFF)]
+    public class AICommand_Buff : CpxAction {
+
+        public override RpxAction GetRuntime() {
+            return RpxPool<Runtime>.Get().SetSource(this);
+        }
+
+        private class Runtime : ModelCommandImpl<AICommand_Buff> {
+           
+
+            protected override void OnEnter() {
+                Debug.Log("ai buff onEnter todo");
+                object obj = machine.GetRuntimeData<object>(CpxState.TEMP_DATA);
+                if (obj == null) {
+                    GlobalLogger.LogError("no setting data retrieved");
+                    return;
+                }
+                _status = CompStatus.COMPLETE;
+            }
+
+
+            private void OnComplete() {
+                _status = CompStatus.COMPLETE;
+            }
+
+            protected override void OnExit() {
+                RpxPool<Runtime>.Release(this);
+            }
+
+        
+        }
+    }
+}

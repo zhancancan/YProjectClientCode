@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_miyue_HP" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_miyue_HP.tree" fileName="Fx_miyue_HP.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="-1">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="-1" duration="7" durationScaleType="-1" actionType="0" anim="Skill_0" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="-1" />
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="-1" duration="0" durationScaleType="-1" delay="0" delayScaleType="-1" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/miyue/EP_miyue_0_hp_sp/EP_miyue_HP_show.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="6.5" durationScaleType="-1" animatorScaleType="-1" orientMode="1" dirMode="1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="7" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/miyue/EP_miyue_0_hp_sp/EP_miyue_zs_weapon.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="4.5" timeScaleType="0" duration="6.5" durationScaleType="0" boneName="Bip001 L Finger2" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="6.4" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/miyue/EP_miyue_0_hp_sp/EP_miyue_zs_L_qun11.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="6.4" durationScaleType="0" boneName="L_qun11" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/miyue/EP_miyue_0_hp_sp/EP_miyue_zs_R_qun11.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="6.4" durationScaleType="0" boneName="R_qun11" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="6.3" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/miyue/EP_miyue_0_hp_sp/EP_miyue_zs_texiao.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="6.3" durationScaleType="0" boneName="texiao" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="" cellType="fxtimescale" groupPhase="0" time="2.27" timeScaleType="0" scaleType="-1" scale="0.1" phase="0" />
+      <cell treeOpen="False" editName="" cellType="fxtimescale" groupPhase="0" time="3.6" timeScaleType="0" scaleType="-1" scale="1" phase="0" />
+    </cell>
+  </cell>
+</Canvas>

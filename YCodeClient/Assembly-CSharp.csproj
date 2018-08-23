@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{735F0098-F4AF-E309-0FA6-0B31FF4BBF1B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_4;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>E:/Unity5.5.4p5/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>E:/Unity5.5.4p5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_Buff.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_Dead.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_FireSkill.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_FloatText.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_Move.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_MoveElastic.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_QuitMove.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_Stand.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\AICommand_SteerMove.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\CommandActionType.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\FlyTextEntity.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\machine\ai\ModelCommandImpl.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\GameStarter.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\IStartRunner.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\MachineWrap.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\MediatorWrap.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\MonoWrap.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\NativeBridge.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\PropertyWrap.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\Start_Async.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\Starter_Lua.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\TreeWrap.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\lua\DelegateFactory.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\lua\LuaBinder.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\main\lua\Luawrap.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\animator\AnimState_Audio.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\animator\AnimState_Block.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\CharacterMouseRotater.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\Fbx_Bone.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\Fbx_Model.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\Fbx_Shadow.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\FireFxTreeDebuger.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\FlexBoneCollider.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\FlexSkeleton.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\Fx_Audio.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\Fx_BulletPrefab.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\MeshCut.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\PortraitAct_Skill.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\fbx\TickerCenterTrigger.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\materials\FogSetting.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\materials\MaterialTools.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\materials\ShaderBeh_ColorMatrix.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\materials\ShaderBeh_SpecLightDir.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\CamSetting.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\CameraData.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\CameraDepthRender.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\CustomData.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\EventArea.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\FogProbe.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\LightmapBake.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\LocationData.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\Navigator.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\PathWayPoint.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\scene\SceneRoot.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\screen\ImageEffect_ScreenColor.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\screen\ImageEffect_WaterDrop.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\shadow\ShadowProjector.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\terrain\TerrainBillboard.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\terrain\TerrainLod.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\terrain\TerrainObject.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\terrain\TerrainPart.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\test\EtParticleAndAnimator.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\test\HostMachineDebuger.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\TestClick.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\TestTreeRenderer.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIBackground.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIBar.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UICheckBox.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIComboBox.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIDataPane.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIItemPanel.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UILabel.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIPortrait.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIRadioButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIResourceField.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIRichText.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UISceneSpace.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UISlider.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UISpaceManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UIStar.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UITabNavigator.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UITextArea.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UITextInput.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\controls\UITreePane.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Bar.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Clickable.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Draggable.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Dropable.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\GradientText.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Icon.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\JoyStickFix.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\MovieClip.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\NumberField.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PDropdown.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PFloatMaterial.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PImage.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PRepeatImage.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PText.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PToggle.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Panel.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PolyImage.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\PortraitCache.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Pressable.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\ResourceField.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\RichText.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\ScrollView.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\SpriteAtlas.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\SpriteGraphic.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Star.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\Tab.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\TouchControl.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\TouchableRect.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\elements\UIAnimation.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\grid\GridFactory_Lua.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\grid\GridLayout_Align.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\grid\GridLayout_Card.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\grid\GridLayout_Central.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\grid\GridLayout_HandMark.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\grid\GridLayout_Lua.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\hud\SceneCanvas.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\hud\Text3D.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\so\SpriteCollection.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\utils\RectExpender.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\utils\TextAutoSize.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\utils\TextExpender.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\utils\UIColorGroup.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\ui\utils\UITween.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\voiceChat\ChatControl.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\voiceChat\ChatPlayer.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\voiceChat\ChatRecorder.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\voiceChat\VoiceChatSetting.cs" />
+     <Compile Include="Assets\Res\Scripts\Game\mono\voiceChat\VoiceTest.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Misc\LuaClient.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Misc\LuaResLoader.cs" />
+     <Compile Include="Assets\Test\DeSerializeObjToMesh.cs" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\Skinnable_Diffuse.shader" />
+     <None Include="Assets\Res\Scripts\Editor\shader\LineShader.shader" />
+     <None Include="Assets\Res\Arts\Shader\Unlit\Diffuse_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\color_tools.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableDecoration.xml" />
+     <None Include="Assets\Res\Data\Server\To\Lang\ui.txt" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture4_Diffuse.shader" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\Type_RewardUnit.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\DepthOnly.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle AddMultiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Unlit\Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Add.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainShadowCaster.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\BumpSpec.shader" />
+     <None Include="Assets\Res\Data\Server\To\Tree\BehaviorTree.xml" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\TerrainStruct_Bump.cginc" />
+     <None Include="Assets\Res\Scripts\Editor\shader\CollideShader_ZOn.shader" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Multiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\Terrain_LM3_Bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Core\rimlight_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Add.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Bump_CutOff.shader" />
+     <None Include="Assets\Res\Data\Source\Lang\Lang.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bump_map.cginc" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\vertlit_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\Skinnable_Bump.shader" />
+     <None Include="Assets\Res\Data\Server\From\Lang\zh_cn.txt" />
+     <None Include="Assets\Res\Data\Server\To\Tree\Default.xml" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Multiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture2_Bump.shader" />
+     <None Include="Assets\Res\Data\Server\To\Place\data.xml" />
+     <None Include="Assets\Res\Arts\Shader\Ray\BlinkingRays.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\Water_Best.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Previewer.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane AddMultiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\vertlit_bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Magma\Magma.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\math_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\skin_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\aux_color_tools.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableStruct_readme.txt" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Alpha Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture3_Bump.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\depth_only.cginc" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Bump.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bumpSpec_base.cginc" />
+     <None Include="Assets\Res\Scripts\Editor\shader\EditorTriangleDrawer.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\DepthSplit.shader" />
+     <None Include="Assets\Res\Data\Server\To\Lang\data.txt" />
+     <None Include="Assets\Res\Scripts\ToLua\link.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\BumpSpec_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Bump_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Add.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\WaterLightCG.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Premultiply Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\plane_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_MultiplyDouble.shader" />
+     <None Include="Assets\Res\Data\Server\To\Tree\WordTree.xml" />
+     <None Include="Assets\Res\Data\Server\To\Tree\SettingTree.xml" />
+     <None Include="Assets\Res\Arts\Shader\Screen\WaterDrop.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Anim Alpha Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane AddSmooth.shader" />
+     <None Include="Assets\Res\Arts\Shader\Shadow\ShadowProjector.shader" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Alpha_Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Normal.shader" />
+     <None Include="Assets\Res\Scripts\Editor\plugins\diagram\DiagramSetting.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_diffuse_add.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Multiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Bump.shader" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\skinmerge.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableConfigData.xml" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Diffuse_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bumpSpec_map.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Unlit\simple_unlit.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bump_base.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainFwdBase.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_AddMultiply.shader" />
+     <None Include="Assets\Res\Data\Server\To\Tree\FireFx.xml" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_AddSmooth.shader" />
+     <None Include="Assets\Res\Arts\Shader\Hud\hud.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bump_add.cginc" />
+     <None Include="Assets\Res\Data\Server\To\Lang\program.txt" />
+     <None Include="Assets\Res\Arts\Shader\Shadow\ShadowSimpleRender.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\depth_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Diffuse_Transparent.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_diffuse_base.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\WaterRef_1.cginc" />
+     <None Include="Assets\Res\Scripts\ToLua\ToLua\readme.txt" />
+     <None Include="Assets\Res\Scripts\Editor\shader\CollideShader_ZOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle AddSmooth.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainStruct.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\LightSpace.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableStruct.xml" />
+     <None Include="Assets\Res\Arts\Shader\Water\Water_Medium.shader" />
+     <None Include="Assets\Res\Arts\Shader\Magma\simple_magma.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture2_Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture4_Bump.shader" />
+     <None Include="Assets\Res\Scripts\Editor\shader\EventArea.shader" />
+     <None Include="Assets\Res\Data\Server\To\Diagram\Mission.xml" />
+     <None Include="Assets\Res\Arts\Shader\Water\WaterRef_0.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Premultiply_Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane MultiplyDouble.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\TerrainFwdAdd_Bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_shadowCaster.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\Terrain_LM_3.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\TerrainFwdBase_Bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\UI\FloatLight.shader" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableConfigStruct.xml" />
+     <None Include="Assets\Res\Arts\Shader\Ray\GodRays.shader" />
+     <None Include="Assets\Res\Arts\Shader\Hud\Image.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle MultiplyDouble.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture3_Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Diffuse_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\skin_bump.cginc" />
+     <None Include="Assets\Res\Scripts\Editor\plugins\tree\treeSetting.xml" />
+     <None Include="Assets\Res\Arts\Shader\Core\dissolve_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\mp_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Screen\ScreenColor.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\particle_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_diffuse_map.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainFwdAdd.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Core\fog_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Core\particle_blend_mode.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Alpha Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Normal.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Premultiply Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Ray\BlinkingBillboardRay.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="EPPlus">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/epplus/EPPlus.dll</HintPath>
+ </Reference>
+ <Reference Include="game">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/game/Win/game.dll</HintPath>
+ </Reference>
+ <Reference Include="zip">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/pure/zip.dll</HintPath>
+ </Reference>
+ <Reference Include="pure">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/pure/Win/pure.dll</HintPath>
+ </Reference>
+ <Reference Include="CString">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tolua/CString.dll</HintPath>
+ </Reference>
+ <Reference Include="Debugger">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tolua/Debugger.dll</HintPath>
+ </Reference>
+ <Reference Include="tolua">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tolua/Win/tolua.dll</HintPath>
+ </Reference>
+ <Reference Include="toolsEx">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tools/toolsEx.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

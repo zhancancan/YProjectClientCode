@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<message name ="AoE" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="fx" type="string" />
+		<field name="tag" type="string" extraAction="array,trim" />
+		<field name="tickTime" type="int" />
+		<field name="onCreate" type="string" extraAction="customType=Function" />
+		<field name="onRemoved" type="string" extraAction="customType=Function" />
+		<field name="onTick" type="string" extraAction="customType=Function" />
+		<field name="onChaEnter" type="string" extraAction="customType=Function" />
+		<field name="onChaLeave" type="string" extraAction="customType=Function" />
+		<field name="onAoeEnter" type="string" extraAction="customType=Function" />
+		<field name="onAoeLeave" type="string" extraAction="customType=Function" />
+	</message>
+
+	<message name ="Buff" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" />
+		<field name="tag" type="string" extraAction="array,trim" />
+		<field name="icon" type="string" extraAction="trim" />
+		<field name="fx" type="string" extraAction="trim" />
+		<field name="tickTime" type="int" />
+		<field name="priority" type="int" />
+		<field name="maxStack" type="int" />
+		<field name="propertyPlus" type="string" extraAction="customType=Property" />
+		<field name="propertyTimes" type="string" extraAction="customType=Property" />
+		<field name="stateModify" type="string" extraAction="customType=Property" />
+		<field name="desc" type="string" />
+		<field name="onOccur" type="string" extraAction="customType=Function" />
+		<field name="onRemoved" type="string" extraAction="customType=Function" />
+		<field name="onTick" type="string" extraAction="customType=Function" />
+		<field name="onHit" type="string" extraAction="customType=Function" />
+		<field name="onBeHurt" type="string" extraAction="customType=Function" />
+		<field name="onKill" type="string" extraAction="customType=Function" />
+		<field name="onBeforeKilled" type="string" extraAction="customType=Function" />
+	</message>
+
+	<message name ="Bullet" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="fx" type="string" />
+		<field name="tag" type="string" extraAction="array,trim" />
+		<field name="msPerMeter" type="int" />
+		<field name="maxDuration" type="int" />
+		<field name="onHit" type="string" extraAction="customType=Function" />
+		<field name="onRemoved" type="string" extraAction="customType=Function" />
+	</message>
+
+	<message name ="ChatChannel" indexField="id">
+		<field name="id" type="int" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="canBeSelected" type="int" />
+		<field name="keepWord" type="int" />
+		<field name="keepVoice" type="int" />
+		<field name="fontColor" type="string" />
+		<field name="voiceLength" type="int" />
+		<field name="canSendMessage" type="int" />
+	</message>
+
+	<message name ="Currency" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="icon" type="string" extraAction="trim" />
+		<field name="maxCount" type="int" />
+		<field name="startCount" type="int" />
+	</message>
+
+	<message name ="Emote" indexField="id">
+		<field name="id" type="int" />
+		<field name="key" type="string" />
+		<field name="icon" type="string" />
+		<field name="isSmall" type="int" />
+		<field name="isAnim" type="int" />
+		<field name="immediateSend" type="int" />
+		<field name="tabIndex" type="int" fk="ChannelTab.id" />
+	</message>
+
+	<message name ="EmoteTab" indexField="id">
+		<field name="id" type="int" />
+		<field name="icon" type="string" />
+	</message>
+
+	<message name ="Equipment" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="icon" type="string" extraAction="trim" />
+		<field name="tag" type="string" extraAction="array,trim" />
+		<field name="part" type="int" />
+		<field name="level" type="int" />
+		<field name="quality" type="int" />
+		<field name="buff" type="string" extraAction="trim" />
+	</message>
+
+	<message name ="Hero" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="health" type="int" />
+		<field name="defence" type="int" />
+		<field name="attack" type="int" />
+		<field name="crit" type="int" />
+		<field name="critDamage" type="int" />
+		<field name="skills" type="string" extraAction="array,trim" />
+		<field name="artKey" type="string" extraAction="trim" />
+		<field name="heroType" type="string" fk="HeroType.id" />
+		<field name="buff" type="string" />
+		<field name="tag" type="string" extraAction="array,trim" />
+	</message>
+
+	<message name ="HeroType" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="icon" type="string" extraAction="trim" />
+	</message>
+
+	<message name ="Item" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="icon" type="string" extraAction="trim" />
+		<field name="tag" type="string" />
+		<field name="maxCount" type="int" />
+		<field name="effect" type="string" extraAction="customType=Function" />
+		<field name="desc" type="string" extraAction="lang" />
+	</message>
+
+	<message name ="MainQuest" indexField="id">
+		<field name="id" type="int" />
+		<field name="step" type="int" />
+		<field name="questId" type="string" fk="Quest.id" />
+	</message>
+
+	<message name ="NPC" indexField="id">
+		<field name="id" type="string" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="type" type="int" />
+		<field name="attackRank" type="int" />
+		<field name="defenseRank" type="int" />
+		<field name="healthRank" type="int" />
+		<field name="speedRank" type="int" />
+		<field name="exp" type="int" />
+		<field name="ai" type="string" extraAction="customType=Function&amp;functionClass=IHandler_Ai" />
+		<field name="dialog" type="string" />
+		<field name="tag" type="string" extraAction="array,trim" />
+		<field name="lootId" type="string" />
+		<field name="artkey" type="string" />
+	</message>
+
+	<message name ="Place" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="userThreshold" type="int" />
+		<field name="maxInstance" type="int" />
+		<field name="onPick" type="string" extraAction="customType=Function" />
+	</message>
+
+	<message name ="Quest" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="subQuest" type="string" extraAction="trim" fk="SubQuest.id" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="image" type="string" />
+		<field name="signText" type="string" extraAction="lang" />
+		<field name="type" type="int" />
+		<field name="firstReward" type="string" extraAction="array,trim" />
+		<field name="normalReward" type="string" extraAction="array,trim" />
+		<field name="isKey" type="int" />
+		<field name="isBoss" type="int" />
+		<field name="mapId" type="string" />
+		<field name="startLocationId" type="string" />
+		<field name="condition" type="string" extraAction="customType=Function" />
+		<field name="description" type="string" extraAction="lang" />
+	</message>
+
+	<message name ="RandomName" indexField="id">
+		<field name="id" type="string" />
+		<field name="word" type="string" extraAction="lang" />
+		<field name="position" type="int" />
+	</message>
+
+	<message name ="Setting" indexField="name">
+		<field name="name" type="string" extraAction="trim" />
+		<field name="value" type="string" />
+		<field name="type" type="string" extraAction="trim" />
+		<field name="isExport" type="int" />
+		<field name="description" type="string" />
+	</message>
+
+	<message name ="Skill" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="trim" />
+		<field name="maxLevel" type="int" />
+		<field name="cd" type="int" />
+		<field name="description" type="string" extraAction="trim" />
+		<field name="icon" type="string" extraAction="trim" />
+		<field name="maxCharge" type="int" />
+		<field name="fx" type="string" extraAction="trim" />
+		<field name="onCast" type="string" extraAction="customType=Function" />
+	</message>
+
+	<message name ="StartHero" indexField="id">
+		<field name="id" type="int" />
+		<field name="heroId" type="string" extraAction="trim" fk="Hero.id" />
+		<field name="desc" type="string" extraAction="lang" />
+		<field name="skill" type="int" />
+		<field name="attack" type="int" />
+		<field name="defend" type="int" />
+	</message>
+
+	<message name ="SubQuest" indexField="id">
+		<field name="id" type="string" extraAction="trim" />
+		<field name="name" type="string" extraAction="lang" />
+		<field name="description" type="string" extraAction="lang" />
+		<field name="icon" type="string" extraAction="trim" />
+		<field name="acceptBuff" type="string" extraAction="array,trim" />
+		<field name="questBuff" type="string" extraAction="array,trim" />
+		<field name="uiKey" type="string" extraAction="trim" />
+		<field name="featType" type="string" />
+		<field name="featExp" type="int" />
+		<field name="unlockCondition" type="string" extraAction="customType=Function" />
+		<field name="nextSubQuest" type="string" extraAction="array,trim" fk="SubQuest.id" />
+		<field name="selectUIHint" type="string" />
+	</message>
+</root>

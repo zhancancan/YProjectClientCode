@@ -1,0 +1,46 @@
+local class 		= require "Class"
+local this 			= class("Data_BuffObj",require "Data")
+local Logger 		= require "Logger"
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+
+local table
+
+
+
+local function getType(self)
+	if not table then table = db.getTable(TypeClasses.TYPE_BUFF)	end
+
+	if self then
+		local buff = rawget(self,"buff")
+		if not buff then
+			buff = table:selectOne({id=self.buffId})
+			rawset(self, "buff",buff)
+		end
+		return buff
+	end
+	return nil
+end
+
+
+
+local meta = {
+	__index = function(t,k)
+		if k == "name"  then
+			local  def = getType(t)
+			if def then return def.name end
+
+		elseif k == "buff" then--todo
+			local  def = getType(t)
+			if def then return def.buff end
+		end
+		return nil
+	end
+
+}
+
+function this:ctor()
+	setmetatable(self._data, meta)
+end
+
+return this

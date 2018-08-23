@@ -1,0 +1,25 @@
+MessageCollection:proxy=Auxiliary
+MessageData:proxy=Auxiliary
+PingMessage:proxy=Auxiliary
+LoginMasterResponse:proxy=Unsave
+
+Data_Error:proxy=Unsave
+
+RewardData:proxy=Auxiliary
+Position:proxy=Auxiliary
+
+Data_Character:proxy=Singleton
+Data_FieldController:proxy=Singleton
+
+
+Data_Player:proxy=Model
+Data_Monster:proxy=Model
+
+Data_Scene:proxy=Unsave
+
+Data_Gem:table=Data_Props class=Data_Props
+Data_Equip:table=Data_Props class=Data_Props
+
+Data_ActionMove:proxy=Action
+Data_UserState:proxy=Singleton
+Data_UserBase:proxy=Singleton

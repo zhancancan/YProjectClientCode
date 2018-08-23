@@ -1,0 +1,49 @@
+local app 			= require "AppCenter"
+local ns 			= require "CSNamespace"
+local native 		= ns["NativeManager"]
+local http 			= ns["LuaHttp"]
+
+
+local this={}
+local med
+
+
+local function onServerListLoaded(status,c)
+	print("onServerListLoaded",c)
+	if status ==1 then
+		app.servers = c.servers
+	else
+
+	end
+
+end
+
+local function onLoginReply(status ,c)
+	if status==1 then
+		app.loginInfo = c
+		print("onLoginReply",c)
+		local url = app.configInfo.ServerListApi
+		url = string.gsub(url,"{a}",c.account)
+		http.Send(url, onServerListLoaded)
+	else
+		-- handle load err
+	end
+end
+
+
+function this.show()
+	local url = app.configInfo.LoginApi
+	local info = app.loginInfo
+	url = string.gsub(url,"{t}",info.type)
+	url = string.gsub(url,"{c}",info.code)
+	print(url)
+	http.Send(url,onLoginReply)
+end
+function this.hide( )
+	-- body
+end
+function this.initView(_,m)
+	med=m
+end
+
+return this

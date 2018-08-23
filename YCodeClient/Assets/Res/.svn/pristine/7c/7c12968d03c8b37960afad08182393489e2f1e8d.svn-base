@@ -1,0 +1,30 @@
+//公用协议
+option java_package = "com.changqu.master.protobuf";
+
+//消息列表 code=10001
+message MessageCollection {
+	repeated MessageData datas = 1; //消息数组 
+	optional string primaryKey = 2; //主标识
+	repeated string userKey = 3; //用户标识
+	optional int32 sceneId=4 [default=-1]; //场景Id
+}
+
+//协议封装 code=10002
+message MessageData {
+	required int32 code = 1;   //协议编码
+	required bytes bytes = 2;    //协议数据 
+}
+
+//错误消息 code=10003
+message Data_Error {
+	required uint32 type = 1;	// 错误类型
+	optional uint32 code = 2;	// 错误码	
+	optional string msg = 3;	// 错误消息
+}
+
+//心跳 code=10004
+message PingMessage {
+	optional string msg = 1;	// 消息
+}
+
+

@@ -1,0 +1,92 @@
+import "GameToClientProto.proto";
+option java_package = "com.changqu.master.protobuf";
+
+//用户Buff表 code=90030
+message Data_BuffObj {
+	optional bool isRemove = 1;
+	required string id = 2;
+	required string buffId = 3;		//Buff定义ID，对应Buff表
+	optional uint32 stack = 4;		//层数
+	optional uint32 tickTime = 5;		//跳一次间隔时间，毫秒
+	optional uint32 ticked = 6;		//$跳过多少次($前缀表示更新时不标记protobuf dirty）
+	optional int64 endTime = 7;		//结束时间
+}
+
+//用户技能表 code=90040
+message Data_SkillObj {
+	optional bool isRemove = 1;
+	required string id = 2;		//技能唯一ID
+	optional string heroId = 3;		//英雄ID
+	optional string skillId = 4;		//技能定义ID，对应Skill表
+	optional uint64 cooldown = 5;		//冷却截止时间（<=当前时间才能用）毫秒
+	optional uint32 setToCooldown = 6;		//当技能被成功使用后，cooldown设置为当前时间+这个数字，毫秒
+	optional uint32 level = 7;		//技能等级
+}
+
+//用户基本信息表 code=90000
+message Data_UserBase {
+	optional bool isRemove = 1;
+	required string id = 2;
+	optional uint32 zoneId = 3;		//区服ID
+	optional string name = 4;		//角色名称
+	optional uint64 regTime = 5;		//注册时间
+}
+
+//用户货币表 code=90020
+message Data_UserCurrency {
+	optional bool isRemove = 1;
+	required uint32 id = 2;		//货币ID
+	optional int64 value = 3;		//资源值
+}
+
+//用户英雄表 code=90050
+message Data_UserHero {
+	optional bool isRemove = 1;
+	required string id = 2;		//英雄ID
+	optional uint32 level = 3;		//英雄星级
+	optional uint64 exp = 4;		//英雄经验
+}
+
+//用户已完成任务表 code=90060
+message Data_UserQuest {
+	optional bool isRemove = 1;
+	required string id = 2;		//任务Id
+	optional uint64 lastStartTime = 3;		//上次开始时间
+	optional uint32 times = 4;		//完成次数
+	optional uint32 star = 5;		//最高完成星级
+}
+
+//用户任务奖励表 code=90080
+message Data_UserQuestReward {
+	optional bool isRemove = 1;
+	optional uint32 id = 2;		//奖励星级（0：通关奖励，1：1星，2：2星，3：3星）
+	optional ThingGroup rewardThing = 3;		//奖励内容<!--{"extraAction":"customType=Thing"}-->[proto=GameToClientProto.ThingGroup]
+}
+
+//用户进行中任务表 code=90070
+message Data_UserQuestState {
+	optional bool isRemove = 1;
+	required string id = 2;
+	optional string questId = 3;		//当前主任务ID
+	optional string subQuestId = 4;		//当前支任务ID
+	optional uint32 subQuestState = 5;		//支任务状态（0：未完成，1：已完成）
+	optional uint32 rewardState = 6;		//领奖状态（0：不可领，1：可领，2：已领）
+}
+
+//用户状态信息表 code=90010
+message Data_UserState {
+	optional bool isRemove = 1;
+	required string id = 2;
+	optional string heroId = 3;		//当前英雄Id
+	optional uint32 level = 4;		//等级
+	optional uint64 exp = 5;		//经验
+	optional uint64 loginTime = 6;		//本次登录时间
+	optional uint64 lastLoginTime = 7;		//上次登录时间
+	optional uint64 lastLogoutTime = 8;		//上次登出时间
+	optional string placeId = 9;		//场景ID
+	optional string sceneId = 10;		//所在场景实例ID
+	optional uint32 logoId = 11;		//用户Logo
+	optional uint32 controlState = 12;		//可控状态<!--{"extraAction":"customType=ControlState"}-->
+	optional PropertyGroup property = 13;		//属性<!--{"extraAction":"customType=Property"}-->[proto=GameToClientProto.PropertyGroup]
+}
+

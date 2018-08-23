@@ -1,0 +1,49 @@
+local this={}
+local med
+
+local app 			= require "AppCenter"
+local ns 			= require "CSNamespace"
+local native 		= ns["NativeManager"]
+local http 			= ns["LuaHttp"]
+
+local item = {}
+
+local function utcToTime(utc)
+	local t = tonumber(utc)
+	return os.date("%Y-%m-%d-%H-%M-%S",t)
+end
+
+function item:draw(cell,data)
+	local str
+	-- if data.state == 2 then
+
+	-- end
+	str = utcToTime(data.open_time)
+	cell:SetString("txt_0",str)
+	cell:SetString("txt_1",data.name)
+end
+
+function item:onInit(cell)
+	cell:SetClickTrigger("img")
+end
+
+function this.show( )
+	local serverList = app.servers
+
+	med:SetList("pane",serverList)
+end
+local function onItemClick()
+	med:Hide()
+end
+function this.hide( )
+	med:SetList("pane",nil)
+end
+
+function this.initView(_,m)
+	med=m
+	med:SetPaneFactory("pane",item)
+	med:AddListener("pane",onItemClick)
+end
+
+
+return this

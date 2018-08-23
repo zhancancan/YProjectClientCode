@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe94ff9d92818b43a980eb1f990bec2, type: 3}
+  m_Name: uiSceneStatic_Space_0
+  m_EditorClassIdentifier: 
+  type: 1
+  distance: 7
+  height: 3
+  anquluarSoothLag: 0.3
+  anqularMaxSpeed: 15
+  heightSmoothLag: 0.3
+  snapSmoothLag: 0.2
+  snapMaxSpeed: 720
+  clampHeadPositionScreenSpace: 0.75
+  lockCameraTimeOut: 0.2
+  cameraRotateY: 45
+  ignoreLayers: -131073

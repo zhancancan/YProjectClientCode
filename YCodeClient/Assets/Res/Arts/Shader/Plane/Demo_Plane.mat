@@ -1,0 +1,271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Demo_Plane
+  m_Shader: {fileID: 4800000, guid: 27ad1215a139f0a4c9a8e3e2b5eee3a7, type: 3}
+  m_ShaderKeywords: TRANSFORM_UV _BLEND_SCREEN _EMISSION _TEX_L2
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailAlbedoMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailMask
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailNormalMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DissolveMap
+      second:
+        m_Texture: {fileID: 2800000, guid: 2683bcdaaf7c4b1438c126421d55c6e8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EmissionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 4c9a86f7c334c1340aca2804478ff73f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MetallicGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ParallaxMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SkyTex
+      second:
+        m_Texture: {fileID: 8900000, guid: 9b89d3ee654421b4c8beb73b0abdb99d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Tex_0
+      second:
+        m_Texture: {fileID: 2800000, guid: 8fe3b41e9a0622145b3e1372ca37a637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Tex_1
+      second:
+        m_Texture: {fileID: 2800000, guid: 2d37415aaba91684e8e0b388f060c52b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Tex_2
+      second:
+        m_Texture: {fileID: 2800000, guid: 3d5f0f74ad2d0c8458a19418193bc515, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Tex_3
+      second:
+        m_Texture: {fileID: 2800000, guid: 4db3a088cfa4ede4ca0cb5fb8868cef5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _WaterTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 4c5b81af3c597a4499513b4d0891992c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _Blend
+      second: 2
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _ColorEdge
+      second: 0.8
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _DetailNormalMapScale
+      second: 1
+    - first:
+        name: _DissolveEdge
+      second: 0.1
+    - first:
+        name: _DissolveThreshold
+      second: 0
+    - first:
+        name: _DstBlend
+      second: 0
+    - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
+    - first:
+        name: _InvFade
+      second: 1
+    - first:
+        name: _Metallic
+      second: 0
+    - first:
+        name: _Mode
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _Parallax
+      second: 0.02
+    - first:
+        name: _ReflectionTint
+      second: 0.8
+    - first:
+        name: _Rotate
+      second: 0
+    - first:
+        name: _Rotate_0
+      second: 1
+    - first:
+        name: _Rotate_1
+      second: 1
+    - first:
+        name: _Rotate_2
+      second: 1
+    - first:
+        name: _Rotate_3
+      second: 1
+    - first:
+        name: _Shininess
+      second: 1
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
+        name: _SrcBlend
+      second: 1
+    - first:
+        name: _Tex
+      second: 0
+    - first:
+        name: _Tiling
+      second: 0.025
+    - first:
+        name: _TransformUV
+      second: 1
+    - first:
+        name: _UVSec
+      second: 0
+    - first:
+        name: _ZWrite
+      second: 1
+    - first:
+        name: _dissolve
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _Color0
+      second: {r: 0.54341066, g: 0.5071367, b: 0.9852941, a: 1}
+    - first:
+        name: _Color1
+      second: {r: 0.0759083, g: 0.27803957, b: 0.28676468, a: 0}
+    - first:
+        name: _DissolveColor
+      second: {r: 1, g: 0.9724138, b: 0, a: 1}
+    - first:
+        name: _DissolveEdgeColor
+      second: {r: 1, g: 0, b: 0, a: 1}
+    - first:
+        name: _EmissionColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _InvRanges
+      second: {r: 1, g: 0.17, b: 0.17, a: 0}
+    - first:
+        name: _Offset
+      second: {r: 0, g: 0, b: 0.5, a: 0.5}
+    - first:
+        name: _Offset_0
+      second: {r: 0, g: 0, b: 1, a: 1}
+    - first:
+        name: _Offset_1
+      second: {r: 0, g: 0, b: 1, a: 1}
+    - first:
+        name: _Offset_2
+      second: {r: 0, g: 0, b: 1, a: 1}
+    - first:
+        name: _Offset_3
+      second: {r: 0, g: 0, b: 1, a: 1}
+    - first:
+        name: _Pivot
+      second: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - first:
+        name: _Pivot_0
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _Pivot_1
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _Pivot_2
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _Pivot_3
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _Reflection
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _Specular
+      second: {r: 1, g: 1, b: 1, a: 0}
+    - first:
+        name: _TintColor
+      second: {r: 1, g: 1, b: 1, a: 1}

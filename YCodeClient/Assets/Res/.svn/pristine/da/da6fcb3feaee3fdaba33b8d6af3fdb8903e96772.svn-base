@@ -1,0 +1,35 @@
+local class  = require "Class"
+local base   = require "HudCore"
+local this = class("NpcHud",base);
+
+local data
+local hud
+
+function this:onEnter(c,d)
+	self.hud =c;
+	self.data = d
+	data = d
+	hud =c
+	c:SetString("txt",d.name)
+	-- self.txt.text=d.name;
+
+	data:addListener(this,this.onDataChanged)
+
+	local f = d.hp / d.maxHp
+	self.hud:SetFloat("bar",f)
+
+end
+
+function this:onExit( ... )
+	data:removeAllListener()
+end
+
+function this:onDataChanged(property,oldV,newV)
+	if property == "name" then
+		hud:SetString("txt",newV)
+	elseif property == "hp" then
+		local f = newV / data.maxHp
+		hud:SetFloat("bar",f)
+	end
+end
+return this;

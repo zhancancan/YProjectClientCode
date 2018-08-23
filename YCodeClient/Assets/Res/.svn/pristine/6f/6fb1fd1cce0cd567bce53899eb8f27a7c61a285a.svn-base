@@ -1,0 +1,48 @@
+local class 		= require "Class"
+local base 			= require "Data"
+local this 			= class("Data_Npc",base)
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+
+local table
+
+
+
+local function getTypeNpc(self)
+	if not table then table = db.getTable(TypeClasses.TYPE_NPC)	end
+
+	if self then
+		local npc = rawget(self,"npc")
+		if not npc then
+			npc = table:selectOne({id=self.npcId})
+			rawset(self, "npc",npc)
+		end
+		return npc
+	end
+	return nil
+end
+
+
+
+local meta = {
+	__index = function(t,k)
+		if k == "name"  then
+			local  def = getTypeNpc(t)
+			if def then return def.name end
+
+		elseif k == "body" then
+			local  def = getTypeNpc(t)
+			--print("npc get body", def.body)
+			if def then return def.body end
+		end
+		return nil
+	end
+
+}
+
+function this:ctor()
+	setmetatable(self._data, meta)
+end
+
+
+return this

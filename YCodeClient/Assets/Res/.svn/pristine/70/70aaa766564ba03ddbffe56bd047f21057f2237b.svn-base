@@ -1,0 +1,11 @@
+local this = class("HostHud",HudCore);
+function this:enter(c)
+	self.hud =c;
+	self.txt=c:GetUI("txt_0");
+	self.txt.text="newbility";
+end
+
+function this:onDataChanged(property,oldV,newV)
+
+end
+return this;

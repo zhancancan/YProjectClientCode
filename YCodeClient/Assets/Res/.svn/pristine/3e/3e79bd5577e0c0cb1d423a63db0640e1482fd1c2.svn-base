@@ -1,0 +1,20 @@
+
+local app = require "AppCenter"
+
+local this = class("HostHud",HudCore);
+function this:enter(c)
+	self.hud =c;
+	self.txt=c:GetUI("txt_0");
+	self.txt.text="newbility";
+	-- self.bar = c:GetUI("bar");
+
+end
+
+function this:onDataChanged(property,oldV,newV)
+	if property == "name" then
+		self.txt.text = newV
+	else
+		--...
+	end
+end
+return this;

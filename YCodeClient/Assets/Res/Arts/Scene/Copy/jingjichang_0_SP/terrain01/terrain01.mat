@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: terrain01
+  m_Shader: {fileID: 4800000, guid: 5878664576ab80345a8334a01bd7e661, type: 3}
+  m_ShaderKeywords: ENABLE_ILLUMIN
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Control
+      second:
+        m_Texture: {fileID: 2800000, guid: 458e47b6f3fe77e4f9474ed256efae01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DissolveMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _IlluminTex
+      second:
+        m_Texture: {fileID: 2800000, guid: a5ea4fd634166924494545b05d92ab62, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 2e43271fd53293740b1e345fea6db5b4, type: 3}
+        m_Scale: {x: 6, y: 6}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _NoiseTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 31f5a8611c4ed1245b18456206e798dc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Splat0
+      second:
+        m_Texture: {fileID: 2800000, guid: 2e43271fd53293740b1e345fea6db5b4, type: 3}
+        m_Scale: {x: 12, y: 12}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Splat1
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Splat2
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Splat3
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _BumpPower
+      second: 0.5
+    - first:
+        name: _ColorEdge
+      second: 0.8
+    - first:
+        name: _Cull
+      second: 2
+    - first:
+        name: _DissolveEdge
+      second: 0.1
+    - first:
+        name: _DissolveThreshold
+      second: 0
+    - first:
+        name: _Emission
+      second: 0.8
+    - first:
+        name: _EmissionPower
+      second: 0.5
+    - first:
+        name: _Gloss
+      second: 0
+    - first:
+        name: _InvFade
+      second: 1
+    - first:
+        name: _NoiseSpeed
+      second: 2
+    - first:
+        name: _Rotate
+      second: 1
+    - first:
+        name: _SequenceSpeed
+      second: 200
+    - first:
+        name: _Shininess
+      second: 1
+    - first:
+        name: _SizeX
+      second: 4
+    - first:
+        name: _SizeY
+      second: 4
+    - first:
+        name: _TransformUV
+      second: 0
+    - first:
+        name: _dissolve
+      second: 0
+    - first:
+        name: _illumin
+      second: 1
+    - first:
+        name: _sequence
+      second: 0
+    - first:
+        name: _vertexAnim
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 0}
+    - first:
+        name: _DissolveColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _DissolveEdgeColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _Emission
+      second: {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
+    - first:
+        name: _NoiseData
+      second: {r: 2, g: 2, b: 3, a: 0.005}
+    - first:
+        name: _Offset
+      second: {r: 0, g: 0, b: 1, a: 1}
+    - first:
+        name: _Pivot
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _SpecColor
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _SpecDir
+      second: {r: 0.6694701, g: 0.46970055, b: 0.57549226, a: 0}
+    - first:
+        name: _Tiling3
+      second: {r: 1, g: 1, b: 0, a: 0}
+    - first:
+        name: _TintColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _WinDir
+      second: {r: 0, g: -0.7, b: 0.7, a: 1}

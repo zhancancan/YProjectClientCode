@@ -1,0 +1,17 @@
+
+local this = {}
+_G["DataInitor"]=this
+function this.init()
+	require "TypeDataInitor"
+	local typeData = _G["TypeDataInitor"]
+	require "GameDataInitor"
+	local gameData =_G["GameDataInitor"]
+	typeData.init()
+	gameData.init()
+
+	_G["DataInitor"]=nil
+	_G["TypeDataInitor"]=nil
+	_G["GameDataInitor"]=nil
+end
+
+return this

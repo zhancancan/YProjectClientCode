@@ -1,0 +1,16 @@
+﻿using edit.pure.machine.core;
+using pure.ai.aimachine;
+
+namespace plugins.machine.canvas.ai.host.action {
+    [MacActon(false, "Host/Fx Fire", new[] {typeof (AIMachineChart)})]
+    public class MacAction_FxFire : Mac_Action {
+        public override string actionType {
+            get { return AIActionType.HOST_FX_FIRE; }
+        }
+
+        public override string renderContent {
+            get { return "Host Fx Fire"; }
+            set { }
+        }
+    }
+}

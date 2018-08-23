@@ -1,0 +1,59 @@
+local this={}
+local med
+
+local class 			= require "Class"
+local TypeClasses		= require "TypeClasses"
+local typeDB			= require "TypeDB"
+local ns 				= require "CSNamespace"
+local PanelManager  	= ns.PanelManager
+
+local error				= require "ErrorCenter"
+local log 				= require "Logger"
+
+local db 				= require "DataManager".dbase
+local DataClasses		= require "DataClasses"
+local data_quest 		= require "Data_UserQuest"
+local data_questState   = require "Data_UserQuestState"
+
+local SocketForm 		= require "SocketForm"
+
+--Mediator
+local function  onErrorReceived(err)
+	log.log("create med", err.code, err.msg)
+end
+
+function onSubQuestBtnClick()
+end
+
+function judgeEqual(quests,id)
+	for i=1,#quests do
+		if quests[i].id==id then return true end
+	end
+	return false
+end
+
+function getIndex(quests,id)
+	for index=1,#quests do
+		if quests[index].id==id then return index end
+	end
+end
+
+function this.show()
+	error.addListener(onErrorReceived,this)
+	local questId = data_questState.questId
+	if questId ~= nil then
+		local quest = typeDB.selectOne(TypeClasses.TYPE_QUEST,questId)
+		med:SetString("txt",quest.name)
+	end
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+end
+
+function this.initView(_,meditor)
+	med = meditor
+	med:AddListener("btn",onSubQuestBtnClick)
+end
+
+return this

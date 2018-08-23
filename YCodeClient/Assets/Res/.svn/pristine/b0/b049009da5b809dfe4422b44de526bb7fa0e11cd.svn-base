@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <canvas type="bt_test_0">
+    <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+      <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+    </cell>
+    <cell type="Pal_Seq" enabled="True" level="0" abortType="0">
+      <cell type="act_npcDead" enabled="True" level="0" abortType="0" />
+      <cell type="con_parameter" enabled="True" level="0" abortType="1" compareType="1" valueType="0" paramType="0" denominatorType="4" targetValue="0.06" />
+      <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+    </cell>
+  </canvas>
+  <canvas type="bt_test_1">
+    <cell type="Pal_Sel" enabled="True" level="0" abortType="0">
+      <cell type="act_npcChase" enabled="True" level="0" abortType="0" animation="" />
+    </cell>
+    <cell type="Pal_Seq" enabled="True" level="0" abortType="0">
+      <cell type="act_npcDead" enabled="True" level="0" abortType="0" />
+      <cell type="con_parameter" enabled="True" level="0" abortType="0" compareType="2" valueType="0" paramType="0" denominatorType="0" targetValue="0" />
+    </cell>
+  </canvas>
+</root>

@@ -1,0 +1,22 @@
+local class 		= require "Class"
+local base			= require "UnsaveProxy"
+local this 			= class("Proxy_Scene",base)
+local namespace 	= require "CSNamespace"
+local sceneManager 	= namespace["SceneEntityManager"]
+function this:ctor()
+	self._proxycenter=require"ProxyCenter"
+end
+function this:pushData(buffer)
+	local data=self:_parseData(buffer)
+	if not data then return end
+	self._proxycenter._status=1
+	self._proxycenter._sceneId=data.id
+	sceneManager.AddListener(self,self.onSceneInited)
+	sceneManager.ChangeScene(data)
+end
+function this:onSceneInited()
+	self._proxycenter._status=0
+	self._proxycenter:flush();
+end
+
+return this

@@ -1,0 +1,16 @@
+local CommandClasses 	 = require "CommandClasses"
+local SocketForm = require "SocketForm"
+
+local this={}
+
+
+function this.execute(x,y,z,fx,fy,fz)
+	-- log:log(x,y,z,fx,fy,fz)
+	local  form = SocketForm(CommandClasses.CmdMove)
+	form.type = 0
+	form.position={x=x,y=y,z=z}
+	form.forcast={x=fx,y=fy,z=fz}
+	form:send()
+end
+
+return this

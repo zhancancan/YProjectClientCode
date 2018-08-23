@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="bt_test_0" type="BehaviorTree" fileName="bt_test_0.tree" fileURL="Assets/Data/Source/Tree/Behavior/bt_test_0.tree">
+  <state name="MainTreeEditorState" offset="0:0" indent="20" toolTip="False" zoom="1" />
+  <windows area="0:22:262:602" flexible="0.2" visible="True" max="300" min="100" />
+  <windows area="262:22:786.0001:602" flexible="0.6" visible="True" max="3000" min="300" />
+  <windows area="1048:22:262:602" flexible="0.2" visible="True" max="300" min="100" />
+  <cell contentOpen="False" treeOpen="True" cellType="rootcell">
+    <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel" enabled="True" level="0" abortType="0">
+      <cell contentOpen="False" treeOpen="True" cellType="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+    </cell>
+    <cell contentOpen="False" treeOpen="True" cellType="Pal_Seq" enabled="True" level="0" abortType="0">
+      <cell contentOpen="False" treeOpen="True" cellType="act_npcDead" enabled="True" level="0" abortType="0" />
+      <cell contentOpen="False" treeOpen="True" cellType="con_parameter" enabled="True" level="0" abortType="1" compareType="1" valueType="0" paramType="0" denominatorType="4" targetValue="0.06" />
+      <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell contentOpen="False" treeOpen="True" cellType="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell contentOpen="False" treeOpen="True" cellType="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell contentOpen="False" treeOpen="True" cellType="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell contentOpen="False" treeOpen="True" cellType="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell contentOpen="False" treeOpen="True" cellType="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+      <cell contentOpen="False" treeOpen="True" cellType="Pal_Sel" enabled="True" level="0" abortType="0">
+        <cell contentOpen="False" treeOpen="True" cellType="act_npcChase" enabled="True" level="0" abortType="0" animation="stand_0" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

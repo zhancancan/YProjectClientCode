@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_miyue_skill_1" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_miyue_skill_1.tree" fileName="Fx_miyue_skill_1.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="0.43" durationScaleType="0" actionType="0" anim="Skill_1" paramName="isDead" paramType="4" paramValue="0" animTarget="0" bone="B_weapon_0" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="" cellType="emitline" groupPhase="0" time="0.5" timeScaleType="0" duration="1" durationScaleType="0" delay="0" delayScaleType="0" numParticle="3" interval="0.5" useRandomDelay="False" maxDistance="15" minDistance="0" startMode="1" destinyMode="1" lineMode="0" space="3">
+        <cell treeOpen="True" editName="" cellType="seq" groupPhase="0" time="0" timeScaleType="0">
+          <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="1" minArea="0:0:0" maxArea="0:0:0" offset="0:0:1" />
+          <cell treeOpen="False" editName="" cellType="posarea" groupPhase="0" calcMode="2" minArea="0:0:0" maxArea="0:0:0" offset="0:0:-7" />
+          <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/miyue/EP_miyue_0_sp/EP_miyue_skill_1_bullet.prefab" />
+          <cell treeOpen="False" editName="" cellType="posdividspace" groupPhase="0" calcMode="-1" />
+          <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+          <cell treeOpen="True" editName="" cellType="fxfollow" groupPhase="0" duration="2" durationScaleType="0" />
+        </cell>
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

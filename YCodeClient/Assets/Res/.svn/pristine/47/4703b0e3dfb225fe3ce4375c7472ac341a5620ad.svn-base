@@ -1,0 +1,23 @@
+local namespace		= require "CSNamespace"
+local panel  		= namespace["PanelManger"]
+local NativeMethod 	= namespace["NativeMethod"]
+local native 		= namespace["NativeManager"]
+local this 			= {}
+
+function this.ask(content, callBack, title)
+	local o = {}
+	o.content = content
+	o.callBaack = callBack
+	o.title = title
+	panel.Open("DialogPanel_sys",o)
+end
+
+function this.askNative(title,content,call)
+	local o = {}
+	o.method = NativeMethod.REQUEST_DIALOG
+	o.title = title
+	o.content =content
+	native.Send(o, function (jo)call(jo.result) end)
+end
+
+return this

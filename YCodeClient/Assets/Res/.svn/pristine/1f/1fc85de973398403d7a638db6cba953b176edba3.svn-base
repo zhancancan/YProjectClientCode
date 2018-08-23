@@ -1,0 +1,73 @@
+local class 			= require "Class"
+local base 				= require "EventDispatcher"
+local SocketForm 		= require "SocketForm"
+local CommandClasses 	= require "CommandClasses"
+
+local user				= require "Data_Character"
+
+local TypeClasses		= require "TypeClasses"
+local DataClasses		= require "DataClasses"
+local db 				= require "TypeDB"
+
+local GameTicker 		= require "GameTicker"
+local log				= require "Logger"
+
+
+
+local this = class("CharacterManager",base).new()
+
+--todo
+local _meta={}
+
+function _meta.doCast(skillId,position,forcast)
+	local form = SocketForm()
+	form.method = CommandClasses.CmdCast
+	form.id = skillId
+	form.position = position
+	form.forcast = forcast
+	form:send()
+
+
+end
+
+function _meta.getEntity()
+	local d =self.table:selectOne(user.id)
+
+
+	if d then
+		local e = rawget(d, "entity")
+		return e
+	end
+end
+
+function this.tryCast(skillId,position,forcast)
+	local isCD = false
+	--todo need judge state
+	local isChaos = false
+	log:log("try cast:"..skillId)
+	--local pos = position or 
+
+	local skills = db.getTable(DataClasses.DATA_SKILLS)
+	if not skills then 
+		log:error("not any skills exist")
+		return
+	end
+
+	local skill = skills.selectOne({skillId = skillId})
+
+	if not skill then
+		log:error("not this skill exist:" + skillId)
+		return
+	else
+		if skill.cooldown > GameTicker.time then
+			skill.cooldown =  skill.setToCooldown + GameTicker.time
+			_meta.doCast(skillId,position,forcast)
+		end
+	end
+
+
+
+
+end
+
+return this

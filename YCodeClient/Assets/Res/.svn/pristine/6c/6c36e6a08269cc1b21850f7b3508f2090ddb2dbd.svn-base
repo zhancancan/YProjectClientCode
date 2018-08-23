@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MachineChart fileName="PlayerMachine_0" fileURL="Assets/Res/Data/Source/Machine/PlayerMachine_0.machine" chartType="AIMachine" panOffset="0:0" zoom="1">
+  <machine uuid="1531839564204" name="base machine">
+    <state uuid="1531839564206" stateName="Exit State" isDefault="False" priority="0" type="exit" position="-271:-202" />
+    <state uuid="1531839698170" stateName="Init" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-256.5:-97">
+      <action uuid="1531839716329" priority="0" property="body" type="0" useReplace="False" replaceLua="" actionType="aiInitRenderer" />
+      <action uuid="1531839808317" priority="0" value="True" useReplace="False" replaceLua="" actionType="actionSetInited" />
+    </state>
+    <state uuid="1531839564205" stateName="Any State" isDefault="False" priority="0" type="any" position="9:-95">
+      <transition uuid="1531839657396" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1531839564205" destiny="1531839608008">
+        <condition uuid="1531839672122" score="0" useReplace="False" replaceLua="" conditionType="conditionAny" />
+      </transition>
+    </state>
+    <state uuid="1531839608008" stateName="Stand" isDefault="True" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-241.5:5">
+      <transition uuid="1531839787420" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="1" source="1531839608008" destiny="1531839698170">
+        <condition uuid="1531839829138" score="0" compare="False" useReplace="False" replaceLua="" conditionType="conditionCpxInited" />
+      </transition>
+      <action uuid="1531842775707" priority="0" updateInterval="10" standModePercent="0.3" useReplace="False" replaceLua="" actionType="cmdAct:stand" />
+    </state>
+    <state uuid="1533736073255" stateName="Dead" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="90:-15.5">
+      <action uuid="1533737239592" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:dead" />
+    </state>
+    <state uuid="1531839677214" stateName="Move" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-29.5:54">
+      <action uuid="1532420362165" priority="0" mass="1" maxSpeed="1.2" maxForce="2" arriveThreshold="0.1" duration="0.6" lastElasity="0.1" useReplace="False" replaceLua="" actionType="cmdAct:steerMove" />
+    </state>
+    <state uuid="1533736098523" stateName="FireSkill" isDefault="False" priority="10" useStatePriority="True" order="0" loops="1" type="action" position="-246:109.5">
+      <action uuid="1533736119616" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:fireSkill" />
+    </state>
+  </machine>
+  <machine uuid="1533756480896" name="cmdLayer">
+    <state uuid="1533756480898" stateName="Exit State" isDefault="False" priority="0" type="exit" position="-3:-127" />
+    <state uuid="1533756486994" stateName="Default" isDefault="True" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-273.5:56" />
+    <state uuid="1533756480897" stateName="Any State" isDefault="False" priority="0" type="any" position="-5:-35">
+      <transition uuid="1533756536961" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="3" source="1533756480897" destiny="1533756486994" />
+    </state>
+    <state uuid="1533756499571" stateName="ShowHealth" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="118.5:52">
+      <action uuid="1533756532359" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:health" />
+    </state>
+    <state uuid="1533756498377" stateName="ShowBuff" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-91.5:125">
+      <action uuid="1533756513148" priority="0" useReplace="False" replaceLua="" actionType="cmdAct:buff" />
+    </state>
+  </machine>
+</MachineChart>

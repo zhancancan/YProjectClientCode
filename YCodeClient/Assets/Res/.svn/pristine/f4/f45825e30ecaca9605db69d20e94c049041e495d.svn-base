@@ -1,0 +1,38 @@
+import "GameToClientProto.proto";
+option java_package = "com.changqu.master.protobuf";
+
+//用户基本信息表 code=90001
+message Data_UserBase {
+	optional bool isRemove = 1;
+	required string id = 2;
+	optional uint32 zoneId = 3;
+	optional string name = 4;
+	optional uint64 regTime = 5;
+}
+
+//用户货币表 code=90003
+message Data_UserCurrency {
+	optional bool isRemove = 1;
+	required string id = 2;
+	required string currencyId = 3;
+	optional int64 value = 4;
+	optional uint64 updateTime = 5;
+}
+
+//用户状态信息表 code=90002
+message Data_UserState {
+	optional bool isRemove = 1;
+	required string id = 2;
+	optional string heroId = 3;
+	optional uint32 level = 4;
+	optional uint64 exp = 5;
+	optional uint64 loginTime = 6;
+	optional uint64 lastLoginTime = 7;
+	optional uint64 lastLogoutTime = 8;
+	optional string placeId = 9;
+	optional string sceneId = 10;
+	optional float x = 11;
+	optional float y = 12;
+	optional float z = 13;
+}
+

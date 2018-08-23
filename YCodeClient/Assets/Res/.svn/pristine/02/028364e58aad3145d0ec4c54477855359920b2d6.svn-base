@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RS>
+	<group name="Preload">
+		<item download="资源加载：{0}/{1},剩余{2}完成"/> 
+		<item updateVer="更新版本号: {0}"/> 
+		<item copy="正在解压资源{0} / {1}"/>
+		<item sceneLoad="场景加载 {0}"/> 
+		<item ucWarning="解压提示"/>
+		<item ucError_100 = "[code:100]空间不足，请清理存储后再次尝试" uiError_101="[code:101]源文件缺失，重新安装" uiError_102="[code:102] 没有写入权限"
+				urError_103="[code:103]资源读取错误"/> 
+	</group>
+	
+	<group name="Login">
+		<item askLogout="是否确认退出"/>  
+		<item name_isUsed="该名字已经被使用"/>
+		<item illegal_character="该名字中含有非法字符"/>
+		<item please_inputName="请输入名字"/>
+	</group>
+
+	<group name="Mission">
+		<item mission_isgoing="任务进行中"/>
+	</group>
+</RS>
+
+
+
+

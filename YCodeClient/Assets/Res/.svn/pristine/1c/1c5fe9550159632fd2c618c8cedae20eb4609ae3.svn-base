@@ -1,0 +1,31 @@
+local this = {}
+local med
+
+local item = {}
+
+function item:draw(cell,data)
+	cell:SetString("txt","channl")
+end
+
+function item:onInit(cell)
+	cell:SetClickTrigger("icon")
+end
+
+-----------------mediator
+
+function this.show()
+	-- body
+end
+
+function this.hide()
+	-- body
+end
+
+function this:initView(mediator)
+	med = mediator
+
+	med:SetPaneFactory("pane",item)
+end
+
+
+return this

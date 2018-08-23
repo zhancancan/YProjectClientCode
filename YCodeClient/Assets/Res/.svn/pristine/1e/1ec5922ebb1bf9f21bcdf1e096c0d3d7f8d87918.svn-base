@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 8b96fdada1c902a4794023d527824f08
+timeCreated: 1530672449
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B_head
+    100002: Bip001
+    100004: Bone_l_dabi_0
+    100006: Bone_l_dashouzhi_0
+    100008: Bone_l_dashouzhi_1
+    100010: Bone_l_shouzhang_0
+    100012: Bone_l_shouzhi_0
+    100014: Bone_l_shouzhi_1
+    100016: Bone_l_xiaobi_0
+    100018: Bone_r_dabi_0
+    100020: Bone_r_dashouzhi_0
+    100022: Bone_r_dashouzhi_0 1
+    100024: Bone_r_shouzhang_0
+    100026: Bone_r_shouzhi_0
+    100028: Bone_r_shouzhi_1
+    100030: Bone_r_xiaobi_0
+    100032: Bone_xiaoshizi_0
+    100034: Bone_xiaoshizi_1
+    100036: Bone_xiaoshizi_2
+    100038: //RootNode
+    400000: B_head
+    400002: Bip001
+    400004: Bone_l_dabi_0
+    400006: Bone_l_dashouzhi_0
+    400008: Bone_l_dashouzhi_1
+    400010: Bone_l_shouzhang_0
+    400012: Bone_l_shouzhi_0
+    400014: Bone_l_shouzhi_1
+    400016: Bone_l_xiaobi_0
+    400018: Bone_r_dabi_0
+    400020: Bone_r_dashouzhi_0
+    400022: Bone_r_dashouzhi_0 1
+    400024: Bone_r_shouzhang_0
+    400026: Bone_r_shouzhi_0
+    400028: Bone_r_shouzhi_1
+    400030: Bone_r_xiaobi_0
+    400032: Bone_xiaoshizi_0
+    400034: Bone_xiaoshizi_1
+    400036: Bone_xiaoshizi_2
+    400038: //RootNode
+    7400000: Shitouxiaoguai_0_stand
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Shitouxiaoguai_0_stand
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 52
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip001
+        weight: 1
+      - path: Bip001/B_head
+        weight: 1
+      - path: Bip001/Bone_l_dabi_0
+        weight: 1
+      - path: Bip001/Bone_l_dabi_0/Bone_l_xiaobi_0
+        weight: 1
+      - path: Bip001/Bone_l_dabi_0/Bone_l_xiaobi_0/Bone_l_shouzhang_0
+        weight: 1
+      - path: Bip001/Bone_l_dabi_0/Bone_l_xiaobi_0/Bone_l_shouzhang_0/Bone_l_dashouzhi_0
+        weight: 1
+      - path: Bip001/Bone_l_dabi_0/Bone_l_xiaobi_0/Bone_l_shouzhang_0/Bone_l_dashouzhi_0/Bone_l_dashouzhi_1
+        weight: 1
+      - path: Bip001/Bone_l_dabi_0/Bone_l_xiaobi_0/Bone_l_shouzhang_0/Bone_l_shouzhi_0
+        weight: 1
+      - path: Bip001/Bone_l_dabi_0/Bone_l_xiaobi_0/Bone_l_shouzhang_0/Bone_l_shouzhi_0/Bone_l_shouzhi_1
+        weight: 1
+      - path: Bip001/Bone_r_dabi_0
+        weight: 1
+      - path: Bip001/Bone_r_dabi_0/Bone_r_xiaobi_0
+        weight: 1
+      - path: Bip001/Bone_r_dabi_0/Bone_r_xiaobi_0/Bone_r_shouzhang_0
+        weight: 1
+      - path: Bip001/Bone_r_dabi_0/Bone_r_xiaobi_0/Bone_r_shouzhang_0/Bone_r_dashouzhi_0
+        weight: 1
+      - path: Bip001/Bone_r_dabi_0/Bone_r_xiaobi_0/Bone_r_shouzhang_0/Bone_r_dashouzhi_0/Bone_r_dashouzhi_0
+          1
+        weight: 1
+      - path: Bip001/Bone_r_dabi_0/Bone_r_xiaobi_0/Bone_r_shouzhang_0/Bone_r_shouzhi_0
+        weight: 1
+      - path: Bip001/Bone_r_dabi_0/Bone_r_xiaobi_0/Bone_r_shouzhang_0/Bone_r_shouzhi_0/Bone_r_shouzhi_1
+        weight: 1
+      - path: Bip001/Bone_xiaoshizi_0
+        weight: 1
+      - path: Bip001/Bone_xiaoshizi_1
+        weight: 1
+      - path: Bip001/Bone_xiaoshizi_2
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b3e29f24a05d1b649addc4b37376d111,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: prefab/role/monster/shitouxiaoguai/shitouxiaoguai.ab
+  assetBundleVariant: 

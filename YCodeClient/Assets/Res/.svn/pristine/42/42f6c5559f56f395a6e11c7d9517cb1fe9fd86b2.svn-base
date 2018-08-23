@@ -1,0 +1,36 @@
+local this ={}
+local center 			= require "ProxyCenter"
+local SocketForm 		= require "SocketForm"
+local CommandClasses 	= require "CommandClasses"
+local namespace 		= require "CSNamespace"
+local server 			= namespace["LuaServer"]
+local Logger 			= require "Logger"
+local app 				= require "AppCenter"
+
+
+function connectServer( )
+	local url = "192.168.0.218"
+	local port = 17001
+	Logger:log("Connect server:"..url.." : "..port)
+	server.Connect(url,port)
+end
+
+function startUserLogin()
+	local c = app.loginInfo
+	local form = SocketForm()
+	form.method =CommandClasses.UserLogin
+	form.type = 0
+	form.code= c.code
+	form.zoneId=1--todo
+	form:send()
+end
+
+function startUserRegister( name,heroId )
+	local form = SocketForm()
+	form.method = CommandClasses.UserRegister
+	form.name = name
+	form.heroId = heroId
+	form.send()
+end
+
+return this

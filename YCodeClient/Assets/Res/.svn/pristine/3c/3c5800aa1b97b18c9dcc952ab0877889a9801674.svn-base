@@ -1,0 +1,43 @@
+local class 		= require "Class"
+local this 			= class("Data_UserQuest",require "Data")
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+local log			= require "Logger"
+
+
+local function get_typeData(t)
+	local typeData = rawget (t,"typeData")
+	if not typeData then
+		local id = rawget(t,"questId")
+		if id then
+			typeData = db:selectOne(TypeClasses.TYPE_QUEST,id)
+			if typeData  then
+				rawset (t , "typeData",typeData)
+			else
+				log.error(string.format("Data_UserQuestState can not find define at %s",id))
+			end
+		end
+	end
+	return typeData
+end
+
+
+local function getter(t,k)
+	local td = get_typeData(t)
+	if k == "typeData" then return td end
+	return td and td[k] or nil
+end
+
+local meta = {__index = getter}
+
+function this:ctor()
+	setmetatable(self._data , meta)
+end
+
+function this:onSelfChange(p)
+	if p == "questId" then
+		self.quest = nil
+	end
+end
+
+return this

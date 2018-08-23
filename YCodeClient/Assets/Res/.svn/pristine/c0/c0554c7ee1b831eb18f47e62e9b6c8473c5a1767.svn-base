@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c179f5de3a1d5e45b70a714e9b00a57, type: 3}
+  m_Name: BT_Test001
+  m_EditorClassIdentifier: 
+  rootCell: {fileID: 114257212930715860}
+  editStates:
+  - {fileID: 114385475309347184}
+  livesInScene: 0
+  sideWindowRatio: 0.2
+  windowSetting:
+    children:
+    - area:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 296.05252
+        height: 1014
+      flexible: 0.17770259
+      visible: 1
+      min: 100
+      max: 300
+    - area:
+        serializedVersion: 2
+        x: 296.05252
+        y: 0
+        width: 1069.9475
+        height: 1014
+      flexible: 0.6422254
+      visible: 1
+      min: 300
+      max: 3000
+    - area:
+        serializedVersion: 2
+        x: 1366
+        y: 0
+        width: 299.99997
+        height: 1014
+      flexible: 0.18007201
+      visible: 1
+      min: 100
+      max: 300
+  fileName: BT_Test001
+  fileURL: Assets/Editor/Resources/Saves/BT_Test001.asset
+--- !u!114 &114257212930715860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab9130a3d988dd45b1fcab71951fe99, type: 3}
+  m_Name: Rootcell
+  m_EditorClassIdentifier: 
+  headRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 20
+    height: 100
+  treeOpen: 1
+  contentOpen: 0
+  _children:
+  - {fileID: 114693599147573528}
+--- !u!114 &114385475309347184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b45e50d362a9e45bdb30a085a7beae, type: 3}
+  m_Name: MainTreeEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  drawing: 1
+  panOffset: {x: 0, y: 0}
+  zoom: 1
+  indentWidth: 10
+  toolTip: 0
+--- !u!114 &114693599147573528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e9b60a53f804e4e809eb2cc78d7361, type: 3}
+  m_Name: Sel
+  m_EditorClassIdentifier: 
+  headRect:
+    serializedVersion: 2
+    x: 5
+    y: 10
+    width: 1026.9475
+    height: 24
+  treeOpen: 1
+  contentOpen: 0
+  _children:
+  - {fileID: 114891652968469144}
+  - {fileID: 114849137463972722}
+--- !u!114 &114849137463972722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c13ce066420d9849b052333784c046b, type: 3}
+  m_Name: Con_sight
+  m_EditorClassIdentifier: 
+  headRect:
+    serializedVersion: 2
+    x: 15
+    y: 58
+    width: 1016.9475
+    height: 24
+  treeOpen: 0
+  contentOpen: 0
+  _children: []
+--- !u!114 &114891652968469144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d61c185581ee504cab8929ca80f0f2f, type: 3}
+  m_Name: Con_blood
+  m_EditorClassIdentifier: 
+  headRect:
+    serializedVersion: 2
+    x: 15
+    y: 34
+    width: 1016.9475
+    height: 24
+  treeOpen: 0
+  contentOpen: 0
+  _children: []
+  compare: 2
+  valueType: 0
+  blood: 0

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3869b630ca1d7174586518558629b278, type: 3}
+  m_Name: SettingData
+  m_EditorClassIdentifier: 
+  action: 0
+  readMode: 0
+  streamPackMode: 0
+  packCode: 16388
+  rsync: E:/Rsync/bin/rsync.exe
+  rsyncSites: []
+  remoteSite: http://192.168.0.218/res/
+  buildOptions: 256
+  messageType: 0
+  platform: 1
+  modifyAssets: 1
+  readVersion: 0
+  isCleanDownload: 0
+  leftWidth: 300
+  foldBuildBundle: 0
+  foldClearUnsed: 0
+  foldUploadServer: 1
+  foldBuildPlayer: 1
+  foldElements: 1
+  foldChannels: 0
+  channels: []
+  buildPlatforms: []
+  _clearAtStart: 1

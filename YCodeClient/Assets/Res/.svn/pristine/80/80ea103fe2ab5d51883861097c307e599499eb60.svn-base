@@ -1,0 +1,12 @@
+local class=require "Class"
+local this =class("Data_FieldController",require "Data" )
+local instance = this.new()
+local log = require"Logger"
+function this.ctor()
+	if instance then
+		log.error("singleton error: Data_Character can create only once")
+		return
+	end
+end
+
+return instance

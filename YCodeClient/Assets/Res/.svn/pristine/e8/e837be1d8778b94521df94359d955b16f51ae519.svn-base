@@ -1,0 +1,13 @@
+﻿using edit.pure.machine.core;
+using machine.ai;
+
+namespace plugins.machine.canvas.ai.core.command {
+    [MacActon(false, "Command/Test Move", new[] {typeof (AIMachineChart)})]
+    public class MacCmdAction_TestMove : Mac_Action {
+        public override string actionType { get { return CommandActionType.TEST_MOVE; } }
+
+        public override string renderContent { get { return "Test Move"; } set { } }
+    } 
+
+
+}

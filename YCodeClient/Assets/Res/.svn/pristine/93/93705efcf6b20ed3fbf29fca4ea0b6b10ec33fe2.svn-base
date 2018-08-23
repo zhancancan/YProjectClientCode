@@ -1,0 +1,7 @@
+require "Class"
+local superClass = require "Type_DataCore"
+local class=_G["class"]
+local this =class("Type_Props",superClass)
+_G["Type_Props"]=this
+
+return this

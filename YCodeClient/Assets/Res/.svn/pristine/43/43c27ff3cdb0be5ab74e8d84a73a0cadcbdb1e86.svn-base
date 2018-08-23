@@ -1,0 +1,27 @@
+local class=require "Class"
+local this =class("Data_CmdDestroyObject",require "Data")
+local dbmgt= require "DataManager"
+local db =dbmgt.dbase
+local DataClasses = require "DataClasses"
+local table;
+
+function this:ctor()
+	print("Data CmdDestroyObject ctor")
+end
+-- - is self
+function this:execute(_)
+	print("cmd CmdDestroyObject")
+	if not table then table = db:getTable(DataClasses.DATA_SCENEOBJ) end
+
+	print(user._data.id)
+	if self.id ~= user._data.id then
+
+		local d =table:selectOne(self.id)
+		if d and d.entity then
+			d.entity:Dispose()
+		end
+end
+
+end
+
+return this

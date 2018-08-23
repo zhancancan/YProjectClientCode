@@ -1,0 +1,75 @@
+local this={}
+local _meta={}
+local med
+local heroPane
+
+local TypeClasses	=require "TypeClasses"
+local TypeDB		=require "TypeDB"
+local Logger 		=require "Logger"
+
+local Logger = require "Logger"
+
+--Grid
+local heroItem={}
+function heroItem.draw(_,cell,data)
+	cell:SetString("icon",data.icon)
+end
+
+function heroItem.onInit(_,cell)
+	cell:SetClickTrigger("icon")
+end
+
+--Mediator
+function this.show()
+	local startHeroArr=TypeDB.toArray(TypeClasses.TYPE_STARTHERO)
+	med:SetList("obj_1/pane",startHeroArr)
+	med:SetInt("obj_1/pane",0)
+
+	heroPane.selectedData=startHeroArr[1]
+	_meta.updateHeroModel(startHeroArr[1].hero)
+	_meta.updateHeroInfo(startHeroArr[1])
+end
+
+function this.hide()
+	med:SetList("obj_1/pane",nil)
+end
+
+function this.initView(_,meditor)
+	med=meditor
+	med:AddListener("obj_2/btn_0",_meta.onBtnClick)
+	med:AddListener("obj_2/btn_1",_meta.onBtnClick)
+
+	med:SetPaneFactory("obj_1/pane",heroItem)
+	heroPane=med:AddListener("obj_1/pane",_meta.onHeroItemClick)
+end
+
+function _meta.onBtnClick(btn)
+	if btn=="btn_0" then
+		--Test
+		local heroArr=TypeDB.toArray(TypeClasses.TYPE_HERO)
+		med:SetString("obj_2/txt",heroArr[math.random(#heroArr)].name)
+	elseif btn=="btn_1" then
+		local name=med:GetString("obj_2/txt")
+		if name~=nil then
+			Logger:log("角色名字："..name)
+		end
+		med:Hide()
+	end
+end
+
+function _meta.onHeroItemClick(_,evt)
+	_meta.updateHeroModel(evt.data.hero)
+	_meta.updateHeroInfo(evt.data)
+end
+
+function _meta.updateHeroModel(hero)
+	med:PlayPortrait(hero.portrait,hero.showFx)
+end
+
+function _meta.updateHeroInfo(startHero)
+	med:SetString("obj_0/icon",startHero.icon)
+	med:SetString("obj_0/txt",startHero.name)
+	med:SetString("obj_0/area",startHero.desc)
+end
+
+return this

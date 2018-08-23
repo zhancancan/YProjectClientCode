@@ -1,0 +1,71 @@
+import "GameToClientProto.proto";
+option java_package = "com.changqu.master.protobuf";
+
+//用户Buff表 code=90030
+message Data_BuffObj {
+	optional bool isRemove = 1;
+	required string id = 2;
+	required string buffId = 3;		//Buff定义ID，对应Buff表
+	optional uint32 stack = 4;		//层数
+	optional uint32 tickTime = 5;		//跳一次间隔时间，毫秒
+	optional uint32 ticked = 6;		//$跳过多少次($前缀表示更新时不标记protobuf dirty）
+	optional uint64 lastTickTime = 7;		//上次跳的时间
+	optional int64 expireTime = 8;		//截止时间
+}
+
+//用户技能表 code=90040
+message Data_SkillObj {
+	optional bool isRemove = 1;
+	required string id = 2;		//技能唯一ID
+	optional string heroId = 3;		//英雄ID
+	optional string skillId = 4;		//技能定义ID，对应Skill表
+	optional uint64 cooldown = 5;		//冷却截止时间（<=当前时间才能用）毫秒
+	optional uint32 setToCooldown = 6;		//当技能被成功使用后，cooldown设置为当前时间+这个数字，毫秒
+	optional uint32 level = 7;		//技能等级
+}
+
+//用户基本信息表 code=90000
+message Data_UserBase {
+	optional bool isRemove = 1;
+	required string id = 2;
+	optional uint32 zoneId = 3;		//区服ID
+	optional string name = 4;		//角色名称
+	optional uint64 regTime = 5;		//注册时间
+}
+
+//用户货币表 code=90020
+message Data_UserCurrency {
+	optional bool isRemove = 1;
+	required uint32 id = 2;		//货币ID
+	optional int64 value = 3;		//资源值
+}
+
+//用户英雄表 code=90050
+message Data_UserHero {
+	optional bool isRemove = 1;
+	required string id = 2;		//货币ID
+	optional uint32 level = 3;		//英雄星级
+	optional uint64 exp = 4;		//英雄经验
+}
+
+//用户状态信息表 code=90010
+message Data_UserState {
+	optional bool isRemove = 1;
+	required string id = 2;
+	optional string heroId = 3;		//当前英雄Id
+	optional uint32 level = 4;		//等级
+	optional uint64 exp = 5;		//经验
+	optional uint64 loginTime = 6;		//本次登录时间
+	optional uint64 lastLoginTime = 7;		//上次登录时间
+	optional uint64 lastLogoutTime = 8;		//上次登出时间
+	optional string placeId = 9;		//场景ID
+	optional string sceneId = 10;		//所在场景实例ID
+	optional float x = 11;		//X坐标
+	optional float y = 12;		//Y坐标
+	optional float z = 13;		//Z坐标
+	optional uint32 logoId = 14;		//用户Logo
+	optional uint32 controlState = 15;		//可控状态<!--{"extraAction":"customType=ControlState"}-->
+	optional PropertyGroup property = 16;		//属性<!--{"extraAction":"customType=Property"}-->[proto=GameToClientProto.PropertyGroup]
+	optional uint32 health = 17;		//当前血量
+}
+

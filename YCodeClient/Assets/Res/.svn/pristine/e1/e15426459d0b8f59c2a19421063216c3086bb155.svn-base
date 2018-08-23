@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root type="diagram" collection="mission">
+  <item type="table" name="chapter">
+    <item type="chapter" id="1509440813691" name="chapter" description="chapter" enabled="True" icon="" />
+    <item type="chapter" id="1509716994115" name="chapter" description="chapter" enabled="True" icon="" />
+  </item>
+  <item type="table" name="mission">
+    <item type="mission" id="1509365020259" name="mission" description="" isMain="True" enabled="True" rewardId="none" chapterId="1509440813691" input="" output="1509366868609,1509365926165,1509365348076" />
+    <item type="mission" id="1509366868609" name="mission" description="" isMain="True" enabled="True" rewardId="0" chapterId="1509716994115" input="1509365020259,1509365926165,1509365348076" output="" />
+    <item type="mission" id="1509365926165" name="mission" description="" isMain="True" enabled="True" rewardId="none" chapterId="1509440813691" input="1509365020259" output="1509366868609" />
+    <item type="mission" id="1509365348076" name="mission" description="" isMain="True" enabled="True" rewardId="0" chapterId="1509440813691" input="1509365020259" output="1509366868609" />
+  </item>
+  <item type="table" name="node">
+    <item type="node" id="1509365025001" nodeType="missionNode_kill" name="mission node" description="" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" parent="1509365020259" />
+    <item type="node" id="1509365260238" nodeType="missionNode_kill" name="mission node" description="" enabled="True" nodeIndex="1" place="" npcId="" numKill="1" parent="1509365020259" />
+    <item type="node" id="1509368465371" nodeType="missionNode_kill" name="mission node" description="" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" parent="1509365348076" />
+    <item type="node" id="1509368467796" nodeType="missionNode_kill" name="mission node" description="" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" parent="1509365926165" />
+    <item type="node" id="1509717011825" nodeType="missionNode_take" name="mission node" description="" enabled="True" nodeIndex="0" place="" npcId="" parent="1509366868609" />
+    <item type="node" id="1509365926169" nodeType="missionNode_kill" name="mission node" description="" enabled="False" nodeIndex="2" place="" npcId="" numKill="1" parent="1509365926165" />
+    <item type="node" id="1509365926170" nodeType="missionNode_kill" name="mission node" description="" enabled="True" nodeIndex="1" place="" npcId="" numKill="1" parent="1509365926165" />
+    <item type="node" id="1509715958405" nodeType="missionNode_submit" name="mission node" description="" enabled="True" nodeIndex="0" place="Assets/Res/Data/Source/Place/abc/abc.place" npcId="" parent="1509365926165" />
+    <item type="node" id="1509366868610" nodeType="missionNode_kill" name="mission node" description="" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" parent="1509366868609" />
+    <item type="node" id="1509366868611" nodeType="missionNode_kill" name="mission node" description="" enabled="True" nodeIndex="0" place="" npcId="" numKill="1" parent="1509366868609" />
+  </item>
+</root>

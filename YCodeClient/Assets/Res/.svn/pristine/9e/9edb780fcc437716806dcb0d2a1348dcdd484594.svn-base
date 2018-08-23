@@ -1,0 +1,66 @@
+﻿using edit.pure.resource;
+using mono.ui.elements;
+using pure.ui.imageFiller;
+using UnityEditor;
+using UnityEditor.UI;
+using UnityEngine;
+
+namespace inspectors.ui {
+    [CustomEditor(typeof (PolyImage))]
+    internal class Insp_PolyImage : GraphicEditor {
+        private PolyImage _field;
+        private SerializedProperty _event;
+        private SerializedProperty _sprite;
+
+        protected override void OnEnable() {
+            base.OnEnable();
+            _field = target as PolyImage;
+            _event = serializedObject.FindProperty("_clickEvent");
+            _sprite = serializedObject.FindProperty("_sprite");
+        }
+
+        public override void OnInspectorGUI() {
+            EditorGUI.BeginChangeCheck();
+            EditorGUILayout.PropertyField(_sprite);
+            if (EditorGUI.EndChangeCheck()) {
+                _field.sprite = _sprite.objectReferenceValue as Sprite;
+                EditorUtility.SetDirty(_field);
+            }
+            EditorGUI.BeginChangeCheck();
+            _field.keepAspect = EditorGUILayout.Toggle("Kepp Aspect", _field.keepAspect);
+            _field.shape = (ImageShape) EditorGUILayout.EnumPopup("Shape", _field.shape);
+            switch (_field.shape) {
+                case ImageShape.Round:
+                    _field.numEdge = EditorGUILayout.IntSlider("Number Edge:", _field.numEdge, 3, 60);
+                    _field.startAngle = EditorGUILayout.Slider("Start Angle", _field.startAngle, 0, 360);
+                    break;
+                case ImageShape.RoundRect:
+                    _field.ellipse = EditorGUILayout.Vector2Field("Ellipse", _field.ellipse);
+                    break;
+            }
+            DrawSeperator();
+
+            _field.interactable = EditorGUILayout.Toggle("Interactive", _field.interactable);
+            if (EditorGUI.EndChangeCheck()) {
+                EditorUtility.SetDirty(_field);
+            }
+
+            serializedObject.Update();
+
+            AppearanceControlsGUI();
+            RaycastControlsGUI();
+
+            DrawSeperator();
+            EditorGUILayout.PropertyField(_event);
+
+            serializedObject.ApplyModifiedProperties();
+        }
+
+
+        private void DrawSeperator() {
+            GUILayout.Space(5);
+            GUILayout.Box("", EditStyles.Border1, GUILayout.Height(1));
+            GUILayout.Space(2);
+        }
+    }
+}

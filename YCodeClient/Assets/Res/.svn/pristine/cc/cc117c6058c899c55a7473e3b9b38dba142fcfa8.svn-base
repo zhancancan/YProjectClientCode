@@ -1,0 +1,108 @@
+local this={}
+local med
+
+local TreePane 		= require "TreePane"
+
+local TypeClasses	= require "TypeClasses"
+local typeDB		= require "TypeDB"
+local ns 			= require "CSNamespace"
+
+local error			= require "ErrorCenter"
+
+local questData		= require "Data_UserQuestState"
+
+local tree
+
+local sub_0
+local sub_1
+
+--Item
+local item={}
+
+function onTaskBtnClick()
+	print("accept task")
+end
+
+function onTaskDesBtnClick()
+	print("onTaskDesBtnClick")
+	sub_0:Hide()
+	sub_1:Show()
+end
+
+function onTaskGoalBtnClick()
+	sub_0:Show()
+	sub_1:Hide()
+end
+
+function item.pickPrefab(pane,data,index)
+	return data.isMain and 0 or 1
+end
+
+function item.onInit(_,cell,data)
+	if data.isMain then
+    	cell:SetClickTrigger("img_0")
+	else
+		cell:AddListener("btn_0",onTaskBtnClick)
+		cell:AddListener("sub_0/btn_1",onTaskDesBtnClick)
+		cell:AddListener("sub_1/btn_2",onTaskGoalBtnClick)
+
+		sub_0 = cell:GetUI("sub_0")
+		sub_1 = cell:GetUI("sub_1")
+	end
+end
+
+function item.draw(_,cell,data,index)
+	if(data.isMain) then
+		cell:SetString("txt",data.name)
+	else
+		
+	end
+end
+
+local function onBtnClick(btn)
+
+end
+
+local function onItemClick(_,evt)
+	print(evt.index)
+end
+
+local function  onErrorReceived(err)
+	print("create med", err.code, err.msg)
+end
+
+--Mediator
+function this.show(_,chapter)
+	error.addListener(onErrorReceived,this)
+	local questsArr = chapter.quests
+
+	local datas = {}
+	for i=1, #questsArr do
+		local t = questsArr[i]
+		t.isMain =true
+		datas[i] = t
+
+		local children = {}
+		for j = 1,1 do
+			children [j] ={isMain =false}
+		end
+		t.children = children
+	end
+
+	tree:setList(datas)
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+	tree:setList(nil)
+end
+
+function this.initView(_,meditor)
+	med = meditor
+	tree = TreePane.new(med:GetUI("pane"),false,true)
+	med:SetPaneFactory("pane",item)
+
+	med:AddListener("pane",onItemClick)
+end
+
+return this

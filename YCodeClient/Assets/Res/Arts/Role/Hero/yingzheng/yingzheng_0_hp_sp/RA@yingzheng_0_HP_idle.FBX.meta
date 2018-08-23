@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 0bfe8d33cc675f44386e2a17110504ba
+timeCreated: 1523171848
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B_beigua
+    100002: B_chest
+    100004: B_h_qunbai_00
+    100006: B_h_qunbai_01
+    100008: B_h_qunbai_02
+    100010: B_h_qunbai_03
+    100012: B_h_qunbai_04
+    100014: B_h_qunbai_05
+    100016: B_h_qunbai_06
+    100018: B_h_qunbai_07
+    100020: B_head
+    100022: B_l_piaodai_00
+    100024: B_l_piaodai_01
+    100026: B_l_piaodai_02
+    100028: B_l_piaodai_03
+    100030: B_l_piaodai_04
+    100032: B_l_piaodai_05
+    100034: B_q_qunbai_00
+    100036: B_q_qunbai_01
+    100038: B_q_qunbai_02
+    100040: B_q_qunbai_03
+    100042: B_q_qunbai_04
+    100044: B_q_qunbai_05
+    100046: B_q_qunbai_06
+    100048: B_q_qunbai_07
+    100050: B_r_piaodai_00
+    100052: B_r_piaodai_01
+    100054: B_r_piaodai_02
+    100056: B_r_piaodai_03
+    100058: B_r_piaodai_04
+    100060: B_r_piaodai_05
+    100062: B_weapon_0
+    100064: Bip001
+    100066: Bip001 L Calf
+    100068: Bip001 L Clavicle
+    100070: Bip001 L Finger0
+    100072: Bip001 L Finger01
+    100074: Bip001 L Finger1
+    100076: Bip001 L Finger11
+    100078: Bip001 L Finger2
+    100080: Bip001 L Finger21
+    100082: Bip001 L Foot
+    100084: Bip001 L Forearm
+    100086: Bip001 L Hand
+    100088: Bip001 L Thigh
+    100090: Bip001 L Toe0
+    100092: Bip001 L UpperArm
+    100094: Bip001 Neck
+    100096: Bip001 Pelvis
+    100098: Bip001 R Calf
+    100100: Bip001 R Clavicle
+    100102: Bip001 R Finger0
+    100104: Bip001 R Finger01
+    100106: Bip001 R Finger1
+    100108: Bip001 R Finger11
+    100110: Bip001 R Finger2
+    100112: Bip001 R Finger21
+    100114: Bip001 R Foot
+    100116: Bip001 R Forearm
+    100118: Bip001 R Hand
+    100120: Bip001 R Thigh
+    100122: Bip001 R Toe0
+    100124: Bip001 R UpperArm
+    100126: Bip001 Spine
+    100128: //RootNode
+    100130: B_weapon_1
+    100132: Bip001 Footsteps
+    400000: B_beigua
+    400002: B_chest
+    400004: B_h_qunbai_00
+    400006: B_h_qunbai_01
+    400008: B_h_qunbai_02
+    400010: B_h_qunbai_03
+    400012: B_h_qunbai_04
+    400014: B_h_qunbai_05
+    400016: B_h_qunbai_06
+    400018: B_h_qunbai_07
+    400020: B_head
+    400022: B_l_piaodai_00
+    400024: B_l_piaodai_01
+    400026: B_l_piaodai_02
+    400028: B_l_piaodai_03
+    400030: B_l_piaodai_04
+    400032: B_l_piaodai_05
+    400034: B_q_qunbai_00
+    400036: B_q_qunbai_01
+    400038: B_q_qunbai_02
+    400040: B_q_qunbai_03
+    400042: B_q_qunbai_04
+    400044: B_q_qunbai_05
+    400046: B_q_qunbai_06
+    400048: B_q_qunbai_07
+    400050: B_r_piaodai_00
+    400052: B_r_piaodai_01
+    400054: B_r_piaodai_02
+    400056: B_r_piaodai_03
+    400058: B_r_piaodai_04
+    400060: B_r_piaodai_05
+    400062: B_weapon_0
+    400064: Bip001
+    400066: Bip001 L Calf
+    400068: Bip001 L Clavicle
+    400070: Bip001 L Finger0
+    400072: Bip001 L Finger01
+    400074: Bip001 L Finger1
+    400076: Bip001 L Finger11
+    400078: Bip001 L Finger2
+    400080: Bip001 L Finger21
+    400082: Bip001 L Foot
+    400084: Bip001 L Forearm
+    400086: Bip001 L Hand
+    400088: Bip001 L Thigh
+    400090: Bip001 L Toe0
+    400092: Bip001 L UpperArm
+    400094: Bip001 Neck
+    400096: Bip001 Pelvis
+    400098: Bip001 R Calf
+    400100: Bip001 R Clavicle
+    400102: Bip001 R Finger0
+    400104: Bip001 R Finger01
+    400106: Bip001 R Finger1
+    400108: Bip001 R Finger11
+    400110: Bip001 R Finger2
+    400112: Bip001 R Finger21
+    400114: Bip001 R Foot
+    400116: Bip001 R Forearm
+    400118: Bip001 R Hand
+    400120: Bip001 R Thigh
+    400122: Bip001 R Toe0
+    400124: Bip001 R UpperArm
+    400126: Bip001 Spine
+    400128: //RootNode
+    400130: B_weapon_1
+    400132: Bip001 Footsteps
+    7400000: yingzheng_0_HP_idle
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: yingzheng_0_HP_idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip001
+        weight: 1
+      - path: Bip001/Bip001 Pelvis
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/B_beigua
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/B_head
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/B_l_piaodai_00
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/B_l_piaodai_00/B_l_piaodai_01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/B_l_piaodai_00/B_l_piaodai_01/B_l_piaodai_02
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/B_l_piaodai_00/B_l_piaodai_01/B_l_piaodai_02/B_l_piaodai_03
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/B_l_piaodai_00/B_l_piaodai_01/B_l_piaodai_02/B_l_piaodai_03/B_l_piaodai_04
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/B_l_piaodai_00/B_l_piaodai_01/B_l_piaodai_02/B_l_piaodai_03/B_l_piaodai_04/B_l_piaodai_05
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm/Bip001 L Hand
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001 L Finger0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001 L Finger0/Bip001 L Finger01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001 L Finger1
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001 L Finger1/Bip001 L Finger11
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001 L Finger2
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 L Clavicle/Bip001
+          L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001 L Finger2/Bip001 L Finger21
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/B_r_piaodai_00
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/B_r_piaodai_00/B_r_piaodai_01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/B_r_piaodai_00/B_r_piaodai_01/B_r_piaodai_02
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/B_r_piaodai_00/B_r_piaodai_01/B_r_piaodai_02/B_r_piaodai_03
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/B_r_piaodai_00/B_r_piaodai_01/B_r_piaodai_02/B_r_piaodai_03/B_r_piaodai_04
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/B_r_piaodai_00/B_r_piaodai_01/B_r_piaodai_02/B_r_piaodai_03/B_r_piaodai_04/B_r_piaodai_05
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand/B_weapon_0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001 R Finger0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001 R Finger0/Bip001 R Finger01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001 R Finger1
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001 R Finger1/Bip001 R Finger11
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001 R Finger2
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/B_chest/Bip001 Neck/Bip001 R Clavicle/Bip001
+          R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001 R Finger2/Bip001 R Finger21
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_h_qunbai_00
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_h_qunbai_00/B_h_qunbai_05
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_h_qunbai_00/B_h_qunbai_05/B_h_qunbai_06
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_h_qunbai_00/B_h_qunbai_05/B_h_qunbai_06/B_h_qunbai_07
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_q_qunbai_00
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_q_qunbai_00/B_q_qunbai_05
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_q_qunbai_00/B_q_qunbai_05/B_q_qunbai_06
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/B_q_qunbai_00/B_q_qunbai_05/B_q_qunbai_06/B_q_qunbai_07
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf/Bip001
+          L Foot
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf/Bip001
+          L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_h_qunbai_01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_h_qunbai_01/B_h_qunbai_02
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_h_qunbai_01/B_h_qunbai_02/B_h_qunbai_03
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_h_qunbai_01/B_h_qunbai_02/B_h_qunbai_03/B_h_qunbai_04
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_q_qunbai_01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_q_qunbai_01/B_q_qunbai_02
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_q_qunbai_01/B_q_qunbai_02/B_q_qunbai_03
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/B_q_qunbai_01/B_q_qunbai_02/B_q_qunbai_03/B_q_qunbai_04
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001
+          R Foot
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001
+          R Foot/Bip001 R Toe0
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2893c518112d972458ed38ff94032406,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: prefab/role/hero/yingzheng/yingzheng_0_hp.ab
+  assetBundleVariant: 

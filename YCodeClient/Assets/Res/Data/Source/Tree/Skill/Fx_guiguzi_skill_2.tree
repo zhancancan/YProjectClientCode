@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_guiguzi_skill_2" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_guiguzi_skill_2.tree" fileName="Fx_guiguzi_skill_2.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="0.43" durationScaleType="0" actionType="0" anim="Skill_2" paramName="isDead" paramType="4" paramValue="0" animTarget="0" bone="B_weapon_0" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="weapon_0_2(pugong2)" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0.5" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/guiguzi/EP_guiguzi_0_sp/EP_guiguzi_skill_0_weapon.prefab" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="1" durationScaleType="0" boneName="B_weapon_0" position="-0.8:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="True" editName="" cellType="emitline" groupPhase="0" time="0.4" timeScaleType="0" duration="1" durationScaleType="0" delay="0" delayScaleType="0" numParticle="3" interval="1.2" useRandomDelay="False" maxDistance="15" minDistance="0" startMode="0" destinyMode="1" lineMode="0" space="3">
+        <cell treeOpen="True" editName="" cellType="seq" groupPhase="0" time="0" timeScaleType="0">
+          <cell treeOpen="False" editName="" cellType="posdividspace" groupPhase="0" calcMode="-1" />
+          <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/guiguzi/EP_guiguzi_0_sp/EP_guiguzi_skill_2_bullet.prefab" />
+          <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+          <cell treeOpen="False" editName="" cellType="tween" groupPhase="0" duration="0.6" durationScaleType="0" orientMode="0" easeType="0" loopType="0" loops="1" />
+          <cell treeOpen="True" editName="" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+            <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.85" durationScaleType="0" animatorScaleType="0" orientMode="2" dirMode="1" />
+            <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/guiguzi/EP_guiguzi_0_sp/EP_guiguzi_skill_2_shouji.prefab" />
+          </cell>
+        </cell>
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

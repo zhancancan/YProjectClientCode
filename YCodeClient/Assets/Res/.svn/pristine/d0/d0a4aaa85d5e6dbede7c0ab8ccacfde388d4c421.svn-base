@@ -1,0 +1,92 @@
+local this={}
+local med
+local sub_1
+
+local TypeClasses	= require "TypeClasses"
+local typeDB		= require "TypeDB"
+local ns 			= require "CSNamespace"
+
+local error			= require "ErrorCenter"
+local log 			= require "Logger"
+
+
+local data_userqueststate= require "Data_UserQuestState"
+local data_userQuest = require "Data_UserQuest"
+
+local db 			= require "DataManager".dbase
+local DataClasses	= require "DataClasses"
+
+--Item
+local item={}
+function item.draw(_,cell,data,index)
+	cell:SetString("txt_0",data.caption)
+	cell:SetString("txt_1",data.title)
+end
+
+function item.onInit(_,cell)
+	cell:SetClickTrigger("img")
+end
+
+
+local function onBtnClick(btn)
+end
+
+local function onItemClick(_,evt)
+	sub_1:Show(evt.data)
+end
+
+local function  onErrorReceived(err)
+	log.log("create med", err.code, err.msg)
+end
+
+--Mediator
+function judgeEqual(arr,str)
+	for i=1,#arr do
+		print(arr[i].id.."-"..str.id)
+		if arr[i].id==str.id then return true end
+	end
+	return false
+end
+
+function this.show()
+	error.addListener(onErrorReceived,this)
+	-- local mainTask = typeDB.selectOne(TypeClasses.TYPE_QUEST,questData.questId)
+
+	local questsData = db:getTable(DataClasses.DATA_USERQUEST):toArray()
+	-- for i=1,#questData do
+	-- 	print(questData[i].id,"................")
+	-- end
+
+    local chapters = typeDB.toArray(TypeClasses.TYPE_CHAPTER)
+	-- chapters:reverse()
+	log.log(".....",#chapters)
+
+	for i=#chapters,1,-1 do
+		local questIds = chapters[i].quests
+		for j=1,#questIds do
+			local isEqual = judgeEqual(questsData,questIds[j])
+			if isEqual then 
+				log.log("this chapter is old")
+				break 
+			else 
+				chapters:removeAt(i)
+			end
+		end
+	end
+
+
+	med:SetList("pane",chapters)
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+end
+
+function this.initView(_,meditor)
+	med=meditor
+	med:SetPaneFactory("pane",item)
+	med:AddListener("pane",onItemClick)
+	sub_1 = med:GetSibling("sub_1")
+end
+
+return this

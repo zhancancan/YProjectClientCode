@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{FB126B1D-6929-462A-8AB2-5117EA66B9A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_4;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_DUCK_TYPING</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>E:/Unity5.5.4p5/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>E:/Unity5.5.4p5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Editor\svnUtils\EditorSvnCommand.cs" />
+     <Compile Include="Assets\Editor\svnUtils\EditorUtil.cs" />
+     <Compile Include="Assets\Editor\svnUtils\SvnTools.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\consoler\ConsolerCommand.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\consoler\ConsolerHelper.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\consoler\GlobalLogHelper.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\demo\Insp_ParticleAndAnimator.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\fbx\Insp_FbxBone.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\fbx\Insp_FbxBulletPrefab.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\fbx\Insp_FlexSkeleton.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\fbx\Insp_MeshCut.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\fbx\Insp_PortraitAct_Skill.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\game\Insp_GameStart.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\materials\Insp_ColorMatrix.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\materials\Insp_LightmapBake.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\materials\Insp_SpecLightDir.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\place\Insp_CustomData.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\place\Insp_EventArea.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\place\Insp_LocaltionData.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\place\Insp_PlaceDataCore.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\shaders\InspShader_MultiPlane.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\shaders\InspShader_MultiSkin.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\shaders\InspShader_Plane.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\tween\Insp_UITween.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Drawer_ScrollView.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_GridFactoryLua.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_Icon.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_Image.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_MovieClip.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_PBar.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_PNumbeField.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_PResource.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_PRichText.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_PTabButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_Panel.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_PolyImage.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_PortraitData.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_ScrollView.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_Text.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_Text3D.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_TextArea.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIAnimation.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIAnimationDrawer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIBar.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UICombobox.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIDataPane.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIItemPane.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIPrefab.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIResourceField.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UISceneSpace.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UISlider.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIStar.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIStyleCore.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIStyleCore_Picker.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UIStyleCore_Text.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UITabNavigator.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\Insp_UITreePane.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\ui\PDropdownOptionListDrawer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\voiceChat\Insp_VoiceSetting.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\inspectors\voiceChat\Insp_VoiceTest.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\mono\MonoDllWrap.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\data\ProtoDecoWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\data\ProtoDecorate.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\DiagramPropertyWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\DiagramSourceWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\DiagramWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\Connect_Mission.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\GraphNode_Chapter.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\GraphNode_Mission.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\GraphType.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\MissionDiagram.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\MissionExport_XML.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\MissionExporter_Binary.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\node\GraphNode_Kill.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\node\GraphNode_MissionNodeBase.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\node\GraphNode_Submit.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\diagram\canvas\mission\node\GraphNode_Take.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\effect\ActionSyncWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\effect\Insp_FireFxDebuger.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\lua\LuaConsoler.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\lua\LuaConsoler_Exception.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\lua\LuaConsoler_Log.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\lua\LuaConsoler_ParseError.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\lua\LuaHelper.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\lua\LuaNamespaceCommand.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\MachineHierachy.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\MachineInspector.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\MachineWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\AIMachineChart.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_AnimatorBoolSet.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_FightModeStatus.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_InitChildRenderer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_InitLabel.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_InitRenderer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_Jump.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_ParameterSet.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_PathFind.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_PathSourcePick.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\action\MacAction_SetCameraFollow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\command\MacCmdAction_Move.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\command\MacCmdAction_SteerMove.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\condition\MacCondition_HasJumpoint.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\core\condition\MacCondition_RuntimeParameter.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\action\MacAction_Gather.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\action\MacAction_HostDead.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\action\MacAction_HostStand.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\action\MacAction_PathMove.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\action\MacAction_PushListener.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\action\MacAction_PushMove.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\condition\MacCon_HostClickEntity.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\ai\host\condition\MacCon_HostClickGroud.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\LoginMachineChart.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_ForceReinstall.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_HttpConfig.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitData.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitLang.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitLua.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitMediator.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitScreen.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitShader.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitStyle.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitSysDiagram.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitSysMachine.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitSysTree.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_InitUIMain.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_LoadBundle.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_LoadVer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_PreloaderHide.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_PreloaderShow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_ReadLocalAssetManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_SdkLogin.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\actions\LogAct_ShowEnterLogo.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\condition\LoginCon_IsLowerCritical.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\condition\LoginCon_IsNewPlayer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\condition\LoginCon_IsRequireCopy.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\login\condition\LoginCon_IsVerUpdate.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\scene\SceneMachineChart.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\scene\actions\EtScAct_Clear.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\scene\actions\EtScAct_Load.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\scene\actions\EtScAct_Panel.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\scene\actions\EtScAct_Transition.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\share\actions\MacAct_Lua.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\share\actions\MacAct_Nothing.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\share\actions\MacAct_SetInited.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\share\condition\MacCon_Any.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\share\condition\MacCon_CpxInited.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\share\condition\MacCon_Lua.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\machine\canvas\share\condition\MacCondition_ParameterChecker.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\nav\Insp_NavBehavior.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\nav\NavEditorMenu.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\pack\PackSetting.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\pack\PackWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\panel\PanelMenuCommand.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\path\Insp_PathWay.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\place\PlaceEditor.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\preset\PresetDecoWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\preset\PresetDecorate.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\sprites\Insp_SpriteAtlas.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\sprites\Insp_SpriteCollection.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TaModifier.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TaPaint.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainAction.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainCenter.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainConfigure.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainEditData.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainGUI.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainInspector.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainLayer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainShader.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainShaderTypes.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrainWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TerrianEditor.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvCollapse.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvConverter.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvConverter_Part_0_Object2Terrain.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvConverter_Part_0_Unity2Terrain.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvOptmaizer.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvPaint.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvPaint_0_Init.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvPaint_1_Pixel.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvPaint_2_PickMaterial.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvSetting.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\TvSetting_Part0.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\terrain\undoOpt\TextureUndoOperation.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\textures\TexturePostProcess.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\TreePropertyWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\TreeSearchWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\TreeSourceWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\TreeWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\FireFxCanvas.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\FireFxCellBase.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\act\FireFxCellActBase.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\act\FireFxCell_Animation.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\act\FireFxCell_ChangeWeapon.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\act\FireFxCell_Hit.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\act\FireFxCell_Move.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\act\FireFxCell_Pull.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\act\FireFxCell_TimeScale.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxCell_Chain.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxCell_LookAt.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcellBase.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_BoundleBone.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_Create.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_Fly.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_Follow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_Parabola.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_Play.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_Seek.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletFxcell_Tween.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletPosCell_Area.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletPosCell_DividSpace.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletPosCell_Line.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletPosCell_Ring.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\bullet\BulletPosCell_Sector.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\emitter\FireFxEmitCellBase.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\emitter\FireFxEmitCell_Line.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\emitter\FireFxEmitCell_Normal.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\order\FireFxCell_Parallel.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\order\FireFxCell_Phase.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\tree\canvas\firefx\order\FireFxCell_Sequence.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\ui\StyleListWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\ui\StylePickerWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\ui\UIMenuOptions.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\ui\UIPrefabProcessor.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\WrapperMenu.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\WrapperTools.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\machine\MachineWrapperBuilder.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\machine\MachineWrapperCleaner.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\mediator\MediatorWrapperBuilder.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\mediator\MediatorWrapperCleaner.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\mono\MonoWrapBuilder.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\mono\MonoWrapCleaner.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\property\PropertyWrapCleaner.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\property\PropertyWrapperBuilder.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\property\ScriptCreator.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\tree\TreeWrapperBuilder.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\plugins\wrapper\tree\TreeWrapperCleaner.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\projectSet\LayerSettingCommand.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\reference\RefWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\tools\AlignWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Editor\tools\FilterWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_LuaInterface_EventObject.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_LuaInterface_LuaConstructor.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_LuaInterface_LuaField.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_LuaInterface_LuaMethod.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_LuaInterface_LuaProperty.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_System_Delegate.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_System_Enum.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_System_Object.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_System_String.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_System_Type.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_UnityEngine_GameObject.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_UnityEngine_Input.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_UnityEngine_Object.cs" />
+     <Compile Include="Assets\Res\Scripts\ToLua\ToLua\Editor\Extend\ToLua_UnityEngine_RectTransform.cs" />
+     <Compile Include="Assets\Test\Editor\ConvertObjToBinary.cs" />
+     <Compile Include="Assets\Test\Editor\PackCenterCommand.cs" />
+     <Compile Include="Assets\Test\Editor\ProtobufCommand.cs" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\Skinnable_Diffuse.shader" />
+     <None Include="Assets\Res\Scripts\Editor\shader\LineShader.shader" />
+     <None Include="Assets\Res\Arts\Shader\Unlit\Diffuse_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\color_tools.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableDecoration.xml" />
+     <None Include="Assets\Res\Data\Server\To\Lang\ui.txt" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture4_Diffuse.shader" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\Type_RewardUnit.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\DepthOnly.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle AddMultiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Unlit\Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Add.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainShadowCaster.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\BumpSpec.shader" />
+     <None Include="Assets\Res\Data\Server\To\Tree\BehaviorTree.xml" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\TerrainStruct_Bump.cginc" />
+     <None Include="Assets\Res\Scripts\Editor\shader\CollideShader_ZOn.shader" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Multiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\Terrain_LM3_Bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Core\rimlight_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Add.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Bump_CutOff.shader" />
+     <None Include="Assets\Res\Data\Source\Lang\Lang.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bump_map.cginc" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\vertlit_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\Skinnable_Bump.shader" />
+     <None Include="Assets\Res\Data\Server\From\Lang\zh_cn.txt" />
+     <None Include="Assets\Res\Data\Server\To\Tree\Default.xml" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Multiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture2_Bump.shader" />
+     <None Include="Assets\Res\Data\Server\To\Place\data.xml" />
+     <None Include="Assets\Res\Arts\Shader\Ray\BlinkingRays.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\Water_Best.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Previewer.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane AddMultiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\vertlit_bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Magma\Magma.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\math_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\skin_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\aux_color_tools.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableStruct_readme.txt" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Alpha Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture3_Bump.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\depth_only.cginc" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Bump.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bumpSpec_base.cginc" />
+     <None Include="Assets\Res\Scripts\Editor\shader\EditorTriangleDrawer.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\DepthSplit.shader" />
+     <None Include="Assets\Res\Data\Server\To\Lang\data.txt" />
+     <None Include="Assets\Res\Scripts\ToLua\link.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\BumpSpec_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Bump_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Add.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\WaterLightCG.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Premultiply Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\plane_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_MultiplyDouble.shader" />
+     <None Include="Assets\Res\Data\Server\To\Tree\WordTree.xml" />
+     <None Include="Assets\Res\Data\Server\To\Tree\SettingTree.xml" />
+     <None Include="Assets\Res\Arts\Shader\Screen\WaterDrop.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Anim Alpha Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane AddSmooth.shader" />
+     <None Include="Assets\Res\Arts\Shader\Shadow\ShadowProjector.shader" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Alpha_Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Normal.shader" />
+     <None Include="Assets\Res\Scripts\Editor\plugins\diagram\DiagramSetting.xml" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_diffuse_add.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Multiply.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Bump.shader" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\skinmerge.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableConfigData.xml" />
+     <None Include="Assets\Res\Arts\Shader\VertexLit\Diffuse_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bumpSpec_map.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Unlit\simple_unlit.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bump_base.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainFwdBase.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_AddMultiply.shader" />
+     <None Include="Assets\Res\Data\Server\To\Tree\FireFx.xml" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_AddSmooth.shader" />
+     <None Include="Assets\Res\Arts\Shader\Hud\hud.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_bump_add.cginc" />
+     <None Include="Assets\Res\Data\Server\To\Lang\program.txt" />
+     <None Include="Assets\Res\Arts\Shader\Shadow\ShadowSimpleRender.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\depth_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Diffuse_Transparent.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_diffuse_base.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Water\WaterRef_1.cginc" />
+     <None Include="Assets\Res\Scripts\ToLua\ToLua\readme.txt" />
+     <None Include="Assets\Res\Scripts\Editor\shader\CollideShader_ZOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle AddSmooth.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainStruct.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Core\LightSpace.cginc" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableStruct.xml" />
+     <None Include="Assets\Res\Arts\Shader\Water\Water_Medium.shader" />
+     <None Include="Assets\Res\Arts\Shader\Magma\simple_magma.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture2_Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture4_Bump.shader" />
+     <None Include="Assets\Res\Scripts\Editor\shader\EventArea.shader" />
+     <None Include="Assets\Res\Data\Server\To\Diagram\Mission.xml" />
+     <None Include="Assets\Res\Arts\Shader\Water\WaterRef_0.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Premultiply_Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane MultiplyDouble.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\TerrainFwdAdd_Bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_shadowCaster.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\Terrain_LM_3.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Bump\TerrainFwdBase_Bump.cginc" />
+     <None Include="Assets\Res\Arts\Shader\UI\FloatLight.shader" />
+     <None Include="Assets\Res\Data\Server\From\TypeData\TableConfigStruct.xml" />
+     <None Include="Assets\Res\Arts\Shader\Ray\GodRays.shader" />
+     <None Include="Assets\Res\Arts\Shader\Hud\Image.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle MultiplyDouble.shader" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Texture3_Diffuse.shader" />
+     <None Include="Assets\Res\Arts\Shader\Bake\Diffuse_CutOff.shader" />
+     <None Include="Assets\Res\Arts\Shader\Skinable\skin_bump.cginc" />
+     <None Include="Assets\Res\Scripts\Editor\plugins\tree\treeSetting.xml" />
+     <None Include="Assets\Res\Arts\Shader\Core\dissolve_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\mp_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Screen\ScreenColor.shader" />
+     <None Include="Assets\Res\Arts\Shader\Particle\particle_diffuse.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Bake\bb_diffuse_map.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Terrain\Diffuse\TerrainFwdAdd.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Core\fog_tools.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Core\particle_blend_mode.cginc" />
+     <None Include="Assets\Res\Arts\Shader\Particle\Particle Alpha Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\MultiPlane\MultiPlane_Normal.shader" />
+     <None Include="Assets\Res\Arts\Shader\Plane\Plane Premultiply Blend.shader" />
+     <None Include="Assets\Res\Arts\Shader\Ray\BlinkingBillboardRay.shader" />
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.EditorTestsRunner">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.PlaymodeTestsRunner">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/Editor/UnityEditor.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.HoloLens">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="EPPlus">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/epplus/EPPlus.dll</HintPath>
+ </Reference>
+ <Reference Include="game">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/game/Win/game.dll</HintPath>
+ </Reference>
+ <Reference Include="zip">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/pure/zip.dll</HintPath>
+ </Reference>
+ <Reference Include="pure">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/pure/Win/pure.dll</HintPath>
+ </Reference>
+ <Reference Include="CString">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tolua/CString.dll</HintPath>
+ </Reference>
+ <Reference Include="Debugger">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tolua/Debugger.dll</HintPath>
+ </Reference>
+ <Reference Include="tolua">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tolua/Win/tolua.dll</HintPath>
+ </Reference>
+ <Reference Include="toolsEx">
+ <HintPath>E:/YCodeClient/Assets/Plugins/dll/tools/toolsEx.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>E:/Unity5.5.4p5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{735F0098-F4AF-E309-0FA6-0B31FF4BBF1B}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

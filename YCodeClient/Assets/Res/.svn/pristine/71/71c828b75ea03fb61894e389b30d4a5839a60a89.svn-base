@@ -1,0 +1,92 @@
+﻿using pure.asset.manager;
+using pure.asset.manager.utils;
+using pure.entity.renderer;
+using pure.ticker;
+using pure.utils.debug;
+using pure.utils.fileTools;
+using pure.utils.memory;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BuffEntity : ITicker
+{
+    private string _prefab;
+    private string _bone;
+    private long _endTime;
+    private IEnumerator _enumerator;
+
+    private GameObject _model;
+    private Transform _transform;
+    public void UpdateNow(long now = -1) {
+        if (_enumerator != null && !_enumerator.MoveNext()) {
+            _enumerator = null;
+        }
+
+        if(now > _endTime) {
+            Dispose();
+        }
+
+    
+    }
+
+    public void Init(string prefab,long expireTime) {
+
+        _prefab = prefab;
+        _endTime = expireTime;
+        GameTicker.sceneTicker.Add(this);
+
+        _enumerator = ShowModel();
+    }
+
+    private IEnumerator ShowModel() {
+        string file;
+        if (!ParseFile(out file)) {
+            yield break;
+        }
+
+        IEnumerator e = AssetUtils.Load(AssetType.Prefab, file);
+        while (e.MoveNext()) yield return null;
+        e = AssetUtils.PickAsyn<GameObject>(AssetType.Prefab, file);
+        while (e.MoveNext()) yield return null;
+        GameObject go = AssetUtils.Pick<GameObject>(AssetType.Prefab, file);
+
+        if (!go) {
+            GlobalLogger.LogError(string.Format("prefab read error at {0}", file));
+            yield break;
+        }
+
+        //-------------already get the prefab
+        _model = GameObjectPool.Get(go, GameObjectPool.LifeMode.SceneLife);
+        //todo
+        _transform = _model.transform;
+        _model.SetActive(true);
+
+        //BuffRenderer renderer = new BuffRenderer(file)
+
+        
+
+    }
+    private bool ParseFile(out string file) {
+        file = string.Empty;
+        if (string.IsNullOrEmpty(_prefab)) {
+            return false;
+        }
+        if (!FileTools.TryFile2Path(_prefab, out file)) {
+            GlobalLogger.LogError(string.Format("no prefab found by name {0}", _prefab));
+            return false;
+        }
+
+        if (!AssetUtils.Contains(AssetType.Prefab, file)) {
+            GlobalLogger.LogError(string.Format("no prefab found in AssetUtils at {0}", file));
+            return false;
+        }
+
+        return true;
+    }
+
+    void Dispose() {
+        GameObjectPool.ReturnInstance(_model);
+        GameTicker.sceneTicker.Remove(this);
+    }
+}

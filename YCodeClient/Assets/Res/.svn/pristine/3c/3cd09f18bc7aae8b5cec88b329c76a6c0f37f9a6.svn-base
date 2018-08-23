@@ -1,0 +1,314 @@
+fileFormatVersion: 2
+guid: 9cdb9ca1b02997e44ab0172cb4bbff60
+timeCreated: 1526611118
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B_beapon_0
+    100002: B_beigua00
+    100004: B_beiguay00
+    100006: B_beiguay01
+    100008: B_beiguay02
+    100010: B_beiguay03
+    100012: B_beiguay04
+    100014: B_beiguaz00
+    100016: B_beiguaz01
+    100018: B_beiguaz02
+    100020: B_beiguaz03
+    100022: B_beiguaz04
+    100024: B_bip
+    100026: B_bozi_0
+    100028: B_chest
+    100030: B_dabi_l_0
+    100032: B_dabi_l_1
+    100034: B_dabi_r_0
+    100036: B_dabi_r_1
+    100038: B_damuzhi_l_0
+    100040: B_damuzhi_l_1
+    100042: B_damuzhi_r_0
+    100044: B_danjianjia_0
+    100046: B_danqunjia_0
+    100048: B_dazhi_l_0
+    100050: B_dazhi_l_1
+    100052: B_dazhi_r_0
+    100054: B_dazhi_r_1
+    100056: B_head
+    100058: B_jianbang_0
+    100060: B_jianjia_0
+    100062: B_jianjia_1
+    100064: B_qunbaih00
+    100066: B_qunbaih01
+    100068: B_qunbaih02
+    100070: B_qunbaih03
+    100072: B_qunbaiq00
+    100074: B_qunbaiq01
+    100076: B_qunbaiq02
+    100078: B_qunbaiq03
+    100080: B_qunbaiy00
+    100082: B_qunbaiz00
+    100084: B_shouzhang_l_0
+    100086: B_shouzhang_l_1
+    100088: B_shouzhang_r_0
+    100090: B_shouzhang_r_1
+    100092: B_shouzhi_l_0
+    100094: B_shouzhi_l_0 1
+    100096: B_shouzhi_r_0
+    100098: B_shouzhi_r_1
+    100100: B_shouzhi_r_1 1
+    100102: B_tou_0
+    100104: B_toufa00
+    100106: B_toufa01
+    100108: B_toufa02
+    100110: B_weapon_1
+    100112: B_weapon_2
+    100114: B_wheel_0
+    100116: B_wheel_1
+    100118: B_xiaobi_l_0
+    100120: B_xiaobi_l_1
+    100122: B_xiaobi_r_0
+    100124: B_xiaobi_r_1
+    100126: B_xiongqiang_0
+    100128: B_xiongqiang_1
+    100130: B_zhi_l_0
+    100132: B_zhi_l_0 1
+    100134: B_zhi_r_0
+    100136: B_zhi_r_1
+    100138: Bip001
+    100140: Bip001 L Calf
+    100142: Bip001 L Clavicle
+    100144: Bip001 L Finger0
+    100146: Bip001 L Finger01
+    100148: Bip001 L Finger1
+    100150: Bip001 L Finger11
+    100152: Bip001 L Finger2
+    100154: Bip001 L Finger21
+    100156: Bip001 L Finger3
+    100158: Bip001 L Finger31
+    100160: Bip001 L Finger4
+    100162: Bip001 L Finger41
+    100164: Bip001 L Foot
+    100166: Bip001 L Forearm
+    100168: Bip001 L Hand
+    100170: Bip001 L Thigh
+    100172: Bip001 L Toe0
+    100174: Bip001 L UpperArm
+    100176: Bip001 Neck
+    100178: Bip001 Pelvis
+    100180: Bip001 R Calf
+    100182: Bip001 R Clavicle
+    100184: Bip001 R Finger0
+    100186: Bip001 R Finger01
+    100188: Bip001 R Finger1
+    100190: Bip001 R Finger11
+    100192: Bip001 R Finger2
+    100194: Bip001 R Finger21
+    100196: Bip001 R Finger3
+    100198: Bip001 R Finger31
+    100200: Bip001 R Finger4
+    100202: Bip001 R Finger41
+    100204: Bip001 R Foot
+    100206: Bip001 R Forearm
+    100208: Bip001 R Hand
+    100210: Bip001 R Thigh
+    100212: Bip001 R Toe0
+    100214: Bip001 R UpperArm
+    100216: Bip001 Spine
+    100218: //RootNode
+    100220: RV_nezha_0_Copy
+    100222: RV_nezha_0_HP
+    100224: Torus001
+    100226: Torus002
+    400000: B_beapon_0
+    400002: B_beigua00
+    400004: B_beiguay00
+    400006: B_beiguay01
+    400008: B_beiguay02
+    400010: B_beiguay03
+    400012: B_beiguay04
+    400014: B_beiguaz00
+    400016: B_beiguaz01
+    400018: B_beiguaz02
+    400020: B_beiguaz03
+    400022: B_beiguaz04
+    400024: B_bip
+    400026: B_bozi_0
+    400028: B_chest
+    400030: B_dabi_l_0
+    400032: B_dabi_l_1
+    400034: B_dabi_r_0
+    400036: B_dabi_r_1
+    400038: B_damuzhi_l_0
+    400040: B_damuzhi_l_1
+    400042: B_damuzhi_r_0
+    400044: B_danjianjia_0
+    400046: B_danqunjia_0
+    400048: B_dazhi_l_0
+    400050: B_dazhi_l_1
+    400052: B_dazhi_r_0
+    400054: B_dazhi_r_1
+    400056: B_head
+    400058: B_jianbang_0
+    400060: B_jianjia_0
+    400062: B_jianjia_1
+    400064: B_qunbaih00
+    400066: B_qunbaih01
+    400068: B_qunbaih02
+    400070: B_qunbaih03
+    400072: B_qunbaiq00
+    400074: B_qunbaiq01
+    400076: B_qunbaiq02
+    400078: B_qunbaiq03
+    400080: B_qunbaiy00
+    400082: B_qunbaiz00
+    400084: B_shouzhang_l_0
+    400086: B_shouzhang_l_1
+    400088: B_shouzhang_r_0
+    400090: B_shouzhang_r_1
+    400092: B_shouzhi_l_0
+    400094: B_shouzhi_l_0 1
+    400096: B_shouzhi_r_0
+    400098: B_shouzhi_r_1
+    400100: B_shouzhi_r_1 1
+    400102: B_tou_0
+    400104: B_toufa00
+    400106: B_toufa01
+    400108: B_toufa02
+    400110: B_weapon_1
+    400112: B_weapon_2
+    400114: B_wheel_0
+    400116: B_wheel_1
+    400118: B_xiaobi_l_0
+    400120: B_xiaobi_l_1
+    400122: B_xiaobi_r_0
+    400124: B_xiaobi_r_1
+    400126: B_xiongqiang_0
+    400128: B_xiongqiang_1
+    400130: B_zhi_l_0
+    400132: B_zhi_l_0 1
+    400134: B_zhi_r_0
+    400136: B_zhi_r_1
+    400138: Bip001
+    400140: Bip001 L Calf
+    400142: Bip001 L Clavicle
+    400144: Bip001 L Finger0
+    400146: Bip001 L Finger01
+    400148: Bip001 L Finger1
+    400150: Bip001 L Finger11
+    400152: Bip001 L Finger2
+    400154: Bip001 L Finger21
+    400156: Bip001 L Finger3
+    400158: Bip001 L Finger31
+    400160: Bip001 L Finger4
+    400162: Bip001 L Finger41
+    400164: Bip001 L Foot
+    400166: Bip001 L Forearm
+    400168: Bip001 L Hand
+    400170: Bip001 L Thigh
+    400172: Bip001 L Toe0
+    400174: Bip001 L UpperArm
+    400176: Bip001 Neck
+    400178: Bip001 Pelvis
+    400180: Bip001 R Calf
+    400182: Bip001 R Clavicle
+    400184: Bip001 R Finger0
+    400186: Bip001 R Finger01
+    400188: Bip001 R Finger1
+    400190: Bip001 R Finger11
+    400192: Bip001 R Finger2
+    400194: Bip001 R Finger21
+    400196: Bip001 R Finger3
+    400198: Bip001 R Finger31
+    400200: Bip001 R Finger4
+    400202: Bip001 R Finger41
+    400204: Bip001 R Foot
+    400206: Bip001 R Forearm
+    400208: Bip001 R Hand
+    400210: Bip001 R Thigh
+    400212: Bip001 R Toe0
+    400214: Bip001 R UpperArm
+    400216: Bip001 Spine
+    400218: //RootNode
+    400220: RV_nezha_0_Copy
+    400222: RV_nezha_0_HP
+    400224: Torus001
+    400226: Torus002
+    2300000: Torus001
+    2300002: Torus002
+    3300000: Torus001
+    3300002: Torus002
+    4300000: Torus001
+    4300002: Torus002
+    4300004: RV_nezha_0_HP
+    4300006: RV_nezha_0_Copy
+    9500000: //RootNode
+    13700000: RV_nezha_0_Copy
+    13700002: RV_nezha_0_HP
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: prefab/role/hero/nezha/nezha_0_hp.ab
+  assetBundleVariant: 

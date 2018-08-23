@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Panel_zcc" fileURL="Assets/Res/Data/Source/Tree/Panel/Panel_zcc.tree" fileName="Panel_zcc.tree" type="PanelManager">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="panelModule" module="Preloading">
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="CreatRolePanel_preloading" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Preloading_SP/CreatRolePanel_login.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelScene" sceneAsset="Assets/Res/Arts/Scene/UIScene/background_0_sp/RoleBackground_0_output.unity|15bdb59415b8fa843a103c2d59671d65" />
+        <cell treeOpen="False" editName="" cellType="panelCull" mode="12" />
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/zcc/preload/hero/CreatRoleMediator_Preloading_zcc.lua|3b5b996671ba57c49a2e6b2abc9c0f3a" />
+      </cell>
+    </cell>
+    <cell treeOpen="True" editName="" cellType="panelModule" module="Task">
+      <cell treeOpen="False" editName="" cellType="panelCell" mediatorName="TaskChapterPanel_Achievement" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Achievement_SP/TaskChapterPanel_Achievement.prefab" layer="Base" sceneType="0" lifeMode="10">
+        <cell treeOpen="False" editName="" cellType="panelCull" mode="4" />
+        <cell treeOpen="True" editName="" cellType="panelChild_stack" control="closeBtn" closeAsStackEmpty="True" autoOpenFirstChild="True">
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_0" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/zcc/Achievement/Task/TaskChapterMediator_Achievement_zcc.lua|3dfa82b0db47c5d489fdd6c43185fc7a" />
+          </cell>
+          <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="sub_1" mediatorType="3" prefab="" layer="Base" sceneType="0" lifeMode="20">
+            <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/zcc/Achievement/Task/TaskListMediator_Achievement_zcc.lua|20fb82f4947837e419551ce1e04d7ec5" />
+          </cell>
+        </cell>
+      </cell>
+      <cell treeOpen="True" editName="" cellType="panelCell" mediatorName="TaskPanel_Main" mediatorType="0" prefab="Assets/Res/Arts/UI/Panel/Achievement_SP/TaskPanel_Main.prefab" layer="Base" sceneType="0" lifeMode="20">
+        <cell treeOpen="False" editName="" cellType="panelLua" luaFile="Assets/Res/Lua/zcc/Achievement/Task/TaskMediator_Main_zcc.lua|67955147cbf938d4fb26dbb345843b27" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

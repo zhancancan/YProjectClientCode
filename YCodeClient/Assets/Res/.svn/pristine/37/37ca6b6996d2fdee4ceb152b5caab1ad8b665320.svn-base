@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas name="Fx_zhangliang_HP" fileURL="Assets/Res/Data/Source/Tree/Skill/Fx_zhangliang_HP.tree" fileName="Fx_zhangliang_HP.tree" type="FireFx">
+  <cell treeOpen="True" cellType="rootCell">
+    <cell treeOpen="True" editName="" cellType="pal" groupPhase="0" time="0" timeScaleType="0">
+      <cell treeOpen="False" editName="" cellType="anim" groupPhase="0" time="0" timeScaleType="0" duration="8" durationScaleType="0" actionType="0" anim="Skill_0" paramName="" paramType="4" paramValue="0" animTarget="0" bone="" autoBlock="True" animatorScaleType="0" />
+      <cell treeOpen="True" editName="leiqiu" cellType="emitnormal" groupPhase="0" time="3" timeScaleType="0" duration="0.2" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_leiqiu.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0.2" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="2" durationScaleType="0" boneName="qiulei" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="lei" cellType="emitnormal" groupPhase="0" time="3.9" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_lei.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="2.1" durationScaleType="0" boneName="qiulei" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="fengqiu" cellType="emitnormal" groupPhase="0" time="3.1" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_fengqiu.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="2.4" durationScaleType="0" boneName="qiufeng" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="feng" cellType="emitnormal" groupPhase="0" time="3.5" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_feng.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="2.45" durationScaleType="0" boneName="qiufeng" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="huoqiu" cellType="emitnormal" groupPhase="0" time="3.2" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_huoqiu.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="2" durationScaleType="0" boneName="qiuhuo" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="huo" cellType="emitnormal" groupPhase="0" time="4.3" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_huo.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="0" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="2.1" durationScaleType="0" boneName="qiuhuo" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="HP" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_HP.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="10" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+      </cell>
+      <cell treeOpen="False" editName="book" cellType="emitnormal" groupPhase="0" time="0" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_HP_book.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="0" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="4.6" durationScaleType="0" boneName="B_weapon_0" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+      <cell treeOpen="False" editName="hand_L" cellType="emitnormal" groupPhase="0" time="4.4" timeScaleType="0" duration="0" durationScaleType="0" delay="0" delayScaleType="0" numParticle="1" interval="0" useRandomDelay="False" maxDistance="10" minDistance="0" startMode="0" destinyMode="1" qtyMode="0">
+        <cell treeOpen="False" editName="" cellType="create" groupPhase="0" asset="Assets/Res/Arts/Role/Hero/zhangliang/EP_zhangliang_0_hp_sp/EP_zhangliang_HP_hand_L.prefab" />
+        <cell treeOpen="False" editName="" cellType="play" groupPhase="0" duration="2.3" durationScaleType="0" animatorScaleType="0" orientMode="1" dirMode="1" />
+        <cell treeOpen="False" editName="" cellType="bonefx" groupPhase="0" time="0" timeScaleType="0" duration="2.3" durationScaleType="0" boneName="hand_L" position="0:0:0" rotate="0:0:0" scale="1:1:1" />
+      </cell>
+    </cell>
+  </cell>
+</Canvas>

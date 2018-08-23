@@ -1,0 +1,24 @@
+local this ={}
+require "DefNamespace"
+local VersionGroup = _G["VersionGroup"]
+local lang  = require "LangManager"
+
+
+function this:onInit(med)
+	local v = VersionGroup.GetSteamVersion()
+	local str =v:ToString()
+	str = lang.format("Preload.updateVer",str)
+	med:SetString("txt_2",str)
+end
+
+function this:onUpdate(med,current,total)
+	local r= current /total
+	med:SetFloat("bar",r)
+	local str = string.format("%.0f%%",r* 100)
+	med:SetString("txt_1",str)
+
+	str = lang.format("Preload.copy",current,total)
+	med:SetString("txt_0",str)
+end
+
+return this

@@ -1,0 +1,50 @@
+local class 		= require "Class"
+local this 			= class("Data_UserQuestState",require "Data")
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+local log			= require "Logger"
+
+local instance ;
+
+
+local function get_typeData(t)
+	local typeData = rawget (t,"typeData")
+	if not typeData then
+		local id = rawget(t,"questId")
+		if id then
+			typeData = db:selectOne(TypeClasses.TYPE_QUEST,id)
+			if typeData  then
+				rawset (t , "typeData",typeData)
+			else
+				log.error(string.format("Data_UserQuestState can not find define at %s",id))
+			end
+		end
+	end
+	return typeData
+end
+
+local function getter(t,k)
+	local td = get_typeData(t)
+	return td and td[k] or nil
+end
+
+local meta = {__index = getter}
+
+function this:ctor()
+	if instance then
+		log.error("singleton error: Data_UserQuestState can create only once")
+		return
+	end
+	setmetatable(self._data , meta)
+end
+
+function this:onSelfChange(p)
+	if p == "questId" then
+		self.quest = nil
+	end
+
+end
+
+
+instance = this.new()
+return instance

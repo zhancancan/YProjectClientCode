@@ -1,0 +1,33 @@
+local class 	= require "Class"
+local base 		= require "HudCore"
+local this = class("HostHud",base);
+local log = require "Logger"
+
+function this:enter(c,d)
+	self.hud =c;
+	self.txt=c:GetUI("txt");
+	-- self.txt.text="newbility";
+	c:SetString("txt",d.name)
+	self.bar = c:GetUI("bar");
+
+	self.data = d
+
+	self.data:addListener(this,this.onDataChanged)
+
+	local f = d.hp / self.data.maxHp
+	self.hud:SetFloat("bar",f)
+
+end
+
+function this:onDataChanged(property,oldV,newV)
+	print(string.format("onDataChanged=====hud:p %s,o %s,n %s",property,oldV,newbility))
+	if property == "name" then
+		self.hud:SetString("txt",newV)
+	elseif property == "hp" then
+		local f = newV / self.data.maxHp
+		self.hud:SetFloat("bar",f)
+
+	end
+end
+
+return this

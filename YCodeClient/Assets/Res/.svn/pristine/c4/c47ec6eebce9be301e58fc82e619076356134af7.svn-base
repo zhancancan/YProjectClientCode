@@ -1,0 +1,50 @@
+local class 		= require "Class"
+local base 			= require "Data"
+local this 			= class("Data_Npc",base)
+local db 			= require "TypeDB"
+local TypeClasses	= require "TypeClasses"
+
+local table
+
+
+local function ensureTable()
+	if not table then
+	 table = db.getTable(TypeClasses.TYPE_NPC)
+	end
+end
+
+
+
+
+
+local _meta = {
+	__index = function(t,k)
+		ensureTable()
+		local def = rawget(t,"npc")
+		local d = rawget(t,"_data")
+		if not def then
+			local npcId = d.npcId
+			if npcId then
+				def = table:selectOne({id=npcId})
+				print("foudn def ",d.id , def, npcId)
+				if def then rawset(t, "npc",def) end
+			end
+		end
+		if not def then return nil end
+
+		if k == "name" then
+			return def.name
+		end
+
+		return d [k]
+	end
+
+}
+
+
+function this:ctor()
+	setmetatable(self, _meta)
+end
+
+
+return this

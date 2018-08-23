@@ -1,0 +1,18 @@
+
+local app 		= require "AppCenter"
+local user		= require "Data_Character"
+
+local this = class("HostHud",HudCore);
+function this:enter(c)
+	self.hud =c;
+	self.txt=c:GetUI("txt_0");
+	-- self.txt.text="newbility";
+	self.txt.text= app.name;
+	self.bar = c:GetUI("bar");
+
+end
+
+function this:onDataChanged(property,oldV,newV)
+	
+end
+return this;

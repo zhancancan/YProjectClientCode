@@ -1,0 +1,151 @@
+local this={}
+local med
+
+local class 			= require "Class"
+local TypeClasses		= require "TypeClasses"
+local typeDB			= require "TypeDB"
+local ns 				= require "CSNamespace"
+local panelManager  	= ns.PanelManager
+
+local error				= require "ErrorCenter"
+local log 				= require "Logger"
+local dialog 			= require "Dialog"
+
+local lang 				= require "LangManager"
+
+local data_questState   = require "Data_UserQuestState"
+
+local sub_0
+local sub_1
+local sub_2
+
+local quest,subQuest
+local questId,subQuestId,typeSubeQuestId
+local cbTown,cbTask,cbNormal,cbBattle,cbNPC
+
+--Mediator
+local function  onErrorReceived(err)
+	log.log("create med", err.code, err.msg)
+end
+
+local function onSubQuestBtnClick(n)
+	if questId then 
+		if cbNPC.selected then 
+			sub_0:Hide()
+			sub_1:Show()
+			sub_2:Show()
+			med:SetString("sub_1/txt_0",quest.name)
+		else
+			dialog.askByType("please go to NPC",dialog.TYPE_ONEBTN)
+		end
+	else
+		panelManager.Open("TaskChapterPanel_Achievement",subQuestId)
+	end
+end
+
+local function onSelectBtnClick()
+	-- if questId then 
+		if typeSubeQuestId == subQuestId then
+			dialog.askByType(lang.get("Mission.subQuset_isgoing"),dialog.TYPE_ONEBTN)
+		else
+			panelManager.Open("SubTaskPanel_Achievement",subQuestId)
+		end
+	-- else
+		-- dialog.askByType("please  Accept Mian Quest",dialog.TYPE_ONEBTN)
+	-- end
+end
+
+--Test code
+local function onSelectChange(n,isOn)
+	if n=="cb_0" then 
+		cbTown.selected = isOn
+		cbTask.selected = not isOn 
+		cbNormal.selected = true
+		cbBattle.selected = false
+	end
+	if n=="cb_1" then 
+		cbTask.selected = isOn 
+		cbTown.selected = not isOn
+		cbNPC.selected = false
+	end
+	if n=="cb_2" then 
+		cbNormal.selected = isOn 
+		cbBattle.selected = not isOn
+	end
+	if n=="cb_3" then 
+		cbBattle.selected = isOn 
+		if cbTown.selected then cbBattle.selected = false else cbNormal.selected = not isOn end
+	end
+	if n=="cb_4" then 
+		cbNPC.selected = isOn 
+		if cbTask.selected then cbNPC.selected = false end
+	end
+
+	if cbTown.selected then 
+		if cbNPC.selected then 
+			sub_0:Hide() sub_1:Show() sub_2:Show() 
+			med:SetString("sub_1/txt_0",quest.name)
+		else 
+			sub_0:Show() sub_1:Hide() sub_2:Hide() 
+		end
+	end
+
+	if cbTask.selected then 
+		if cbNormal.selected then 
+			sub_0:Hide() sub_1:Show() sub_2:Show() 
+			med:SetString("sub_1/txt_1",subQuest.name)
+			med:SetString("sub_1/txt_0",subQuest.description)
+		else 
+			sub_0:Hide() sub_1:Hide() sub_2:Hide() 
+		end
+	end
+end
+
+function this.show()
+	error.addListener(onErrorReceived,this)
+    questId = data_questState.questId
+    subQuestId = data_questState.subQuestId
+    
+	if questId then 
+		quest = typeDB.selectOne(TypeClasses.TYPE_QUEST,questId)
+		typeSubeQuestId = quest.subQuest
+	end
+	if subQuestId then
+		subQuest = typeDB.selectOne(TypeClasses.TYPE_SUBQUEST,subQuestId)
+	end
+
+	--Test code
+	cbTown.selected = true
+	cbNormal.selected = true
+	cbTask.selected = false 
+	cbBattle.selected = false
+	cbNPC.selected=false
+
+	if cbTown.selected and cbNormal.selected and not cbNPC.selected then 
+		if not sub_0.active then sub_0:Show() end
+		if sub_1.active then sub_1:Hide() end
+	end
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+end
+
+function this.initView(_,meditor)
+	med = meditor
+	med:AddListener("sub_0/btn",onSubQuestBtnClick)
+	med:AddListener("sub_2/btn",onSelectBtnClick)
+
+	--Test code
+	cbTown=med:AddListener("test/cb_0",onSelectChange)
+	cbTask=med:AddListener("test/cb_1",onSelectChange)
+	cbNormal=med:AddListener("test/cb_2",onSelectChange)
+	cbBattle=med:AddListener("test/cb_3",onSelectChange)
+	cbNPC=med:AddListener("test/cb_4",onSelectChange)
+
+	sub_0=med:GetChildByName("sub_0")
+	sub_1=med:GetChildByName("sub_1")
+	sub_2=med:GetChildByName("sub_2")
+end
+
+return this

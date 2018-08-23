@@ -1,0 +1,99 @@
+﻿using LuaInterface;
+using pure.ai.aimachine.runner;
+using pure.asset.manager.utils;
+using pure.database.structure.tree;
+using pure.entity.interfaces;
+using pure.stateMachine.machine.core;
+using pure.stateMachine.machine.runtime;
+using pure.treeComp.firefx.core;
+using pure.utils.mathTools;
+using UnityEngine;
+
+namespace machine.ai {
+    [CpxAction(CommandActionType.FIRE_SKILL)]
+    public class AICommand_FireSkill : CpxAction {
+        public override RpxAction GetRuntime() {
+            return RpxPool<Runtime>.Get().SetSource(this);
+        }
+
+        private class Runtime : ModelCommandImpl<AICommand_FireSkill> {
+            private IFightableEntity _fighter;
+            private FireFxRoot _fx;
+            private FxFireRunner _fireRunner;
+
+            protected override void OnEnter() {
+                _status = CompStatus.COMPLETE;
+                _fighter = entity as IFightableEntity;
+                if (_fighter == null) return;
+                _fx = GetFireFx();
+                if (_fx == null) return;
+                _status = CompStatus.RUNING;
+                _fireRunner = new FxFireRunner(_fighter, _fx) {
+                    targetInfos = new FireFxInfo[0],
+                    targetPos = GetTargetPosition()
+                };
+                _fireRunner.completeEvent.AddListener(OnComplete);
+                _fireRunner.Start();
+            }
+
+            private FireFxRoot GetFireFx() {
+                object obj = machine.GetRuntimeData<object>(CpxState.TEMP_DATA);
+                if (obj is FireFxRoot) return obj as FireFxRoot;
+                string setting = string.Empty;
+                if (obj is string) {
+                    setting = obj as string;
+                } else if (obj is LuaTable) {
+                    setting = (obj as LuaTable).GetValue<string>("fireFx");
+                }
+                FireFxRoot fx;
+                if (!string.IsNullOrEmpty(setting) && FxFileUtils.TryGet(setting, out fx)) {
+                    return fx;
+                }
+                return null;
+            }
+
+            private Vector3 GetTargetPosition() {
+                LuaTable tb = machine.GetRuntimeData<LuaTable>(CpxState.TEMP_DATA);
+                LuaTable position = tb != null ? tb.GetTable<LuaTable>("position") : null;
+                if (position != null) {
+                    return new Vector3(
+                        position.GetValue<float>("x"),
+                        position.GetValue<float>("y"),
+                        position.GetValue<float>("z"));
+                }
+                Vector3 v = Vector3.forward;
+                VectorMath.RotateVector3(ref v, _fighter.orientation);
+                return model.position + v;
+            }
+
+            protected override void OnUpdate(long now) {
+                if (_fireRunner != null) {
+                    _fireRunner.UpdateNow(now);
+                }
+            }
+
+            private void OnComplete() {
+                _status = CompStatus.COMPLETE;
+                RemoveRunner();
+            }
+
+            private void RemoveRunner() {
+                if (_fireRunner != null) {
+                    _fireRunner.Dispose();
+                    _fireRunner = null;
+                }
+                if (_fighter != null && _fighter.collideBody != null) {
+                    lock (_fighter.collideBody) {
+                        _fighter.collideBody.SetDirty();
+                    }
+                    _fighter = null;
+                }
+            }
+
+            protected override void OnExit() {
+                RemoveRunner();
+                RpxPool<Runtime>.Release(this);
+            }
+        }
+    }
+}

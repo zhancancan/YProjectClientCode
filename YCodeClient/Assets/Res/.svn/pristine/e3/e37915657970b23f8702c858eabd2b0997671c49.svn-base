@@ -1,0 +1,3 @@
+local dbClass 	= require "DataBase"
+_G["dbase"]		= dbClass.new("gameDB")
+return nil

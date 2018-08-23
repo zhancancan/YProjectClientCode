@@ -1,0 +1,52 @@
+local db 			= require "TypeDB"
+local user 			= require "Data_Character"
+local TypeClasses	= require "TypeClasses"
+
+local manager 		= require "CharacterUseSkill"
+
+local this={}
+local med
+local pane
+local item = {}
+
+local initByTypeData = true
+
+function item:draw(cell,data)
+
+	local str = data
+
+	if not initByTypeData then
+		str = data.name
+	end
+
+	cell:SetString("txt",data)
+	cell:SetClickTrigger("img_1")
+
+end
+
+
+local function onPaneClick(_,evt)
+	local skillId = evt.data
+	manager.tryCast(skillId)
+end
+
+function this:show()
+	local skills = user.getHeroSkills(initByTypeData)
+	pane:SetList(skills)
+
+end
+
+function this:hide()
+	pane:SetList(nil)
+end
+
+function this:initView(mediator)
+	med = mediator
+	pane = med:AddListener("pane",onPaneClick)
+	med:SetPaneFactory("pane",item)
+
+
+
+end
+
+return this;

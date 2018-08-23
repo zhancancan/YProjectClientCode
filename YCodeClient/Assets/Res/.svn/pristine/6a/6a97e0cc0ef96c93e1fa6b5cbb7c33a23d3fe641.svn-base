@@ -1,0 +1,53 @@
+
+local app 			= require "AppCenter"
+local ns 			= require "CSNamespace"
+local native 		= ns["NativeManager"]
+local NativeMethod 	= ns["NativeMethod"]
+
+local this={}
+local med
+
+local sub_1
+local sub_2
+
+
+
+local function onLoginInfoReply(c)
+	app.loginInfo = c
+	sub_2:Show()
+end
+
+local function onItemClick(_,evt)
+	local t = evt.data
+	if t == "Test" then
+		sub_1:Show()
+	else
+		native.Send({method = NativeMethod.REQUEST_LOGIN,type =t}, onLoginInfoReply)
+	end
+end
+
+local item={}
+
+function item.draw(_,cell ,data)
+	cell:SetString("txt",data)
+end
+
+function item.onInit(_,cell)
+	cell:SetClickTrigger("icon")
+end
+
+function this.show( )
+	med:SetList("pane", app.supportLoginTypes)
+end
+function this.hide( )
+	med:SetList("pane",nil)
+end
+function this.initView(_,m)
+	med=m
+	med:AddListener("pane",onItemClick)
+	med:SetPaneFactory("pane",item)
+	sub_1= med:GetSibling("sub_1")
+	sub_2= med:GetSibling("sub_2")
+end
+
+return this

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MachineChart fileName="NpcMachine_0" fileURL="Assets/Res/Data/Source/Machine/NpcMachine_0.machine" chartType="AIMachine" panOffset="0:0" zoom="1">
+  <machine uuid="1531839564204" name="base machine">
+    <state uuid="1531839564206" stateName="Exit State" isDefault="False" priority="0" type="exit" position="-271:-202" />
+    <state uuid="1531839698170" stateName="Init" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-256.5:-97">
+      <action uuid="1531839716329" priority="0" property="body" type="0" actionType="aiInitRenderer" />
+      <action uuid="1531839808317" priority="0" value="True" actionType="actionSetInited" />
+    </state>
+    <state uuid="1531839564205" stateName="Any State" isDefault="False" priority="0" type="any" position="9:-95">
+      <transition uuid="1531839657396" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="4" source="1531839564205" destiny="1531839608008">
+        <condition uuid="1531839672122" score="0" conditionType="conditionAny" />
+      </transition>
+    </state>
+    <state uuid="1531839608008" stateName="Stand" isDefault="True" priority="0" useStatePriority="False" order="0" loops="0" type="action" position="-241.5:5">
+      <transition uuid="1531839787420" selectMode="1" useDefaultParameter="False" canTransferToSelf="False" interrupt="0" checkMode="1" source="1531839608008" destiny="1531839698170">
+        <condition uuid="1531839829138" score="0" compare="False" conditionType="conditionCpxInited" />
+      </transition>
+      <action uuid="1531842775707" priority="0" standModePercent="0.3" updateInterval="10" actionType="cmdAct:stand" />
+    </state>
+    <state uuid="1531839677214" stateName="Move" isDefault="False" priority="0" useStatePriority="False" order="0" loops="1" type="action" position="-160.5:136">
+      <action uuid="1531839687328" priority="0" threshhold="10" duration="0.6" forcastLen="0.1" maxSpeedMulitple="1.2" actionType="cmdAct:move" />
+    </state>
+  </machine>
+</MachineChart>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RS>
+	<group name="RollCardTest">
+		<item Text="0"/>
+	</group>
+	<group name="ChatSkin_2_social">
+		<item richTxt="abc"/>
+	</group>
+	<group name="ChatSkin_3_social">
+		<item richTxt="abc"/>
+	</group>
+	<group name="Debug_PromptPanel_0_preloading">
+		<item bg="abc"/>
+	</group>
+	<group name="Debug_PromptPanel_1_preloading">
+		<item bg="abc"/>
+	</group>
+	<group name="Debug_PromptPanel_2_preloading">
+		<item bg="abc"/>
+	</group>
+	<group name="HostHud">
+		<item txt_0="hahaha"/>
+	</group>
+	<group name="CreatRolePanel_preloading">
+		<item obj_0.bg="abc"/>
+		<item obj_1.bg="abc"/>
+		<item obj_2.bg="abc"/>
+		<item obj_2.bg.lab="你的名字："/>
+	</group>
+	<group name="ServerPanel_preloading">
+		<item tab="我的服务器,推荐服务器,1区-10区,11区-20区"/>
+		<item selectSever_top.lab_0="选择大区"/>
+		<item selectSever_top.lab_1="爆满"/>
+		<item selectSever_top.lab_2="流畅"/>
+		<item selectSever_top.lab_3="维护"/>
+		<item closeBtn="Label"/>
+		<item img_2.lab="上次登录："/>
+	</group>
+	<group name="ChatPanel_main">
+		<item bg="abc"/>
+	</group>
+	<group name="DownLoadPanel_preloading">
+		<item lab_banshu="开发商：123456789"/>
+		<item sub_0.lab_check="检查更新中...."/>
+	</group>
+	<group name="ChatPanel_social">
+		<item sub_2.txt="请输入聊天内容"/>
+	</group>
+	<group name="ChatSettingPanel_social">
+		<item bg="选择频道"/>
+	</group>
+		<group name="VoicePanel_social">
+		<item bg="abc"/>
+		<item lab="向上滑动取消发送"/>
+	</group>
+	<group name="DialogPanel_sys">
+		<item bg="确认面板"/>
+		<item btn_0="确认"/>
+		<item btn_1="取消"/>
+	</group>
+	<group name="LoadnoticePanel_sys">
+		<item img_0.lab="更新公告"/>
+		<item btn_0="取消"/>
+		<item btn_1="前往下载"/>
+	</group>
+	<group name="activityPanel_area">
+		<item img_0.lab_0="abc"/>
+		<item lab_1="abc"/>
+	</group>
+	<group name="mainTask_area">
+		<item lab="abc"/>
+	</group>
+	<group name="mainTeam_area">
+		<item lab="abc"/>
+	</group>
+	<group name="activityPanel_biz">
+		<item panel_Second.btn="Label"/>
+	</group>
+	<group name="activityPanel_main">
+		<item btn="背包"/>
+	</group>
+	<group name="buttonPanel_main">
+		<item btn="背包"/>
+	</group>
+	<group name="headPanel_main">
+		<item btn="PVP"/>
+	</group>
+	<group name="rolePanel_cultivate">
+		<item roleObj_resource.btn="Label"/>
+		<item roleObj_tab.tab="英雄,装备,皮肤,故事"/>
+		<item sub0.roleObj_message.lab_0="基本信息"/>
+		<item sub0.roleObj_message.lab_1="能力"/>
+		<item sub0.roleObj_message.lab_2="技能"/>
+		<item sub0.roleObj_message.lab_3="生存"/>
+		<item sub0.roleObj_message.lab_4="伤害"/>
+		<item sub0.roleObj_message.lab_5="防御"/>
+		<item sub0.roleObj_message.tab="tab_0,tab_1,tab_2"/>
+		<item sub0.roleObj_rightselect.img_0.lab_0="当前选择"/>
+		<item sub0.roleObj_rightselect.img_1.btn_0="Label"/>
+		<item sub0.roleObj_rightselect.img_3.lab_1="选择英雄"/>
+		<item sub0.roleObj_rightselect.btn_1="英 雄 池"/>
+		<item sub0.roleObj_rightselect.btn_2="确定"/>
+		<item sub0.roleObj_select.btn_right="Label"/>
+		<item sub0.roleObj_select.btn_left="Label"/>
+	</group>
+	<group name="taskPanel_achievement">
+		<item img_0.btn="Label"/>
+	</group>
+	<group name="Preload">
+		<item download="资源加载：{0}/{1},剩余{2}完成"/> 
+		<item updateVer="更新版本号: {0}"/> 
+		<item copy="正在解压资源{0} / {1}"/>
+		<item sceneLoad="场景加载 {0}"/> 
+		<item ucWarning="解压提示"/>
+		<item ucError_100 = "[code:100]空间不足，请清理存储后再次尝试" uiError_101="[code:101]源文件缺失，重新安装" uiError_102="[code:102] 没有写入权限"
+				urError_103="[code:103]资源读取错误"/>
+		
+	</group>
+	<group name="Login">
+		<item askLogout="是否确认退出"/>  
+	</group>
+</RS>
+
+
+
+

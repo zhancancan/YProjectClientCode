@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: EM_shuijinshi_0
+  m_Shader: {fileID: 4800000, guid: bfec46b2f1fcd9a4781b789ffec084d6, type: 3}
+  m_ShaderKeywords: ENABLE_ILLUMIN
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _AUxCtrlTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _AuxTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 2800000, guid: 71f0a92bdf09bce47b78b6f0a844dc7a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _IlluminTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 5f8e6545ce36d934888b1f1c4b3c8ffb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: e4a1a42fd96882f47a99d36e84b4da65, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _AuxEmission
+      second: 0
+    - first:
+        name: _AuxRatio
+      second: 0
+    - first:
+        name: _BumpPower
+      second: 0.5
+    - first:
+        name: _Cull
+      second: 2
+    - first:
+        name: _Emission
+      second: 1
+    - first:
+        name: _Shininess
+      second: 0.6
+    - first:
+        name: _aux
+      second: 0
+    - first:
+        name: _illumin
+      second: 1
+    - first:
+        name: _vertexAnim
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _SpecDir
+      second: {r: 0.57908237, g: 0.4039191, b: 0.70817614, a: 0}
+    - first:
+        name: _WinDir
+      second: {r: 0, g: -0.7, b: 0.7, a: 1}

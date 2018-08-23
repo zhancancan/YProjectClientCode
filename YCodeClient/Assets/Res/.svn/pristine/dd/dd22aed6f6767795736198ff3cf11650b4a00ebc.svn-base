@@ -1,0 +1,10 @@
+﻿using edit.pure.machine.core;
+using game.entity.game.machine;
+
+namespace plugins.machine.canvas.login.actions {
+    [MacActon(false, "Http/Get server list", new[] {typeof (LoginMachineChart)})]
+    internal class LogAct_HttpServerList : Mac_Action {
+        public override string actionType { get { return LoginCenter.ACT_GET_SERVER_LIST; } }
+        public override string renderContent { get { return "Http get server list"; } set { } }
+    }
+}

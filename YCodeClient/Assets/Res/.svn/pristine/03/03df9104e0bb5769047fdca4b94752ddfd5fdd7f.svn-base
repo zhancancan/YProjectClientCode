@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<place name="xinshou" enviorPath="Assets/Res/Arts/Scene/Copy/xinshou_sp/xinshou_output.unity" enviorName="xinshou_output" enviorGUID="03fe42af7f3248a47ab669e3fcf6a9ce" fileName="xinshou" filePath="Assets/Res/Data/Source/Place/xinshou/xinshou.place">
+  <object name="Place Root" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0">
+    <object name="laoguan1" position="83.90001:30.28283:56" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="20" icon="sv_label_4">
+      <mono monoType="locationData" type="0" />
+    </object>
+    <object name="RP_diaochan_0" position="24:7:51" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="21" prefab="Assets/Res/Arts/Role/Hero/diaochan/diaochan_0_sp/RP_diaochan_0.prefab" />
+    <object name="GameObject (1)" position="79.52:30.2762:63.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <mono monoType="eventArea" color="ff00ff00" shape="1" width="5" depth="5" radius="5" ignoreMask="0" />
+    </object>
+    <object name="path" position="78.3:30.28283:54.2" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <mono monoType="pathwaypoint" id="0" radius="0.2" type="0">
+        <point pos="6.641678:-7.764448:0.03520814" />
+        <point pos="9.474625:-8.809771:0.05204444" />
+        <point pos="9.296921:2.510055:0.02517236" />
+        <point pos="0.5025482:-2.119427:0.03820509" />
+      </mono>
+    </object>
+    <object name="GameObject (2)" position="89.1:30.2762:63.4" rotate="90:0:0" scale="1:1:1" tag="Untagged" layer="0">
+      <mono monoType="eventArea" color="ff00ff00" shape="1" width="5" depth="5" radius="5" ignoreMask="0" />
+    </object>
+    <object name="GameObject" position="0:0:0" rotate="0:0:0" scale="1:1:1" tag="Untagged" layer="0" icon="sv_label_4" />
+  </object>
+</place>

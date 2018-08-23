@@ -1,0 +1,14 @@
+local this={}
+this.playerId="-1"
+local namespace = require "CSNamespace"
+this.LocalData	= namespace["LocalData"].instance
+
+--the info object from native sdk
+this.sdkInfo=nil
+
+--this info object from getconfig,@see LoginAct_GetConfig.lua
+this.configInfo=nil
+
+this.loginInfo=nil
+
+return this

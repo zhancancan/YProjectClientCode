@@ -1,0 +1,102 @@
+local this={}
+local med
+local sub_1
+
+local TypeClasses		 = require "TypeClasses"
+local typeDB		 	 = require "TypeDB"
+local ns 				 = require "CSNamespace"
+
+local error				 = require "ErrorCenter"
+local log 				 = require "Logger"
+
+local db 				 = require "DataManager".dbase
+local DataClasses		 = require "DataClasses"
+local data_quest 	     = require "Data_UserQuest"
+local data_questState    = require "Data_UserQuestState"
+
+--Item
+local item={}
+function item.draw(_,cell,data,index)
+	cell:SetString("txt_0",data.caption)
+	cell:SetString("txt_1",data.title)
+end
+
+function item.onInit(_,cell)
+	cell:SetClickTrigger("img")
+end
+
+
+local function onBtnClick(btn)
+end
+
+local function onItemClick(_,evt)
+	sub_1:Show(evt.data)
+end
+
+local function  onErrorReceived(err)
+	log.log("create med", err.code, err.msg)
+end
+
+--Mediator
+function judgeEqual(quests,id)
+	for i=1,#quests do
+		if quests[i].id==id then return true,i end
+	end
+	return false
+end
+
+function this.show()
+	error.addListener(onErrorReceived,this)
+	local questId = data_questState.questId
+
+	local questsDone = db:getTable(DataClasses.DATA_USERQUEST):toArray()
+    local chapters = typeDB.toArray(TypeClasses.TYPE_CHAPTER)
+
+
+    for i=#chapters,1,-1 do
+    	local quests = chapters[i].quests
+    	local isEqual,index
+    	local isNew=true
+    	--judge chapter state
+		for j=1,#quests do
+			isEqual,index = judgeEqual(questsDone,quests[j].id)
+			if isEqual and quests[j].id ~= questId then 
+				local time = tonumber(questsDone[index].lastStartTime)
+				print(time)
+				if time > 0 then 
+					isNew = false
+				 	break 
+				end
+			end
+		end
+		chapters[i].isNew = isNew
+
+		--is chapter show or hide
+    	isEqual=false
+		for j=1,#quests do
+			isEqual = judgeEqual(questsDone,quests[j].id)
+			if isEqual then break end
+		end
+		if not isEqual then 
+			for j=1,#quests do
+				if quests[j].id == questId then else chapters:removeAt(i) end
+			end
+		end
+    end
+
+	chapters:reverse()
+	med:SetList("pane",chapters)
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+end
+
+function this.initView(_,meditor)
+	med=meditor
+	med:SetPaneFactory("pane",item)
+	med:AddListener("pane",onItemClick)
+	sub_1 = med:GetSibling("sub_1")
+end
+
+return this

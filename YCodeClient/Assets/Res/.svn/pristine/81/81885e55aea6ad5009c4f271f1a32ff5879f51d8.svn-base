@@ -1,0 +1,23 @@
+local class 	= require "Class"
+local base 		= require "Data_Action"
+local this 		= class("Data_CmdCast",base)
+local log 		= require "Logger"
+function this:ctor()
+	self.time = 0
+end
+-- - is self
+function this:execute(_)
+	
+	if self.char.id == self.id then return end
+	print("-----todo-------fire:",self.id)
+	self.stateName= "FireSkill"
+	local d =self.table:selectOne(self.id)
+	if d then
+		local e = rawget(d, "entity")
+		if e then
+			e:ChangeState(self,0)
+		end
+	end
+end
+
+return this

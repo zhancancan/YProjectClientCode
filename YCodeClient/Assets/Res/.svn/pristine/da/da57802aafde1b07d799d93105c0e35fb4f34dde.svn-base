@@ -1,0 +1,5 @@
+local class 		= require "Class"
+local this 			= class("Data_SkillObj",require "Data")
+local Logger 		= require "Logger"
+
+return this

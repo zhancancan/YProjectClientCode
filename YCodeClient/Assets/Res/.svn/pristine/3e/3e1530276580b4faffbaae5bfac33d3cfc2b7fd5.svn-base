@@ -1,0 +1,56 @@
+local this={}
+local med
+local sub_1
+
+local TypeClasses	= require "TypeClasses"
+local typeDB		= require "TypeDB"
+local ns 			= require "CSNamespace"
+
+local error			= require "ErrorCenter"
+
+local questData		= require "Data_UserQuestState"
+
+--Item
+local item={}
+function item.draw(_,cell,data,index)
+	cell:SetString("txt_0",data.caption)
+	cell:SetString("txt_1",data.title)
+end
+
+function item.onInit(_,cell)
+	cell:SetClickTrigger("img")
+end
+
+
+local function onBtnClick(btn)
+end
+
+local function onItemClick(_,evt)
+	sub_1:Show(evt.data)
+end
+
+local function  onErrorReceived(err)
+	print("create med", err.code, err.msg)
+end
+
+--Mediator
+function this.show()
+	error.addListener(onErrorReceived,this)
+	-- local mainTask = typeDB.selectOne(TypeClasses.TYPE_QUEST,questData.questId)
+    local chapterArr = typeDB.toArray(TypeClasses.TYPE_CHAPTER)
+	chapterArr:reverse()
+	med:SetList("pane",chapterArr)
+end
+
+function this.hide()
+	error.removeListener(onErrorReceived)
+end
+
+function this.initView(_,meditor)
+	med=meditor
+	med:SetPaneFactory("pane",item)
+	med:AddListener("pane",onItemClick)
+	sub_1 = med:GetSibling("sub_1")
+end
+
+return this
